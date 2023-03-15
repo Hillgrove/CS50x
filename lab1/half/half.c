@@ -4,9 +4,10 @@
 #include <cs50.h>
 #include <stdio.h>
 
-float half(float bill, float tax, int tip);
+float half(float bill, float tax, int tip)
 {
     // do something
+    return 3.2
 }
 
 int main(void)
