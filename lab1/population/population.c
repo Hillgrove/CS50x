@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int start(void)
+    int get_start(void)
     {
         int start_size;
         do
@@ -11,14 +11,21 @@ int main(void)
             start_size = get_int("Start size: ");
         }
         while (start_size < 9);
+
+        return start_size
     }
 
-    int end_size;
-    do
+    int get_end(void)
     {
-        end_size = get_int("End Size: ");
+        int end_size;
+        do
+        {
+            end_size = get_int("End Size: ");
+        }
+        while (start_size > end_size);
+
+        return end_size
     }
-    while (start_size > end_size);
 
     int num_years (start, end)
 
