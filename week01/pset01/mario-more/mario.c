@@ -3,12 +3,13 @@
 
 int get_height(void);
 void print_row(int height, int row);
+void print_pyramid(int height);
 
 // runs main function
 int main(void)
 {
     int height = get_height();
-    print_row(3, 1);
+    print_pyramid(height);
 }
 
 // Prompts for pyramid height
@@ -23,6 +24,7 @@ int get_height(void)
     return height;
 }
 
+// Prints a single row
 void print_row(int height, int row)
 {
     const string BLOCK = "#";
@@ -35,19 +37,28 @@ void print_row(int height, int row)
         printf("%s", SPACE);
     }
 
-    // Print left blocks
+    // Prints blocks to the left
     for(int i = 1; i <= row; i++)
     {
-        printf("%s  ", BLOCK);
+        printf("%s", BLOCK);
     }
 
+    // Prints space between blocks
+    printf("  ");
+
+    // Prints blocks to the left
     for(int i = 1; i <= row; i++)
     {
-        printf("%s\n", BLOCK);
+        printf("%s", BLOCK);
     }
+    printf("\n");
 }
 
-
-// TODO: print blocks
-// TODO: print space
-// TODO: print blocks
+// Prints the whole pyramid
+void print_pyramid(int height)
+{
+    for(int row = 1; row <= height; row++)
+    {
+        print_row(height, row);
+    }
+}
