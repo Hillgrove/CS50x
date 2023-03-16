@@ -6,13 +6,17 @@ int main(void)
     int start_size;
     do
     {
-        llama = get_int("Input number of llamas: ");
+        start_size = get_int("Start size: ");
     }
-    while (llama < 9);
+    while (start_size < 9);
 
+    int end_size;
+    do
+    {
+        end_size = get_int("End Size: ");
+    }
+    while (start_size <= end_size);
 
-
-    printf("Number of llamas: %i\n", llama);
 
 
 
