@@ -38,7 +38,7 @@ bool prime(int number)
     {
         return true;
     }
-    else
+    else if (number > 2)
     {
         for (int i = 1; i <= number; i++)
         {
