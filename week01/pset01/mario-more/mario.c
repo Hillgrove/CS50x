@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 int get_height(void);
+void print_row(int height, int row);
 
 // runs main function
 int main(void)
 {
     int height = get_height();
-
-
+    print_row(3, 1);
 }
 
 // Prompts for pyramid height
@@ -23,7 +23,23 @@ int get_height(void)
     return height;
 }
 
+void print_row(int height, int row)
+{
+    const string BLOCK = "#";
+    const string SPACE = " ";
+    int num_blank = height - row;
 
+    for(int i = 1; i <= num_blank; i++)
+    {
+        printf("%s", SPACE);
+    }
+
+    for(int i = 1; i <= row; i++)
+    {
+        printf("%s", BLOCK);
+    }
+
+}
 // TODO: print spaces before block
 // TODO: print blocks
 // TODO: print space
