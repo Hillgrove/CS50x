@@ -44,14 +44,14 @@ int num_years (start, end)
     int population, dead, born;
     int years = 0;
 
-    do
+    while (population < end)
     {
         dead = start / 4;
         born = start / 3;
         population = start + dead - born;
         years++;
     }
-    while (population < end);
+
     printf("Years: %i", years);
     return years;
 }
