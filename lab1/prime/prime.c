@@ -38,16 +38,17 @@ bool prime(int number)
     {
         return true;
     }
-    else if (number > 2)
+    else
     {
         for (int i = 1; i <= number; i++)
         {
-            // printf("check if prime: %i\n", number);
-            if (number % i == 1)
+            printf("check if prime: %i\n", number);
+            if (number % i == 0)
             {
-                return true;
+               printf("number: %i is not a prime\n", number);
+               return false;
             }
         }
-        return false;
+        return true;
     }
 }
