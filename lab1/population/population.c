@@ -10,7 +10,7 @@ int main(void)
     }
     while (llama < 9);
 
-    printf("Number of llamas: %i\n" llama);
+    printf("Number of llamas: %i\n", llama);
 
     // TODO: Prompt for start size
 
