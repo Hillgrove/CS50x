@@ -3,7 +3,9 @@
 
 int main(void)
 {
-    int heigh = get_int("Height: ");
-
+    const block = "#"
     
+    int height = get_int("Height: ");
+
+
 }
