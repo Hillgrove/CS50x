@@ -30,9 +30,9 @@ int main(void)
 
 bool prime(int number)
 {
-    for (int i = 1, i <= number, i++)
+    for (int i = 1; i <= number; i++)
     {
         printf("%i", i);
+        return false;
     }
-
 }
