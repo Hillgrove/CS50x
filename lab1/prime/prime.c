@@ -41,7 +41,7 @@ bool prime(int number)
     else
     {
         int count = 0;
-        for (int i = 2; i <= number / 2; i++)
+        for (int i = 2; i <= number; i++)
         {
             if (number % i == 0)
             {
