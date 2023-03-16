@@ -7,14 +7,15 @@ int num_years (int start, int end);
 
 int main(void)
 {
+    int start = get_start();
+    int end = get_end(start);
 
 
-
-        // TODO: Calculate number of years until we reach threshold
 
     // TODO: Print number of years
 }
 
+// TODO: Prompt for start size
 int get_start(void)
 {
     int start_size;
@@ -27,6 +28,7 @@ int get_start(void)
     return start_size;
 }
 
+// TODO: Prompt for end size
 int get_end(int start_size)
 {
     int end_size;
@@ -39,7 +41,7 @@ int get_end(int start_size)
     return end_size;
 }
 
-int num_years (start, end)
+int num_years (start, end) // TODO: Calculate number of years until we reach threshold
 {
     return 0;
 }
