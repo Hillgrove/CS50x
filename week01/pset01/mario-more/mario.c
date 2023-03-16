@@ -3,7 +3,7 @@
 
 int get_height(void);
 
-
+// runs main function
 int main(void)
 {
     int height = get_height();
@@ -11,6 +11,7 @@ int main(void)
 
 }
 
+// Prompts for pyramid height
 int get_height(void)
 {
     int height;
@@ -21,3 +22,9 @@ int get_height(void)
     while(1 > height || height > 8);
     return height;
 }
+
+
+// TODO: print spaces before block
+// TODO: print blocks
+// TODO: print space
+// TODO: print blocks
