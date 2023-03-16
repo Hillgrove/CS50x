@@ -23,24 +23,31 @@ int main(void)
     {
         if (prime(i))
         {
-            printf("%i\n", i);
+            printf("    %i\n", i);
         }
     }
 }
 
 bool prime(int number)
 {
-    if (number == 1) || (number == 2);
+    if (number == 1)
     {
-        return true
+        return false;
     }
-    else;
+    else if (number == 2)
+    {
+        return true;
+    }
+    else
     {
         for (int i = 1; i <= number; i++)
         {
-            printf("%i\n", i);
+            // printf("check if prime: %i\n", number);
+            if (number % i == 1)
+            {
+                return true;
+            }
         }
-    }
-
     return false;
+    }
 }
