@@ -36,7 +36,7 @@ int get_end(void)
     }
     while (start_size > end_size);
 
-    return end_size
+    return end_size;
 }
 
 int num_years (start, end)
