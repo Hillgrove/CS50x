@@ -43,6 +43,7 @@ bool prime(int number)
         int count = 0;
         for (int i = 2; i <= number; i++)
         {
+            printf("number: %i\ni: %i\n", number, i);
             if (number % i == 0)
             {
                 count++;
