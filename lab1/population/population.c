@@ -44,7 +44,8 @@ int get_end(int start_size)
 // TODO: Calculate number of years until we reach threshold
 int num_years (start, end)
 {
-    int dead = 
+    int dead = start / 3;
+    int born = start / 4;
     return 0;
 }
 
