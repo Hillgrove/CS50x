@@ -6,9 +6,17 @@ int get_height(void);
 
 int main(void)
 {
-    const block = "#"
-    int height()
-    int height = get_int("Height: ");
+    int height = get_height();
 
 
+}
+
+int get_height(void)
+{
+    do
+    {
+        int height = get_int("Height: ");
+    }
+    while(1 <= height <= 8);
+    return height
 }
