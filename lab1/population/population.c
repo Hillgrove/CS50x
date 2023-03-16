@@ -3,7 +3,7 @@
 
 int get_start(void);
 int get_end(int start_size);
-int num_years (int start, int end);
+int num_years(int start, int end);
 
 int main(void)
 {
@@ -40,7 +40,7 @@ int get_end(int start_size)
 }
 
 // Calculate number of years until we reach threshold
-int num_years (start, end)
+int num_years(start, end)
 {
     int dead, born;
     int years = 0;
