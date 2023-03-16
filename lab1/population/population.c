@@ -15,14 +15,12 @@ int main(void)
     {
         end_size = get_int("End Size: ");
     }
-    while (start_size <= end_size);
+    while (start_size > end_size);
+
+    int num_years (start, end)
 
 
-
-
-    // TODO: Prompt for end size
-
-    // TODO: Calculate number of years until we reach threshold
+        // TODO: Calculate number of years until we reach threshold
 
     // TODO: Print number of years
 }
