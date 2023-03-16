@@ -6,9 +6,9 @@ int main(void)
     int llama;
     do
     {
-        int llama = get_int("");
+        llama = get_int("");
     }
-    while (llama < 9)
+    while (llama < 9);
 
     printf("Number of llamas: %i\n" llama);
 
