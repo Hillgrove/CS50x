@@ -33,7 +33,7 @@ int i;
 {
     for i = 1; i <= number; i++)
     {
-        printf("%i", i)
+        printf("%i", i);
     }
 
 }
