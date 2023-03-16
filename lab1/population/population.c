@@ -44,13 +44,12 @@ int num_years (start, end)
 {
     int dead, born;
     int years = 0;
-    int population = start;
 
-    while (population < end)
+    while (start < end)
     {
         dead = start / 4;
         born = start / 3;
-        population += born - dead;
+        start += born - dead;
         years++;
     }
     return years;
