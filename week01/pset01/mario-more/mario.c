@@ -13,11 +13,11 @@ int main(void)
 
 int get_height(void)
 {
-    int height = 0;
+    int height;
     do
     {
         height = get_int("Height: ");
     }
-    while(1 <= height && height <= 8);
+    while(1 > height || height > 8);
     return height;
 }
