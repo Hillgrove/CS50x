@@ -10,7 +10,7 @@ int main(void)
     int start = get_start();
     int end = get_end(start);
     int years = num_years(start, end);
-    void print(years);
+    printf("Years: %i\n", years);
 }
 
 // Prompts for start size
@@ -55,5 +55,3 @@ int num_years (start, end)
     }
     return years;
 }
-
-// TODO: Print number of years
