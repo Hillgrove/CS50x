@@ -30,9 +30,17 @@ int main(void)
 
 bool prime(int number)
 {
-    for (int i = 1; i <= number; i++)
+    if (number == 1) || (number == 2);
     {
-        printf("%i\n", i);
+        return true
     }
+    else;
+    {
+        for (int i = 1; i <= number; i++)
+        {
+            printf("%i\n", i);
+        }
+    }
+
     return false;
 }
