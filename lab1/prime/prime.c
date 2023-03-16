@@ -39,10 +39,11 @@ bool prime(int number)
         return true;
     }
     else
-    int count = 0;
     {
+
         // receives 1 number.. check if that number is a prime and return true if it is.
         // if number modulo running integer (higher than 1) equals 0
+        int count = 0;
         for (int i = 2; i = number; i++)
         {
             if number % i == 0;
