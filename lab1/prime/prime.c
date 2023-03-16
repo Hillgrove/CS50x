@@ -23,7 +23,7 @@ int main(void)
     {
         if (prime(i))
         {
-            printf("    %i\n", i);
+            printf("%i\n", i);
         }
     }
 }
@@ -44,15 +44,20 @@ bool prime(int number)
         // receives 1 number.. check if that number is a prime and return true if it is.
         // if number modulo running integer (higher than 1) equals 0
         int count = 0;
-        for (int i = 2; i = number; i++)
+        for (int i = 2; i <= number; i++)
         {
-            if number % i == 0;
+            if (number % i == 0)
             {
-                count++
+                count++;
             }
         }
-        printf("count for number: %i is %i", number, count);
-
-        return false;
+        if (count == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
