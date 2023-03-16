@@ -54,7 +54,7 @@ int num_years (start, end)
         years++;
     }
     while start population < end;
-
+    return years;
 }
 
 
