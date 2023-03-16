@@ -18,6 +18,6 @@ int get_height(void)
     {
         height = get_int("Height: ");
     }
-    while(1 <= height <= 8);
+    while(1 <= height && height <= 8);
     return height;
 }
