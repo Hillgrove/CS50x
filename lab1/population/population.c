@@ -3,12 +3,15 @@
 
 int main(void)
 {
-    int start_size;
-    do
+    int start(void)
     {
-        start_size = get_int("Start size: ");
+        int start_size;
+        do
+        {
+            start_size = get_int("Start size: ");
+        }
+        while (start_size < 9);
     }
-    while (start_size < 9);
 
     int end_size;
     do
