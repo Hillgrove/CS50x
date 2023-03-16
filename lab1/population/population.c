@@ -3,16 +3,18 @@
 
 int main(void)
 {
-    int llama;
+    int start_size;
     do
     {
-        llama = get_int("");
+        llama = get_int("Input number of llamas: ");
     }
     while (llama < 9);
 
+
+
     printf("Number of llamas: %i\n", llama);
 
-    // TODO: Prompt for start size
+
 
     // TODO: Prompt for end size
 
