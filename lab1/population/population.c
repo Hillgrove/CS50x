@@ -10,6 +10,7 @@ int main(void)
     int start = get_start();
     int end = get_end(start);
     int years = num_years(start, end);
+    void print(years);
 }
 
 // Prompts for start size
@@ -49,17 +50,10 @@ int num_years (start, end)
     {
         dead = start / 4;
         born = start / 3;
-        population = start + dead - born;
-        printf("Start: %i\n", start);
-        printf("Years: %i\n", years);
-        printf("Population: %i\n", population);
-        printf("\n");
+        population += born - dead;
         years++;
     }
-
-    // printf("Years: %i", years);
     return years;
 }
-
 
 // TODO: Print number of years
