@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int get_start(void);
-int get_end(void);
+int get_end(int start_size);
 int num_years (int start, int end);
 
 int main(void)
@@ -27,7 +27,7 @@ int get_start(void)
     return start_size;
 }
 
-int get_end(void)
+int get_end(int start_size)
 {
     int end_size;
     do
