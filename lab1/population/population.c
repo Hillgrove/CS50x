@@ -45,6 +45,7 @@ int get_end(int start_size)
 int num_years (start, end)
 {
     int population, years, dead, born;
+    int years = 0
 
     do
     {
@@ -53,7 +54,7 @@ int num_years (start, end)
         population = start + dead - born;
         years++;
     }
-    while start population < end;
+    while (population < end);
     return years;
 }
 
