@@ -50,10 +50,14 @@ int num_years (start, end)
         dead = start / 4;
         born = start / 3;
         population = start + dead - born;
+        printf("Start: %i\n", start);
+        printf("Years: %i\n", years);
+        printf("Population: %i\n", population);
+        printf("\n");
         years++;
     }
 
-    printf("Years: %i", years);
+    // printf("Years: %i", years);
     return years;
 }
 
