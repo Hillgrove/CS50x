@@ -44,9 +44,17 @@ int get_end(int start_size)
 // TODO: Calculate number of years until we reach threshold
 int num_years (start, end)
 {
-    int dead = start / 3;
-    int born = start / 4;
-    return 0;
+    int population, years, dead, born;
+
+    do
+    {
+        dead = start / 4;
+        born = start / 3;
+        population = start + dead - born;
+        years++;
+    }
+    while start population < end;
+
 }
 
 
