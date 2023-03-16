@@ -9,10 +9,8 @@ int main(void)
 {
     int start = get_start();
     int end = get_end(start);
-
-
-
-
+    int years = num_years(start, end);
+    printf("years: %i\n", years);
 }
 
 // Prompts for start size
@@ -44,8 +42,8 @@ int get_end(int start_size)
 // TODO: Calculate number of years until we reach threshold
 int num_years (start, end)
 {
-    int population, years, dead, born;
-    int years = 0
+    int population, dead, born;
+    int years = 0;
 
     do
     {
