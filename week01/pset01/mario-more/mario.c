@@ -29,18 +29,25 @@ void print_row(int height, int row)
     const string SPACE = " ";
     int num_blank = height - row;
 
+    // Prints spaces before block
     for(int i = 1; i <= num_blank; i++)
     {
         printf("%s", SPACE);
     }
 
+    // Print left blocks
     for(int i = 1; i <= row; i++)
     {
-        printf("%s", BLOCK);
+        printf("%s  ", BLOCK);
     }
 
+    for(int i = 1; i <= row; i++)
+    {
+        printf("%s\n", BLOCK);
+    }
 }
-// TODO: print spaces before block
+
+
 // TODO: print blocks
 // TODO: print space
 // TODO: print blocks
