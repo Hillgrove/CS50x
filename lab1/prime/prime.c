@@ -40,15 +40,7 @@ bool prime(int number)
     }
     else
     {
-        for (int i = 1; i <= number; i++)
-        {
-            printf("check if prime: %i\n", number);
-            if (number % i == 0)
-            {
-               printf("number: %i is not a prime\n", number);
-               return false;
-            }
-        }
-        return true;
+        // receives 
+        return false;
     }
 }
