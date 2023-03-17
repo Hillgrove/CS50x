@@ -54,10 +54,11 @@ int calculate_quarters(int cents)
     return quarters;
 }
 
+// Calculate the number of dimes to give the customer
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    int dimes = cents / 10;
+    return dimes;
 }
 
 int calculate_nickels(int cents)
