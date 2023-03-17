@@ -31,7 +31,7 @@ long get_cardnr(void)
 {
         long cardnr = get_long("Number: ");
         return cardnr;
-        test();
+        void test();
 }
 
 string check_number(long cardnumber)
