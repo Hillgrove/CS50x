@@ -18,6 +18,7 @@ Luhn’s Algorithm
 long get_cardnumber(void);
 string check_number(long cardnumber);
 int get_length(long cardnumber);
+bool test_checksum(long cardnumber);
 
 void test();
 
@@ -68,6 +69,10 @@ int get_length(long cardnumber)
 }
 
 
+bool test_checksum(cardnumber)
+{
+
+}
 
 
 void test()
