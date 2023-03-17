@@ -76,7 +76,9 @@ void test()
     int digit = 0;
 
     printf("Card 1: %li\n", card);
-    card = card % 10;
-    printf("Card 2: %li\n", card);
+    int test1 = card % 10;
+    long test2 = card / 10;
+    printf("Card %: %i\n", test1);
+    printf("Card /: %li\n", test2);
 
 }
