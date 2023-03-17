@@ -33,6 +33,7 @@ long get_cardnr(void)
 
 string check_number(long cardnumber)
 {
+    bool is_valid(long cardnumber)
     // TODO: Check if valid
     // TODO: Check if AMEX
     // TODO: Check if MasterCard
@@ -40,3 +41,7 @@ string check_number(long cardnumber)
     return "not made yet";
 }
 
+bool is_valid(long cardnumber)
+{
+    
+}
