@@ -17,13 +17,14 @@ Luhn’s Algorithm
 
 long get_cardnr(void);
 string check_number(long cardnumber);
-bool huh = test();
+void test();
 
 int main(void)
 {
     // long cardnumber = get_cardnr();
     // string result = check_number(cardnumber);
     // printf("%s\n", result);
+    test();
 
 }
 
@@ -48,8 +49,8 @@ bool is_valid(long cardnumber)
     return true;
 }
 
-bool test()
+void test()
 {
-    printf("test\n");
-    return false;
+    printf("TESTING\n");
+    
 }
