@@ -77,7 +77,7 @@ void test()
     for (int i = 0; i <= length; i+=2)
     {
         card = card % 10;
-        printf("Digit %i: %i\n", i, card);
+        printf("Digit %i: %li\n", i, card);
     }
 
 }
