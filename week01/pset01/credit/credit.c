@@ -17,7 +17,7 @@ Luhn’s Algorithm
 
 long get_cardnr(void);
 string check_number(long cardnumber);
-bool test();
+bool huh = test();
 
 int main(void)
 {
@@ -31,7 +31,6 @@ long get_cardnr(void)
 {
         long cardnr = get_long("Number: ");
         return cardnr;
-        bool huh = test();
 }
 
 string check_number(long cardnumber)
