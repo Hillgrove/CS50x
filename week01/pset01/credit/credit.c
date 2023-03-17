@@ -24,10 +24,11 @@ int main(void)
 
 long get_cardnr(void)
 {
+    long cardnr = 0;
     do
     {
         cardnr = get_long("Number: ");
         return cardnr;
     }
-    while (cardnr > 0)
+    while (cardnr > 0);
 }
