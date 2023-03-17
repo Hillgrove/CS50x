@@ -59,12 +59,16 @@ bool valid_checksum(long cardnumber)
     int digit;
     int length = get_length(cardnumber); // 3 78 28 22 46 31 00 05
 
-    for (int i = 0; i <= length; i+=1)
+    for (int i = 1; i <= length; i+=1)
     {
-        if i % 2 == 
-        digit = cardnumber % 10;
         cardnumber = cardnumber / 10;
-        printf("Digit %i: %i\n", i, digit);
+        if (i % 2 == 0)
+        {
+            cardnumber = cardnumber / 10;
+            printf("Digit %i: %i\n", i, digit);
+        }
+
+
     }
     return false;
 }
