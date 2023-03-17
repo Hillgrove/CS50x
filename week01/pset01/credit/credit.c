@@ -37,6 +37,7 @@ long get_cardnumber(void)
         return cardnumber;
 }
 
+
 string check_number(long cardnumber)
 {
     bool is_valid(long cardnumber);
@@ -47,10 +48,12 @@ string check_number(long cardnumber)
     return "not made yet";
 }
 
+
 bool is_valid(long cardnumber)
 {
     return true;
 }
+
 
 int get_length(long cardnumber)
 {
@@ -64,7 +67,12 @@ int get_length(long cardnumber)
     return length;
 }
 
+
 void test()
 {
-    printf("TESTING\n");
+    long card = 378282246310005;
+    printf("*** TESTING ***\n");
+    int digit = card % 10;
+    printf("Digit 1: %i\n", digit);
+
 }
