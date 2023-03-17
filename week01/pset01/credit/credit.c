@@ -18,16 +18,17 @@ Luhn’s Algorithm
 long get_cardnumber(void);
 string check_number(long cardnumber);
 int get_length(long cardnumber);
-bool test_checksum(long cardnumber);
+bool valid_checksum(long cardnumber);
 
 void test();
 
 int main(void)
 {
     // long cardnumber = get_cardnr();
-    // string result = check_cardnumber(cardnumber);
-    // printf("%s\n", result);
-    test();
+    long cardnumber = 378282246310005;
+    string result = check_cardnumber(cardnumber);
+    printf("%s\n", result);
+    // test();
 }
 
 
@@ -42,11 +43,13 @@ long get_cardnumber(void)
 // Check if number is valid and if so which supplier it belongs to
 string check_cardnumber(long cardnumber)
 {
-    // TODO: Check checksum
+    if (valid_checksum(cardnumber))
+    {
     // TODO: Check if AMEX
     // TODO: Check if MasterCard
     // TODO: Check if Visa
-    return "not made yet";
+    }
+    return "INVALID";
 }
 
 
@@ -65,9 +68,10 @@ int get_length(long cardnumber)
 
 
 // Calculates and checks if checksum is correct
-bool test_checksum(cardnumber)
+bool valid_checksum(long cardnumber)
 {
-    return true;
+
+    return false;
 }
 
 
