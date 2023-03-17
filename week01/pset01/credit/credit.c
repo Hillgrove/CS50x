@@ -52,5 +52,5 @@ bool is_valid(long cardnumber)
 void test()
 {
     printf("TESTING\n");
-    
+    long number = 
 }
