@@ -53,11 +53,15 @@ void test()
 {
     printf("TESTING\n");
     long number = 378282246310005;
-    int length = 0
+    int length = 0;
     do
     {
+        printf("Number before integer div: %l\n", number);
         number = number / 10;
+        printf("Number after integer div: %l\n", number);
         length++;
+        printf("Length of number: %i\n", length);
     }
-    while (number > 0)
+    while (number > 0);
+    printf("Final length of number: %i\n", length);
 }
