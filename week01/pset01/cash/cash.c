@@ -61,14 +61,16 @@ int calculate_dimes(int cents)
     return dimes;
 }
 
+// Calculate the number of nickels to give the customer
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    int nickels = cents / 5;
+    return nickels;
 }
 
+// Calculate the number of pennies to give the customer
 int calculate_pennies(int cents)
 {
-    // TODO
-    return 0;
+    int pennies = cents / 5;
+    return pennies;
 }
