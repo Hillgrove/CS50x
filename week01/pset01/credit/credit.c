@@ -42,7 +42,7 @@ long get_cardnumber(void)
 string check_number(long cardnumber)
 {
     bool is_valid(long cardnumber);
-    // TODO: Check if valid
+    // TODO: Check checksum
     // TODO: Check if AMEX
     // TODO: Check if MasterCard
     // TODO: Check if Visa
@@ -71,7 +71,7 @@ int get_length(long cardnumber)
 
 bool test_checksum(cardnumber)
 {
-
+    
 }
 
 
