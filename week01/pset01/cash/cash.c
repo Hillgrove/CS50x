@@ -50,8 +50,8 @@ int get_cents(void)
 // Calculate the number of quarters to give the customer
 int calculate_quarters(int cents)
 {
-    int cents_left = cents / 25;
-    return cents_left;
+    int quarters = cents / 25;
+    return quarters;
 }
 
 int calculate_dimes(int cents)
