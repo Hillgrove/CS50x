@@ -15,7 +15,7 @@ Luhn’s Algorithm
 3. If the total’s last digit is 0 (or, put more formally, if the total modulo 10 is congruent to 0), the number is valid!
 */
 
-long get_cardnr(void);
+long get_cardnumber(void);
 string check_number(long cardnumber);
 int get_length(long cardnumber);
 
@@ -30,11 +30,11 @@ int main(void)
 
 }
 
-long get_cardnr(void)
+long get_cardnumber(void)
 {
-        long cardnr = get_long("Number: ");
+        long cardnumber = get_long("Number: ");
         int length = get_length(cardnumber);
-        return cardnr;
+        return cardnumber;
 }
 
 string check_number(long cardnumber)
@@ -52,7 +52,7 @@ bool is_valid(long cardnumber)
     return true;
 }
 
-int get_length(cardnumber)
+int get_length(long cardnumber)
 {
     int length = 0;
     do
@@ -67,16 +67,4 @@ int get_length(cardnumber)
 void test()
 {
     printf("TESTING\n");
-    long number = 378282246310005;
-    int length = 0;
-    do
-    {
-        printf("Number before integer div: %lu\n", number);
-        number = number / 10;
-        printf("Number after integer div: %lu\n", number);
-        length++;
-        printf("Length of number: %i\n", length);
-    }
-    while (number > 0);
-    printf("Final length of number: %i\n", length);
 }
