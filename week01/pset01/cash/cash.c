@@ -50,7 +50,8 @@ int get_cents(void)
 // Calculate the number of quarters to give the customer
 int calculate_quarters(int cents)
 {
-    int cents_left = cents % 25;
+    int cents_left = cents / 25;
+    printf("cents left: %i", cents_left);
     return cents_left;
 }
 
