@@ -25,7 +25,7 @@ void test();
 int main(void)
 {
     // long cardnumber = get_cardnr();
-    // string result = check_number(cardnumber);
+    // string result = check_cardnumber(cardnumber);
     // printf("%s\n", result);
     test();
 }
@@ -41,7 +41,7 @@ long get_cardnumber(void)
 
 
 // Check if number is valid and if so which supplier it belongs to
-string check_number(long cardnumber)
+string check_cardnumber(long cardnumber)
 {
     bool is_valid(long cardnumber);
     // TODO: Check checksum
