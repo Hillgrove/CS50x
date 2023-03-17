@@ -17,22 +17,21 @@ Luhn’s Algorithm
 
 long get_cardnr(void);
 string check_number(long cardnumber);
+void test();
 
 int main(void)
 {
     // long cardnumber = get_cardnr();
     // string result = check_number(cardnumber);
-    printf("%s\n", result);
-    int test1 = 999 % 1000;
-    int test2 = 999 / 1000;
-    printf("modulo remainder: %i\n", test1);
-    printf("integer division remainder: %i\n", test2);
+    // printf("%s\n", result);
+
 }
 
 long get_cardnr(void)
 {
         long cardnr = get_long("Number: ");
         return cardnr;
+        test();
 }
 
 string check_number(long cardnumber)
@@ -48,4 +47,9 @@ string check_number(long cardnumber)
 bool is_valid(long cardnumber)
 {
     return true;
+}
+
+void test()
+{
+    printf("test\n");
 }
