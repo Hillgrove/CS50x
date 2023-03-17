@@ -15,18 +15,26 @@ int main(void)
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
     cents = cents - quarters * 25;
+    printf("# Quarters: %i\n", quarters);
+    printf("Cents left: %i\n", cents);
 
     // Calculate the number of dimes to give the customer
     int dimes = calculate_dimes(cents);
     cents = cents - dimes * 10;
+    printf("# Dimes: %i\n", dimes);
+    printf("Cents left: %i\n", cents);
 
     // Calculate the number of nickels to give the customer
     int nickels = calculate_nickels(cents);
     cents = cents - nickels * 5;
+    printf("# Nickles: %i\n", nickels);
+    printf("Cents left: %i\n", cents);
 
     // Calculate the number of pennies to give the customer
     int pennies = calculate_pennies(cents);
     cents = cents - pennies * 1;
+    printf("# Pennies: %i\n", pennies);
+    printf("Cents left: %i\n", cents);
 
     // Sum coins
     int coins = quarters + dimes + nickels + pennies;
@@ -71,6 +79,6 @@ int calculate_nickels(int cents)
 // Calculate the number of pennies to give the customer
 int calculate_pennies(int cents)
 {
-    int pennies = cents / 5;
+    int pennies = cents / 1;
     return pennies;
 }
