@@ -43,18 +43,11 @@ long get_cardnumber(void)
 // Check if number is valid and if so which supplier it belongs to
 string check_cardnumber(long cardnumber)
 {
-    bool is_valid(long cardnumber);
     // TODO: Check checksum
     // TODO: Check if AMEX
     // TODO: Check if MasterCard
     // TODO: Check if Visa
     return "not made yet";
-}
-
-
-bool is_valid(long cardnumber)
-{
-    return true;
 }
 
 
