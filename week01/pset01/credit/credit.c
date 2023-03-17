@@ -35,7 +35,6 @@ int main(void)
 long get_cardnumber(void)
 {
         long cardnumber = get_long("Number: ");
-        int length = get_length(cardnumber);
         return cardnumber;
 }
 
@@ -68,7 +67,7 @@ int get_length(long cardnumber)
 // Calculates and checks if checksum is correct
 bool test_checksum(cardnumber)
 {
-
+    return true;
 }
 
 
