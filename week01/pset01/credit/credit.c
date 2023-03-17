@@ -23,6 +23,10 @@ int main(void)
     long cardnumber = get_cardnr();
     string result = check_number(cardnumber);
     printf("%s\n", result);
+    int test1 = 999 % 1000;
+    int test2 = 999 / 1000;
+    printf("modulo remainder: %i", test1);
+    printf("integer division remainder: %i", test2);
 }
 
 long get_cardnr(void)
@@ -33,7 +37,7 @@ long get_cardnr(void)
 
 string check_number(long cardnumber)
 {
-    bool is_valid(long cardnumber)
+    bool is_valid(long cardnumber);
     // TODO: Check if valid
     // TODO: Check if AMEX
     // TODO: Check if MasterCard
@@ -43,5 +47,5 @@ string check_number(long cardnumber)
 
 bool is_valid(long cardnumber)
 {
-    
+
 }
