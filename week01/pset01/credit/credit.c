@@ -28,9 +28,10 @@ int main(void)
     // string result = check_number(cardnumber);
     // printf("%s\n", result);
     test();
-
 }
 
+
+// Ask user for cardnumber
 long get_cardnumber(void)
 {
         long cardnumber = get_long("Number: ");
@@ -39,6 +40,7 @@ long get_cardnumber(void)
 }
 
 
+// Check if number is valid and if so which supplier it belongs to
 string check_number(long cardnumber)
 {
     bool is_valid(long cardnumber);
@@ -56,6 +58,7 @@ bool is_valid(long cardnumber)
 }
 
 
+// Returns the length of the cardnumber
 int get_length(long cardnumber)
 {
     int length = 0;
@@ -69,9 +72,10 @@ int get_length(long cardnumber)
 }
 
 
+// Calculates and checks if checksum is correct
 bool test_checksum(cardnumber)
 {
-    
+
 }
 
 
