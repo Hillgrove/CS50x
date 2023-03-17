@@ -73,11 +73,13 @@ void test()
     long card = 378282246310005;
     printf("*** TESTING ***\n");
     int length = 15;
+    int digit = 0;
 
     for (int i = 0; i <= length; i+=2)
     {
-        card = card % 10;
-        printf("Digit %i: %li\n", i, card);
+        digit = card % 10;
+        card = card - digit;
+        printf("Digit %i: %i\n", i, digit);
     }
 
 }
