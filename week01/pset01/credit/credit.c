@@ -22,6 +22,7 @@ int main(void)
 {
     long cardnumber = get_cardnr();
     string result = check_number(cardnumber);
+    printf("%s\n", result);
 }
 
 long get_cardnr(void)
@@ -32,5 +33,10 @@ long get_cardnr(void)
 
 string check_number(long cardnumber)
 {
+    // TODO: Check if valid
+    // TODO: Check if AMEX
+    // TODO: Check if MasterCard
+    // TODO: Check if Visa
     return "not made yet";
 }
+
