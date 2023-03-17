@@ -52,5 +52,12 @@ bool is_valid(long cardnumber)
 void test()
 {
     printf("TESTING\n");
-    long number = 
+    long number = 378282246310005;
+    int length = 0
+    do
+    {
+        number = number / 10;
+        length++;
+    }
+    while (number > 0)
 }
