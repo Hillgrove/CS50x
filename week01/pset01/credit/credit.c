@@ -68,6 +68,8 @@ int get_length(long cardnumber)
 }
 
 
+
+
 void test()
 {
     long card = 378282246310005;
@@ -75,10 +77,10 @@ void test()
     int length = 15;
     int digit = 0;
 
-    printf("Card 1: %li\n", card);
+    printf("Card: %li\n", card);
     int test1 = card % 10;
     long test2 = card / 10;
-    printf("Card %: %i\n", test1);
+    printf("Card %%: %i\n", test1);
     printf("Card /: %li\n", test2);
 
 }
