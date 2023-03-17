@@ -56,9 +56,9 @@ void test()
     int length = 0;
     do
     {
-        printf("Number before integer div: %l \n", number);
+        printf("Number before integer div: %lu\n", number);
         number = number / 10;
-        printf("Number after integer div: %l \n", number);
+        printf("Number after integer div: %lu\n", number);
         length++;
         printf("Length of number: %i\n", length);
     }
