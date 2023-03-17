@@ -20,8 +20,8 @@ string check_number(long cardnumber);
 
 int main(void)
 {
-    long cardnumber = get_cardnr();
-    string result = check_number(cardnumber);
+    // long cardnumber = get_cardnr();
+    // string result = check_number(cardnumber);
     printf("%s\n", result);
     int test1 = 999 % 1000;
     int test2 = 999 / 1000;
