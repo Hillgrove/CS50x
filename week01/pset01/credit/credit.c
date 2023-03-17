@@ -59,7 +59,7 @@ bool valid_checksum(long cardnumber)
     int digit;
     int length = get_length(cardnumber);
 
-    for (int i = 1; i <= length; i++)
+    for (int i = 2; i <= length; i+=2)
     {
         digit = cardnumber % 10;
         cardnumber = cardnumber / 10;
