@@ -16,19 +16,21 @@ Luhn’s Algorithm
 */
 
 long get_cardnr(void);
+string check_number(cardnumber);
 
 int main(void)
 {
     long cardnr = get_cardnr();
+    string result = check_number(cardnr);
 }
 
 long get_cardnr(void)
 {
-    long cardnr = 0;
-    do
-    {
-        cardnr = get_long("Number: ");
+        long cardnr = get_long("Number: ");
         return cardnr;
-    }
-    while (cardnr > 0);
+}
+
+string check_number(cardnumber)
+{
+    return "not made yet";
 }
