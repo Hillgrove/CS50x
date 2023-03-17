@@ -53,6 +53,20 @@ string check_cardnumber(long cardnumber)
 }
 
 
+// Calculates and checks if checksum is correct
+bool valid_checksum(long cardnumber)
+{
+    int digit;
+    do
+    {
+        digit = cardnumber % 10;
+        printf("Digit: %i", digit);
+    }
+    while (cardnumber > 0;
+
+}
+
+
 // Returns the length of the cardnumber
 int get_length(long cardnumber)
 {
@@ -64,14 +78,6 @@ int get_length(long cardnumber)
     }
     while (cardnumber > 0);
     return length;
-}
-
-
-// Calculates and checks if checksum is correct
-bool valid_checksum(long cardnumber)
-{
-
-    return false;
 }
 
 
