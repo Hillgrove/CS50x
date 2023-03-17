@@ -75,10 +75,11 @@ void test()
     int length = 15;
     int digit = 0;
 
-    for (int i = 0; i <= length; i+=2)
+    for (int i = 0; i <= length; i++)
     {
         digit = card % 10;
         card = card - digit;
+        printf("Cardnumber left: %li\n", card);
         printf("Digit %i: %i\n", i, digit);
     }
 
