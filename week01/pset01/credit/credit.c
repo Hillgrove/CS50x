@@ -49,7 +49,7 @@ string check_cardnumber(long cardnumber)
     // TODO: Check if MasterCard
     // TODO: Check if Visa
     }
-    return "INVALID";
+    return "VALID";
 }
 
 
