@@ -60,9 +60,8 @@ bool valid_checksum(long cardnumber)
     int length = get_length(cardnumber);
     printf("Card length = %i\n", length); // delete when code done
 
-    for (int i = 0; i <= length; i++)
+    for (int i = 1; i <= length; i++)
     {
-        printf("Cardnumber %i: %li\n", i, cardnumber);
         if (i % 2 == 0)
         {
             digit = cardnumber % 10;
