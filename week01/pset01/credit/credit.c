@@ -45,13 +45,13 @@ string check_cardnumber(long cardnumber)
 {
     if (valid_checksum(cardnumber))
     {
-    return "VALID";
-    // TODO: Check if AMEX
-    // TODO: Check if MasterCard
-    // TODO: Check if Visa
+        return "VALID";
+        // TODO: Check if AMEX
+        // TODO: Check if MasterCard
+        // TODO: Check if Visa
     }
-
-    if (valid_checksum(cardnumber) == false)
+    
+    else
     {
         return "INVALID";
     }
