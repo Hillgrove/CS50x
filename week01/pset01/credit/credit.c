@@ -79,6 +79,7 @@ bool valid_checksum(long cardnumber)
         }
         cardnumber = cardnumber / 10;
     }
+    printf("Luhn Sum = %i\n", luhnSum);
     return false;
 }
 
