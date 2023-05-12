@@ -57,7 +57,7 @@ string check_cardnumber(long cardnumber)
 bool valid_checksum(long cardnumber)
 {
     int digit;
-    int luhnSum;
+    int luhnSum = 0;
     int length = get_length(cardnumber);
     printf("Card length = %i\n", length); // delete when code done
 
@@ -66,9 +66,16 @@ bool valid_checksum(long cardnumber)
         if (i % 2 == 0)
         {
             digit = cardnumber % 10;
-            luhnsum += digit * 2;
-            printf("Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
-            printf("Tallied Luhn Sum: %i\n", luhnSum);
+            luhnSum += digit * 2;
+            printf("+Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
+        }
+
+        if (i % 2 != 0)
+        {
+            digit = cardnumber % 10;
+            luhnSum += digit;
+            printf("-Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
+            // printf("Tallied Luhn Sum: %i\n", luhnSum);
         }
         cardnumber = cardnumber / 10;
     }
