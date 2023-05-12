@@ -51,7 +51,7 @@ string check_cardnumber(long cardnumber)
     }
     return "VALID";
 
-    else
+    elseif
     {
         return "INVALID";
     }
@@ -77,8 +77,6 @@ int calculate_checksum(long cardnumber)
                 checksum += digit % 10;
                 digit = digit / n;
             }
-
-
 
             checksum += digit * 2;
             // printf("+Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
