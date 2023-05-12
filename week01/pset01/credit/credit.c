@@ -74,7 +74,7 @@ int calculate_checksum(long cardnumber)
 
             while (digit > 0)
             {
-                
+                checksum += digit % 10
             }
 
 
