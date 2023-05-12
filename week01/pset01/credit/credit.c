@@ -57,6 +57,7 @@ string check_cardnumber(long cardnumber)
 bool valid_checksum(long cardnumber)
 {
     int digit;
+    int 
     int length = get_length(cardnumber);
     printf("Card length = %i\n", length); // delete when code done
 
@@ -65,6 +66,7 @@ bool valid_checksum(long cardnumber)
         if (i % 2 == 0)
         {
             digit = cardnumber % 10;
+
             printf("Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
         }
         cardnumber = cardnumber / 10;
