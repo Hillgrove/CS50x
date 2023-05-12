@@ -50,6 +50,11 @@ string check_cardnumber(long cardnumber)
     // TODO: Check if Visa
     }
     return "VALID";
+
+    else
+    {
+        return "INVALID";
+    }
 }
 
 
