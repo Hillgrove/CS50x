@@ -53,8 +53,8 @@ string check_cardnumber(long cardnumber)
 }
 
 
-// Calculates and checks if checksum is correct
-bool valid_checksum(long cardnumber)
+// Calculates checksum
+int calculate_checksum(long cardnumber)
 {
     int digit;
     int luhnSum = 0;
@@ -78,9 +78,20 @@ bool valid_checksum(long cardnumber)
             // printf("Tallied Luhn Sum: %i\n", luhnSum);
         }
         cardnumber = cardnumber / 10;
+}
+
+// Checks if checksum is correct
+bool valid_checksum(int checksum)
+{
+    if (luhnSum / 10 = 0)
+    {
+        return false;
     }
-    printf("Luhn Sum = %i\n", luhnSum);
-    return false;
+
+    else
+    {
+        return true;
+    }
 }
 
 
