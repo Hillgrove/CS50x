@@ -71,6 +71,14 @@ int calculate_checksum(long cardnumber)
         if (i % 2 == 0)
         {
             digit = cardnumber % 10;
+
+            while (digit > 0)
+            {
+                
+            }
+
+
+
             checksum += digit * 2;
             // printf("+Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
         }
