@@ -25,7 +25,7 @@ void test();
 int main(void)
 {
     // long cardnumber = get_cardnr();
-    long cardnumber = 378282246310005;
+    long cardnumber = 378282246310006;
     string result = check_cardnumber(cardnumber);
     printf("%s\n", result);
     // test();
@@ -50,7 +50,7 @@ string check_cardnumber(long cardnumber)
         // TODO: Check if MasterCard
         // TODO: Check if Visa
     }
-    
+
     else
     {
         return "INVALID";
@@ -65,33 +65,38 @@ int calculate_checksum(long cardnumber)
     int checksum = 0;
     int length = get_length(cardnumber);
 
-
+    // loops through each digit of the cardnumber
     for (int i = 1; i <= length; i++)
     {
+        digit = cardnumber % 10;
+
+        // all even numbers
         if (i % 2 == 0)
         {
-            digit = cardnumber % 10;
+            int temp_sum = digit * 2;
 
-            while (digit > 0)
+            // do cross sum if sum higher than or equal to 10
+            if (temp_sum >= 10)
             {
-                checksum += digit % 10;
-                digit = digit / n;
+                checksum += (temp_sum % 10) + (temp_sum / 10);
             }
-
-            checksum += digit * 2;
-            // printf("+Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
+            else
+            {
+                checksum += temp_sum;
+            }
         }
 
+        // all uneven numbers
         if (i % 2 != 0)
         {
-            digit = cardnumber % 10;
             checksum += digit;
-            // printf("-Digit %i: %i\n", i, digit); // for testing of loop | 3 78 28 22 46 31 00 05   =>   0 0 3 4 2 2 7 0
         }
         cardnumber = cardnumber / 10;
     }
+    printf("Checksum is: %i\n", checksum);
     return checksum;
 }
+
 
 // Checks if checksum is correct
 bool valid_checksum(long cardnumber)
@@ -121,23 +126,4 @@ int get_length(long cardnumber)
     }
     while (cardnumber > 0);
     return length;
-}
-
-
-void test()
-{
-    long card = 378282246310005;
-    printf("\n*** TESTING ***\n\n");
-
-    int length = 15;
-    int digit = 0;
-
-    printf("Card: %li\n", card);
-    int test1 = card % 10;
-    long test2 = card / 10;
-    printf("Card %%: %i\n", test1);
-    printf("Card /: %li\n", test2);
-
-    printf("\n*** TESTING ENDED***\n\n");
-
 }
