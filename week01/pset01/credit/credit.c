@@ -14,6 +14,7 @@ Luhn’s Algorithm
 
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 
 long get_cardnumber(void);
@@ -168,7 +169,7 @@ int first_two(long cardnumber)
     int leading_digits = 0;
     int length = get_length(cardnumber);
 
-    leading_digits = cardnumber / 10 (length - 2)
+    leading_digits = cardnumber / pow(10,length - 2);
 
     printf("first two digits = %i\n", leading_digits);
     return leading_digits;
