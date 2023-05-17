@@ -17,19 +17,19 @@ Luhn’s Algorithm
 #include <math.h>
 
 
+int get_length(long cardnumber);
+int calculate_checksum(long cardnumber);
+int first_two_digits(long cardnumber);
 long get_cardnumber(void);
 string check_cardnumber(long cardnumber);
-int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
-int calculate_checksum(long cardnumber);
 bool is_amex(long cardnumber, int length);
-int first_two_digits(long cardnumber);
 
 
+// ask for cardnumber and check if it's valid and belongs to Mastercard, Visa or American Express
 int main(void)
 {
     long cardnumber = get_cardnumber();
-    // long cardnumber = 378282246310005;
     string result = check_cardnumber(cardnumber);
     printf("%s\n", result);
 }
@@ -68,7 +68,7 @@ string check_cardnumber(long cardnumber)
 }
 
 
-// Checks if checksum is correct
+// Check if checksum is correct
 bool valid_checksum(long cardnumber)
 {
     int checksum = calculate_checksum(cardnumber);
@@ -85,7 +85,7 @@ bool valid_checksum(long cardnumber)
 }
 
 
-// Calculates checksum
+// Calculate checksum
 int calculate_checksum(long cardnumber)
 {
     int digit;
@@ -124,7 +124,7 @@ int calculate_checksum(long cardnumber)
 }
 
 
-// Returns the length of the cardnumber
+// Return the length of the cardnumber
 int get_length(long cardnumber)
 {
     int length = 0;
@@ -138,10 +138,6 @@ int get_length(long cardnumber)
 }
 
 
-// TODO: Check if AMEX
-// American Express uses 15-digit numbers
-// All American Express numbers start with 34 or 37
-// Checks if valid cardnumber is AMEX
 bool is_amex(long cardnumber, int length)
 {
     int leading_digits = first_two_digits(cardnumber);
