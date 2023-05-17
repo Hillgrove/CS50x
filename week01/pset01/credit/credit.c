@@ -1,6 +1,3 @@
-#include <cs50.h>
-#include <stdio.h>
-
 /*
 American Express uses 15-digit numbers
 All American Express numbers start with 34 or 37
@@ -15,17 +12,19 @@ Luhn’s Algorithm
 3. If the total’s last digit is 0 (or, put more formally, if the total modulo 10 is congruent to 0), the number is valid!
 */
 
+#include <cs50.h>
+#include <stdio.h>
+
 long get_cardnumber(void);
 string check_cardnumber(long cardnumber);
 int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
 int calculate_checksum(long cardnumber);
 
-
 int main(void)
 {
     // long cardnumber = get_cardnr();
-    long cardnumber = 378282246310006;
+    long cardnumber = 378282246310005;
     string result = check_cardnumber(cardnumber);
     printf("%s\n", result);
     // test();
@@ -62,16 +61,15 @@ string check_cardnumber(long cardnumber)
 bool valid_checksum(long cardnumber)
 {
     int checksum = calculate_checksum(cardnumber);
-    printf("checksum mod 10 = %i\n", checksum % 10);
 
     if (checksum % 10 == 0)
     {
-        return false;
+        return true;
     }
 
     else
     {
-        return true;
+        return false;
     }
 }
 
