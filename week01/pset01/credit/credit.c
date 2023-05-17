@@ -146,7 +146,9 @@ int get_length(long cardnumber)
     return length;
 }
 
-
+// check if valid American Express
+// American Express uses 15-digit numbers
+// All American Express numbers start with 34 or 37
 bool is_amex(int length, int leading_digits)
 {
     if (length == 15)
@@ -166,9 +168,28 @@ bool is_amex(int length, int leading_digits)
     }
 }
 
+// check if valid mastercard
+// MasterCard uses 16-digit numbers
+// most MasterCard numbers start with 51, 52, 53, 54, or 55
 bool is_mastercard(int length, int leading_digits)
 {
-    return false;
+    if (length == 16)
+    {
+        if (51 <= leading_digits <= 55)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+
+    else
+    {
+        return false;
+    }
 }
 
 
