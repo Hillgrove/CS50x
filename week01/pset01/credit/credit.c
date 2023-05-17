@@ -163,7 +163,7 @@ bool is_amex(long cardnumber, int length)
 }
 
 
-// find first 2 digits of a long number
+// find first 2 digits of a long int
 int first_two_digits(long cardnumber)
 {
     int leading_digits = 0;
@@ -171,6 +171,5 @@ int first_two_digits(long cardnumber)
 
     leading_digits = cardnumber / pow(10,length - 2);
 
-    printf("first two digits = %i\n", leading_digits);
     return leading_digits;
 }
