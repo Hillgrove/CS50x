@@ -57,14 +57,17 @@ string check_cardnumber(long cardnumber)
         {
             return "American Express";
         }
+
         if (is_mastercard(length, leading_digits))
         {
             return "Mastercard";
         }
+
         if (is_visa(length, leading_digits))
         {
             return "VISA";
         }
+
         else
         {
             return "INVALID";
