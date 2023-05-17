@@ -147,7 +147,9 @@ bool is_amex(int length, int leading_digits)
     if (length == 15)
     {
         if (leading_digits == 34 || leading_digits == 37)
-        return true;
+        {
+            return true;
+        }
 
         else
         {
