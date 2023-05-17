@@ -64,7 +64,7 @@ bool valid_checksum(long cardnumber)
     int checksum = calculate_checksum(cardnumber);
     printf("checksum mod 10 = %i\n", checksum % 10);
 
-    if (checksum / 10 == 0)
+    if (checksum % 10 == 0)
     {
         return false;
     }
