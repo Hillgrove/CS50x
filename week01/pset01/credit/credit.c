@@ -22,6 +22,7 @@ int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
 int calculate_checksum(long cardnumber);
 bool is_amex(long cardnumber, int length);
+int first_two(long cardnumber);
 
 
 int main(void)
@@ -157,4 +158,12 @@ bool is_amex(long cardnumber, int length)
     {
         return false;
     }
+}
+
+
+// find first 2 digits of a long number
+int first_two(long cardnumber)
+{
+    int length = get_length(cardnumber);
+    for ()
 }
