@@ -15,19 +15,20 @@ Luhn’s Algorithm
 #include <cs50.h>
 #include <stdio.h>
 
+
 long get_cardnumber(void);
 string check_cardnumber(long cardnumber);
 int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
 int calculate_checksum(long cardnumber);
 
+
 int main(void)
 {
-    // long cardnumber = get_cardnr();
-    long cardnumber = 378282246310005;
+    long cardnumber = get_cardnumber();
+    // long cardnumber = 378282246310005;
     string result = check_cardnumber(cardnumber);
     printf("%s\n", result);
-    // test();
 }
 
 
@@ -74,7 +75,6 @@ bool valid_checksum(long cardnumber)
 }
 
 
-
 // Calculates checksum
 int calculate_checksum(long cardnumber)
 {
@@ -110,7 +110,6 @@ int calculate_checksum(long cardnumber)
         }
         cardnumber = cardnumber / 10;
     }
-    printf("Checksum is: %i\n", checksum);
     return checksum;
 }
 
