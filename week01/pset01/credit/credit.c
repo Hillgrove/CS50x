@@ -23,7 +23,9 @@ int first_two_digits(long cardnumber);
 long get_cardnumber(void);
 string check_cardnumber(long cardnumber);
 bool valid_checksum(long cardnumber);
-bool is_amex(long cardnumber, int length);
+bool is_amex(int length, int leading_digits);
+bool is_mastercard(int length, int leading_digits);
+bool is_visa(int length, int leading_digits);
 
 
 // ask for cardnumber and check if it's valid and belongs to Mastercard, Visa or American Express
@@ -49,22 +51,26 @@ string check_cardnumber(long cardnumber)
     if (valid_checksum(cardnumber))
     {
         int length = get_length(cardnumber);
-        if (is_amex(cardnumber, length))
+        int leading_digits = first_two_digits(cardnumber);
+
+        if (is_amex(length, leading_digits))
         {
             return "American Express";
         }
+        if (is_mastercard(length, leading_digits))
+        {
+            return "Mastercard";
+        }
+        if (is_visa(length, leading_digits))
+        {
+            return "VISA";
+        }
         else
         {
-            return "VALID";
-            // TODO: Check if MasterCard
-            // TODO: Check if Visa
+            return "INVALID";
         }
     }
-
-    else
-    {
-        return "INVALID";
-    }
+    return "INVALID";
 }
 
 
@@ -138,9 +144,8 @@ int get_length(long cardnumber)
 }
 
 
-bool is_amex(long cardnumber, int length)
+bool is_amex(int length, int leading_digits)
 {
-    int leading_digits = first_two_digits(cardnumber);
     if (length == 15)
     {
         if (leading_digits == 34 || leading_digits == 37)
@@ -156,6 +161,17 @@ bool is_amex(long cardnumber, int length)
     {
         return false;
     }
+}
+
+bool is_mastercard(int length, int leading_digits)
+{
+    return false;
+}
+
+
+bool is_visa(int length, int leading_digits)
+{
+    return false;
 }
 
 
