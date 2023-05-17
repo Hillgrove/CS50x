@@ -23,7 +23,7 @@ int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
 int calculate_checksum(long cardnumber);
 bool is_amex(long cardnumber, int length);
-int first_two(long cardnumber);
+int first_two_digits(long cardnumber);
 
 
 int main(void)
@@ -144,7 +144,7 @@ int get_length(long cardnumber)
 // Checks if valid cardnumber is AMEX
 bool is_amex(long cardnumber, int length)
 {
-    int leading_digits = first_two(cardnumber);
+    int leading_digits = first_two_digits(cardnumber);
     if (length == 15)
     {
         if (leading_digits == 34 || leading_digits == 37)
@@ -164,7 +164,7 @@ bool is_amex(long cardnumber, int length)
 
 
 // find first 2 digits of a long number
-int first_two(long cardnumber)
+int first_two_digits(long cardnumber)
 {
     int leading_digits = 0;
     int length = get_length(cardnumber);
