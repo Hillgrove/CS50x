@@ -21,7 +21,6 @@ int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
 int calculate_checksum(long cardnumber);
 
-void test();
 
 int main(void)
 {
@@ -63,6 +62,7 @@ string check_cardnumber(long cardnumber)
 bool valid_checksum(long cardnumber)
 {
     int checksum = calculate_checksum(cardnumber);
+    printf("checksum mod 10 = %i\n", checksum % 10);
 
     if (checksum / 10 == 0)
     {
