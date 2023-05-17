@@ -26,8 +26,8 @@ int main(void)
 // Ask user for cardnumber
 long get_cardnumber(void)
 {
-        long cardnumber = get_long("Number: ");
-        return cardnumber;
+    long cardnumber = get_long("Number: ");
+    return cardnumber;
 }
 
 
@@ -218,7 +218,7 @@ int first_two_digits(long cardnumber)
     int leading_digits = 0;
     int length = get_length(cardnumber);
 
-    leading_digits = cardnumber / pow(10,length - 2);
+    leading_digits = cardnumber / pow(10, length - 2);
 
     return leading_digits;
 }
