@@ -144,6 +144,7 @@ bool is_amex(long cardnumber, int length)
 {
     if (length == 15)
     {
+        if cardnumber / 13
 
         return true;
     }
