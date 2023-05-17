@@ -141,7 +141,12 @@ bool is_amex(long cardnumber)
 {
     if (get_length(cardnumber) == 15)
     {
-        printf("in amex loop\n");
+        
+        return true;
     }
-    return true;
+
+    else
+    {
+        return false;
+    }
 }
