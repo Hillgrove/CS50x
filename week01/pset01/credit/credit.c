@@ -19,6 +19,7 @@ long get_cardnumber(void);
 string check_cardnumber(long cardnumber);
 int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
+int calculate_checksum(long cardnumber);
 
 void test();
 
@@ -58,6 +59,24 @@ string check_cardnumber(long cardnumber)
 }
 
 
+// Checks if checksum is correct
+bool valid_checksum(long cardnumber)
+{
+    int checksum = calculate_checksum(cardnumber);
+
+    if (checksum / 10 == 0)
+    {
+        return false;
+    }
+
+    else
+    {
+        return true;
+    }
+}
+
+
+
 // Calculates checksum
 int calculate_checksum(long cardnumber)
 {
@@ -95,23 +114,6 @@ int calculate_checksum(long cardnumber)
     }
     printf("Checksum is: %i\n", checksum);
     return checksum;
-}
-
-
-// Checks if checksum is correct
-bool valid_checksum(long cardnumber)
-{
-    int checksum = calculate_checksum(cardnumber);
-
-    if (checksum / 10 == 0)
-    {
-        return false;
-    }
-
-    else
-    {
-        return true;
-    }
 }
 
 
