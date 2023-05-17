@@ -143,10 +143,10 @@ int get_length(long cardnumber)
 // Checks if valid cardnumber is AMEX
 bool is_amex(long cardnumber, int length)
 {
-    int first_two = first_two(cardnumber);
+    int leading_digits = first_two(cardnumber);
     if (length == 15)
     {
-        if (first_two == 34 || first_two == 37)
+        if (leading_digits == 34 || leading_digits == 37)
         return true;
 
         else
@@ -165,13 +165,13 @@ bool is_amex(long cardnumber, int length)
 // find first 2 digits of a long number
 int first_two(long cardnumber)
 {
-    int first_two = 0;
+    int leading_digits = 0;
     int length = get_length(cardnumber);
 
     for (int i = 0; i < length - 2; i++)
     {
-        first_two = cardnumber / 10;
+        leading_digits = cardnumber / 10;
     }
-    printf("first two digits = %i\n", first_two);
-    return first_two;
+    printf("first two digits = %i\n", leading_digits);
+    return leading_digits;
 }
