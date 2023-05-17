@@ -173,10 +173,12 @@ bool is_amex(int length, int leading_digits)
 // most MasterCard numbers start with 51, 52, 53, 54, or 55
 bool is_mastercard(int length, int leading_digits)
 {
+    printf("do I reach this?\n");
     if (length == 16)
     {
         if (51 <= leading_digits && leading_digits <= 55)
         {
+            printf
             return true;
         }
 
