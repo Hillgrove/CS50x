@@ -146,6 +146,11 @@ bool is_amex(long cardnumber, int length)
     {
         if (cardnumber / 10000000000000 == 34 || cardnumber / 10000000000000 == 37)
         return true;
+
+        else
+        {
+            return false;
+        }
     }
 
     else
