@@ -21,7 +21,7 @@ string check_cardnumber(long cardnumber);
 int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
 int calculate_checksum(long cardnumber);
-bool is_amex(long cardnumber);
+bool is_amex(long cardnumber, int length);
 
 
 int main(void)
@@ -46,7 +46,8 @@ string check_cardnumber(long cardnumber)
 {
     if (valid_checksum(cardnumber))
     {
-        if (is_amex(cardnumber))
+        int length = get_length(cardnumber);
+        if (is_amex(cardnumber, length))
         {
             printf("American Express\n");
         }
@@ -137,11 +138,11 @@ int get_length(long cardnumber)
 // American Express uses 15-digit numbers
 // All American Express numbers start with 34 or 37
 // Checks if valid cardnumber is AMEX
-bool is_amex(long cardnumber)
+bool is_amex(long cardnumber, int length)
 {
-    if (get_length(cardnumber) == 15)
+    if (length == 15)
     {
-        
+
         return true;
     }
 
