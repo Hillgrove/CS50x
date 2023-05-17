@@ -49,12 +49,14 @@ string check_cardnumber(long cardnumber)
         int length = get_length(cardnumber);
         if (is_amex(cardnumber, length))
         {
-            printf("American Express\n");
+            return "American Express";
         }
-        return "VALID";
-
-        // TODO: Check if MasterCard
-        // TODO: Check if Visa
+        else
+        {
+            return "VALID";
+            // TODO: Check if MasterCard
+            // TODO: Check if Visa
+        }
     }
 
     else
