@@ -41,12 +41,12 @@ string check_cardnumber(long cardnumber)
 
         if (is_amex(length, leading_digits))
         {
-            return "American Express";
+            return "AMEX";
         }
 
         if (is_mastercard(length, leading_digits))
         {
-            return "Mastercard";
+            return "MASTERCARD";
         }
 
         if (is_visa(length, leading_digits))
