@@ -168,10 +168,8 @@ int first_two(long cardnumber)
     int leading_digits = 0;
     int length = get_length(cardnumber);
 
-    for (int i = 0; i < length - 2; i++)
-    {
-        leading_digits = cardnumber / 10;
-    }
+    leading_digits = cardnumber / 10 (length - 2)
+
     printf("first two digits = %i\n", leading_digits);
     return leading_digits;
 }
