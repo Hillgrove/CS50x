@@ -21,6 +21,7 @@ string check_cardnumber(long cardnumber);
 int get_length(long cardnumber);
 bool valid_checksum(long cardnumber);
 int calculate_checksum(long cardnumber);
+bool is_amex(long cardnumber);
 
 
 int main(void)
@@ -47,13 +48,9 @@ string check_cardnumber(long cardnumber)
     {
         if (is_amex(cardnumber))
         {
-            printf("American Express");
+            printf("American Express\n");
         }
         return "VALID";
-        // TODO: Check if AMEX
-        // American Express uses 15-digit numbers
-        // All American Express numbers start with 34 or 37
-
 
         // TODO: Check if MasterCard
         // TODO: Check if Visa
@@ -133,4 +130,18 @@ int get_length(long cardnumber)
     }
     while (cardnumber > 0);
     return length;
+}
+
+
+// TODO: Check if AMEX
+// American Express uses 15-digit numbers
+// All American Express numbers start with 34 or 37
+// Checks if valid cardnumber is AMEX
+bool is_amex(long cardnumber)
+{
+    if (get_length(cardnumber) == 15)
+    {
+        printf("in amex loop\n");
+    }
+    return true;
 }
