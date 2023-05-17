@@ -45,9 +45,16 @@ string check_cardnumber(long cardnumber)
 {
     if (valid_checksum(cardnumber))
     {
+        if (is_amex(cardnumber))
+        {
+            printf("American Express");
+        }
         return "VALID";
         // TODO: Check if AMEX
-        
+        // American Express uses 15-digit numbers
+        // All American Express numbers start with 34 or 37
+
+
         // TODO: Check if MasterCard
         // TODO: Check if Visa
     }
