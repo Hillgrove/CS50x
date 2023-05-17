@@ -175,7 +175,7 @@ bool is_mastercard(int length, int leading_digits)
 {
     if (length == 16)
     {
-        if (51 <= leading_digits <= 55)
+        if (51 <= leading_digits && leading_digits <= 55)
         {
             return true;
         }
