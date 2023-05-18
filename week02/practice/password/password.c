@@ -45,7 +45,7 @@ bool valid(string password)
 
 bool hasUpper(string password, int length)
 {
-    for(int i = 1; i < length; i++)
+    for(int i = 0; i < length; i++)
     {
         printf("current letter = %c\n", password[i]);
         if(isupper(password[i]))
@@ -60,17 +60,44 @@ bool hasUpper(string password, int length)
 
 bool hasLower(string password, int length)
 {
+    for(int i = 0; i < length; i++)
+    {
+        printf("current letter = %c\n", password[i]);
+        if(islower(password[i]))
+        {
+            return true;
+        }
+    }
+
     return false;
 }
 
 
 bool hasAlphanumeric(string password, int length)
 {
+    for(int i = 0; i < length; i++)
+    {
+        printf("current letter = %c\n", password[i]);
+        if(isalnum(password[i]))
+        {
+            return true;
+        }
+    }
+
     return false;
 }
 
 
 bool hasSymbol(string password, int length)
 {
+    for(int i = 0; i < length; i++)
+    {
+        printf("current letter = %c\n", password[i]);
+        if(ispunct(password[i]))
+        {
+            return true;
+        }
+    }
+
     return false;
 }
