@@ -32,24 +32,26 @@ string replace(string word)
 
     for (int i = 0; i < length; i++)
     {
-        if (word[i] == 'a')
+        switch (word[i])
         {
-            word[i] = '6';
-        }
+            case 'a':
+                word[i] = '6';
+                break;
 
-        else if (word[i] == 'e')
-        {
-            word[i] = '3';
-        }
+            case 'e':
+                word[i] = '3';
+                break;
 
-        else if (word[i] == 'i')
-        {
-            word[i] = '1';
-        }
+            case 'i':
+                word[i] = '1';
+                break;
 
-        else if (word[i] == 'o')
-        {
-            word[i] = '0';
+            case 'o':
+                word[i] = '0';
+                break;
+
+            default:
+                break;
         }
     }
 
