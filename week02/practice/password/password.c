@@ -11,7 +11,7 @@
 bool valid(string password);
 bool hasUpper(string password, int length);
 bool hasLower(string password, int length);
-bool hasAlphanumeric(string password, int length);
+bool hasDigit(string password, int length);
 bool hasSymbol(string password, int length);
 
 int main(void)
@@ -31,7 +31,7 @@ int main(void)
 bool valid(string password)
 {
     int length = strlen(password);
-    if(hasUpper(password, length) && hasLower(password, length) && hasAlphanumeric(password, length) && hasSymbol(password, length))
+    if(hasUpper(password, length) && hasLower(password, length) && hasDigit(password, length) && hasSymbol(password, length))
     {
         return true;
     }
@@ -73,11 +73,11 @@ bool hasLower(string password, int length)
 
 
 // Checks if provided passwork has minimum 1 alphanumeric
-bool hasAlphanumeric(string password, int length)
+bool hasDigit(string password, int length)
 {
     for(int i = 0; i < length; i++)
     {
-        if(isalnum(password[i]))
+        if(isdigit(password[i]))
         {
             return true;
         }
