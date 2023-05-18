@@ -17,7 +17,7 @@ int main(int argc, string argv[])
 
     else
     {
-        printf("Command incorrect. Please provide a single string to convert");
+        printf("Command incorrect. Please provide a single string to convert\n");
         return 1;
     }
 }
@@ -25,5 +25,5 @@ int main(int argc, string argv[])
 
 string replace(string argument)
 {
-    return "so far so good";
+    return "so far so good\n";
 }
