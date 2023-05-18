@@ -8,5 +8,14 @@
 
 int main(int argc, string argv[])
 {
-    
+    if (argc == 2)
+    {
+        printf("replace()
+    }
+
+    else
+    {
+        printf("Command incorrect. Please provide a single string to convert");
+        return 1;
+    }
 }
