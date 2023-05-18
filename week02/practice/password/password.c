@@ -47,7 +47,7 @@ bool hasUpper(string password, int length)
 {
     for(int i = 1; i < length; i++)
     {
-        printf("current letter = %c", password[i]);
+        printf("current letter = %c\n", password[i]);
         if(isupper(password[i]))
         {
             return true;
