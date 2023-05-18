@@ -3,11 +3,12 @@
 // Practice using the ctype library
 
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+#include <string.h>
 
 
-bool valid(string password);
+bool check(string password);
 
 int main(void)
 {
@@ -25,5 +26,6 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool check(string password)
 {
+    for ()
     return false;
 }
