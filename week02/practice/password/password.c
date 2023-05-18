@@ -9,10 +9,10 @@
 
 
 bool valid(string password);
-bool hasUpper(string password);
-bool hasLower(string password);
-bool hasAlphanumeric(string password);
-bool hasSymbol(string password);
+bool hasUpper(string password, int length);
+bool hasLower(string password, int length);
+bool hasAlphanumeric(string password, int length);
+bool hasSymbol(string password, int length);
 
 int main(void)
 {
@@ -46,7 +46,7 @@ bool valid(string password)
 bool hasUpper(string password, int length)
 {
     for(int i = 1; i < length; i++)
-        if(isUpper[i])
+        if(isupper[i])
         {
             return true;
         }
@@ -59,19 +59,19 @@ bool hasUpper(string password, int length)
 }
 
 
-bool hasLower(string password)
+bool hasLower(string password, int length)
 {
     return false;
 }
 
 
-bool hasAlphanumeric(string password)
+bool hasAlphanumeric(string password, int length)
 {
     return false;
 }
 
 
-bool hasSymbol(string password)
+bool hasSymbol(string password, int length)
 {
     return false;
 }
