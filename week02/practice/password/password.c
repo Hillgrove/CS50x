@@ -9,6 +9,10 @@
 
 
 bool valid(string password);
+bool hasUpper(string password);
+bool hasLower(string password);
+bool hasAlphanumeric(string password);
+bool hasSymbol(string password);
 
 int main(void)
 {
@@ -26,15 +30,48 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    bool hasUpper == false;
-    bool hasLower == false;
-    bool hasAlphanumeric == false;
-    bool hasSymbol == false;
-
-    do
+    int length = strlen(password);
+    if(hasUpper(password, length) && hasLower(password, length) && hasAlphanumeric(password, length) && hasSymbol(password, length))
     {
-
+        return true;
     }
+
+    else
+    {
+        return false;
+    }
+}
+
+
+bool hasUpper(string password, int length)
+{
+    for(int i = 1; i < length; i++)
+        if(isUpper[i])
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+
+}
+
+
+bool hasLower(string password)
+{
     return false;
 }
 
+
+bool hasAlphanumeric(string password)
+{
+    return false;
+}
+
+
+bool hasSymbol(string password)
+{
+    return false;
+}
