@@ -6,11 +6,13 @@
 #include <cs50.h>
 #include <stdio.h>
 
+string replace(string argument);
+
 int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        printf("replace()
+        printf("%s", replace(argv[1]));
     }
 
     else
@@ -18,4 +20,10 @@ int main(int argc, string argv[])
         printf("Command incorrect. Please provide a single string to convert");
         return 1;
     }
+}
+
+
+string replace(string argument)
+{
+    return "so far so good";
 }
