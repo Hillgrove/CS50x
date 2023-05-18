@@ -27,5 +27,12 @@ int main(void)
 bool valid(string password)
 {
     int length = strlen(password);
+    bool uppercase == false;
+    bool lowercase == false;
+    bool alphanumeric == false;
+    bool symbol == false;
+
+
+    while
     return false;
 }
