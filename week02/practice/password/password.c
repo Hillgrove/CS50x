@@ -32,7 +32,9 @@ bool valid(string password)
     bool alphanumeric == false;
     bool symbol == false;
 
-
-    while
+    do
+    {
+        
+    }
     return false;
 }
