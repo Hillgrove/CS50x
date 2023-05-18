@@ -14,7 +14,8 @@ int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        printf("%s", replace(argv[1]));
+        string leetspeak = replace(argv[1]);
+        printf("%s\n", leetspeak);
     }
 
     else
@@ -25,35 +26,32 @@ int main(int argc, string argv[])
 }
 
 
-string replace(string argument)
+string replace(string word)
 {
-    int length = strlen(argument);
+    int length = strlen(word);
 
-    for (i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         if (argument[i] == 'a')
         {
-            argument[i] == '6';
+            argument[i] = '6';
         }
 
-        elseif (argument[i] == 'e')
+        else if (argument[i] == 'e')
         {
-            printf(3);
+            argument[i] = '3';
         }
 
-        elseif (argument[i] == 'i')
+        else if (argument[i] == 'i')
         {
-            printf(1);
+            argument[i] = '1';
         }
 
-        elseif (argument[i] == 'o')
+        else if (argument[i] == 'o')
         {
-            printf(0);
-        }
-
-        else
-        {
-            printf(argument[i]);
+            argument[i] = '0';
         }
     }
+
+    return word;
 }
