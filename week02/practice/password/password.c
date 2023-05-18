@@ -27,7 +27,7 @@ int main(void)
     }
 }
 
-// TODO: Complete the Boolean function below
+// Checks if provided passwork has minimum 1 uppercase, lowercase, alphanumeric and symbol
 bool valid(string password)
 {
     int length = strlen(password);
@@ -43,11 +43,11 @@ bool valid(string password)
 }
 
 
+// Checks if provided passwork has minimum 1 uppercase
 bool hasUpper(string password, int length)
 {
     for(int i = 0; i < length; i++)
     {
-        printf("current letter = %c\n", password[i]);
         if(isupper(password[i]))
         {
             return true;
@@ -57,12 +57,11 @@ bool hasUpper(string password, int length)
     return false;
 }
 
-
+// Checks if provided passwork has minimum 1 lowercase
 bool hasLower(string password, int length)
 {
     for(int i = 0; i < length; i++)
     {
-        printf("current letter = %c\n", password[i]);
         if(islower(password[i]))
         {
             return true;
@@ -73,11 +72,11 @@ bool hasLower(string password, int length)
 }
 
 
+// Checks if provided passwork has minimum 1 alphanumeric
 bool hasAlphanumeric(string password, int length)
 {
     for(int i = 0; i < length; i++)
     {
-        printf("current letter = %c\n", password[i]);
         if(isalnum(password[i]))
         {
             return true;
@@ -88,11 +87,11 @@ bool hasAlphanumeric(string password, int length)
 }
 
 
+// Checks if provided passwork has minimum 1 symbol
 bool hasSymbol(string password, int length)
 {
     for(int i = 0; i < length; i++)
     {
-        printf("current letter = %c\n", password[i]);
         if(ispunct(password[i]))
         {
             return true;
