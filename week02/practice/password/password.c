@@ -26,15 +26,14 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    int length = strlen(password);
-    bool isUppercase == false;
-    bool isLowercase == false;
-    bool isAlphanumeric == false;
-    bool isSymbol == false;
+    bool hasUppercase == false;
+    bool hasLowercase == false;
+    bool hasAlphanumeric == false;
+    bool hasSymbol == false;
 
     do
     {
-        
+
     }
     return false;
 }
