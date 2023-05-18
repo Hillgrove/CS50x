@@ -8,12 +8,12 @@
 #include <string.h>
 
 
-bool check(string password);
+bool valid(string password);
 
 int main(void)
 {
     string password = get_string("Enter your password: ");
-    if (check(password))
+    if (valid(password))
     {
         printf("Your password is valid!\n");
     }
@@ -24,8 +24,7 @@ int main(void)
 }
 
 // TODO: Complete the Boolean function below
-bool check(string password)
+bool valid(string password)
 {
-    for ()
     return false;
 }
