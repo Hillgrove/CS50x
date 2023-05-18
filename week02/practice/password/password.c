@@ -26,5 +26,6 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    int length = strlen(password);
     return false;
 }
