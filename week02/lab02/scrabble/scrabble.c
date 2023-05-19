@@ -20,7 +20,7 @@ int main(void)
     printf("Player 1: %i\n", score1);
     printf("Player 2: %i\n", score2);
 
-    // TODO: Print the winner
+    
 }
 
 int compute_score(string word)
@@ -29,8 +29,12 @@ int compute_score(string word)
     int score = 0;
     for (int i = 0, length = strlen(word); i < length; i++)
     {
-        int index = toupper(word[i]) - 65;
-        score += POINTS[index];
+        if (isalpha(word[i]))
+        {
+            int index = toupper(word[i]) - 65;
+            score += POINTS[index];
+        }
+
     }
     return score;
 }
