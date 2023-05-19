@@ -10,6 +10,7 @@ where L is the average number of letters per 100 words in the text, and S is the
 
 #include <cs50.h>
 #include <ctype.h>
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -31,7 +32,7 @@ int main(void)
     printf("Letter count: %i\n", letters);
     printf("Word count: %i\n", words);
     printf("Sentence count: %i\n", sentences);
-    printf("Grade: %i\n", score);
+    printf("Grade: %i\n", (int) round(score));
 
     // TODO: calculate coleman-Liau score
     // TODO: print result
