@@ -61,7 +61,7 @@ int word_count(string text)
 
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        // checks if current char is blank and if either the char left or right is alphanumeric
+        // checks if current char is blank
         if (isblank(text[i]))
         {
             count++;
@@ -75,6 +75,14 @@ int word_count(string text)
 // TODO: Complete function
 int sentence_count(string text)
 {
-    int sum = 0;
-    return 0;
+    int count = 0;
+
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        // checks if current char is a 
+        if (isblank(text[i]))
+        {
+            count++;
+        }
+    }
 }
