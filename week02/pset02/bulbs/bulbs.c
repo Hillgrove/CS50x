@@ -52,16 +52,8 @@ long string2binary(string message)
     for (int i = 0, len = strlen(message); i < len; i++)
     {
         printf("ASCII code for %c: %i\n", message[i], message[i]);
-        long decimal2binary(message[i]);
+        
     }
 
     return 0; // TODO: correct return
-}
-
-long decimal2binary(int ascii)
-{
-    for (int i = 0, len = strlen(message); i < len; i++)
-    {
-
-    }
 }
