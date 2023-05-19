@@ -52,12 +52,14 @@ long string2binary(string message)
     for (int i = 0, len = strlen(message); i < len; i++)
     {
         printf("ASCII code for %c: %i\n", message[i], message[i]);
-        int ascii_code = (int) message[i];
+
+        int binary = 0;
         do
         {
-
+            int ascii_code = (int) message[i];
+            binary = ascii_code 
         }
-        while (ascii_code)
+        while (ascii_code > 0)
     }
 
     return 0; // TODO: correct return
