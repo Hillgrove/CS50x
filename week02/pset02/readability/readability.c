@@ -99,4 +99,6 @@ float score(int letters, int words, int sentences)
 {
     float L = letters / words * 100.0; // average number of letters per 100 words
     float S = sentences / words * 100.0 // average number of sentences per 100 words
+    float score = 0.0588 * L - 0.296 * S - 15.8;
+    return score;
 }
