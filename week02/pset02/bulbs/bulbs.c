@@ -22,7 +22,7 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    string message = getstring("Message: ");
+    string message = get_string("Message: ");
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
     int binary_string = string2binary(message);
 
@@ -45,11 +45,11 @@ void print_bulb(int bit)
 }
 
 
-int string2binary(string message)
+long string2binary(string message)
 {
     for(int i = 0, len = strlen(message); i < len; i++)
     {
-        printf("ASCII code for c%: i%", message[i], message[i]);
+        printf("ASCII code for %c: %i\n", message[i], message[i]);
     }
     return 0;
 }
