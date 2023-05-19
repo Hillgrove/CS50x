@@ -10,6 +10,8 @@ where L is the average number of letters per 100 words in the text, and S is the
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+
 
 int number_of_letters(string text);
 
@@ -17,7 +19,8 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    
+    int letters = number_of_letters(text);
+    printf("Number of letters: %i", letters);
 
     // TODO: calculate average number of letters er 100 words
     // TODO: calculate average number of sentences pr 100 words
