@@ -29,7 +29,13 @@ int main(void)
     int sentences = sentence_count(text);
     int score = round(calc_score(letters, words, sentences));
 
-    if (score >= 16)
+
+    if (score < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+
+    else if (score >= 16)
     {
         printf("Grade 16+\n");
     }
