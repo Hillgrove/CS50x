@@ -53,7 +53,8 @@ int letter_count(string text)
     return count;
 }
 
-
+// counts the number of words in the text
+// any sequence of characters separated by spaces should count as a word
 int word_count(string text)
 {
     int count = 0;
