@@ -36,7 +36,8 @@ int main(void)
     // TODO: print result
 }
 
-
+// counts the number of letters in the text
+// You may assume that a letter is any lowercase character from a to z or any uppercase character from A to Z
 int letter_count(string text)
 {
     int count = 0;
