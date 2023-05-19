@@ -97,5 +97,6 @@ int sentence_count(string text)
 // where L is the average number of letters per 100 words in the text, and S is the average number of sentences per 100 words in the text.
 float score(int letters, int words, int sentences)
 {
-    avg_letters = letters
+    float L = letters / words * 100.0; // avera
+    float S =
 }
