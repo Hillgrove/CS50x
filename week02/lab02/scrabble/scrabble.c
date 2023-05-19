@@ -24,8 +24,10 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    for (i = 0, length = strlen(word), i < length, i++)
+    int score = 0;
+    for (int i = 0, length = strlen(word), i < length, i++)
     {
-        
+        int index = toUpper(word[i]) - 64
+        printf("Letter: %c. Index: %i\n", word[i], toUpper(word[i]) - 64);
     }
 }
