@@ -47,6 +47,7 @@ void print_bulb(int bit)
 
 long string2binary(string message)
 {
+    printf("\n*** string2binary segment ***\n");
     int ASCII_codes[strlen(message)];
 
     // converts each char to it's ASCII char and saves it in an array
@@ -58,7 +59,7 @@ long string2binary(string message)
 
     for (int i = 0, len = strlen(message); i < len; i++)
     {
-        
+
     }
 
     return 0; // TODO: correct return
