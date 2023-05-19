@@ -42,7 +42,7 @@ int main(void)
 
     else
     {
-        printf("Grade: %i\n", score);
+        printf("Grade %i\n", score);
     }
 
 
