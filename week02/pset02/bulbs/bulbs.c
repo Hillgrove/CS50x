@@ -23,7 +23,7 @@ int main(void)
 {
     string message = getstring("Message: ");
 
-    
+    int 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
     // TODO: use the provided print_bulb function to print a series of 0s and 1s as a series of yellow and black emoji, which represent on and off light bulbs.
     // TODO: Each “byte” of 8 symbols should be printed on its own line when outputted; there should be a \n after the last “byte” of 8 symbols as well.
