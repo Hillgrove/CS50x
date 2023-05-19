@@ -17,20 +17,23 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
-    printf("Player 1: %i\n", score1);
-    printf("Player 2: %i\n", score2);
 
-    
+    // TODO: Print the winner
+    if (score1 > score2)
+    {
+        printf("Player ")
+    }
 }
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
+    // Compute and return score for string
     int score = 0;
     for (int i = 0, length = strlen(word); i < length; i++)
     {
         if (isalpha(word[i]))
         {
+            // using ASCII values, calculate index, A = 65, B = 66 etc
             int index = toupper(word[i]) - 65;
             score += POINTS[index];
         }
