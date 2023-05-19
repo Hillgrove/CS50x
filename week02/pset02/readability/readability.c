@@ -29,13 +29,17 @@ int main(void)
     int sentences = sentence_count(text);
     int score = round(calc_score(letters, words, sentences));
 
-    // printf("Letter count: %i\n", letters);
-    // printf("Word count: %i\n", words);
-    // printf("Sentence count: %i\n", sentences);
+    if (score >= 16)
+    {
+        printf("Grade 16+\n");
+    }
 
-    if (score > 16)
+    else
+    {
+        printf("Grade: %i\n", score);
+    }
 
-    printf("Grade: %i\n", score);
+
 }
 
 // counts the number of letters in the text
@@ -51,7 +55,6 @@ int letter_count(string text)
             count++;
         }
     }
-
     return count;
 }
 
@@ -69,7 +72,6 @@ int word_count(string text)
             count++;
         }
     }
-
     return count + 1; // As there's no space after the last word, we have to add 1 extra word for the count to be right
 }
 
@@ -88,7 +90,6 @@ int sentence_count(string text)
             count++;
         }
     }
-
     return count;
 }
 
@@ -102,7 +103,5 @@ float calc_score(int letters, int words, int sentences)
     float S = (float) sentences / (float) words * 100; // average number of sentences per 100 words
     float score = 0.0588 * L - 0.296 * S - 15.8;
 
-    // printf("L value: %f\n", L);
-    // printf("S value: %f\n", S);
     return score;
 }
