@@ -72,17 +72,20 @@ int word_count(string text)
 }
 
 
-// TODO: Complete function
+// counts the number of sentences in the text
+// any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
 int sentence_count(string text)
 {
     int count = 0;
 
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        // checks if current char is a 
-        if (isblank(text[i]))
+        // checks if current char is a
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
             count++;
         }
     }
+
+    return count;
 }
