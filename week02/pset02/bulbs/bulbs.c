@@ -48,19 +48,18 @@ void print_bulb(int bit)
 long string2binary(string message)
 {
     printf("\n*** string2binary segment ***\n");
-    // converts each char to it's ASCII char and saves it in an array
+
+    // converts each char to it's ASCII decimal
     for (int i = 0, len = strlen(message); i < len; i++)
     {
         printf("ASCII code for %c: %i\n", message[i], message[i]);
 
-        int binary = 0;
         int ascii_code = (int) message[i];
-        for (int j = 0; j < ascii_code; i++)
+
+        // converts each ASCII decimal to it's binary representation
+        for (int j = 0; j < len; i++)
         {
-            binary += ascii_code % 2;
-            ascii_code = ascii_code / 2;
-            printf("Binary at step %i: %i\n", j, binary);
-            printf("ASCII at step %i: %i\n", j, ascii_code);
+            
         }
     }
 
