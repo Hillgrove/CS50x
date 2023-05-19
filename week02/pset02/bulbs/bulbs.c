@@ -47,9 +47,12 @@ void print_bulb(int bit)
 
 long string2binary(string message)
 {
+    int ASCII_codes[strlen(message)];
+
     for(int i = 0, len = strlen(message); i < len; i++)
     {
         printf("ASCII code for %c: %i\n", message[i], message[i]);
+        ASCII_codes[i] = (int) message[i];
     }
     return 0;
 }
