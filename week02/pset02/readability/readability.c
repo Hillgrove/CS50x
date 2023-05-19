@@ -13,18 +13,22 @@ where L is the average number of letters per 100 words in the text, and S is the
 #include <stdio.h>
 #include <string.h>
 
+int letter_count(string text);
+int word_count(string text);
+int sentence_count(string text);
 
-int number_of_letters(string text);
-int number_of_sentences(string text);
 
 int main(void)
 {
     string text = get_string("Text: ");
 
-    int letters = number_of_letters(text);
-    int sentences = number_of_sentences(text);
+    int letters = letter_count(text);
+    int words = word_count(text);
+    int sentences = sentence_count(text);
 
-    printf("Number of letters: %i\n", letters);
+    printf("Letter count: %i\n", letters);
+    printf("Word count: %i\n", words);
+    printf("Sentence count: %i\n", sentences);
 
     // TODO: calculate average number of letters er 100 words
     // TODO: calculate average number of sentences pr 100 words
@@ -32,21 +36,39 @@ int main(void)
     // TODO: print result
 }
 
-int number_of_letters(string text)
+
+int letter_count(string text)
 {
-    int sum = 0;
+    int count = 0;
+
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (isalpha(text[i]))
         {
-            sum++;
+            count++;
         }
     }
-    return sum;
+
+    return count;
 }
 
-int number_of_sentences(string text)
+
+int word_count(string text)
+{
+    int count = 0;
+
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        
+    }
+
+    return count;
+}
+
+
+// TODO: Complete function
+int sentence_count(string text)
 {
     int sum = 0;
-    
+    return 0;
 }
