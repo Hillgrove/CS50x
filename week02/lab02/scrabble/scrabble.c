@@ -17,6 +17,7 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
+    printf()
 
     // TODO: Print the winner
 }
@@ -27,8 +28,8 @@ int compute_score(string word)
     int score = 0;
     for (int i = 0, length = strlen(word); i < length; i++)
     {
-        int index = toupper(word[i]) - 64;
-        printf("Letter: %c. Index: %i\n", word[i], toupper(word[i]) - 64);
+        int index = toupper(word[i]) - 65;
+        score += POINTS[index];
     }
-    return 1;
+    return score;
 }
