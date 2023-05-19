@@ -98,7 +98,7 @@ int sentence_count(string text)
 float calc_score(int letters, int words, int sentences)
 {
     float L = (float) letters / (float) words * 100; // average number of letters per 100 words
-    float S = sentences / words * 100.0; // average number of sentences per 100 words
+    float S = (float) sentences / (float) words * 100; // average number of sentences per 100 words
     float score = 0.0588 * L - 0.296 * S - 15.8;
 
     printf("L value: %f\n", L);
