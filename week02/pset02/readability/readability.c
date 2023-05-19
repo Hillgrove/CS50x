@@ -16,6 +16,7 @@ where L is the average number of letters per 100 words in the text, and S is the
 int letter_count(string text);
 int word_count(string text);
 int sentence_count(string text);
+float score(int letters, int words, int sentences);
 
 
 int main(void)
@@ -25,13 +26,13 @@ int main(void)
     int letters = letter_count(text);
     int words = word_count(text);
     int sentences = sentence_count(text);
+    float score = score(letters, words, sentences);
 
     printf("Letter count: %i\n", letters);
     printf("Word count: %i\n", words);
     printf("Sentence count: %i\n", sentences);
+    printf("Sentence count: %f\n", score);
 
-    // TODO: calculate average number of letters er 100 words
-    // TODO: calculate average number of sentences pr 100 words
     // TODO: calculate coleman-Liau score
     // TODO: print result
 }
@@ -88,4 +89,13 @@ int sentence_count(string text)
     }
 
     return count;
+}
+
+
+// calculate coleman-Liau score
+// index = 0.0588 * L - 0.296 * S - 15.8
+// where L is the average number of letters per 100 words in the text, and S is the average number of sentences per 100 words in the text.
+float score(int letters, int words, int sentences)
+{
+    avg_letters = letters
 }
