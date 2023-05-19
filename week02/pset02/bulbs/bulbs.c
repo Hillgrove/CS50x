@@ -54,15 +54,15 @@ long string2binary(string message)
         printf("ASCII code for %c: %i\n", message[i], message[i]);
 
         int binary = 0;
+        int ascii_code = (int) message[i];
         do
         {
-            int ascii_code = (int) message[i];
             binary = ascii_code % 2;
             ascii_code = ascii_code / 2;
             printf("Binary at step %i: \n", i);
             printf("ASCII at step %i: \n", ascii_code);
         }
-        while (ascii_code > 0)
+        while (ascii_code > 0);
     }
 
     return 0; // TODO: correct return
