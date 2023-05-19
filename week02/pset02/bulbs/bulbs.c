@@ -50,14 +50,13 @@ long string2binary(string message)
     int ASCII_codes[strlen(message)];
 
     // converts each char to it's ASCII char and saves it in an array
-    for(int i = 0, len = strlen(message); i < len; i++)
+    for (int i = 0, len = strlen(message); i < len; i++)
     {
         printf("ASCII code for %c: %i\n", message[i], message[i]);
         ASCII_codes[i] = (int) message[i];
     }
 
-    
-
+    for (int i = 0, )
 
     return 0; // TODO: correct return
 }
