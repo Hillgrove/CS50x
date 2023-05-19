@@ -62,13 +62,13 @@ int word_count(string text)
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         // checks if current char is blank and if either the char left or right is alphanumeric
-        if (isblank(text[i]) && (isalnum(text[i-1]) && isalnum(text[i+1])))
+        if (isblank(text[i]))
         {
             count++;
         }
     }
 
-    return count;
+    return count + 1; // As there's no space after the last word, we have to add 1 extra word for the count to be right
 }
 
 
