@@ -59,8 +59,8 @@ long string2binary(string message)
         {
             binary = ascii_code % 2;
             ascii_code = ascii_code / 2;
-            printf("Binary at step %i: \n", i);
-            printf("ASCII at step %i: \n", ascii_code);
+            printf("Binary at step %i: %i\n", i, binary);
+            printf("ASCII at step %i: %i\n", i, ascii_code);
         }
         while (ascii_code > 0);
     }
