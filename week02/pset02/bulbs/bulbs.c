@@ -56,7 +56,10 @@ long string2binary(string message)
         ASCII_codes[i] = (int) message[i];
     }
 
-    for (int i = 0, )
+    for (int i = 0, len = strlen(message); i < len; i++)
+    {
+        
+    }
 
     return 0; // TODO: correct return
 }
