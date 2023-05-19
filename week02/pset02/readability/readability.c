@@ -11,12 +11,29 @@ where L is the average number of letters per 100 words in the text, and S is the
 #include <cs50.h>
 #include <stdio.h>
 
+int number_of_letters(string text);
+
 int main(void)
 {
     string text = get_string("Text: ");
+
+    
 
     // TODO: calculate average number of letters er 100 words
     // TODO: calculate average number of sentences pr 100 words
     // TODO: calculate coleman-Liau score
     // TODO: print result
+}
+
+int number_of_letters(string text)
+{
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        int sum = 0;
+        if (isalpha(text[i]))
+        {
+            sum++
+        }
+        return sum;
+    }
 }
