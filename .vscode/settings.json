@@ -2,5 +2,8 @@
     "gitdoc.enabled": true,
     "editor.folding": true,
     "editor.showFoldingControls": "always",
-    "notebook.showFoldingControls": "always"
+    "notebook.showFoldingControls": "always",
+    "files.associations": {
+        "string.h": "c"
+    }
 }
