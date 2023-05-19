@@ -31,7 +31,7 @@ int main(void)
     printf("Letter count: %i\n", letters);
     printf("Word count: %i\n", words);
     printf("Sentence count: %i\n", sentences);
-    printf("Score: %f\n", score);
+    printf("Grade: %i\n", score);
 
     // TODO: calculate coleman-Liau score
     // TODO: print result
@@ -101,7 +101,7 @@ float calc_score(int letters, int words, int sentences)
     float S = (float) sentences / (float) words * 100; // average number of sentences per 100 words
     float score = 0.0588 * L - 0.296 * S - 15.8;
 
-    printf("L value: %f\n", L);
-    printf("S value: %f\n", S);
+    // printf("L value: %f\n", L);
+    // printf("S value: %f\n", S);
     return score;
 }
