@@ -31,7 +31,7 @@ int main(void)
     printf("Letter count: %i\n", letters);
     printf("Word count: %i\n", words);
     printf("Sentence count: %i\n", sentences);
-    printf("Sentence count: %f\n", score);
+    printf("Score: %f\n", score);
 
     // TODO: calculate coleman-Liau score
     // TODO: print result
