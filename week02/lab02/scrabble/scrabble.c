@@ -17,7 +17,8 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
-    printf()
+    printf("Player 1: %i\n", score1);
+    printf("Player 2: %i\n", score2);
 
     // TODO: Print the winner
 }
