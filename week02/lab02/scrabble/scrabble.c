@@ -46,7 +46,6 @@ int compute_score(string word)
             int index = toupper(word[i]) - 65;
             score += POINTS[index];
         }
-
     }
     return score;
 }
