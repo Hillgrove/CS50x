@@ -55,14 +55,13 @@ long string2binary(string message)
 
         int binary = 0;
         int ascii_code = (int) message[i];
-        do
+        for (int j = 0; j < ascii_code; i++)
         {
-            binary = ascii_code % 2;
+            binary += ascii_code % 2;
             ascii_code = ascii_code / 2;
-            printf("Binary at step %i: %i\n", i, binary);
-            printf("ASCII at step %i: %i\n", i, ascii_code);
+            printf("Binary at step %i: %i\n", j, binary);
+            printf("ASCII at step %i: %i\n", j, ascii_code);
         }
-        while (ascii_code > 0);
     }
 
     return 0; // TODO: correct return
