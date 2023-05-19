@@ -61,7 +61,7 @@ int word_count(string text)
 
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (isblank(text[i]))
+        if (isblank(text[i]) && is)
         {
             count++;
         }
