@@ -27,15 +27,15 @@ int main(void)
     int letters = letter_count(text);
     int words = word_count(text);
     int sentences = sentence_count(text);
-    float score = calc_score(letters, words, sentences);
+    int score = round(calc_score(letters, words, sentences));
 
-    printf("Letter count: %i\n", letters);
-    printf("Word count: %i\n", words);
-    printf("Sentence count: %i\n", sentences);
-    printf("Grade: %i\n", (int) round(score));
+    // printf("Letter count: %i\n", letters);
+    // printf("Word count: %i\n", words);
+    // printf("Sentence count: %i\n", sentences);
 
-    // TODO: calculate coleman-Liau score
-    // TODO: print result
+    if (score > 16)
+
+    printf("Grade: %i\n", score);
 }
 
 // counts the number of letters in the text
