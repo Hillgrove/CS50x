@@ -17,7 +17,7 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 
 const int BITS_IN_BYTE = 8;
 
-int string2binary(string message);
+long string2binary(string message);
 void print_bulb(int bit);
 
 int main(void)
