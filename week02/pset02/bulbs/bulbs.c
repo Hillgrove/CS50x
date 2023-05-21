@@ -32,7 +32,7 @@ int main(void)
     int ascii_codes[length];
     string2ascii(message, length, ascii_codes); // converts each char in message to its ASCII code and saves it in an array
     ascii2binary(ascii_codes, length);
-    printarray(ascii_codes, length);
+    // printarray(ascii_codes, length);
 
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
@@ -74,18 +74,18 @@ void ascii2binary(int ascii_codes[], int length)
         // for each digit in 8 bit binary - left to right
         for (int j = 0; number > 0; j++)
             {
-                int bitdivisor = pow(2, BITS_IN_BYTE - (i + 1));
+                int bitdivisor = pow(2, BITS_IN_BYTE - (j + 1));
                 int remainder = number / bitdivisor;
 
                 printf("\n*** test() ***\n");
-                printf("i:      %i\n", i);
+                printf("j:      %i\n", j);
                 printf("number: %i\n", number);
 
                 printf("%i / %i = %i           \n", number, bitdivisor, remainder);
 
                 if (number / bitdivisor >= 1)
                 {
-                    binary[i] = 1;
+                    binary[j] = 1;
                     number -= bitdivisor;
                 }
             }
