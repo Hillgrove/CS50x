@@ -53,15 +53,14 @@ void test()
     for (int i = 0; i < number; i++)
     {
         printf("\n*** test() ***\n");
-        printf("i:                        %i\n", i);
+        printf("i:                   %i\n", i);
 
-        if (number / pow(2, BITS_IN_BYTE - (i + 1)) > 0)
+        if (number / pow(2, BITS_IN_BYTE - (i + 1)) >= 1)
         {
             int bit = pow(2, BITS_IN_BYTE - (i + 1));
-            float remainder = (float) number / bit;
+            int remainder = number / bit;
 
-            printf("%i / %i                       \n", number, bit);
-            printf("remainder: %f                 \n", remainder);
+            printf("%i / %i = %i             \n", number, bit, remainder);
             binary[i] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
 
