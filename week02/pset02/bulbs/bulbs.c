@@ -62,7 +62,7 @@ void test()
         if (number / bit >= 1)
         {
             binary[i] = 1;
-            number -= pow(2, BITS_IN_BYTE - (i + 1));
+            number -= bit;
 
             printarray(binary);
         }
