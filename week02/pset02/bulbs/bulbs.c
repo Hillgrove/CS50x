@@ -51,6 +51,10 @@ void test()
     int binary[BITS_IN_BYTE];
     for (int i = 0, int rest = number; i < rest; i++)
     {
-        if (number / 
+        if (number / pow(2, BITS_IN_BYTE - (i + 1)))
+        {
+            printf("i counter: %i\n", i);
+            printf("current power: %i\n", pow(2, BITS_IN_BYTE - (i + 1)));
+        }
     }
 }
