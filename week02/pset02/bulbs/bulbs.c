@@ -89,8 +89,6 @@ void ascii2binary(int ascii_codes[], int length)
                     number -= bitdivisor;
                 }
             }
-
-
     }
 }
 
