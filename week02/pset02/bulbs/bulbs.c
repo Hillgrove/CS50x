@@ -53,12 +53,12 @@ void test()
     for (int i = 0; i < number; i++)
     {
         printf("\n*** test() ***\n");
-        printf("i:      %i\n", i);
+        printf("i:                        %i\n", i);
 
         if (number / pow(2, BITS_IN_BYTE - (i + 1)) > 0)
         {
             printf("number:                   %i\n", number);
-            printf("remainder higher that 1?: %b\n", number / pow(2, BITS_IN_BYTE - (i + 1)) > 0);
+            printf("remainder higher that 1?: %d\n", number / pow(2, BITS_IN_BYTE - (i + 1)) > 0);
             printf("remainder:                %f\n", number / pow(2, BITS_IN_BYTE - (i + 1)));
             binary[BITS_IN_BYTE - (i + 1)] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
