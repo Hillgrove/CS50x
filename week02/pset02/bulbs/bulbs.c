@@ -18,13 +18,13 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int string2ascii(string message);
 
 int main(void)
 {
     string message = get_string("Message: ");
     int length = strlen(message);
-    int ascii_codes[length] = string2ascii(message);
+    int ascii_codes[length];
+    string2ascii(message, length); // converts each char in message to its ASCII decimal representation
 
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
@@ -44,17 +44,4 @@ void print_bulb(int bit)
         // Light emoji
         printf("\U0001F7E1");
     }
-}
-
-int string2ascii(string message)
-{
-    int length = strlen(message);
-    int ascii_codes[length];
-
-    for (int i = 0; i < length; i++)
-    {
-        ascii_codes[i] = (int) message[i];
-    }
-
-    return ascii_codes[];
 }
