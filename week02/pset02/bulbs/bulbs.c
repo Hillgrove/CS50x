@@ -19,7 +19,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void string2ascii(string message, int length, int ascii_codes[]);
-void printarray(int array[]);
+void printarray(int array[], int length);
 
 
 int main(void)
@@ -28,6 +28,7 @@ int main(void)
     int length = strlen(message);
     int ascii_codes[length];
     string2ascii(message, length, ascii_codes); // converts each char in message to its ASCII code
+    printarray(ascii_codes, length);
 
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
@@ -57,7 +58,11 @@ void string2ascii(string message, int length, int ascii_codes[])
     }
 }
 
-void printarray(int array[])
+void printarray(int array[], int length)
 {
-    fo
+    for (int i = 0; i < length; i++)
+    {
+        printf("%i ", array[i]);
+    }
+    printf("\n");
 }
