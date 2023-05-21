@@ -78,7 +78,7 @@ void ascii2binary(int ascii_codes[], int length)
             int remainder = number / bitdivisor;
             if (number / bitdivisor >= 1)
             {
-                ascii_
+                ascii_codes[i]
             }
         }
     }
