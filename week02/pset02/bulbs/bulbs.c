@@ -25,6 +25,7 @@ int main(void)
     string message = get_string("Message: ");
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
     int binary_string = string2binary(message);
+    printf("ASCII code for %s: %i\n", message, binary_string);
 
     // TODO: use the provided print_bulb function to print a series of 0s and 1s as a series of yellow and black emoji, which represent on and off light bulbs.
     // TODO: Each “byte” of 8 symbols should be printed on its own line when outputted; there should be a \n after the last “byte” of 8 symbols as well.
@@ -59,7 +60,7 @@ long string2binary(string message)
         // converts each ASCII decimal to it's binary representation
         for (int j = 0; j < len; i++)
         {
-            
+
         }
     }
 
