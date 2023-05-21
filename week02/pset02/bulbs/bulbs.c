@@ -15,7 +15,7 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 #include <stdio.h>
 #include <string.h>
 
-int string2ascii(string message);
+int string2ascii(string message, int length);
 
 const int BITS_IN_BYTE = 8;
 
@@ -24,7 +24,8 @@ void print_bulb(int bit);
 int main(void)
 {
     string message = get_string("Message: ");
-    int ascii_array[] = string2ascii(message);
+    int length = strlen(message);
+    int ascii_array[length] = string2ascii(message, length);
 
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
@@ -47,13 +48,12 @@ void print_bulb(int bit)
 }
 
 
-int string2ascii(string message)
+int string2ascii(string message, int length)
 {
-    int lenth = strlen(message);
-    int ascii_array[length];
+    int array[length];
     for (int i = 0; i < len; i++)
     {
-        ascii_array[i] = (int) message[i];
+        array[i] = (int) message[i];
     }
-    return ascii_array;
+    return array;
 }
