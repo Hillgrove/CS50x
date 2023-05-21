@@ -69,7 +69,7 @@ void ascii2binary(int ascii_codes[], int length)
     for (int i = 0; i < length; i++)
     {
         int number = ascii_codes[i];
-        int binary[BITS_IN_BYTE];
+        int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 
         // for each digit in 8 bit binary - left to right
