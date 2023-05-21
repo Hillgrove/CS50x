@@ -59,7 +59,7 @@ void test()
         printf("i: %i\n", i);
         printf("%i / %i = %i           \n", number, bit, remainder);
 
-        if (number / pow(2, BITS_IN_BYTE - (i + 1)) >= 1)
+        if (number / bit >= 1)
         {
             binary[i] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
