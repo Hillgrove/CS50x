@@ -9,4 +9,5 @@ int main(void)
         printf("%i", array1[i]);
     }
     printf("\n");
+
 }
