@@ -77,11 +77,10 @@ void ascii2binary(int ascii_codes[], int length)
             int bitdivisor = pow(2, BITS_IN_BYTE - (j + 1));
             int remainder = number / bitdivisor;
 
-            printf("\n*** test() ***\n");
-            printf("j:      %i\n", j);
-            printf("number: %i\n", number);
-
-            printf("%i / %i = %i           \n", number, bitdivisor, remainder);
+            // printf("\n*** test() ***\n");
+            // printf("j:      %i\n", j);
+            // printf("number: %i\n", number);
+            // printf("%i / %i = %i           \n", number, bitdivisor, remainder);
 
             if (number / bitdivisor >= 1)
             {
@@ -89,17 +88,18 @@ void ascii2binary(int ascii_codes[], int length)
                 number -= bitdivisor;
             }
         }
+        printarray(binary, 8);
     }
+
 }
 
 
 
 void printarray(int array[], int length)
 {
-    printf("ASCII_codes array: ");
     for (int i = 0; i < length; i++)
     {
-        printf("%i ", array[i]);
+        print_bulb(array[i]);
     }
     printf("\n");
 }
