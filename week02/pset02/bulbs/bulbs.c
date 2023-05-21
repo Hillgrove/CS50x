@@ -21,6 +21,7 @@ void print_bulb(int bit);
 
 int main(void)
 {
+    int 
     string message = getstring("Message: ");
 
 
