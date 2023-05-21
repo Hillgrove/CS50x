@@ -58,9 +58,10 @@ void test()
 
         if (number / pow(2, BITS_IN_BYTE - (i + 1)) > 0)
         {
+            printf("number: %i\n", number);
             binary[BITS_IN_BYTE - (i + 1)] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
-            printf("i:      %i\n", i);
+
             printarray(binary);
         }
     }
