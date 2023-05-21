@@ -99,7 +99,7 @@ void printarray(int array[], int length)
 {
     for (int i = 0; i < length; i++)
     {
-        print_bulb(array[i]);
+        printf("%i ", array[i]);
     }
     printf("\n");
 }
