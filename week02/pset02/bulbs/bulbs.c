@@ -26,9 +26,8 @@ int main(void)
 {
     string message = get_string("Message: ");
     int length = strlen(message);
-    int ascii_codes[length];
-    string2ascii(message, length, ascii_codes); // converts each char in message to its ASCII code
-    printarray(ascii_codes, length);
+    int message_array[length];
+    string2ascii(message, length, ascii_codes); // converts each char in message to its ASCII code and saves it in an array
 
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
