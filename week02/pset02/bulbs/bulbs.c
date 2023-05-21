@@ -19,7 +19,7 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-void test();
+void printb(int binary);
 
 int main(void)
 {
@@ -45,7 +45,6 @@ void print_bulb(int bit)
     }
 }
 
-
 void test()
 {
     int number = 72; // ASCII decimal for H
@@ -56,12 +55,12 @@ void test()
         {
             binary[BITS_IN_BYTE - (i + 1)] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
-            printf("binary code: %i\n", binary);
+            printarray(binary);
         }
     }
 }
 
-void printb()
+void printb(binary[])
 {
-    
+    for (int i = 0, len = )
 }
