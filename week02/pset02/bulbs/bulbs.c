@@ -73,22 +73,22 @@ void ascii2binary(int ascii_codes[], int length)
 
         // for each digit in 8 bit binary - left to right
         for (int j = 0; number > 0; j++)
+        {
+            int bitdivisor = pow(2, BITS_IN_BYTE - (j + 1));
+            int remainder = number / bitdivisor;
+
+            printf("\n*** test() ***\n");
+            printf("j:      %i\n", j);
+            printf("number: %i\n", number);
+
+            printf("%i / %i = %i           \n", number, bitdivisor, remainder);
+
+            if (number / bitdivisor >= 1)
             {
-                int bitdivisor = pow(2, BITS_IN_BYTE - (j + 1));
-                int remainder = number / bitdivisor;
-
-                printf("\n*** test() ***\n");
-                printf("j:      %i\n", j);
-                printf("number: %i\n", number);
-
-                printf("%i / %i = %i           \n", number, bitdivisor, remainder);
-
-                if (number / bitdivisor >= 1)
-                {
-                    binary[j] = 1;
-                    number -= bitdivisor;
-                }
+                binary[j] = 1;
+                number -= bitdivisor;
             }
+        }
     }
 }
 
