@@ -61,9 +61,9 @@ void test()
     }
 }
 
-void printarray(binary[])
+void printarray(int binary[])
 {
-    for (int i = 0; i < BITS_IN_BYTE; o++)
+    for (int i = 0; i < BITS_IN_BYTE; i++)
     {
         printf("%i", binary[i]);
     }
