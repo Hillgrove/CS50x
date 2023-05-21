@@ -58,10 +58,11 @@ void test()
         if (number / pow(2, BITS_IN_BYTE - (i + 1)) > 0)
         {
             int bit = pow(2, BITS_IN_BYTE - (i + 1));
+            float remainder = (float) number / bit;
 
             printf("%i / %i                       \n", number, bit);
-            printf("remainder higher that 1?: %d  \n", number / bit > 0);
-            binary[BITS_IN_BYTE - (i + 1)] = 1;
+            printf("remainder: %f                 \n", remainder);
+            binary[i] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
 
             printarray(binary);
