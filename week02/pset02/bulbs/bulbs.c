@@ -83,19 +83,17 @@ void ascii2binary(int ascii_codes[], int length)
                 number -= bitdivisor;
             }
         }
-        ascii_codes[i] = binary;
         printarray(binary, BITS_IN_BYTE);
     }
 
 }
 
 
-
 void printarray(int array[], int length)
 {
     for (int i = 0; i < length; i++)
     {
-        printf("%i ", array[i]);
+        print_bulb(array[i]);
     }
     printf("\n");
 }
