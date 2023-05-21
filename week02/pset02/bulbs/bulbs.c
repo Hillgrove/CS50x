@@ -49,9 +49,11 @@ void print_bulb(int bit)
 
 int string2ascii(string message)
 {
-    for (int i = 0, len = strlen(message); i < 0; i++)
+    int lenth = strlen(message);
+    int ascii_array[length];
+    for (int i = 0; i < len; i++)
     {
-        int ascii_array[i] = (int) message[i];
+        ascii_array[i] = (int) message[i];
     }
     return ascii_array;
 }
