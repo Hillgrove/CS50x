@@ -83,6 +83,7 @@ void ascii2binary(int ascii_codes[], int length)
                 number -= bitdivisor;
             }
         }
+        ascii_codes[i] = binary;
         printarray(binary, BITS_IN_BYTE);
     }
 
