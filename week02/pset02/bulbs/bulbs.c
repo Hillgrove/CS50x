@@ -49,16 +49,14 @@ void print_bulb(int bit)
 void test()
 {
     int number = 72;
-    int rest = number;
     int binary[BITS_IN_BYTE];
-    for (int i = 0; i < rest; i++)
+    for (int i = 0; i < number; i++)
     {
         if (number / pow(2, BITS_IN_BYTE - (i + 1)) > 0)
         {
-            printf("i counter: %i\n", i);
-            printf("current power: %f\n", pow(2, BITS_IN_BYTE - (i + 1)));
-            printf("rest : %f\n", number / pow(2, BITS_IN_BYTE - (i + 1)));
-            rest = number 
+            binary[BITS_IN_BYTE - (i + 1)] = 1;
+            number -= pow(2, BITS_IN_BYTE - (i + 1));
+            printf("binary code: %i\n", binary);
         }
     }
 }
