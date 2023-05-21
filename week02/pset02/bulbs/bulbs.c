@@ -12,14 +12,16 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 */
 
 #include <cs50.h>
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
+
 
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void string2ascii(string message, int length, int ascii_codes[]);
-void ascii2binary(int ascii_codes, int length);
+void ascii2binary(int ascii_codes[], int length);
 void printarray(int array[], int length);
 
 
@@ -60,7 +62,7 @@ void string2ascii(string message, int length, int ascii_codes[])
 }
 
 
-void ascii2binary(int ascii_codes, int length)
+void ascii2binary(int ascii_codes[], int length)
 {
     // for each ASCII code in array
     for (int i = 0; length; i++)
