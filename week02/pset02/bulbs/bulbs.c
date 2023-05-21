@@ -64,9 +64,10 @@ void ascii2binary(int ascii_codes, int length)
 {
     int binary[BITS_IN_BYTE];
 
+
     for (int i = 0; i < BITS_IN_BYTE; i++)
     {
-        
+        if ()
     }
 }
 
