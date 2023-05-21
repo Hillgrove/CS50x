@@ -65,9 +65,10 @@ void string2ascii(string message, int length, int ascii_codes[])
 void ascii2binary(int ascii_codes[], int length)
 {
     // for each ASCII code in array
-    for (int i = 0; length; i++)
+    for (int i = 0; i < length; i++)
     {
         int number = ascii_codes[i];
+        int binary[BITS_IN_BYTE];
 
         for (int j = 0; number > 0; j++)
             {
