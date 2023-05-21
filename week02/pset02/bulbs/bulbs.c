@@ -20,11 +20,11 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void printarray(int binary[]);
-void test(int number);
+void test();
 
 int main(void)
 {
-    string message = get_string("Message: ");
+    // string message = get_string("Message: ");
     test();
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
@@ -46,9 +46,9 @@ void print_bulb(int bit)
     }
 }
 
-void test(int number)
+void test()
 {
-    // int number = 73; // ASCII decimal for H
+    int number = get_int("input number: "); // ASCII decimal for H
     int binary[BITS_IN_BYTE];
     for (int i = 0; i < number; i++)
     {
