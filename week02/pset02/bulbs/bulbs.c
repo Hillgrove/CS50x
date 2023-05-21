@@ -60,3 +60,5 @@ void test()
         }
     }
 }
+
+void printb()
