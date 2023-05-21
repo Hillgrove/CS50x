@@ -56,8 +56,8 @@ void test()
         int remainder = number / bit;
 
         printf("\n*** test() ***\n");
-        printf("i: %i\n", i);
-        printf("i: %i\n", i);
+        printf("i:      %i\n", i);
+        printf("number: %i\n", number);
 
         printf("%i / %i = %i           \n", number, bit, remainder);
 
