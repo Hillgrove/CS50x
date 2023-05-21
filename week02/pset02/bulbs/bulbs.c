@@ -18,12 +18,13 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
+int string2ascii(string message);
 
 int main(void)
 {
     string message = get_string("Message: ");
+    int ascii_codes = string2ascii(message);
 
-    int ascii_codes[]
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
     // TODO: use the provided print_bulb function to print a series of 0s and 1s as a series of yellow and black emoji, which represent on and off light bulbs.
@@ -44,3 +45,15 @@ void print_bulb(int bit)
     }
 }
 
+int string2ascii(string message)
+{
+    int length = strlen(message);
+    int ascii_codes[length];
+
+    for (int i = 0; i < length; i++)
+    {
+        ascii_codes[i] = (int) message[i];
+    }
+
+    return ascii_codes[];
+}
