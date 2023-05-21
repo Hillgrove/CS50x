@@ -48,7 +48,7 @@ void print_bulb(int bit)
 
 void test()
 {
-    int number = 72; // ASCII decimal for H
+    int number = 73; // ASCII decimal for H
     int binary[BITS_IN_BYTE];
     for (int i = 0; i < number; i++)
     {
