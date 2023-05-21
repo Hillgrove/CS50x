@@ -52,15 +52,15 @@ void test()
     int binary[BITS_IN_BYTE];
     for (int i = 0; i < number; i++)
     {
+        int bit = pow(2, BITS_IN_BYTE - (i + 1));
+        int remainder = number / bit;
+
         printf("\n*** test() ***\n");
-        printf("i:                   %i\n", i);
+        printf("i: %i\n", i);
+        printf("%i / %i = %i           \n", number, bit, remainder);
 
         if (number / pow(2, BITS_IN_BYTE - (i + 1)) >= 1)
         {
-            int bit = pow(2, BITS_IN_BYTE - (i + 1));
-            int remainder = number / bit;
-
-            printf("%i / %i = %i             \n", number, bit, remainder);
             binary[i] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
 
