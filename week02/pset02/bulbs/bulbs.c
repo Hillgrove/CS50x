@@ -51,18 +51,14 @@ long string2binary(string message)
     printf("\n*** string2binary segment ***\n");
 
     // converts each char to it's ASCII decimal
+    int ascii_code = 0;
+
     for (int i = 0, len = strlen(message); i < len; i++)
     {
         printf("ASCII code for %c: %i\n", message[i], message[i]);
 
-        int ascii_code = (int) message[i];
-
-        // converts each ASCII decimal to it's binary representation
-        for (int j = 0; j < len; i++)
-        {
-
-        }
+        ascii_code = (int) message[i];
     }
 
-    return 0; // TODO: correct return
+    return ascii_code; // TODO: correct return
 }
