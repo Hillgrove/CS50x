@@ -31,7 +31,8 @@ int main(void)
     int length = strlen(message);
     int ascii_codes[length];
     string2ascii(message, length, ascii_codes); // converts each char in message to its ASCII code and saves it in an array
-    // printarray(ascii_codes, length);
+    ascii2binary(ascii_codes, length);
+    printarray(ascii_codes, length);
 
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
@@ -70,6 +71,7 @@ void ascii2binary(int ascii_codes[], int length)
         int number = ascii_codes[i];
         int binary[BITS_IN_BYTE];
 
+        // for each digit in 8 bit binary - left to right
         for (int j = 0; number > 0; j++)
             {
                 int bitdivisor = pow(2, BITS_IN_BYTE - (i + 1));
