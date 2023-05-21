@@ -75,8 +75,8 @@ void ascii2binary(int ascii_codes[], int length)
         // for each digit in 8 bit binary - left to right
         for (int j = 0; j < 8; j++)
         {
-            int bitdivisor = pow(2, BITS_IN_BYTE - j);
-            int remainder = number / bitdivisor;
+            // 128, 64, 32, 16, 8, 4, 2, 1
+            int bitdivisor = pow(2, BITS_IN_BYTE - (j + 1));
             if (number / bitdivisor >= 1)
             {
                 binary[j] = 1;
