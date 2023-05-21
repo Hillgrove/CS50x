@@ -23,7 +23,7 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    string message = getstring("Message: ");
+    string message = get_string("Message: ");
     int ascii_array[] = string2ascii(message);
 
 
@@ -44,4 +44,14 @@ void print_bulb(int bit)
         // Light emoji
         printf("\U0001F7E1");
     }
+}
+
+
+int string2ascii(string message)
+{
+    for (int i = 0, len = strlen(message); i < 0; i++)
+    {
+        int ascii_array[i] = (int) message[i];
+    }
+    return ascii_array;
 }
