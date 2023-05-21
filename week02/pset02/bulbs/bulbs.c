@@ -50,21 +50,21 @@ void test()
 {
     int number = get_int("input number: "); // ASCII decimal for H
     int binary[BITS_IN_BYTE];
-    for (int i = 0; i < number; i++)
+    for (int i = 0; number > 0; i++)
     {
-        int bit = pow(2, BITS_IN_BYTE - (i + 1));
-        int remainder = number / bit;
+        int bitdivisor = pow(2, BITS_IN_BYTE - (i + 1));
+        int remainder = number / bitdivisor;
 
         printf("\n*** test() ***\n");
         printf("i:      %i\n", i);
         printf("number: %i\n", number);
 
-        printf("%i / %i = %i           \n", number, bit, remainder);
+        printf("%i / %i = %i           \n", number, bitdivisor, remainder);
 
-        if (number / bit >= 1)
+        if (number / bitdivisor >= 1)
         {
             binary[i] = 1;
-            number -= bit;
+            number -= bitdivisor;
 
             printarray(binary);
         }
