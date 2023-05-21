@@ -12,20 +12,17 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 */
 
 #include <cs50.h>
-#include <math.h>
 #include <stdio.h>
 #include <string.h>
 
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-void printarray(int binary[]);
-void test();
 
 int main(void)
 {
-    // string message = get_string("Message: ");
-    test();
+    string message = getstring("Message: ");
+
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
     // TODO: use the provided print_bulb function to print a series of 0s and 1s as a series of yellow and black emoji, which represent on and off light bulbs.
@@ -45,39 +42,3 @@ void print_bulb(int bit)
         printf("\U0001F7E1");
     }
 }
-
-void test()
-{
-    int number = get_int("input number: "); // ASCII decimal for H
-    int binary[BITS_IN_BYTE];
-    for (int i = 0; number > 0; i++)
-    {
-        int bitdivisor = pow(2, BITS_IN_BYTE - (i + 1));
-        int remainder = number / bitdivisor;
-
-        printf("\n*** test() ***\n");
-        printf("i:      %i\n", i);
-        printf("number: %i\n", number);
-
-        printf("%i / %i = %i           \n", number, bitdivisor, remainder);
-
-        if (number / bitdivisor >= 1)
-        {
-            binary[i] = 1;
-            number -= bitdivisor;
-
-            printarray(binary);
-        }
-    }
-}
-
-void printarray(int binary[])
-{
-    printf("\n*** printarray() ***\n");
-    for (int i = 0; i < BITS_IN_BYTE; i++)
-    {
-        printf("%i", binary[i]);
-    }
-    printf("\n");
-}
-
