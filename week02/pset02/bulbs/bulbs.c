@@ -105,4 +105,3 @@ void printarray(int array[], int length)
     }
     printf("\n");
 }
-
