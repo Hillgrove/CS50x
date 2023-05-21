@@ -52,13 +52,13 @@ void test()
     int binary[BITS_IN_BYTE];
     for (int i = 0; i < number; i++)
     {
-        printf("\n*** test function. ***\n");
-        printf("number: %i\n", number);
+        printf("\n*** test() ***\n");
         printf("i:      %i\n", i);
 
         if (number / pow(2, BITS_IN_BYTE - (i + 1)) > 0)
         {
             printf("number: %i\n", number);
+            printf("number: %i\n", number / pow(2, BITS_IN_BYTE - (i + 1)));
             binary[BITS_IN_BYTE - (i + 1)] = 1;
             number -= pow(2, BITS_IN_BYTE - (i + 1));
 
@@ -69,6 +69,7 @@ void test()
 
 void printarray(int binary[])
 {
+    printf("\n*** printarray() ***\n");
     for (int i = 0; i < BITS_IN_BYTE; i++)
     {
         printf("%i", binary[i]);
