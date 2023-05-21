@@ -19,6 +19,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void string2ascii(string message, int length, int ascii_codes[]);
+void ascii2binary(int ascii_codes, int length);
 void printarray(int array[], int length);
 
 
@@ -58,6 +59,19 @@ void string2ascii(string message, int length, int ascii_codes[])
     }
 }
 
+
+void ascii2binary(int ascii_codes, int length)
+{
+    int binary[BITS_IN_BYTE];
+
+    for (int i = 0; i < BITS_IN_BYTE; i++)
+    {
+        
+    }
+}
+
+
+
 void printarray(int array[], int length)
 {
     printf("ASCII_codes array: ");
@@ -67,3 +81,4 @@ void printarray(int array[], int length)
     }
     printf("\n");
 }
+
