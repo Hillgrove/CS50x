@@ -19,7 +19,8 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-void printb(int binary);
+void printarray(int binary[]);
+void test();
 
 int main(void)
 {
@@ -60,7 +61,11 @@ void test()
     }
 }
 
-void printb(binary[])
+void printarray(binary[])
 {
-    for (int i = 0, len = )
+    for (int i = 0; i < BITS_IN_BYTE; o++)
+    {
+        printf("%i", binary[i]);
+    }
+    printf("\n");
 }
