@@ -23,7 +23,8 @@ int string2ascii(string message);
 int main(void)
 {
     string message = get_string("Message: ");
-    int ascii_codes[] = string2ascii(message);
+    int length = strlen(message);
+    int ascii_codes[length] = string2ascii(message);
 
 
     // TODO: convert the given string into a series of 8-bit binary numbers, one for each character of the string.
