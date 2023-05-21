@@ -20,7 +20,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void printarray(int binary[]);
-void test();
+void test(int number);
 
 int main(void)
 {
@@ -46,9 +46,9 @@ void print_bulb(int bit)
     }
 }
 
-void test()
+void test(int number)
 {
-    int number = 73; // ASCII decimal for H
+    // int number = 73; // ASCII decimal for H
     int binary[BITS_IN_BYTE];
     for (int i = 0; i < number; i++)
     {
