@@ -12,6 +12,7 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 */
 
 #include <cs50.h>
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -48,13 +49,14 @@ void print_bulb(int bit)
 void test()
 {
     int number = 72;
+    int rest = number;
     int binary[BITS_IN_BYTE];
-    for (int i = 0, int rest = number; i < rest; i++)
+    for (int i = 0; i < rest; i++)
     {
         if (number / pow(2, BITS_IN_BYTE - (i + 1)))
         {
             printf("i counter: %i\n", i);
-            printf("current power: %i\n", pow(2, BITS_IN_BYTE - (i + 1)));
+            printf("current power: %f\n", pow(2, BITS_IN_BYTE - (i + 1)));
         }
     }
 }
