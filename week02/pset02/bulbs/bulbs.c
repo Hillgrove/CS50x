@@ -57,6 +57,8 @@ void test()
 
         printf("\n*** test() ***\n");
         printf("i: %i\n", i);
+        printf("i: %i\n", i);
+
         printf("%i / %i = %i           \n", number, bit, remainder);
 
         if (number / bit >= 1)
