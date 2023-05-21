@@ -4,6 +4,7 @@
     "editor.showFoldingControls": "always",
     "notebook.showFoldingControls": "always",
     "files.associations": {
-        "string.h": "c"
+        "string.h": "c",
+        "type_traits": "c"
     }
 }
