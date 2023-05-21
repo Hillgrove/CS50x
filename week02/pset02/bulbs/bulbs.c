@@ -18,7 +18,7 @@ for you, which takes in a 0 or 1 and outputs emoji representing light bulbs.)
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-void string2ascii(string message, in length);
+void string2ascii(string message, int length);
 
 int main(void)
 {
@@ -47,7 +47,10 @@ void print_bulb(int bit)
     }
 }
 
-void string2ascii(string message, in length)
+void string2ascii(string message, int length)
 {
-    for (i = )
+    for (int i = 0; i < length; i++)
+    {
+        ascii_codes[i] = (int) message[i];
+    }
 }
