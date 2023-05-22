@@ -3,5 +3,7 @@
 
 int main(int argc, string argv[])
 {
-    int ciphher = 
+    int cipher = (int) argv[0];
+    printf("argc: %i", argc);
+    printf("argv: %i", cipher);
 }
