@@ -2,9 +2,11 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-bool check_input(int length, string text[]);
-bool is_number(int length, string text);
+
+bool check_input(int num_args, string text[]);
+bool is_number(string text);
 
 
 int main(int argc, string argv[])
@@ -16,9 +18,9 @@ int main(int argc, string argv[])
 }
 
 // Checks a string to see if it's correct
-bool check_input(int length, string text[])
+bool check_input(int num_args, string text[])
 {
-    if (length == 2 && is_number(length, text[1]))
+    if (num_args == 2 && is_number(text[1]))
     {
         return true;
     }
@@ -30,8 +32,9 @@ bool check_input(int length, string text[])
 }
 
 // Checks if a string is only numbers
-bool is_number(int length, string text)
+bool is_number(string text)
 {
+    int length = strlen(text);
     bool valid = true;
 
     for (int i = 0; i < length; i++)
