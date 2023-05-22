@@ -70,6 +70,6 @@ bool is_number(string text)
 char rotate(char letter, int key)
 {
     char c = ((int) letter + key);
-    printf("\nletter: '%c'  ==>  ASCII code: %i  ==>  Cipher ASCII code %i  ==>  Cipher letter: %c\n", letter, (int) letter, (int) letter + (key, c);
+    printf("\nletter: '%c'  ==>  ASCII code: %i  ==>  Cipher ASCII code %i  ==>  Cipher letter: %c\n", letter, (int) letter, (int) letter + (key % 26), c);
     return c;
 }
