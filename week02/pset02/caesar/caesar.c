@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-bool check_input(int num_args, string text[]);
 bool is_number(string text);
 
 
@@ -24,7 +22,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        
+
     }
 }
 
