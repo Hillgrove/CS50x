@@ -31,7 +31,8 @@ int main(int argc, string argv[])
         // Ask user for message
         string plaintext = get_string("plaintext: ");
 
-        // printf("ciphertext: ");
+        printf("ciphertext: ");
+
         // Loop each char in message
         for (int i = 0, len = strlen(plaintext); i < len; i++)
         {
@@ -82,6 +83,6 @@ char rotate(char letter, int key)
     }
 
     char c = (letter - shift + key) % 26 + shift;
-    printf("\nletter: '%c'  ==>  ASCII code: %i  ==>  Cipher ASCII code %i  ==>  Cipher letter: ", letter, (int) letter, (int) (letter - shift + key) % 26 + shift);
+    // printf("\nletter: '%c'  ==>  ASCII code: %i  ==>  Cipher ASCII code %i  ==>  Cipher letter: ", letter, (int) letter, (int) (letter - shift + key) % 26 + shift);
     return c;
 }
