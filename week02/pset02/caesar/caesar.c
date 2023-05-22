@@ -72,12 +72,12 @@ char rotate(char letter, int key)
     int temp;
     if (isupper(letter))
     {
-        temp = letter - "A";
+        temp = letter - 'A';
     }
 
-    else if (islower(letter))
+    else
     {
-        temp = letter - "a";
+        temp = letter - 'a';
     }
 
     char c = ((temp + key) % 26);
