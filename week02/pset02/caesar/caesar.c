@@ -36,6 +36,9 @@ bool is_number(int length, string text)
 {
     for (int i = 0; i < length; i++)
     {
-        
+        if (isdigit(text[i]))
+        {
+            
+        }
     }
 }
