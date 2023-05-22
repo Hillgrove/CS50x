@@ -24,10 +24,22 @@ int main(int argc, string argv[])
     }
     else
     {
-        // TODO: Convert argument string to int
-        // TODO: Ask user for message
-        // TODO: Loop each char in message
-            // TODO: If letter encode char
+        // Convert argument string to int
+        int key = atoi(argv[1]);
+
+        // Ask user for message
+        string plaintext = get_string("plaintext: ");
+
+        // Loop each char in message
+        for (int i = 0, len = strlen(plaintext); i < len; i++)
+        {
+            // encrypt if char is a letter
+            if (isalpha(plaintext[i]))
+            {
+                
+            }
+        }
+
     }
 }
 
