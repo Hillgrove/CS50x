@@ -34,11 +34,12 @@ bool check_input(int length, string text[])
 // Checks if a string is only numbers
 bool is_number(int length, string text)
 {
+    bool val
     for (int i = 0; i < length; i++)
     {
         if (isdigit(text[i]))
         {
-            
+
         }
     }
 }
