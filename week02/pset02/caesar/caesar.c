@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-bool check_input(int number, string text[]);
+bool check_input(int length, string text[]);
+bool is_number(int length, string text);
 
 
 int main(int argc, string argv[])
@@ -17,9 +18,9 @@ int main(int argc, string argv[])
 }
 
 // Checks a string to see if it's correct
-bool valid_input(int number, string text[])
+bool check_input(int length, string text[])
 {
-    if (number != 2 || isalpha(text[1]))
+    if (length != 2 || isalpha(text[1]))
     {
         printf("Usage: ./caesar key\n");
         return false;
