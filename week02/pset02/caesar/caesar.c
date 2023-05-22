@@ -31,7 +31,7 @@ int main(int argc, string argv[])
         // Ask user for message
         string plaintext = get_string("plaintext: ");
 
-        printf("ciphertext: ");
+        // printf("ciphertext: ");
         // Loop each char in message
         for (int i = 0, len = strlen(plaintext); i < len; i++)
         {
@@ -70,7 +70,7 @@ bool is_number(string text)
 char rotate(char letter, int key)
 {
     printf("letter: '%c'  ==>  ", letter);
-    int c = ((int) letter + key) % 26;
+    char c = ((int) letter + key) % 26;
     printf("cipher: '%c'\n", c);
-    return c;
+    return "X";
 }
