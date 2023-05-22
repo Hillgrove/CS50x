@@ -18,7 +18,7 @@ int main(int argc, string argv[])
 // Checks a string to see if it's correct
 bool check_input(int length, string text[])
 {
-    if (length = 2 && is_number(argc, text[1]))
+    if (length = 2 && is_number(length, text[1]))
     {
         return true;
     }
