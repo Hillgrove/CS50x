@@ -6,6 +6,7 @@
 
 int main(int argc, string argv[])
 {
+    // Checks if argument is 
     if (argc != 2 || isalpha(argv[1][0]))
     {
         printf("Usage: ./caesar key\n");
