@@ -69,8 +69,10 @@ bool is_number(string text)
 
 char rotate(char letter, int key)
 {
+    printf("key: %i\n", key);
+    printf("number: %i\n", ((int) letter + key) % 26);
     printf("letter: '%c'  ==>  ", letter);
     char c = ((int) letter + key) % 26;
     printf("cipher: '%c'\n", c);
-    return "X";
+    return c;
 }
