@@ -3,22 +3,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+bool check_input(int argc, string argv[]);
+
 
 int main(int argc, string argv[])
 {
-    // Checks if argument is 
-    if (argc != 2 || isalpha(argv[1][0]))
-    {
-        printf("Usage: ./caesar key\n");
-    }
+    // Checks if argument is correct
+    bool isValid = check_input(argc, argv);
 
-    else
-    {
-        int cipher = atoi(argv[1]);
-
-        printf("argc: %i\n", argc);
-        printf("argv: %i\n", cipher);
-    }
+    if (isValid())
 
     return 0;
+}
+
+
+bool valid_input(int argc, string argv[])
+{
+    if (argc != 2 || isalpha(argv[1]))
+    {
+        printf("Usage: ./caesar key\n");
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
