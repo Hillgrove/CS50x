@@ -72,7 +72,7 @@ char rotate(char letter, int key)
     printf("key: %i\n", key);
     printf("number: %i\n", ((int) letter + key) % 26);
     printf("letter: '%c'  ==>  ", letter);
-    char c = ((int) letter + key) % 26;
+    char c = ((int) letter + key);
     printf("cipher: '%c'\n", c);
     return c;
 }
