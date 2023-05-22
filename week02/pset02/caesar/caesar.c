@@ -30,10 +30,10 @@ int main(int argc, string argv[])
         // Ask user for message
         string plaintext = get_string("plaintext: ");
 
+        printf("ciphertext: ");
         // Loop each char in message
         for (int i = 0, len = strlen(plaintext); i < len; i++)
         {
-            printf("ciphertext: ");
             // encrypt if char is a letter
             if (isalpha(plaintext[i]))
             {
