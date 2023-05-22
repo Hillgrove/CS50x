@@ -11,16 +11,15 @@ bool is_number(string text);
 
 int main(int argc, string argv[])
 {
-    bool is_valid = check_input(argc, argv);
-    if (is_valid)
+    if (argc != 2)
     {
-
+        printf("Command needs a single numerical argument");
+        return 1
     }
 
     else
     {
-        printf("Usage: ./caesar key\n");
-        return 1;
+        bool is_valid = check_input(argc, argv);
     }
 }
 
