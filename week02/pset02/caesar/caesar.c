@@ -33,10 +33,11 @@ int main(int argc, string argv[])
         // Loop each char in message
         for (int i = 0, len = strlen(plaintext); i < len; i++)
         {
+            printf("");
             // encrypt if char is a letter
             if (isalpha(plaintext[i]))
             {
-                
+
             }
         }
 
