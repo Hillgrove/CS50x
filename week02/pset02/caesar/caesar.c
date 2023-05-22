@@ -13,28 +13,21 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        printf("Command needs a single numerical argument");
-        return 1
+        printf("Command needs a single numerical argument\n");
+        return 1;
     }
 
-    else
+    else if (!is_number(argv[1]))
     {
-        bool is_valid = check_input(argc, argv);
-    }
-}
-
-// Checks a string to see if it's correct
-bool check_input(int num_args, string text[])
-{
-    if (num_args == 2 && is_number(text[1]))
-    {
-        return true;
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
     else
     {
-        return false;
+
     }
 }
+
 
 // Checks if a string is only numbers
 bool is_number(string text)
