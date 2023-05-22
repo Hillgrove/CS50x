@@ -12,7 +12,16 @@ bool is_number(string text);
 int main(int argc, string argv[])
 {
     bool is_valid = check_input(argc, argv);
+    if (is_valid)
+    {
 
+    }
+
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
     return 0;
 }
 
@@ -25,7 +34,6 @@ bool check_input(int num_args, string text[])
     }
     else
     {
-        printf("Usage: ./caesar key\n");
         return false;
     }
 }
