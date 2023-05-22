@@ -4,11 +4,13 @@
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 && isalpha(argv[0]))
+    if (argc != 2)
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
     }
 
+    int cipher = (long) argv[1];
+
     printf("argc: %i\n", argc);
-    printf("argv: %s\n", argv[0]);
+    printf("argv: %i\n", cipher);
 }
