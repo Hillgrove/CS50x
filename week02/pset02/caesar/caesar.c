@@ -12,15 +12,13 @@ int main(int argc, string argv[])
     // Checks if argument is correct
     bool is_Valid = check_input(argc, argv);
 
-    if (is_Valid())
-
     return 0;
 }
 
 // Checks a string to see if it's correct
 bool check_input(int length, string text[])
 {
-    if (length = 2 && is_number(text[1]))
+    if (length = 2 && is_number(argc, text[1]))
     {
         return true;
     }
