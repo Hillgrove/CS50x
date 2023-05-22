@@ -69,19 +69,17 @@ bool is_number(string text)
 
 char rotate(char letter, int key)
 {
-    int temp;
     if (isupper(letter))
     {
-        temp = letter - 'A';
+        char c = (letter - 'A' + key) % 26;
     }
 
     else
     {
-        temp = letter - 'a';
+        char c = (letter - 'a' + key) % 26;
     }
 
-    char c = ((temp + key) % 26);
-    printf("\nletter: '%c'  ==>  ASCII code: %i  ==>  Cipher ASCII code %i  ==>  Cipher letter: %c\n", letter, (int) letter, (int) (letter + key) % 26, temp);
+    printf("\nletter: '%c'  ==>  ASCII code: %i  ==>  Cipher ASCII code %i  ==>  Cipher letter: %c\n", letter, (int) letter, (int) (letter + key) % 26, c);
 
     return c;
 }
