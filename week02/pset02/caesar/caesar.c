@@ -20,19 +20,22 @@ int main(int argc, string argv[])
 // Checks a string to see if it's correct
 bool check_input(int length, string text[])
 {
-    if (length != 2 || isalpha(text[1]))
+    if (length = 2 && is_number(text[1]))
     {
-        printf("Usage: ./caesar key\n");
-        return false;
+        return true;
     }
     else
     {
-        return true;
+        printf("Usage: ./caesar key\n");
+        return false;
     }
 }
 
 // Checks if a string is only numbers
 bool is_number(int length, string text)
 {
-
+    for (int i = 0; i < length; i++)
+    {
+        
+    }
 }
