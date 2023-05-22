@@ -5,6 +5,7 @@
 #include <string.h>
 
 bool is_number(string text);
+char rotate(char letter, int key);
 
 
 int main(int argc, string argv[])
@@ -37,7 +38,7 @@ int main(int argc, string argv[])
             // encrypt if char is a letter
             if (isalpha(plaintext[i]))
             {
-
+                printf("%c", rotate(plaintext[i], key))
             }
             else
             {
@@ -63,4 +64,11 @@ bool is_number(string text)
         }
     }
     return valid;
+}
+
+
+char rotate(char letter, int key)
+{
+    char c = (letter + key) % 26;
+    return c;
 }
