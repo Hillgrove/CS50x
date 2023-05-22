@@ -10,7 +10,7 @@ bool is_number(int length, string text);
 int main(int argc, string argv[])
 {
     // Checks if argument is correct
-    bool is_Valid = check_input(argc, argv);
+    bool is_valid = check_input(argc, argv);
 
     return 0;
 }
@@ -32,13 +32,14 @@ bool check_input(int length, string text[])
 // Checks if a string is only numbers
 bool is_number(int length, string text)
 {
+    bool valid = true;
+
     for (int i = 0; i < length; i++)
     {
         if (!isdigit(text[i]))
         {
-            return false;
-            break;
+            valid = false;
         }
     }
-    return true;
+    return valid;
 }
