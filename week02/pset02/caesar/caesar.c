@@ -11,7 +11,6 @@ bool is_number(string text);
 
 int main(int argc, string argv[])
 {
-    // Checks if argument is correct
     bool is_valid = check_input(argc, argv);
 
     return 0;
