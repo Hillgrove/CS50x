@@ -37,6 +37,7 @@ bool is_number(int length, string text)
         if (!isdigit(text[i]))
         {
             return false;
+            break;
         }
     }
     return true;
