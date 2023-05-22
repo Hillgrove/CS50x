@@ -9,7 +9,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
     }
 
-    int cipher = (long) argv[1];
+    int cipher = atoi(argv[1]);
 
     printf("argc: %i\n", argc);
     printf("argv: %i\n", cipher);
