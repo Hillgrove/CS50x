@@ -3,23 +3,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-bool check_input(int argc, string argv[]);
+bool check_input(int number, string text[]);
 
 
 int main(int argc, string argv[])
 {
     // Checks if argument is correct
-    bool isValid = check_input(argc, argv);
+    bool is_Valid = check_input(argc, argv);
 
-    if (isValid())
+    if (is_Valid())
 
     return 0;
 }
 
-
-bool valid_input(int argc, string argv[])
+// Checks a string to see if it's correct
+bool valid_input(int number, string text[])
 {
-    if (argc != 2 || isalpha(argv[1]))
+    if (number != 2 || isalpha(text[1]))
     {
         printf("Usage: ./caesar key\n");
         return false;
@@ -28,4 +28,10 @@ bool valid_input(int argc, string argv[])
     {
         return true;
     }
+}
+
+// Checks if a string is only numbers
+bool is_number(int length, string text)
+{
+
 }
