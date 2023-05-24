@@ -59,7 +59,7 @@ bool is_valid(string key)
 // Check key length
 bool length_ok(string key)
 {
-    if (strlen(key) == 26)
+    if (strlen(key) == 8)
     {
         return true;
     }
@@ -90,9 +90,9 @@ bool no_repeats(string key)
 
     for (int i = 0; i < len; i++)
     {
-        for (int j = 0; j < len; j++)
+        for (int j = i + 1; j < len - (i + 1); j++)
         {
-            if 
+            printf("Comparing %c to %c\n", key[i], key[j]);
         }
     }
     return false;
