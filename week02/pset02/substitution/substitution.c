@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         // TODO: Find suitable error message
-        printf("error message of your choice\n");
+        printf("Program must have 1 argument to work\n");
         return 1;
     }
 
