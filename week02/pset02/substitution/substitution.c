@@ -7,6 +7,7 @@ A program that implements a substitution cipher
 
 int main(int argc, string argv[])
 {
+    string 
     // TODO: Get key
     // TODO: Validate key
         // TODO: check key length
