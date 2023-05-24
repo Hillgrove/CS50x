@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         // TODO: Find suitable error message
-        printf("Program must have an argument to work\n");
+        printf("Program must have one and only one argument.\n");
         return 1;
     }
 
@@ -29,7 +29,6 @@ int main(int argc, string argv[])
     // Validate key
     if (!is_valid(key))
     {
-        printf("not-valid\n");
         return 1;
     }
 
@@ -63,6 +62,7 @@ bool length_ok(string key)
     {
         return true;
     }
+    printf("Key must contain 26 characters.\n");
     return false;
 }
 
@@ -74,6 +74,7 @@ bool only_alpha(string key)
     {
         if (!isalpha(key[i]))
         {
+            printf("Key must be alphabetic only.\n");
             return false;
         }
     }
