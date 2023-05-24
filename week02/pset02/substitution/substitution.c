@@ -29,6 +29,7 @@ int main(int argc, string argv[])
     // Validate key
     if (!is_valid(key))
     {
+        printf("key not valid\n");
         return 1;
     }
 
