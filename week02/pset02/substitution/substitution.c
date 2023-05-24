@@ -90,7 +90,7 @@ bool no_repeats(string key)
 
     for (int i = 0; i < len; i++)
     {
-        for (int j = i + 1; j < len - (i + 1); j++)
+        for (int j = i + 1; j < len; j++)
         {
             printf("Comparing %c to %c\n", key[i], key[j]);
         }
