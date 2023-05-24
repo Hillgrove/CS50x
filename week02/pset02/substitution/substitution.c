@@ -9,6 +9,7 @@ A program that implements a substitution cipher
 
 
 bool is_valid(string key);
+void to_upper(string key);
 bool length_ok(string key);
 bool only_alpha(string key);
 bool no_repeats(string key);
@@ -49,15 +50,25 @@ bool is_valid(string key)
 {
     if (length_ok(key) && only_alpha(key) && no_repeats(key))
     {
+        to_upper(key);
         return true;
     }
     return false;
 }
 
+// Converts string to UPPERCASE
+void to_upper(string key)
+{
+    for (int i = 0, len = strlen(key); i < len; i++)
+    {
+        key[i] = toupper(key[i]);
+    }
+}
+
 // Check key length
 bool length_ok(string key)
 {
-    if (strlen(key) == 26)  // TODO: Change number back to 26 when testing done
+    if (strlen(key) == 26)
     {
         return true;
     }
@@ -104,6 +115,7 @@ bool no_repeats(string key)
 // Enciphers plaintext
 string encipher(string plaintext, string key)
 {
+    // Makes a copy of the plaintext that we can edit
     string ciphertext = plaintext;
 
     for (int i = 0, len = strlen(plaintext); i < len; i++)
