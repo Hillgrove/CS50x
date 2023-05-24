@@ -106,6 +106,9 @@ string encipher(string plaintext, string key)
     // TODO: preserve case
     // TODO: leave non-alphabetic charaters as-is
     string ciphertext = "";
+        printf("Key: '%s'\n", key);
+        printf("Plaintext: '%s'\n", plaintext);
+        printf("ciphertext: '%s'\n", ciphertext);
 
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
