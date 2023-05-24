@@ -105,5 +105,9 @@ string encipher(string text)
     // TODO: for each alphabetic character, determine what letter it maps to
     // TODO: preserve case
     // TODO: leave non-alphabetic charaters as-is
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        
+    }
 
 }
