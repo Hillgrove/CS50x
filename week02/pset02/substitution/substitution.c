@@ -59,7 +59,7 @@ bool is_valid(string key)
 // Check key length
 bool length_ok(string key)
 {
-    if (strlen(key) == 8)
+    if (strlen(key) == 26)
     {
         return true;
     }
