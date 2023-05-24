@@ -114,8 +114,8 @@ string encipher(string plaintext, string key)
     for (int i = 0; i < len; i++)
     {
         int alfaindex = plaintext[i] - 65;
-        // printf("i: %i  =>  plaintext letter: %c  => alfaindex: %i\n", i, plaintext[i], alfaindex);
-        ciphertext[i] = key[alfaindex];
+        printf("i: %i  =>  plaintext letter: %c  => alfaindex: %i\n", i, plaintext[i], alfaindex);
+        // ciphertext[i] = (char) key[alfaindex];
 
         /*
         if char = upercase
