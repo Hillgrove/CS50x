@@ -55,7 +55,7 @@ bool is_valid(string key)
 // Check key length
 bool length_ok(string key)
 {
-    if (strlen(key) == 6)  // TODO: Change number back to 26 when testing done
+    if (strlen(key) == 26)  // TODO: Change number back to 26 when testing done
     {
         return true;
     }
@@ -105,17 +105,18 @@ string encipher(string plaintext, string key)
     // TODO: for each alphabetic character, determine what letter it maps to
     // TODO: preserve case
     // TODO: leave non-alphabetic charaters as-is
+    string ciphertext = "";
+
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
         int alfaindex = plaintext[i];
-        string ciphertext[i] = key[alfaindex];
+        ciphertext[i] = key[alfaindex];
 
         /*
         if char = upercase
         if char = lowercase
         if char = not alphabetic
         */
-       return ciphertext;
     }
-
+    return ciphertext;
 }
