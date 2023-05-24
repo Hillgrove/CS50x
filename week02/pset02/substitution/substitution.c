@@ -58,7 +58,7 @@ bool not_valid(string key)
 // Check key length
 bool wrong_length(string key)
 {
-    if (strlen(key) == 26)
+    if (strlen(key) != 26)
     {
         return false;
     }
