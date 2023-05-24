@@ -51,7 +51,7 @@ int main(int argc, string argv[])
 // Validate key
 bool is_valid(string key)
 {
-    if (length_ok(key) && only_alpha(key) && no_repeats(key))
+    if (!length_ok(key) && !only_alpha(key) && !no_repeats(key))
     {
         return true;
     }
