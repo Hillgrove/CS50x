@@ -69,7 +69,7 @@ bool length_ok(string key)
 // Check for non-alphabetic characters
 bool only_alpha(string key)
 {
-    for (int i = 0, int len = strlen(key); i < len; i++)
+    for (int i = 0, len = strlen(key); i < len; i++)
     {
         if (!isalpha(key[i]))
         {
