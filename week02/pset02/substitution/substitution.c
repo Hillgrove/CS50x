@@ -1,14 +1,5 @@
 /*
 A program that implements a substitution cipher
-
-
-If the key is invalid (as by not containing 26 characters, containing any character that is not an alphabetic character, or not containing each letter exactly once), your program should print an error message of your choice (with printf) and return from main a value of 1 immediately.
-Your program must output plaintext: (without a newline) and then prompt the user for a string of plaintext (using get_string).
-Your program must output ciphertext: (without a newline) followed by the plaintext’s corresponding ciphertext, with each alphabetical character in the plaintext substituted for the corresponding character in the ciphertext; non-alphabetical characters should be outputted unchanged.
-Your program must preserve case: capitalized letters must remain capitalized letters; lowercase letters must remain lowercase letters.
-After outputting ciphertext, you should print a newline. Your program should then exit by returning 0 from main.
-
-
 */
 
 #include <cs50.h>
@@ -21,6 +12,7 @@ bool is_valid(string key);
 bool length_ok(string key);
 bool only_alpha(string key);
 bool no_repeats(string key);
+string encipher(string text);
 
 
 int main(int argc, string argv[])
@@ -41,14 +33,12 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // TODO: Get plaintext
-    // TODO: Encipher
-        // TODO: for each alphabetic character, determine what letter it maps to
-        // TODO: preserve case
-        // TODO: leave non-alphabetic charaters as-is
-    // TODO: Print ciphertext
+    // If everything is correct, ask for plaintext
+    string plaintext = get_string("Plaintext:");
 
-
+    // encipher the plaintext and print it
+    string ciphertext = encipher(plaintext);
+    printf("Ciphertext: %s\n", ciphertext);
 }
 
 
@@ -107,4 +97,13 @@ bool no_repeats(string key)
         }
     }
     return true;
+}
+
+// TODO: Encipher
+string encipher(string text)
+{
+    // TODO: for each alphabetic character, determine what letter it maps to
+    // TODO: preserve case
+    // TODO: leave non-alphabetic charaters as-is
+
 }
