@@ -113,12 +113,7 @@ string encipher(string plaintext, string key)
 
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
-        if (!isalpha(plaintext[i]))
-        {
-            ciphertext[i] = key[i];
-        }
-
-        else if (isupper(plaintext[i]))
+        if (isupper(plaintext[i]))
         {
             int alfaindex = plaintext[i] - 65;
             ciphertext[i] = key[alfaindex];
