@@ -52,10 +52,7 @@ bool is_valid(string key)
     {
         return true;
     }
-    else
-    {
-        return false;
-    }
+    return false;
 }
 
 // Check key length
@@ -65,16 +62,17 @@ bool length_ok(string key)
     {
         return true;
     }
-    else
-    {
-        return false;
-    }
+    return false;
 }
 
 
 // TODO: check for non-alphabetic characters
 bool only_alpha(string key)
 {
+    for (int i = 0, int len = strlen(key); i < len; i++)
+    {
+        if (key[i])
+    }
     return true;
 }
 
@@ -82,5 +80,5 @@ bool only_alpha(string key)
 // TODO: check for repeated characters (case-insensitive)
 bool no_repeats(string key)
 {
-    return true;
+    return false;
 }
