@@ -105,8 +105,6 @@ bool no_repeats(string key)
 string encipher(string plaintext, string key)
 {
     string ciphertext = plaintext;
-    printf("Plaintext: %s\n", plaintext);
-    printf("Key: %s\n", key);
 
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
