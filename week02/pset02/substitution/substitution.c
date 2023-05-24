@@ -110,6 +110,7 @@ string encipher(string plaintext, string key)
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
         int alfaindex = plaintext[i];
+        printf("i: %i  =>  plaintext letter: %c  => alfaindex: %i\n", i, plaintext[i], plaintext[i]);
         ciphertext[i] = key[alfaindex];
 
         /*
