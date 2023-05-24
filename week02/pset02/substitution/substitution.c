@@ -12,7 +12,7 @@ bool is_valid(string key);
 bool length_ok(string key);
 bool only_alpha(string key);
 bool no_repeats(string key);
-string encipher(string text);
+string encipher(string plaintext);
 
 
 int main(int argc, string argv[])
@@ -100,16 +100,21 @@ bool no_repeats(string key)
 }
 
 // TODO: Encipher
-string encipher(string text)
+string encipher(string plaintext)
 {
     // TODO: for each alphabetic character, determine what letter it maps to
     // TODO: preserve case
     // TODO: leave non-alphabetic charaters as-is
-    for (int i = 0, len = strlen(text); i < len; i++)
+    for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
+        int alfaindex = plaintext[i];
+        string ciphertext[i] = 
+
+        /*
         if char = upercase
         if char = lowercase
         if char = not alphabetic
+        */
     }
 
 }
