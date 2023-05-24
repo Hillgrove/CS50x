@@ -12,7 +12,7 @@ bool is_valid(string key);
 bool length_ok(string key);
 bool only_alpha(string key);
 bool no_repeats(string key);
-string encipher(string plaintext);
+string encipher(string plaintext, string key);
 
 
 int main(int argc, string argv[])
@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("Plaintext:");
 
     // encipher the plaintext and print it
-    string ciphertext = encipher(plaintext);
+    string ciphertext = encipher(plaintext, key);
     printf("Ciphertext: %s\n", ciphertext);
 }
 
@@ -100,7 +100,7 @@ bool no_repeats(string key)
 }
 
 // TODO: Encipher
-string encipher(string plaintext)
+string encipher(string plaintext, string key)
 {
     // TODO: for each alphabetic character, determine what letter it maps to
     // TODO: preserve case
@@ -108,13 +108,14 @@ string encipher(string plaintext)
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
         int alfaindex = plaintext[i];
-        string ciphertext[i] = 
+        string ciphertext[i] = key[alfaindex];
 
         /*
         if char = upercase
         if char = lowercase
         if char = not alphabetic
         */
+       return ciphertext;
     }
 
 }
