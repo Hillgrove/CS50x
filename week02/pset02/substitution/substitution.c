@@ -36,8 +36,10 @@ int main(int argc, string argv[])
     // If everything is correct, ask for plaintext
     string plaintext = get_string("Plaintext: ");
 
-    // encipher the plaintext and print it
+    // encipher the plaintext
     string ciphertext = encipher(plaintext, key);
+
+    // prints ciphertext
     printf("Ciphertext: %s\n", ciphertext);
 }
 
