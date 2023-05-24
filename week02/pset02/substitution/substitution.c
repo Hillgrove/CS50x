@@ -41,10 +41,6 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    printf("test\n");
-
-
-
     // TODO: Get plaintext
     // TODO: Encipher
         // TODO: for each alphabetic character, determine what letter it maps to
@@ -69,7 +65,7 @@ bool is_valid(string key)
 // Check key length
 bool length_ok(string key)
 {
-    if (strlen(key) == 6)
+    if (strlen(key) == 6)  // TODO: Change number back to 26 when testing done
     {
         return true;
     }
@@ -93,7 +89,7 @@ bool only_alpha(string key)
 }
 
 
-// TODO: check for repeated characters (case-insensitive)
+// Check for repeated characters (case-insensitive)
 bool no_repeats(string key)
 {
     int len = strlen(key);
