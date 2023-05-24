@@ -26,15 +26,12 @@ int main(int argc, string argv[])
     string key = argv[1];
 
     // Validate key
-    if (is_valid(key))
-    {
-        printf("valid\n");
-    }
-    else
+    if (!is_valid(key))
     {
         printf("not-valid\n");
         return 1;
     }
+
 
 
     // TODO: Get plaintext
