@@ -107,12 +107,11 @@ string encipher(string plaintext, string key)
     // TODO: leave non-alphabetic charaters as-is
     int len = strlen(plaintext);
     string ciphertext[len];
-        printf("Key: '%s'\n", key);
-        printf("Key length: %lu\n", strlen(key));
-        printf("Plaintext: '%s'\n", plaintext);
-        printf("ciphertext: '%s'\n", ciphertext[i]);
+    printf("Key: '%s'\n", key);
+    printf("Key length: %lu\n", strlen(key));
+    printf("Plaintext: '%s'\n", plaintext);
 
-    for (int i = 0, len = strlen(plaintext); i < len; i++)
+    for (int i = 0; i < len; i++)
     {
         int alfaindex = plaintext[i] - 65;
         // printf("i: %i  =>  plaintext letter: %c  => alfaindex: %i\n", i, plaintext[i], alfaindex);
