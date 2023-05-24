@@ -17,12 +17,11 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        
+        // TODO: Find suitable error message
+        printf("error message of your choice\n");
+        return 1;
     }
-    else
-    {
 
-    }
     // Get key
     string key = argv[1];
 
