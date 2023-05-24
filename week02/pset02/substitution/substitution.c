@@ -86,5 +86,14 @@ bool only_alpha(string key)
 // TODO: check for repeated characters (case-insensitive)
 bool no_repeats(string key)
 {
+    int len = strlen(key);
+
+    for (int i = 0; i < len; i++)
+    {
+        for (int j = 0; j < len; j++)
+        {
+            if 
+        }
+    }
     return false;
 }
