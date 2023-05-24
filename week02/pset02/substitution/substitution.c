@@ -60,24 +60,21 @@ bool wrong_length(string key)
 {
     if (strlen(key) == 26)
     {
-        return true;
-    }
-    else
-    {
         return false;
     }
+    return true;
 }
 
 
 // TODO: check for non-alphabetic characters
 bool not_alpha(string key)
 {
-    return true;
+    return false;
 }
 
 
 // TODO: check for repeated characters (case-insensitive)
 bool repeated_chars(string key)
 {
-    return true;
+    return false;
 }
