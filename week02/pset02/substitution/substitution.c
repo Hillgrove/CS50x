@@ -70,7 +70,7 @@ bool is_valid(string key)
 // Check key length
 bool length_ok(string key)
 {
-    if (strlen(key) == 26)
+    if (strlen(key) == 6)
     {
         return true;
     }
@@ -107,6 +107,7 @@ bool no_repeats(string key)
             if (toupper(key[i]) == toupper(key[j]))
             {
                 printf("key is the same\n");
+                printf("%s\n", key);
                 return false;
             }
         }
