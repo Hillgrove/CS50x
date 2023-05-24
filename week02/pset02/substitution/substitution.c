@@ -96,8 +96,9 @@ bool no_repeats(string key)
             if (key[i] == key[j])
             {
                 printf("key is the same\n");
+                return false;
             }
         }
     }
-    return false;
+    return true;
 }
