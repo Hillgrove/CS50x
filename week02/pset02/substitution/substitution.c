@@ -50,9 +50,9 @@ bool not_valid(string key)
 {
     if (!wrong_length(key) || !not_alpha(key) || !repeated_chars(key))
     {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 
 // Check key length
