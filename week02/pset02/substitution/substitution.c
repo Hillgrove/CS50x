@@ -41,7 +41,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    printf("test");
+    printf("test\n");
 
 
 
