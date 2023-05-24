@@ -104,9 +104,6 @@ bool no_repeats(string key)
 // TODO: Encipher
 string encipher(string plaintext, string key)
 {
-    // TODO: for each alphabetic character, determine what letter it maps to
-    // TODO: preserve case
-    // TODO: leave non-alphabetic charaters as-is
     string ciphertext = plaintext;
     printf("Plaintext: %s\n", plaintext);
     printf("Key: %s\n", key);
@@ -124,18 +121,6 @@ string encipher(string plaintext, string key)
             int alfaindex = plaintext[i] - 97;
             ciphertext[i] = tolower(key[alfaindex]);
         }
-
-
-
-
-        // printf("i: %i  =>  plaintext letter: %c  => alfaindex: %i  => %c\n", i, plaintext[i], alfaindex, key[alfaindex]);
-
-
-        /*
-        if char = upercase
-        if char = lowercase
-        if char = not alphabetic
-        */
     }
     return ciphertext;
 }
