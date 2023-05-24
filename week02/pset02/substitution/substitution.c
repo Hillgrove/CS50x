@@ -107,7 +107,9 @@ string encipher(string text)
     // TODO: leave non-alphabetic charaters as-is
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        
+        if char = upercase
+        if char = lowercase
+        if char = not alphabetic
     }
 
 }
