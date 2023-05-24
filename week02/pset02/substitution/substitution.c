@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     // Checks if only 1 argument has been entered
     if (argc != 2)
     {
-        printf("Program must have one and only one argument.\n");
+        printf("Usage: ./substitution key\n");
         return 1;
     }
 
