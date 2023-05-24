@@ -4,10 +4,13 @@ A program that implements a substitution cipher
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 
-bool is_valid();
+bool is_valid(string key);
 bool length_ok(string key);
+bool only_alpha(string key);
+bool no_repeats(string key);
 
 
 int main(int argc, string argv[])
@@ -16,13 +19,13 @@ int main(int argc, string argv[])
     string key = argv[1];
 
     // Validate key
-    if (is_valid())
+    if (is_valid(key))
     {
-        printf("valid");
+        printf("valid\n");
     }
     else
     {
-        printf("not-valid");
+        printf("not-valid\n");
         return 1;
     }
 
@@ -39,9 +42,9 @@ int main(int argc, string argv[])
 
 
 // Validate key
-bool is_valid()
+bool is_valid(string key)
 {
-    if (length_ok() && only_alpha() && no_repeats())
+    if (length_ok(key) && only_alpha(key) && no_repeats(key))
     {
         return true;
     }
@@ -66,8 +69,14 @@ bool length_ok(string key)
 
 
 // TODO: check for non-alphabetic characters
-bool only_alpha()
+bool only_alpha(string key)
+{
+    return true;
+}
 
 
 // TODO: check for repeated characters (case-insensitive)
-
+bool no_repeats(string key)
+{
+    return true;
+}
