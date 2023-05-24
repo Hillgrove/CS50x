@@ -48,7 +48,7 @@ int main(int argc, string argv[])
 // Validate key
 bool not_valid(string key)
 {
-    if (wrong_length(key) || not_alpha(key) || repeated_chars(key))
+    if (!wrong_length(key) || !not_alpha(key) || !repeated_chars(key))
     {
         return false;
     }
