@@ -6,7 +6,8 @@ A program that implements a substitution cipher
 #include <stdio.h>
 
 
-bool is_valid(string key);
+bool is_valid();
+bool length_ok(string key);
 
 
 int main(int argc, string argv[])
@@ -15,9 +16,14 @@ int main(int argc, string argv[])
     string key = argv[1];
 
     // Validate key
-    if (is_valid(key))
+    if (is_valid())
     {
-
+        printf("valid");
+    }
+    else
+    {
+        printf("not-valid");
+        return 1;
     }
 
 
@@ -35,7 +41,6 @@ int main(int argc, string argv[])
 // Validate key
 bool is_valid()
 {
-
     if (length_ok() && only_alpha() && no_repeats())
     {
         return true;
@@ -48,9 +53,21 @@ bool is_valid()
 
 // Check key length
 bool length_ok(string key)
-
+{
+    if (strlen(key) == 26)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
 
 // TODO: check for non-alphabetic characters
+bool only_alpha()
+
+
 // TODO: check for repeated characters (case-insensitive)
 
