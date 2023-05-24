@@ -122,7 +122,7 @@ string encipher(string plaintext, string key)
         else if (islower(plaintext[i]))
         {
             int alfaindex = plaintext[i] - 97;
-            ciphertext[i] = key[alfaindex];
+            ciphertext[i] = tolower(key[alfaindex]);
         }
 
 
