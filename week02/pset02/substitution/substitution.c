@@ -101,7 +101,7 @@ bool no_repeats(string key)
     return true;
 }
 
-// TODO: Encipher
+// Enciphers plaintext
 string encipher(string plaintext, string key)
 {
     string ciphertext = plaintext;
