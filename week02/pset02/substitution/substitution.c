@@ -110,7 +110,7 @@ string encipher(string plaintext, string key)
         printf("Key: '%s'\n", key);
         printf("Key length: %lu\n", strlen(key));
         printf("Plaintext: '%s'\n", plaintext);
-        printf("ciphertext: '%s'\n", ciphertext);
+        printf("ciphertext: '%s'\n", ciphertext[i]);
 
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
