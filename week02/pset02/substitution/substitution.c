@@ -105,7 +105,8 @@ string encipher(string plaintext, string key)
     // TODO: for each alphabetic character, determine what letter it maps to
     // TODO: preserve case
     // TODO: leave non-alphabetic charaters as-is
-    string ciphertext = "";
+    int len = strlen(plaintext);
+    string ciphertext[len];
         printf("Key: '%s'\n", key);
         printf("Key length: %lu\n", strlen(key));
         printf("Plaintext: '%s'\n", plaintext);
@@ -115,8 +116,7 @@ string encipher(string plaintext, string key)
     {
         int alfaindex = plaintext[i] - 65;
         // printf("i: %i  =>  plaintext letter: %c  => alfaindex: %i\n", i, plaintext[i], alfaindex);
-        printf("%c", key[alfaindex]);
-        // ciphertext[i] = key[alfaindex];
+        ciphertext[i] = key[alfaindex];
 
         /*
         if char = upercase
