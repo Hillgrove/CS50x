@@ -25,9 +25,9 @@ bool no_repeats(string key);
 
 int main(int argc, string argv[])
 {
+    // Checks if only 1 argument has been entered
     if (argc != 2)
     {
-        // TODO: Find suitable error message
         printf("Program must have one and only one argument.\n");
         return 1;
     }
@@ -38,9 +38,10 @@ int main(int argc, string argv[])
     // Validate key
     if (!is_valid(key))
     {
-        printf("key not valid\n");
         return 1;
     }
+
+    printf("test");
 
 
 
