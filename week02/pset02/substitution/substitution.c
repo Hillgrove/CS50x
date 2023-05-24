@@ -93,6 +93,10 @@ bool no_repeats(string key)
         for (int j = i + 1; j < len; j++)
         {
             printf("Comparing %c to %c\n", key[i], key[j]);
+            if (key[i] == key[j])
+            {
+                printf("key is the same\n");
+            }
         }
     }
     return false;
