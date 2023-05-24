@@ -7,10 +7,10 @@ A program that implements a substitution cipher
 #include <string.h>
 
 
-bool not_valid(string key);
-bool wrong_length(string key);
-bool not_alpha(string key);
-bool repeated_chars(string key);
+bool is_valid(string key);
+bool length_ok(string key);
+bool only_alpha(string key);
+bool no_repeats(string key);
 
 
 int main(int argc, string argv[])
@@ -26,12 +26,15 @@ int main(int argc, string argv[])
     string key = argv[1];
 
     // Validate key
-    if (not_valid(key))
+    if (is_valid(key))
+    {
+        printf("valid\n");
+    }
+    else
     {
         printf("not-valid\n");
         return 1;
     }
-
 
 
     // TODO: Get plaintext
@@ -46,35 +49,41 @@ int main(int argc, string argv[])
 
 
 // Validate key
-bool not_valid(string key)
+bool is_valid(string key)
 {
-    if (!wrong_length(key) || !not_alpha(key) || !repeated_chars(key))
+    if (length_ok(key) && only_alpha(key) && no_repeats(key))
     {
         return true;
     }
-    return false;
-}
-
-// Check key length
-bool wrong_length(string key)
-{
-    if (strlen(key) != 26)
+    else
     {
         return false;
     }
-    return true;
+}
+
+// Check key length
+bool length_ok(string key)
+{
+    if (strlen(key) == 26)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 
 // TODO: check for non-alphabetic characters
-bool not_alpha(string key)
+bool only_alpha(string key)
 {
-    return false;
+    return true;
 }
 
 
 // TODO: check for repeated characters (case-insensitive)
-bool repeated_chars(string key)
+bool no_repeats(string key)
 {
-    return false;
+    return true;
 }
