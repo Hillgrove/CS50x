@@ -3,6 +3,7 @@ Implement a program that behaves similarly to the popular Wordle daily word game
 */
 
 #include <cs50.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
