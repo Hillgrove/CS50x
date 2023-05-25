@@ -90,6 +90,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
+        
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
@@ -119,7 +120,6 @@ string get_guess(int wordsize)
     string guess = "";
 
     // ensure users actually provide a guess that is the correct length
-    // TODO #3
     do
     {
         guess = get_string("Input a %i-letter word: ", wordsize);
