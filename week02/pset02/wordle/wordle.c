@@ -41,7 +41,7 @@ int main(int argc, string argv[])
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    if (isdigit(argv[1]))
+    if (53 >= argv[1] >= 56)
     {
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
