@@ -89,7 +89,6 @@ int main(int argc, string argv[])
         int status[wordsize];
 
         // set all elements of status array initially to 0, aka WRONG
-        // TODO #4
         for (int j = 0; j < wordsize; j++)
         {
             status[j] = WRONG;
@@ -142,6 +141,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // HINTS
     // iterate over each letter of the guess
+    
         // iterate over each letter of the choice
             // compare the current guess letter to the current choice letter
                 // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
