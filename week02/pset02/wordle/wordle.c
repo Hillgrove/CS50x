@@ -132,9 +132,11 @@ string get_guess(int wordsize)
     return guess;
 }
 
+// int check_word(string guess, int wordsize, int status[], string choice)
 int check_word(string guess, int wordsize, int status[], string choice)
 {
     int score = 0;
+    choice = "chair";
 
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
@@ -163,6 +165,11 @@ int check_word(string guess, int wordsize, int status[], string choice)
         // keep track of the total score by adding each individual letter's score from above
         status[i] = score;
     }
+    for (int i = 0; i < wordsize; i++)
+    {
+        printf("%i ", status[i]);
+    }
+    printf("\n");
     return score;
 }
 
