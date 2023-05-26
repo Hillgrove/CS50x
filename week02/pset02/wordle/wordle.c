@@ -119,10 +119,8 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("Targeted word was: %s", choice);
+        printf("Sorry you lost.\nTargeted word was: %s\n", choice);
     }
-
-    // that's all folks!
     return 0;
 }
 
