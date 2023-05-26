@@ -142,8 +142,7 @@ string get_guess(int wordsize)
 int check_word(string guess, int wordsize, int status[], string choice)
 {
     int score = 0;
-    choice = "chair"; // TODO: remove this line after testing
-
+    
     // compare guess to choice and score points as appropriate, storing points in status
     // iterate over each letter of the guess
     for (int i = 0; i < wordsize; i++)
