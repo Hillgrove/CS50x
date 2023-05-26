@@ -162,12 +162,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
             // keep track of the total score by adding each individual letter's score from above
         }
     }
-    for (int i = 0; i < wordsize; i++)
-    {
-        printf("%i ", status[i]);
-    }
-    printf("\nScore: %i\n", score);
-
     return score;
 }
 
@@ -178,21 +172,21 @@ void print_word(string guess, int wordsize, int status[])
     // TODO #6
     for (int i = 0; i < wordsize; i++)
     {
-        if (status[i] = EXACT)
+        if (status[i] == EXACT)
         {
-            printf(GREEN"%c"RESET, guess[i]);
+            printf(GREEN"%c", guess[i]);
         }
-        else if (status[i] = CLOSE)
+        else if (status[i] == CLOSE)
         {
-            printf(YELLOW"%c"RESET, guess[i]);
+            printf(YELLOW"%c", guess[i]);
         }
         else
         {
-            printf(RED"%c"RESET, guess[i]);
+            printf(RED"%c", guess[i]);
         }
 
     }
 
-    printf("\n");
+    printf(RESET"\n");
     return;
 }
