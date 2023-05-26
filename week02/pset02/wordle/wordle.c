@@ -167,9 +167,15 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 score = CLOSE;
             }
             // keep track of the total score by adding each individual letter's score from above
-            status[i] = score;
         }
+        status[i] = score;
     }
+    for (int i = 0; i < wordsize; i++)
+    {
+        printf("%i ", status[i]);
+    }
+    printf("\n");
+
     return score;
 }
 
