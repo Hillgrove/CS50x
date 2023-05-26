@@ -138,6 +138,12 @@ int check_word(string guess, int wordsize, int status[], string choice)
     int score = 0;
     choice = "chair";
 
+    for (int i = 0; i < wordsize; i++)
+        {
+            printf("%i ", status[i]);
+        }
+    printf("\n");
+
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
 
