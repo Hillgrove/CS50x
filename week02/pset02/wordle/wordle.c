@@ -161,7 +161,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
         }
         // keep track of the total score by adding each individual letter's score from above
         status[i] = score;
-        
     }
 
 
