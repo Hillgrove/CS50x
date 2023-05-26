@@ -153,23 +153,23 @@ int check_word(string guess, int wordsize, int status[], string choice)
             if (guess[i] == choice[i])
             {
                 // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
-                score = EXACT;
+                status[i] = EXACT;
                 break;
             }
             else if (guess[i] == choice[j])
             {
                 // if it's in the word, but not the right spot, score CLOSE point (yellow)
-                score = CLOSE;
+                status[i] = CLOSE;
             }
             // keep track of the total score by adding each individual letter's score from above
         }
-        status[i] = score;
+        score += score;
     }
     for (int i = 0; i < wordsize; i++)
     {
         printf("%i ", status[i]);
     }
-    printf("\n");
+    printf("\nScore: %i\n", score);
 
     return score;
 }
