@@ -35,6 +35,7 @@ int convert(string input)
         return i;
     }
 
+    // Recursive case
     else
     {
         input[length - 1] = '\0';
