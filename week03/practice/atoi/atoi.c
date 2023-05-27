@@ -27,10 +27,10 @@ int convert(string input)
 {
     // TODO
     int length = strlen(input);
+    int i = input[length - 1] - 'O';
 
     if (length == 1)
     {
-        int i = input[length - 1] - 'O';
         return i;
     }
 
