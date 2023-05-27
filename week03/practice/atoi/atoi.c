@@ -26,5 +26,8 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    
+    if (input[1] == '\0')
+    {
+        
+    }
 }
