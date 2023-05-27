@@ -27,7 +27,7 @@ int convert(string input)
 {
     // TODO
     int length = strlen(input);
-    int i = input[length - 1] - 'O';
+    int i = input[length - 1] - '0';
 
     if (length == 1)
     {
@@ -36,8 +36,7 @@ int convert(string input)
 
     else
     {
-        int i = input[length - 1] - 'O';
         input[length - 1] = '\0';
-
+        return i + 10 * convert(input);
     }
 }
