@@ -30,7 +30,7 @@ int convert(string input)
 
     if (length == 1)
     {
-        int i = input[length - 1];
+        int i = input[length - 1] - 'O';
         return i;
     }
 
