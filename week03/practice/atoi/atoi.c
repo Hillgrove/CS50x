@@ -26,13 +26,13 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    index = strlen(input);
+    int index = strlen(input);
 
     if (input[index] == NULL)
         return 0;
 
     else
         {
-            
+
         }
 }
