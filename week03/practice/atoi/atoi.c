@@ -23,12 +23,13 @@ int main(void)
     printf("%i\n", convert(input));
 }
 
+// Recursively convert each litteral char to litteral int
 int convert(string input)
 {
-    // TODO
     int length = strlen(input);
     int i = input[length - 1] - '0';
 
+    // Base case
     if (length == 1)
     {
         return i;
