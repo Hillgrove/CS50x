@@ -26,15 +26,17 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int index = strlen(input);
+    int length = strlen(input);
 
     if (input[1] == '\0')
     {
-        return input[0] - 'O';
+
     }
 
     else
-        {
-            
-        }
+    {
+        int i = input[length] - 'O';
+        input[length] = '\0';
+
+    }
 }
