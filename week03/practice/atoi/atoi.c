@@ -28,11 +28,13 @@ int convert(string input)
     // TODO
     int index = strlen(input);
 
-    if (input[index] == NULL)
-        return 0;
+    if (input[1] == '\0')
+    {
+        return input[0] - 'O';
+    }
 
     else
         {
-
+            
         }
 }
