@@ -28,9 +28,10 @@ int convert(string input)
     // TODO
     int length = strlen(input);
 
-    if (input[1] == '\0')
+    if (length == 1)
     {
-
+        int i = input[length - 1];
+        return i;
     }
 
     else
