@@ -28,10 +28,10 @@ int convert(string input)
     // TODO
     if (input[1] == '\0')
     {
-        return input[0] - '0':
+        return input[0] - '0';
     }
     else
     {
-        strlen()
+        input[strlen(input) - 1]
     }
 }
