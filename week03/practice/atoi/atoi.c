@@ -28,7 +28,7 @@ int convert(string input)
     // TODO
     index = strlen(input);
 
-    if (input[index] == '\O')
+    if (input[index] == NULL)
         return 0;
 
     else
