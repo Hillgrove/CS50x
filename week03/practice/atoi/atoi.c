@@ -28,6 +28,6 @@ int convert(string input)
     // TODO
     if (input[1] == '\0')
     {
-        return input[0]
+        return input[0] - 
     }
 }
