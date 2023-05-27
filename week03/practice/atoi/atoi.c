@@ -35,7 +35,7 @@ int convert(string input)
 
     else
     {
-        int i = input[length] - 'O';
+        int i = input[length - 1] - 'O';
         input[length - 1] = '\0';
 
     }
