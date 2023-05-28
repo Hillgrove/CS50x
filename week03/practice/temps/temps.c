@@ -65,7 +65,14 @@ void sort_cities(void)
     // Add your code here
     // avg_temp: struct of city and temp
     // temps: array of avg_temp
-    
+
+    // Base Case
+    // no unsorted elements remain
+
+    // Recursive Case
+    // Search the unsorted part of the data to find the smallest value
+    // Swap the smallest found value with the first element of the unsorted part
+    for
 
 }
 
