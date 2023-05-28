@@ -66,6 +66,8 @@ void sort_cities(void)
     // avg_temp: struct of city and temp
     // temps: array of avg_temp
 
+    int index_lowest = 0;
+
     // Base Case
     // no unsorted elements remain
 
@@ -75,16 +77,20 @@ void sort_cities(void)
 
     for (int i = 0; i < NUM_CITIES; i++)
     {
-        int lowest = temps[i].temp;
-
+        index_lowest = i;
+        
         for (int j = i + 1; j = NUM_CITIES - (i + 1); j++)
         {
             if (temps[j].temp < temps[i].temp)
             {
-                lowest = temps[j].temp;
+                index_lowest = j;
             }
         }
 
+        if (i != index_lowest)
+        {
+
+        }
         // Swap temps[j].temp and temps[i].temp
     }
 
