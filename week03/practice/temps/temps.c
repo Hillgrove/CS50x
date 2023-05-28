@@ -72,7 +72,10 @@ void sort_cities(void)
     // Recursive Case
     // Search the unsorted part of the data to find the smallest value
     // Swap the smallest found value with the first element of the unsorted part
-    for
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        
+    }
 
 }
 
