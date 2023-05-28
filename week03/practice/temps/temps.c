@@ -76,16 +76,12 @@ void sort_cities(void)
             printf("Comparing index: %i with index: %i\n", index_highest, j);
             if (temps[j].temp > temps[index_highest].temp)
             {
-                printf("%s: %i is bigger than %s: %i\n", temps[j].city, temps[j].temp, temps[index_highest].city, temps[index_highest].temp);
+                printf("\n>>> %s: %i is bigger than %s: %i\n\n", temps[j].city, temps[j].temp, temps[index_highest].city, temps[index_highest].temp);
                 index_highest = j;
-
-                
             }
-
-            printf("Found highest of loop %i\n", i);
-            printf("Swapping index: %i (%s: %i) with index: %i (%s: %i\n)", i, temps[i].city, temps[i].temp, index_highest, temps[index_highest].city, temps[index_highest].temp);
-
         }
+        printf("\nFound highest of loop %i\n", i);
+        printf("Swapping index: %i (%s: %i) with index: %i (%s: %i)\n", i, temps[i].city, temps[i].temp, index_highest, temps[index_highest].city, temps[index_highest].temp);
     }
 
 
