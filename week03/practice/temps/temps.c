@@ -77,23 +77,23 @@ void sort_cities(void)
 
     for (int i = 0; i < NUM_CITIES; i++)
     {
-        index_lowest = i;
+        int index_highest = i;
 
 
         for (int j = i + 1; j < NUM_CITIES - (i + 1); j++)
         {
-            printf("Comparing %s: %i with %s: %i\n", temps[index_lowest].city, temps[index_lowest].temp,  temps[j].city, temps[j].temp);
-            if (temps[j].temp > temps[index_lowest].temp)
+            printf("Comparing %s: %i with %s: %i\n", temps[index_highest].city, temps[index_highest].temp,  temps[j].city, temps[j].temp);
+            if (temps[j].temp > temps[index_highest].temp)
             {
-                index_lowest = j;
-                printf("\nFound lower temp with %s: %i\n\n", temps[j].city, temps[j].temp);
+                index_highest = j;
+                printf("\nFound higher temp with %s: %i\n\n", temps[j].city, temps[j].temp);
             }
         }
 
-        if (i != index_lowest)
+        if (i != index_highest)
         {
-            avg_temp temporary = temps[index_lowest];
-            temps[index_lowest] = temps[i];
+            avg_temp temporary = temps[index_highest];
+            temps[index_highest] = temps[i];
             temps[i] = temporary;
         }
     }
