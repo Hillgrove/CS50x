@@ -78,14 +78,15 @@ void sort_cities(void)
     for (int i = 0; i < NUM_CITIES; i++)
     {
         index_lowest = i;
-        printf("Comparing %s: %i with ", temps[i].city, temps[i].temp);
+
 
         for (int j = i + 1; j < NUM_CITIES - (i + 1); j++)
         {
-            printf("%s: %i\n", temps[i].city, temps[i].temp);
+            printf("Comparing %s: %i with %s: %i\n", temps[i].city, temps[i].temp,  temps[j].city, temps[j].temp);
             if (temps[j].temp < temps[i].temp)
             {
                 index_lowest = j;
+                printf("\nFound lower temp with %s: %i\n", temps[j].city, temps[j].temp);
             }
         }
 
