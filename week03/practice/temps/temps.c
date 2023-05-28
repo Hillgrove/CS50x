@@ -67,13 +67,17 @@ void sort_cities(void)
 
     int index_lowest = 0;
 
-    for (int i = 0; i < NUM_CITIES; i++)
+    for (int i = 0; i < NUM_CITIES - 1; i++)
     {
-        printf("************\n*  Loop %i  *\n************\n\n", i);
+        printf("\n************\n*  Loop %i  *\n************\n", i);
 
-        for (int j = i + 1; j < NUM_CITIES - (i + 1); j++)
+        for (int j = i + 1; j < NUM_CITIES; j++)
         {
-            printf("Value of j: %i\n", j);
+            printf("Compare i: %i with j: %i\n", i, j);
+            if (temps[j].temp > temps[i].temp)
+            {
+                printf("%s: %i is bigger than %s: %i\n", temps[j].city, temps[j].temp, temps[i].city, temps[i].temp);
+            }
         }
     }
 
