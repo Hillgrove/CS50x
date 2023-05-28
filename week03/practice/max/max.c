@@ -31,11 +31,13 @@ int max(int array[], int n)
 
     for (int i = 0; i < n; i++)
     {
+        // Initializes max to array[0] so it's possible to make comparisons
         if (i == 0)
         {
             max = array[0];
         }
 
+        // sets max to new number if higher number is found
         else if (array[i] > max)
         {
             max = array[i];
