@@ -90,7 +90,7 @@ void sort_cities(void)
         if (i != index_lowest)
         {
             avg_temp temporary = temps[index_lowest];
-            temps[j] = temps[i];
+            temps[index_lowest] = temps[i];
             temps[i] = temporary;
         }
     }
