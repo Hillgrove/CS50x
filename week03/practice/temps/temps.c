@@ -65,7 +65,7 @@ void sort_cities(void)
     // avg_temp: struct of city and temp
     // temps: array of avg_temp
 
-    int index_highest = 0;
+    int idx_max = 0;
 
     for (int i = 0; i < NUM_CITIES - 1; i++)
     {
@@ -73,18 +73,18 @@ void sort_cities(void)
 
         for (int j = i + 1; j < NUM_CITIES; j++)
         {
-            // printf("Comparing index: %i with index: %i\n", index_highest, j);
-            if (temps[j].temp > temps[index_highest].temp)
+            // printf("Comparing index: %i with index: %i\n", idx_max, j);
+            if (temps[j].temp > temps[idx_max].temp)
             {
-                // printf("\n>>> %s: %i is bigger than %s: %i\n\n", temps[j].city, temps[j].temp, temps[index_highest].city, temps[index_highest].temp);
-                index_highest = j;
+                // printf("\n>>> %s: %i is bigger than %s: %i\n\n", temps[j].city, temps[j].temp, temps[idx_max].city, temps[idx_max].temp);
+                idx_max = j;
             }
         }
         // printf("\nFound highest of loop %i\n", i);
-        // printf("Swapping index: %i (%s: %i) with index: %i (%s: %i)\n", i, temps[i].city, temps[i].temp, index_highest, temps[index_highest].city, temps[index_highest].temp);
+        // printf("Swapping index: %i (%s: %i) with index: %i (%s: %i)\n", i, temps[i].city, temps[i].temp, idx_max, temps[idx_max].city, temps[idx_max].temp);
 
-        avg_temp temporary = temps[index_highest];
-        temps[index_highest] = temps[i];
+        avg_temp temporary = temps[idx_max];
+        temps[idx_max] = temps[i];
         temps[i] = temporary;
     }
 }
