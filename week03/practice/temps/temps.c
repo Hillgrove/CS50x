@@ -73,7 +73,7 @@ void sort_cities(void)
 
         for (int j = i + 1; j < NUM_CITIES; j++)
         {
-            printf("Compare i: %i with j: %i\n", i, j);
+            printf("Comparing %i wit\n", j);
             if (temps[j].temp > temps[index_highest].temp)
             {
                 printf("%s: %i is bigger than %s: %i\n", temps[j].city, temps[j].temp, temps[index_highest].city, temps[index_highest].temp);
