@@ -78,7 +78,7 @@ void sort_cities(void)
     for (int i = 0; i < NUM_CITIES; i++)
     {
         index_lowest = i;
-        
+
         for (int j = i + 1; j = NUM_CITIES - (i + 1); j++)
         {
             if (temps[j].temp < temps[i].temp)
@@ -89,9 +89,8 @@ void sort_cities(void)
 
         if (i != index_lowest)
         {
-
+            int temp = temps[]
         }
-        // Swap temps[j].temp and temps[i].temp
     }
 
 }
