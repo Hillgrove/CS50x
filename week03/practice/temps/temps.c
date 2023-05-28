@@ -70,7 +70,13 @@ void sort_cities(void)
     for (int i = 0; i < NUM_CITIES; i++)
     {
         printf("************\n*  Loop %i  *\n************\n\n", i);
+
+        for (int j = i + 1; j < NUM_CITIES - (i + 1); j++)
+        {
+            printf("Value of j: %i\n", j);
+        }
     }
+
 
 }
 
