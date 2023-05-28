@@ -65,11 +65,12 @@ void sort_cities(void)
     // avg_temp: struct of city and temp
     // temps: array of avg_temp
 
-    int idx_max = 0;
+    int idx_max;
 
     for (int i = 0; i < NUM_CITIES - 1; i++)
     {
         // printf("\n************\n*  Loop %i  *\n************\n", i);
+        idx_max = i;
 
         for (int j = i + 1; j < NUM_CITIES; j++)
         {
