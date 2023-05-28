@@ -65,7 +65,7 @@ void sort_cities(void)
     // avg_temp: struct of city and temp
     // temps: array of avg_temp
 
-    int index_lowest = 0;
+    int index_highest = 0;
 
     for (int i = 0; i < NUM_CITIES - 1; i++)
     {
@@ -74,9 +74,10 @@ void sort_cities(void)
         for (int j = i + 1; j < NUM_CITIES; j++)
         {
             printf("Compare i: %i with j: %i\n", i, j);
-            if (temps[j].temp > temps[i].temp)
+            if (temps[j].temp > temps[index_highest].temp)
             {
-                printf("%s: %i is bigger than %s: %i\n", temps[j].city, temps[j].temp, temps[i].city, temps[i].temp);
+                printf("%s: %i is bigger than %s: %i\n", temps[j].city, temps[j].temp, temps[index_highest].city, temps[index_highest].temp);
+                index_highest = j;
             }
         }
     }
