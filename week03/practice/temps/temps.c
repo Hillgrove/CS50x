@@ -62,42 +62,14 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    // Add your code here
     // avg_temp: struct of city and temp
     // temps: array of avg_temp
 
     int index_lowest = 0;
 
-    // Base Case
-    // no unsorted elements remain
-
-    // Recursive Case
-    // Search the unsorted part of the data to find the smallest value
-    // Swap the smallest found value with the first element of the unsorted part
-
     for (int i = 0; i < NUM_CITIES; i++)
     {
-        int index_highest = i;
-
-
-        for (int j = i + 1; j < NUM_CITIES - (i + 1); j++)
-        {
-            printf("Comparing %i: (%s: %i) with %i: (%s: %i)\n", i, temps[index_highest].city, temps[index_highest].temp,  j, temps[j].city, temps[j].temp);
-
-            if (temps[j].temp > temps[index_highest].temp)
-            {
-                index_highest = j;
-                printf("\nFound higher temp with %s: %i\n\n", temps[j].city, temps[j].temp);
-            }
-        }
-
-        if (i != index_highest)
-        {
-            printf("\nLoop %i: Highest temp found: (%s: %i)\n\n", i, temps[index_highest].city, temps[index_highest].temp);
-            avg_temp temporary = temps[index_highest];
-            temps[index_highest] = temps[i];
-            temps[i] = temporary;
-        }
+        printf("************\n*  Loop %i  *\n************\n\n", i);
     }
 
 }
