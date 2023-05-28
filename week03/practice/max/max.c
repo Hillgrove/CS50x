@@ -39,5 +39,5 @@ int max(int array[], int n)
         }
     }
 
-    return 0;
+    return max;
 }
