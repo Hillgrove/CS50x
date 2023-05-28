@@ -93,7 +93,7 @@ void sort_cities(void)
 
         if (i != index_highest)
         {
-            printf("\nLoop %i: Highest temp found: (%s: %i\n\n)", i, temps[index_highest].city, temps[index_highest].temp);
+            printf("\nLoop %i: Highest temp found: (%s: %i)\n\n", i, temps[index_highest].city, temps[index_highest].temp);
             avg_temp temporary = temps[index_highest];
             temps[index_highest] = temps[i];
             temps[i] = temporary;
