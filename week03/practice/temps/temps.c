@@ -86,7 +86,7 @@ void sort_cities(void)
             if (temps[j].temp < temps[i].temp)
             {
                 index_lowest = j;
-                printf("\nFound lower temp with %s: %i\n", temps[j].city, temps[j].temp);
+                printf("\nFound lower temp with %s: %i\n\n", temps[j].city, temps[j].temp);
             }
         }
 
