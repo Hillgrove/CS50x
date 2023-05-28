@@ -81,12 +81,15 @@ void sort_cities(void)
                 idx_max = j;
             }
         }
-        // printf("\nFound highest of loop %i\n", i);
-        // printf("Swapping index: %i (%s: %i) with index: %i (%s: %i)\n", i, temps[i].city, temps[i].temp, idx_max, temps[idx_max].city, temps[idx_max].temp);
 
-        avg_temp temporary = temps[idx_max];
-        temps[idx_max] = temps[i];
-        temps[i] = temporary;
+        if (i != idx_max)
+        {
+            // printf("\nFound highest of loop %i\n", i);
+            // printf("Swapping index: %i (%s: %i) with index: %i (%s: %i)\n", i, temps[i].city, temps[i].temp, idx_max, temps[idx_max].city, temps[idx_max].temp);
+            avg_temp temporary = temps[idx_max];
+            temps[idx_max] = temps[i];
+            temps[i] = temporary;
+        }
     }
 }
 
