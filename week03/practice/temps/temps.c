@@ -59,7 +59,7 @@ int main(void)
     }
 }
 
-// TODO: Sort cities by temperature in descending order
+// Sort cities by temperature in descending order
 void sort_cities(void)
 {
     // avg_temp: struct of city and temp
@@ -87,8 +87,6 @@ void sort_cities(void)
         temps[index_highest] = temps[i];
         temps[i] = temporary;
     }
-
-
 }
 
 
