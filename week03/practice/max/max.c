@@ -36,7 +36,7 @@ int max(int array[], int n)
             max = array[0];
         }
 
-        if (array[i] > max)
+        else if (array[i] > max)
         {
             max = array[i];
         }
