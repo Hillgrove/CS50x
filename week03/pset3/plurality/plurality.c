@@ -115,13 +115,13 @@ int max(candidate array[], int n)
         // Initializes max to array[0] so it's possible to make comparisons
         if (i == 0)
         {
-            max = array[0];
+            max = array[0].votes;
         }
 
         // sets max to new number if higher number is found
-        else if (array[i] > max)
+        else if (array[i].votes > max)
         {
-            max = array[i];
+            max = array[i].votes;
         }
     }
 
