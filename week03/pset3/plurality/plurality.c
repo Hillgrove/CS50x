@@ -23,6 +23,7 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
+int max(int array[], int n);
 
 int main(int argc, string argv[])
 {
@@ -81,10 +82,48 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
+    /*
     printf("\nTotal votes pr candidate\n");
     for (int i = 0; i < candidate_count; i++)
     {
         printf("%s: %i\n", candidates[i].name, candidates[i].votes);
     }
+    */
+
+    int highest_vote = max(candidates, candidate_count);
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidate[i].votes == highest_vote)
+        {
+            printf("%s", candidate[i].name);
+        }
+    }
+
+
     return;
+}
+
+
+// Return the highest vote
+int max(int array[], int n)
+{
+    int max;
+
+    for (int i = 0; i < n; i++)
+    {
+        // Initializes max to array[0] so it's possible to make comparisons
+        if (i == 0)
+        {
+            max = array[0];
+        }
+
+        // sets max to new number if higher number is found
+        else if (array[i] > max)
+        {
+            max = array[i];
+        }
+    }
+
+    return max;
 }
