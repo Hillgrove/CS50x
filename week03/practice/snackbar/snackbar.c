@@ -114,4 +114,5 @@ float get_cost(string item)
         if (menu[i].item == item)
             return menu[i].price;
     }
+    return 0.0;
 }
