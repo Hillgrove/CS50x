@@ -109,11 +109,9 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    printf("get_cost is called:\n");
+    // linear search
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        printf("i: %i - Comparing '%s' with '%s'\n", i, item, menu[i].item);
-
         // compare 2 strings (case insensitive)
         if (strcasecmp(menu[i].item, item) == 0)
         {
