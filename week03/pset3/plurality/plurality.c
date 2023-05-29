@@ -23,6 +23,7 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
+int max(candidate array[], int n);
 
 int main(int argc, string argv[])
 {
