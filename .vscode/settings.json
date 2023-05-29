@@ -6,6 +6,7 @@
     "files.associations": {
         "string.h": "c",
         "type_traits": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "string": "c"
     }
 }

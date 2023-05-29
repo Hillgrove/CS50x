@@ -114,7 +114,7 @@ float get_cost(string item)
     {
         printf("i: %i - Comparing '%s' with '%s'\n", i, item, menu[i].item);
 
-        if (menu[i].item == item)
+        if (strcasecmp(menu[i].item, item) = )
         {
             printf("returning price of %s: %f", menu[i].item, menu[i].price);
             return menu[i].price;
