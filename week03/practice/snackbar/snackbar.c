@@ -112,7 +112,9 @@ float get_cost(string item)
     for (int i = 0; i < NUM_ITEMS; i++)
     {
         if (menu[i].item == item)
+        {
             return menu[i].price;
+        }
     }
     return 0.0;
 }
