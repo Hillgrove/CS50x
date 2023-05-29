@@ -23,7 +23,7 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
-int max(int array[], int n);
+void max(int array[], int n);
 
 int main(int argc, string argv[])
 {
@@ -106,7 +106,7 @@ void print_winner(void)
 
 
 // Return the highest vote
-int max(int array[], int n)
+void max(int array[], int n)
 {
     int max;
 
@@ -124,6 +124,4 @@ int max(int array[], int n)
             max = array[i];
         }
     }
-
-    return max;
 }
