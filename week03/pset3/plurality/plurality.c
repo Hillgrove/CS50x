@@ -69,12 +69,18 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcasecmp(candidates[i].name, name) == 0)
+        if (strcasecmp(candidates[i].name, name) != 0)
         {
-            return true;
+            return false;
+        }
+
+        else
+        {
+            candidates[i].votes += 1;
         }
     }
-    return false;
+
+    return true;
 }
 
 // Print the winner (or winners) of the election
