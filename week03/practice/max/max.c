@@ -24,7 +24,7 @@ int main(void)
     printf("The max value is %i.\n", max(arr, n));
 }
 
-// Return the max value
+// Returns the max value
 int max(int array[], int n)
 {
     int max;
