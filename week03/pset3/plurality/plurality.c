@@ -69,7 +69,6 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("i: %i - Comparing %s with %s...\n", i, name, candidates[i].name);
         if (strcasecmp(candidates[i].name, name) == 0)
         {
             candidates[i].votes += 1;
