@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: The sorted files were much faster to sort than the unsorted ones.
 
 sort2 uses: Merge Sort
 
 How do you know?: Time to sort was same(ish) across the biggest of the files, and it was also the fastest of the 3.
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: Sort time was equal across the different types, and also much slower than Sort2.
