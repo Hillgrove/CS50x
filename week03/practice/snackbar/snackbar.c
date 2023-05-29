@@ -113,6 +113,7 @@ float get_cost(string item)
     {
         if (menu[i].item == item)
         {
+            printf("returning price of %s: %f", menu[i].item, menu[i].price);
             return menu[i].price;
         }
     }
