@@ -74,7 +74,8 @@ int main(void)
 // Add at least the first for items to the menu array
 void add_items(void)
 {
-    
+    menu.menu_item[0] =
+    menu.menu_item[0] = 
     return;
 }
 
