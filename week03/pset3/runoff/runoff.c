@@ -129,13 +129,15 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     for (int i = 0; i < candidate_count; i++)
+    {
         // Is the name in our array of candidates
         if (strcasecmp(candidates[i].name, name) == 0)
         {
+            // Update array with preferences of voter
             preferences[voter][rank] = i;
             return true;
         }
-
+    }
     return false;
 }
 
