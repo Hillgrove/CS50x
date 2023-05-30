@@ -149,14 +149,13 @@ void tabulate(void)
     {
         int index = preferences[i][0];
 
-        if (candidates[index].eliminated == true)
+        for (int j = 0; j < candidate_count; j ++)
         {
-            
-        }
-
-        else
-        {
-            candidates[index].votes += 1;
+            if (candidates[index].eliminated == true)
+            {
+                // TODO: look at preferences[i][1] and preferences[i][2]
+                
+            }
         }
     }
     return;
