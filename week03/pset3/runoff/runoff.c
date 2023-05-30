@@ -131,7 +131,7 @@ bool vote(int voter, int rank, string name)
         // Is the name in our array of candidates
         if (strcasecmp(candidates[i].name, name) == 0)
         {
-            preferences[][] = i;
+            preferences[voter][rank] = i;
         }
     // TODO
     return false;
