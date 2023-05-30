@@ -164,7 +164,7 @@ void tabulate(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("Name: %s. Votes: %i. Elimited: %s.\n", candidates[i].name, candidates[i].votes, candidates[i].eliminated?"true":"false");
+        printf("i: %i - Name: %s. Votes: %i. Elimited: %s.\n", i, candidates[i].name, candidates[i].votes, candidates[i].eliminated?"true":"false");
     }
 
 
