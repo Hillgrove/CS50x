@@ -127,9 +127,12 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    
+
     // TODO
     return false;
+    // int voter =
+    // int rank =
+    // string name =
 }
 
 // Tabulate votes for non-eliminated candidates
