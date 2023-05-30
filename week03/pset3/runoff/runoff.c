@@ -145,10 +145,10 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // Loop through each voter
-    for (int i = 0; i < voter_count; i ++)
+    for (int i = 0; i < voter_count; i++)
     {
         // Loop through each voters ranking
-        for (int j = 0; j < candidate_count; j ++)
+        for (int j = 0; j < candidate_count; j++)
         {
             // Sets the candidate as the index
             int index = preferences[i][j];
@@ -161,6 +161,13 @@ void tabulate(void)
             }
         }
     }
+
+    for (int i = 0; i < voter_count; i++)
+    {
+        printf("Name: %s. Votes: %i. Elimited: %bool.\n", candidates[i].name, candidates[i].votes, candidates[i].eliminated);
+    }
+
+
     return;
 }
 
