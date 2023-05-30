@@ -135,8 +135,8 @@ bool vote(int voter, int rank, string name)
         }
     // TODO
     return false;
-    // int voter = i (voter_count)
-    // int rank = j (candidate_count)
+    // int voter = i - which number of voter is currently voting
+    // int rank = j which rank is the voter currently voting for
     // string name = candidate name
 
 }
