@@ -130,9 +130,9 @@ bool vote(int voter, int rank, string name)
 
     // TODO
     return false;
-    // int voter =
-    // int rank =
-    // string name =
+    // int voter = i (voter_count)
+    // int rank = j (candidate_count)
+    // string name = 
 }
 
 // Tabulate votes for non-eliminated candidates
