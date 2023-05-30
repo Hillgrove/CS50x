@@ -153,7 +153,8 @@ void tabulate(void)
 
             if (candidates[index].eliminated == false)
             {
-                
+                candidates[index].votes += 1;
+                break;
                 // TODO: look at preferences[i][1] and preferences[i][2]
 
             }
