@@ -144,19 +144,20 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // Loop through each
+    // Loop through each voter
     for (int i = 0; i < voter_count; i ++)
     {
+        // Loop through each voters ranking
         for (int j = 0; j < candidate_count; j ++)
         {
+            // Sets the candidate as the index
             int index = preferences[i][j];
 
             if (candidates[index].eliminated == false)
             {
+                // If valid candidate found, update vote, and break out of inner-loop
                 candidates[index].votes += 1;
                 break;
-                // TODO: look at preferences[i][1] and preferences[i][2]
-
             }
         }
     }
