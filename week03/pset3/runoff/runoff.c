@@ -144,20 +144,17 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    printf("*** Tabulate function is called ***\n");
     // FOR DEBUGGING
-    for (int k = 0; k < candidate_count; k++)
-    {
-        printf("k: %i - Candidate: %s\n", k, candidates[k].name);
-    }
-
+    printf("\n*** Tabulate function is called ***\n");
 
     // Loop through each voter
     for (int i = 0; i < voter_count; i++)
     {
+        printf("[%i]", i);
         // Loop through each voters ranking
         for (int j = 0; j < candidate_count; j++)
         {
+            printf("[%i]: ", j);
             // Sets the candidate as the index
             int index = preferences[i][j];
 
