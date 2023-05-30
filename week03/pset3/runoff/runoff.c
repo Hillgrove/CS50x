@@ -146,6 +146,9 @@ void tabulate(void)
 {
     // FOR DEBUGGING
     printf("\n*** Tabulate function is called ***\n");
+    printf("Number of votes: %i\n", voter_count);
+    printf("Number of candidates: %i\n", candidate_count);
+
 
     // Loop through each voter
     for (int i = 0; i < voter_count; i++)
