@@ -157,9 +157,9 @@ void tabulate(void)
         // Loop through each voters ranking
         for (int j = 0; j < candidate_count; j++)
         {
-            printf("[%i]: \n", j);
             // Sets the candidate as the index
             int index = preferences[i][j];
+            printf("[%i]: Index: %i\n", j, index);
 
             if (candidates[index].eliminated == false)
             {
