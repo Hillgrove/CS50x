@@ -154,7 +154,7 @@ void tabulate(void)
     // Loop through each voter
     for (int i = 0; i < voter_count; i++)
     {
-        printf("i = %i: ", i);
+        printf("\n*** i = %i ***\n", i);
         for (int j = 0; j < candidate_count; j++)
         {
             // int index = preference[i][1];
