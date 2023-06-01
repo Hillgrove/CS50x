@@ -157,8 +157,8 @@ void tabulate(void)
         printf("i = %i: ", i);
         for (int j = 0; j < candidate_count; j++)
         {
-            int index = preference[i][]
-            candidates[]
+            int index = preference[i][1];
+            candidates[index].votes += 1;
         }
 
     }
