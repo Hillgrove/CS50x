@@ -88,6 +88,7 @@ int main(int argc, string argv[])
     {
         // Calculate votes given remaining candidates
         tabulate();
+        break;
 
         // Check if election has been won
         bool won = print_winner();
@@ -153,21 +154,12 @@ void tabulate(void)
     // Loop through each voter
     for (int i = 0; i < voter_count; i++)
     {
-        printf("[%i]", i);
-        // Loop through each voters ranking
+        printf("i = %i: ", i);
         for (int j = 0; j < candidate_count; j++)
         {
-            // Sets the candidate as the index
-            int index = preferences[i][j];
-            printf("[%i]: Index: %i\n", j, index);
-
-            if (candidates[index].eliminated == false)
-            {
-                // If valid candidate found, update vote, and break out of inner-loop
-                candidates[index].votes += 1;
-                break;
-            }
+            printf("i: %i - j: %i\n", i, j);
         }
+
     }
     return;
 }
