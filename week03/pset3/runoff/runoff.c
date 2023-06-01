@@ -155,7 +155,12 @@ void tabulate(void)
     for (int i = 0; i < voter_count; i++)
     {
         printf("\n*** voter %i***\n", i + 1);
-        printf("rank 1: %i - rank 2: %i - rank 3: %i\n", preferences[i][0], preferences[i][1], preferences[i][2]);
+
+        for (int j = 0; j < candidate_count; j++)
+        {
+            printf("rank %i: %i ", j, preferences[i][j]);
+        }
+        printf("\n");
     }
     return;
 }
