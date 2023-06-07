@@ -208,16 +208,10 @@ int find_min(void)
         }
     }
 
+    // sets min to new number if lower number is found
     for (int i = 0; i < candidate_count; i++)
     {
-
-        if (i == 0)
-        {
-
-        }
-
-        // sets min to new number if lower number is found
-        else if (candidates[i].votes < min)
+        if (candidates[i].eliminateed == false && candidates[i].votes < min)
         {
             min = candidates[i].votes;
         }
