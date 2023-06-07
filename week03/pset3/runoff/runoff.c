@@ -186,6 +186,7 @@ bool print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
+        printf("Candidate %i has %i votes", i + 1, candidates[i].votes);
         if (candidates[i].votes > voter_count / 2)
         {
             printf("%s wins the election!\n", candidates[i].name);
