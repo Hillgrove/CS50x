@@ -201,7 +201,7 @@ int find_min(void)
     // Initializes min to the first valid element's number of votes, so it's possible to make comparisons
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidate[i].elimited == false)
+        if (candidates[i].eliminated == false)
         {
             min = candidates[i].votes;
             break;
@@ -211,7 +211,7 @@ int find_min(void)
     // sets min to new number if lower number is found
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminateed == false && candidates[i].votes < min)
+        if (candidates[i].eliminated == false && candidates[i].votes < min)
         {
             min = candidates[i].votes;
         }
@@ -223,7 +223,10 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    for (int i = 0; i < candidate.count)
+    for (int i = 0; i < candidate_count)
+    {
+        
+    }
     return false;
 }
 
