@@ -171,7 +171,6 @@ void tabulate(void)
                 break;
             }
         }
-        printf("\n");
     }
     return;
 }
