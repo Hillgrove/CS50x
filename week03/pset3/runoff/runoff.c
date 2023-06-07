@@ -162,13 +162,13 @@ void tabulate(void)
 
             if (candidates[index].eliminated == true)
             {
-                printf("Voter %i's rank %i is eliminted - check next\n", i, j);
+                printf("Voter %i's rank %i is eliminated - check next\n", i, j);
             }
 
             else if (candidates[index].eliminated == false)
             {
                 candidates[index].votes += 1;
-                printf("voter %i's rank %i (name: %s) is valid. Adding 1 to total\n", j, index, candidates[index].name);
+                printf("voter %i's rank %i (name: %s) is valid. Adding 1 to total\n", i, index, candidates[index].name);
                 break;
             }
         }
