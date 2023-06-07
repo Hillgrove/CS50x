@@ -196,16 +196,23 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    int min = 0;
+    int min;
 
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1; j < candidate_count; j++)
+        // Initializes min to the first elements number of votes, so it's possible to make comparisons
+        if (i == 0)
         {
-            
+            min = candidates[i].votes;
+        }
+
+        // sets min to new number if lower number is found
+        else if (candidates[i].votes < min)
+        {
+            min = candidates[i].votes;
         }
     }
-
+    printf("lowest amount of votes received is: %i\n", min);
     return min;
 }
 
