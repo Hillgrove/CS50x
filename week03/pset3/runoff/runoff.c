@@ -145,15 +145,15 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // FOR DEBUGGING
-    printf("\n*** Tabulate function is called ***\n");
-    printf("Number of votes: %i\n", voter_count);
-    printf("Number of candidates: %i\n", candidate_count);
+    // printf("\n*** Tabulate function is called ***\n");
+    // printf("Number of votes: %i\n", voter_count);
+    // printf("Number of candidates: %i\n", candidate_count);
 
 
     // Loop through each voter
     for (int i = 0; i < voter_count; i++)
     {
-        printf("\n*** voter %i ***\n", i + 1);
+        // printf("\n*** voter %i ***\n", i + 1);
 
         for (int j = 0; j < candidate_count; j++)
         {
@@ -167,7 +167,7 @@ void tabulate(void)
             else if (candidates[index].eliminated == false)
             {
                 candidates[index].votes += 1;
-                printf("voter %i's rank %i (name: %s) is valid. Adding 1 to total\n", i + 1, j + 1, candidates[index].name);
+                // printf("voter %i's rank %i (name: %s) is valid. Adding 1 to total\n", i + 1, j + 1, candidates[index].name);
                 break;
             }
         }
