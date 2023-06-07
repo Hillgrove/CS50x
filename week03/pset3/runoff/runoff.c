@@ -159,12 +159,12 @@ void tabulate(void)
         {
             int index = preferences[i][j];
 
-            if (candidates[index].eliminated == true)
-            {
-                printf("Voter %i's rank %i is eliminated - check next\n", i, j);
-            }
+            // if (candidates[index].eliminated == true)
+            // {
+            //     printf("Voter %i's rank %i is eliminated - check next\n", i, j);
+            // }
 
-            else if (candidates[index].eliminated == false)
+            if (candidates[index].eliminated == false)
             {
                 candidates[index].votes += 1;
                 // printf("voter %i's rank %i (name: %s) is valid. Adding 1 to total\n", i + 1, j + 1, candidates[index].name);
@@ -182,10 +182,10 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("Candidate %i (%s) has %i votes\n", i + 1, candidates[i].name, candidates[i].votes);
+        // printf("Candidate %i (%s) has %i votes\n", i + 1, candidates[i].name, candidates[i].votes);
         if (candidates[i].votes > voter_count / 2)
         {
-            printf("%s wins the election!\n", candidates[i].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
