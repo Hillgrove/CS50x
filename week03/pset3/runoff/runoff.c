@@ -177,11 +177,10 @@ void tabulate(void)
 }
 
 // Print the winner of the election, if there is one
+// if any candidate has more than half the votes, print out their name and return TRUE
+// if nobody has won the election yet, return false
 bool print_winner(void)
 {
-    // if any candidate has more than half the votes, print out their name and return TRUE
-    // if nobody has won the election yet, return false
-
     for (int i = 0; i < candidate_count; i++)
     {
         printf("Candidate %i (%s) has %i votes\n", i + 1, candidates[i].name, candidates[i].votes);
@@ -197,8 +196,17 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
-    return 0;
+    int min = 0;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            
+        }
+    }
+
+    return min;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
