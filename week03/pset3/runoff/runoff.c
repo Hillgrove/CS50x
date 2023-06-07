@@ -181,6 +181,17 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    // if any candidate has more than half the votes, print out their name and return TRUE
+    // if nobody has won the election yet, return false
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes > voter_count / 2)
+        {
+            printf("%s wins the election!\n", candidates[i].name);
+            return true;
+        }
+    }
     return false;
 }
 
