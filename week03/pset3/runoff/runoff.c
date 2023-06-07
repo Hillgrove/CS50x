@@ -158,11 +158,12 @@ void tabulate(void)
 
         for (int j = 0; j < candidate_count; j++)
         {
-
-            int index = preferences[i][j];
-            printf("rank %i: %i (name: %s)  |  ", j, index, candidates[index].name);
-
-            // if (candidate[index].eliminated == true)
+            if (candidates[index].eliminated == false)
+            {
+                int index = preferences[i][j];
+                candidates[index].votes += 1;
+                printf("rank %i: %i (name: %s)  |  ", j, index, candidates[index].name);
+            }
         }
         printf("\n");
     }
