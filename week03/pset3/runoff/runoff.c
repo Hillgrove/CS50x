@@ -198,12 +198,22 @@ int find_min(void)
 {
     int min;
 
+    // Initializes min to the first valid element's number of votes, so it's possible to make comparisons
     for (int i = 0; i < candidate_count; i++)
     {
-        // Initializes min to the first elements number of votes, so it's possible to make comparisons
-        if (i == 0)
+        if (candidate[i].elimited == false)
         {
             min = candidates[i].votes;
+            break;
+        }
+    }
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+
+        if (i == 0)
+        {
+
         }
 
         // sets min to new number if lower number is found
