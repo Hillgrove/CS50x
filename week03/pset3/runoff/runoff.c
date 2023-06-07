@@ -215,7 +215,7 @@ int find_min(void)
             min = candidates[i].votes;
         }
     }
-    printf("lowest amount of votes received is: %i\n", min);
+    // printf("lowest amount of votes received is: %i\n", min);
     return min;
 }
 
