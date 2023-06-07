@@ -88,7 +88,6 @@ int main(int argc, string argv[])
     {
         // Calculate votes given remaining candidates
         tabulate();
-        // break;
 
         // Check if election has been won
         bool won = print_winner();
@@ -180,13 +179,12 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
     // if any candidate has more than half the votes, print out their name and return TRUE
     // if nobody has won the election yet, return false
 
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("Candidate %i has %i votes", i + 1, candidates[i].votes);
+        printf("Candidate %i (%s) has %i votes\n", i + 1, candidates[i].name, candidates[i].votes);
         if (candidates[i].votes > voter_count / 2)
         {
             printf("%s wins the election!\n", candidates[i].name);
