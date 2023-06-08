@@ -141,15 +141,18 @@ void record_preferences(int ranks[])
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
+    printf("checking pairs in preferences array:\n");
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        for (int j = i + 1; i < candidate_count; i++)
+        for (int j = i + 1; i < candidate_count; j++)
         {
+            printf("[%i][%i]   ", i, j);
             if (preferences[i][j] > preferences[j][i])
             {
-                pairs[x].winner = x;
-                pairs[x].looser = x;
+                // pairs[x].winner = x;
+                // pairs[x].looser = x;
             }
+            printf("\n");
         }
     }
 
