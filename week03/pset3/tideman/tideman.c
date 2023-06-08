@@ -142,29 +142,25 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     printf("\nchecking pairs in preferences array:\n");
-    // to loop through pairs array
-    for (int p = 0; p < MAX * (MAX - 1) / 2; p++)
+
+    for (int i = 0; i < candidate_count - 1; i++)
     {
-
-        for (int i = 0; i < candidate_count - 1; i++)
+        for (int j = i + 1; j < candidate_count; j++)
         {
-            for (int j = i + 1; j < candidate_count; j++)
+            if (preferences[i][j] > preferences[j][i])
             {
-                if (preferences[i][j] > preferences[j][i])
-                {
-                    printf("[%i][%i]: %i is higher than [%i][%i]: %i\n", i, j, preferences[i][j], j, i, preferences[j][i]);
-                    pairs[p].winner = preferences[i][j];
-                    pairs[p].loser = preferences[j][i];
-                    pair_count += 1;
-                }
+                printf("[%i][%i]: %i is higher than [%i][%i]: %i\n", i, j, preferences[i][j], j, i, preferences[j][i]);
+                pairs[p].winner = preferences[i][j];
+                pairs[p].loser = preferences[j][i];
+                pair_count += 1;
+            }
 
-                else if (preferences[i][j] < preferences[j][i])
-                {
-                    printf("[%i][%i]: %i is lower than [%i][%i]: %i\n", i, j, preferences[i][j], j, i, preferences[j][i]);
-                    pairs[p].winner = preferences[j][i];
-                    pairs[p].loser = preferences[i][j];
-                    pair_count += 1;
-                }
+            else if (preferences[i][j] < preferences[j][i])
+            {
+                printf("[%i][%i]: %i is lower than [%i][%i]: %i\n", i, j, preferences[i][j], j, i, preferences[j][i]);
+                pairs[p].winner = preferences[j][i];
+                pairs[p].loser = preferences[i][j];
+                pair_count += 1;
             }
         }
     }
