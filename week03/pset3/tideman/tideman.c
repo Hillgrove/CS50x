@@ -128,13 +128,13 @@ void record_preferences(int ranks[])
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1; j < candidate_count - (i + 1); j++)
+        for (int j = i + 1; j < candidate_count; j++)
         {
             printf("Is ranks[%i]: %i higher than ranks[%i]: %i? ", i, ranks[i], j, ranks[j]);
             if (ranks[i] > ranks[j])
             {
                 printf("yes!\n");
-                preferences[i][j + 1] += 1;
+                preferences[i][j] += 1;
             }
             else
                 printf("no\n");
