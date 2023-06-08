@@ -108,7 +108,7 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    // TODO
+    // If candidate is valid, update ranks array with the index of the candidate
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcasecmp(name, candidates[i]) == 0)
