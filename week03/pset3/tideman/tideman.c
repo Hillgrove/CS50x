@@ -172,7 +172,9 @@ void sort_pairs(void)
     {
         for (int j = i + 1; j < pair_count; j++)
         {
-            int margin = pairs[i].winner - pairs[i].loser;
+            int i_margin = pairs[i].winner - pairs[i].loser;
+            int j_margin = pairts[j].winner - pairs[j].loser;
+
             if ()
         }
     }
