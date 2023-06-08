@@ -92,7 +92,7 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    print_test();
+    print_preferences();
 
     add_pairs();
     sort_pairs();
@@ -173,10 +173,10 @@ void print_preferences(void)
 
 void print_ranks(int ranks[])
 {
-    printf("Ranks array:\n");
+    printf("\nRanks array:\n ");
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("%i", ranks[i]);
+        printf("%i ", ranks[i]);
     }
     printf("\n");
 }
