@@ -88,7 +88,7 @@ int main(int argc, string argv[])
         printf("voter %i: ", i);
         for (int k = 0; k < candidate_count; k++)
         {
-            printf("[%i][%i] ", k, ranks[k]);
+            printf("ranks[%i] = %i  | ", k, ranks[k]);
         }
         printf("\n");
 
