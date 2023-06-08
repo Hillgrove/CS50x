@@ -149,7 +149,7 @@ void add_pairs(void)
             printf("[%i][%i]", i, j);
             if (preferences[i][j] > preferences[j][i])
             {
-                printf(" : %i is different from [%i][%i]: %i", preferences[i][j], j, i, preferences[j][i]);
+                printf(": %i is different from [%i][%i]: %i", preferences[i][j], j, i, preferences[j][i]);
                 // pairs[x].winner = x;
                 // pairs[x].looser = x;
             }
