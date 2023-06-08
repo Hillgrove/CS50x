@@ -173,13 +173,25 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count - 1; i++)
     {
         idx_max = i;
-        
+
         for (int j = i + 1; j < pair_count; j++)
         {
-            int i_margin = pairs[i].winner - pairs[i].loser;
+            int max_margin = pairs[idx_max].winner - pairs[idx_max].loser;
             int j_margin = pairts[j].winner - pairs[j].loser;
 
-            if ()
+            if (j_margin > max_margin)
+            {
+                idx_max = j;
+            }
+        }
+
+        if (i != idx_max)
+        {
+            // avg_temp temporary = temps[idx_max];
+            // temps[idx_max] = temps[i];
+            // temps[i] = temporary;
+            pair temp = pairs[idx_max];
+            pairs[idx_max] = 
         }
     }
     return;
