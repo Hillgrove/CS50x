@@ -185,9 +185,6 @@ void sort_pairs(void)
 
         if (i != idx_max)
         {
-            // avg_temp temporary = temps[idx_max];
-            // temps[idx_max] = temps[i];
-            // temps[i] = temporary;
             pair temp = pairs[idx_max];
             pairs[idx_max] = pairs[i];
             pairs[i] = temp;
