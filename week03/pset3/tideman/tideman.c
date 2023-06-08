@@ -33,7 +33,8 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-void print_test(void);
+void print_preferences(void);
+void print_ranks(int ranks[]);
 
 int main(int argc, string argv[])
 {
@@ -86,14 +87,6 @@ int main(int argc, string argv[])
             }
         }
 
-        // DEBUGGING INFO
-        // printf("voter %i: ", i + 1);
-        // for (int k = 0; k < candidate_count; k++)
-        // {
-        //     printf("ranks[%i] = %i   ", k, ranks[k]);
-        // }
-        // printf("\n");
-
         record_preferences(ranks);
 
         printf("\n");
@@ -126,12 +119,12 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
+    print_ranks(ranks);
     // preferences[i][j] is number of voters who prefer i over j
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
-            int 
         }
     }
     return;
@@ -165,7 +158,7 @@ void print_winner(void)
     return;
 }
 
-void print_test(void)
+void print_preferences(void)
 {
     printf("Preferences array:\n");
     for (int i = 0; i < candidate_count; i++)
@@ -176,4 +169,14 @@ void print_test(void)
         }
         printf("\n");
     }
+}
+
+void print_ranks(int ranks[])
+{
+    printf("Ranks array:\n");
+    for (int i = 0; i < candidate_count; i++)
+    {
+        printf("%i", ranks[i]);
+    }
+    printf("\n");
 }
