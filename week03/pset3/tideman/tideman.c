@@ -33,6 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+// Debug functions
 void print_preferences(void);
 void print_ranks(int ranks[]);
 
