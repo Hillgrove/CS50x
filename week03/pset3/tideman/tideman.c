@@ -87,12 +87,12 @@ int main(int argc, string argv[])
         }
 
         // DEBUGGING INFO
-        // printf("voter %i: ", i + 1);
-        // for (int k = 0; k < candidate_count; k++)
-        // {
-        //     printf("ranks[%i] = %i   ", k, ranks[k]);
-        // }
-        // printf("\n");
+        printf("voter %i: ", i + 1);
+        for (int k = 0; k < candidate_count; k++)
+        {
+            printf("ranks[%i] = %i   ", k, ranks[k]);
+        }
+        printf("\n");
 
         record_preferences(ranks);
 
@@ -170,7 +170,7 @@ void print_winner(void)
 
 void print_test(void)
 {
-    printf("Preferences array:");
+    printf("Preferences array:\n");
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
