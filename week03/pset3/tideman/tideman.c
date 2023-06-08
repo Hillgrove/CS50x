@@ -85,6 +85,13 @@ int main(int argc, string argv[])
             }
         }
 
+        printf("voter %i: ", i);
+        for (int k = 0; k < candidate_count; k++)
+        {
+            printf("r%i: %i ", k, ranks[k]);
+        }
+        printf("\n");
+
         record_preferences(ranks);
 
         printf("\n");
@@ -105,7 +112,7 @@ bool vote(int rank, string name, int ranks[])
     {
         if (strcasecmp(name, candidates[i]) == 0)
         {
-            ranks[rank] = name;
+            ranks[rank] = i;
             return true;
         }
     }
