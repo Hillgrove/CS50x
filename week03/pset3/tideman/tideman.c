@@ -145,7 +145,7 @@ void add_pairs(void)
     {
         for (int j = i + 1; i < candidate_count; i++)
         {
-            if (preferences[i][j] != [j][i])
+            if (preferences[i][j] != preferences[j][i])
             {
                 
             }
