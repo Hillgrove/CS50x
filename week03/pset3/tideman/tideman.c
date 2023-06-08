@@ -170,6 +170,7 @@ void print_winner(void)
 
 void print_test(void)
 {
+    printf("Preferences array:");
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
