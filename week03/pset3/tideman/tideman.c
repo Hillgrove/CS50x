@@ -124,29 +124,19 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     // preferences[i][j] is number of voters who prefer i over j
-    // ranks = {1, 3, 0, 2, ...}
-    // TODO
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            printf("[%i][%i]: ", i, j);
+            // If i and j are the same, we're comparing an element with itself. S
             if (i == j)
             {
-                printf("Can't compare with itself\n");
                 preferences[i][j] = 0;
             }
             else if (ranks[i] < ranks[j])
             {
-                printf("%s (%i) beats %s (%i)\n", candidates[i], ranks[i], candidates[j], ranks[j]);
                 preferences[i][j] += 1;
             }
-            else
-            {
-                printf("\n");
-            }
-        }
-        printf("\n");
     }
     return;
 }
