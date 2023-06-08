@@ -123,9 +123,15 @@ void record_preferences(int ranks[])
     // preferences[i][j] is number of voters who prefer i over j
     for (int i = 0; i < candidate_count; i++)
     {
+        // index of candidate A
+        int a = ranks[i];
+
         for (int j = i + 1; j < candidate_count; j++)
         {
-            
+            // index of candidate B
+            int b = ranks[j];
+
+            preferences[a][b] += 1;
         }
     }
     return;
