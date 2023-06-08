@@ -120,7 +120,7 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     print_ranks(ranks);
-    // preferences[i][j] is number of voters who prefer i over j
+    // preferences[a][b] is number of voters who prefer a over b
     for (int i = 0; i < candidate_count; i++)
     {
         // index of candidate A
