@@ -85,12 +85,12 @@ int main(int argc, string argv[])
             }
         }
 
-        // printf("voter %i: ", i + 1);
-        // for (int k = 0; k < candidate_count; k++)
-        // {
-        //     printf("ranks[%i] = %i  | ", k, ranks[k]);
-        // }
-        // printf("\n");
+        printf("voter %i: ", i + 1);
+        for (int k = 0; k < candidate_count; k++)
+        {
+            printf("ranks[%i] = %i   ", k, ranks[k]);
+        }
+        printf("\n");
 
         record_preferences(ranks);
 
