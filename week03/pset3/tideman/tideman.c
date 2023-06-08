@@ -174,10 +174,8 @@ void sort_pairs(void)
 
         for (int j = i + 1; j < pair_count; j++)
         {
-            int max_margin = candidates[pairs[idx_max].winner, b] - [b, a];
-
-            int max_margin = pairs[idx_max].winner - pairs[idx_max].loser;
-            int j_margin = pairs[j].winner - pairs[j].loser;
+            int max_margin = candidates[pairs[idx_max].winner][pairs[idx_max].loser] - candidates[pairs[idx_max].loser][pairs[idx_max].winner];
+            int j_margin = candidates[][]   pairs[j].winner - pairs[j].loser;
 
             if (j_margin > max_margin)
             {
