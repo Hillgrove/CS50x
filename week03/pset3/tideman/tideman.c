@@ -125,7 +125,10 @@ void record_preferences(int ranks[])
 {
     // ranks = {1, 3, 0, 2, ...}
     // TODO
-    
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
 
     return;
 }
