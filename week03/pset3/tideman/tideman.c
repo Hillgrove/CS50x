@@ -202,8 +202,7 @@ void print_preferences(void)
 
 void print_pairs(void)
 {
-    printf("Print_pairs running:\n");
-    printf("pair_count: %i\n", pair_count);
+    printf("\npars array:\n");
     for (int i = 0; i < pair_count; i++)
     {
         printf("(%i, %i)", pairs[i].winner, pairs[i].loser);
