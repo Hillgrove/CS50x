@@ -33,6 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+void print_test(void);
 
 int main(int argc, string argv[])
 {
@@ -97,6 +98,8 @@ int main(int argc, string argv[])
 
         printf("\n");
     }
+
+    print_test();
 
     add_pairs();
     sort_pairs();
@@ -163,4 +166,16 @@ void print_winner(void)
 {
     // TODO
     return;
+}
+
+void print_test(void)
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            printf("%i   ", preferences[i][j]);
+        }
+        printf("\n");
+    }
 }
