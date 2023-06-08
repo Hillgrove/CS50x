@@ -93,13 +93,11 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
+    print_preferences();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     add_pairs();
-
-    // TODO: REMOVE THESE WHEN PROGRAM DONE
-    print_preferences();
-    print_pairs();
-
+    print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     sort_pairs();
+    print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     lock_pairs();
     print_winner();
     return 0;
@@ -177,7 +175,7 @@ void sort_pairs(void)
         for (int j = i + 1; j < pair_count; j++)
         {
             int max_margin = pairs[idx_max].winner - pairs[idx_max].loser;
-            int j_margin = pairts[j].winner - pairs[j].loser;
+            int j_margin = pairs[j].winner - pairs[j].loser;
 
             if (j_margin > max_margin)
             {
@@ -191,7 +189,8 @@ void sort_pairs(void)
             // temps[idx_max] = temps[i];
             // temps[i] = temporary;
             pair temp = pairs[idx_max];
-            pairs[idx_max] = 
+            pairs[idx_max] = pairs[i];
+            pairs[i] = temp;
         }
     }
     return;
