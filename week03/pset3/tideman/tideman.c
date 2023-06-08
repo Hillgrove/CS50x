@@ -150,16 +150,16 @@ void add_pairs(void)
             if (preferences[i][j] > preferences[j][i])
             {
                 printf("[%i][%i]: %i is higher than [%i][%i]: %i\n", i, j, preferences[i][j], j, i, preferences[j][i]);
-                pairs[p].winner = preferences[i][j];
-                pairs[p].loser = preferences[j][i];
+                // pairs[p].winner = preferences[i][j];
+                // pairs[p].loser = preferences[j][i];
                 pair_count += 1;
             }
 
             else if (preferences[i][j] < preferences[j][i])
             {
                 printf("[%i][%i]: %i is lower than [%i][%i]: %i\n", i, j, preferences[i][j], j, i, preferences[j][i]);
-                pairs[p].winner = preferences[j][i];
-                pairs[p].loser = preferences[i][j];
+                // pairs[p].winner = preferences[j][i];
+                // pairs[p].loser = preferences[i][j];
                 pair_count += 1;
             }
         }
