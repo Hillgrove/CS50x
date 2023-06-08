@@ -35,7 +35,7 @@ void lock_pairs(void);
 void print_winner(void);
 // Debug functions
 void print_preferences(void);
-void print_ranks(int ranks[]);
+void print_pairs(void);
 
 int main(int argc, string argv[])
 {
@@ -93,7 +93,9 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
+    // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_preferences();
+    print_pairs();
 
     add_pairs();
     sort_pairs();
@@ -120,7 +122,6 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    print_ranks(ranks);
     // preferences[a][b] is number of voters who prefer a over b
     for (int i = 0; i < candidate_count; i++)
     {
@@ -141,8 +142,6 @@ void record_preferences(int ranks[])
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
-    printf("\nchecking pairs in preferences array:\n");
-
     for (int i = 0; i < candidate_count - 1; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
@@ -199,12 +198,11 @@ void print_preferences(void)
     }
 }
 
-void print_ranks(int ranks[])
+
+void print_pairs(void)
 {
-    printf("\nRanks array:\n ");
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
-        printf("%i ", ranks[i]);
+        printf("(%i, %i)", pairs[i].winner, pairs[i].loser);
     }
-    printf("\n");
 }
