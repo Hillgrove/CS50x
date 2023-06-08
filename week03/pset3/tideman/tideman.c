@@ -128,10 +128,17 @@ void record_preferences(int ranks[])
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             printf("Is %s (%i) ranked higher than %s (%i)? ", candidates[i], ranks[i], candidates[j], ranks[j]);
-            if (ranks[i] < ranks[j])
+
+            if (i == j)
+            {
+                printf("Can't compare with itself\n");
+                preferences[i][j] = 0;
+            }
+
+            else if (ranks[i] < ranks[j])
             {
                 printf("yes!\n");
                 preferences[i][j] += 1;
