@@ -128,7 +128,7 @@ void record_preferences(int ranks[])
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            // If i and j are the same, we're comparing an element with itself. S
+            // If i and j are the same, we're comparing an element with itself. Set 
             if (i == j)
             {
                 preferences[i][j] = 0;
