@@ -144,7 +144,7 @@ void add_pairs(void)
     printf("checking pairs in preferences array:\n");
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        for (int j = i + 1; i < candidate_count; j++)
+        for (int j = i + 1; j < candidate_count; j++)
         {
             printf("[%i][%i]   ", i, j);
             if (preferences[i][j] > preferences[j][i])
@@ -152,8 +152,8 @@ void add_pairs(void)
                 // pairs[x].winner = x;
                 // pairs[x].looser = x;
             }
-            printf("\n");
         }
+        printf("\n");
     }
 
     // TODO
