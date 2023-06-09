@@ -174,7 +174,7 @@ void sort_pairs(void)
 
         for (int j = i + 1; j < pair_count; j++)
         {
-            int max_margin = 
+            int max_margin =
             int j_margin =
 
             if (j_margin > max_margin)
