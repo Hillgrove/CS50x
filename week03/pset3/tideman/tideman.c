@@ -163,7 +163,7 @@ void add_pairs(void)
     return;
 }
 
-// Sort pairs in decreasing order by strength of victory
+// Sort pairs in decreasing order by strength (margin) of victory
 void sort_pairs(void)
 {
     int idx_max;
@@ -174,7 +174,7 @@ void sort_pairs(void)
 
         for (int j = i + 1; j < pair_count; j++)
         {
-            int max_margin =
+            int max_margin = preferences[idx_max][j] - preferences[j][idx_max]
             int j_margin =
 
             if (j_margin > max_margin)
