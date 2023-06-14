@@ -176,6 +176,8 @@ void sort_pairs(void)
         {
             // pairs[]
             // preferences[]
+            int eleOne = preferences[pairs[]][pairs[]]
+
             if (arr[j] > arr[j + 1]) {
                 swap(&arr[j], &arr[j + 1]);
                 swapped = true;
