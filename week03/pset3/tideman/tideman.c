@@ -32,6 +32,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
+bool loop(pair lockpair);
 void print_winner(void);
 // Debug functions
 void print_preferences(void);
@@ -202,7 +203,7 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         // if not create loop => create edge/arrow
-        if (not create loop)
+        if (!loop(pairs[i]))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
@@ -211,7 +212,10 @@ void lock_pairs(void)
 }
 
 
-bool loop(pair )
+bool loop(pair lockpair)
+{
+    return true;
+}
 
 
 
