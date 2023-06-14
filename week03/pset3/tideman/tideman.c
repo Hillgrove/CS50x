@@ -188,12 +188,14 @@ void sort_pairs(void)
             // Swap the found maximum element with the first element
             if(max_idx != i)
             {
-                
-                swap(&arr[max_idx], &arr[i]);
+                pair temp = pairs[];
+                *xp = *yp;
+                *yp = temp;
             }
         }
     }
 }
+
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
