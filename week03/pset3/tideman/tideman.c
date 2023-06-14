@@ -219,18 +219,15 @@ bool loop(pair testpair)
     for (int j = 0; j < candidate_count; j++)
     {
         if (locked[i][j] == 1)
-        if ( loser has no locked pairs in locked[i][j]) // i wins over j
-    {
-        return true;
+        {
+            loop()
+        }
+
+        else
+        {
+            return true;
+        }
     }
-    }
-
-
-    else
-    {
-
-    }
-
 }
 
 
