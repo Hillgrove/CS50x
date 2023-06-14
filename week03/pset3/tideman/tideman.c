@@ -214,6 +214,7 @@ void lock_pairs(void)
 
 bool loop(pair lockpair)
 {
+    int winner = lockpair[i].winner;
     return true;
 }
 
