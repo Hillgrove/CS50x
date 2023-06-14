@@ -243,7 +243,7 @@ void print_winner(void)
     for (int j = 0; j < candidate_count; j++)
     {
         int sum = 0;
-        
+
         for (int i = 0; i < candidate_count; i++)
         {
             if (locked[i][j] == 1)
@@ -253,7 +253,7 @@ void print_winner(void)
         }
         if (sum == 0)
         {
-            printf("Winner is candidate %i (%s)\n", );
+            printf("\nWinner is candidate %i (%s)\n", j, candidates[j]);
         }
     }
     return;
