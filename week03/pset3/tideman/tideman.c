@@ -194,6 +194,7 @@ void sort_pairs(void)
             // Swap the found maximum element with the first element
             if(max_idx != i)
             {
+                printf("\nSwapping pair (%i, %i) with (%i, %i)\n");
                 pair temp = pairs[max_idx];
                 pairs[max_idx] = pairs[i];
                 pairs[i] = temp;
