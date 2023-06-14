@@ -214,9 +214,23 @@ void lock_pairs(void)
 
 bool loop(pair testpair)
 {
-    int loser = testpair[i].loser;
-    if ( loser has no locked pairs )
-    return true;
+    int i = testpair[i].loser;
+
+    for (int j = 0; j < candidate_count; j++)
+    {
+        if (locked[i][j] == 1)
+        if ( loser has no locked pairs in locked[i][j]) // i wins over j
+    {
+        return true;
+    }
+    }
+
+
+    else
+    {
+
+    }
+
 }
 
 
