@@ -212,9 +212,10 @@ void lock_pairs(void)
 }
 
 
-bool loop(pair lockpair)
+bool loop(pair testpair)
 {
-    int winner = lockpair[i].winner;
+    int loser = testpair[i].loser;
+    if ( loser has no locked pairs )
     return true;
 }
 
