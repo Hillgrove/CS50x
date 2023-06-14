@@ -177,7 +177,7 @@ void sort_pairs(void)
             // int marginOne = preferences[pairs[max_idx].winner] - preferences[pairs[max_idx].loser];
             // int marginTwo = preferences[pairs[j].winner] - preferences[pairs[j].loser];
 
-            int marginOne = preferences[0][1] - preferences[1][0];
+            int marginOne = preferences[3][1] - preferences[1][3];
             int marginTwo = preferences[0][4] - preferences[4][0];
 
 
