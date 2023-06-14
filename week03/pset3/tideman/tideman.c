@@ -192,13 +192,14 @@ void sort_pairs(void)
             }
         }
     }
+    return;
 }
 
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    for (int i = )
     return;
 }
 
@@ -220,6 +221,7 @@ void print_preferences(void)
         }
         printf("\n");
     }
+    return;
 }
 
 
@@ -231,5 +233,6 @@ void print_pairs(void)
         printf("(%i, %i) ", pairs[i].winner, pairs[i].loser);
     }
     printf("\n");
+    return;
 }
 
