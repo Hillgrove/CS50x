@@ -178,6 +178,7 @@ void sort_pairs(void)
             // int marginTwo = preferences[pairs[j].winner] - preferences[pairs[j].loser];
 
             int marginOne = preferences[3][1] - preferences[1][3];
+            pairs[i]
             int marginTwo = preferences[0][1] - preferences[1][0];
 
 
