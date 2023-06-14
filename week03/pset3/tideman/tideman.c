@@ -227,10 +227,10 @@ bool loop(int winner, int loser)
 
         else
         {
-            return true;
+            return false;
         }
     }
-    return false;
+    return true;
 }
 
 
