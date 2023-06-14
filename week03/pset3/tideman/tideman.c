@@ -182,6 +182,8 @@ void sort_pairs(void)
             int marginOne = preferences[pairs[max_idx].winner][pairs[max_idx].loser] - preferences[pairs[max_idx].loser][pairs[max_idx].winner];
             int marginTwo = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
 
+            printf("marginOne: [][]");
+
             if (marginTwo > marginOne)
             {
                 max_idx = j;
