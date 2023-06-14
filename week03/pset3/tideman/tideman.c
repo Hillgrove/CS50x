@@ -201,7 +201,11 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        
+        // if not create loop => create edge/arrow
+        if (not create loop)
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
     }
     return;
 }
