@@ -95,13 +95,13 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    print_preferences();  // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_preferences();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     add_pairs();
-    print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     sort_pairs();
-    print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     lock_pairs();
-    print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_winner();
     return 0;
 }
@@ -238,8 +238,6 @@ bool loop(int winner, int loser)
 // Print the winner of the election
 void print_winner(void)
 {
-
-
     for (int j = 0; j < candidate_count; j++)
     {
         int sum = 0;
@@ -253,7 +251,8 @@ void print_winner(void)
         }
         if (sum == 0)
         {
-            printf("\nWinner is candidate %i (%s)\n", j, candidates[j]);
+            // printf("\nWinner is candidate %i (%s)\n", j, candidates[j]);
+            printf("%s\n", candidates[j]);
         }
     }
     return;
