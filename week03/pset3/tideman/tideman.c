@@ -222,10 +222,9 @@ bool loop(pair testpair)
         {
             loop(locked[i][j]) // to check if j has a loop to test if => and ultimately if it creates a loop
         }
-
         else
         {
-            return true;
+            return
         }
     }
 }
