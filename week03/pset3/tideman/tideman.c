@@ -166,31 +166,22 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength (margin) of victory
 void sort_pairs(void)
 {
-    int idx_max;
-
-    for (int i = 0; i < pair_count - 1; i++)
-    {
-        idx_max = i;
-
-        for (int j = i + 1; j < pair_count; j++)
-        {
-            int max_margin = preferences[idx_max][j] - preferences[j][idx_max]
-            int j_margin =
-
-            if (j_margin > max_margin)
-            {
-                idx_max = j;
+    int i, j;
+    bool swapped;
+    for (i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(&arr[j], &arr[j + 1]);
+                swapped = true;
             }
         }
 
-        if (i != idx_max)
-        {
-            pair temp = pairs[idx_max];
-            pairs[idx_max] = pairs[i];
-            pairs[i] = temp;
-        }
+        // If no two elements were swapped by inner loop,
+        // then break
+        if (swapped == false)
+            break;
     }
-    return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
