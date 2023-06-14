@@ -254,7 +254,6 @@ void print_winner(void)
         }
         if (sum == 0)
         {
-            // printf("\nWinner is candidate %i (%s)\n", j, candidates[j]);
             printf("%s\n", candidates[j]);
         }
     }
