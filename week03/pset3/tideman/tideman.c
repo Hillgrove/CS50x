@@ -166,29 +166,25 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength (margin) of victory
 void sort_pairs(void)
 {
-    bool swapped;
+    int min_idx;
 
     for (int i = 0; i < pair_count - 1; i++)
     {
-        swapped = false;
+        min_idx = i;
 
-        for (int j = 0; j < pair_count - (i + 1); j++)
+        for (int j = i+1; j < pair_count; j++)
         {
-            // pairs[]
-            // preferences[]
-            int marginOne = preferences[pairs[] ] [pairs[] ]
-            int marginTwo =
+            if (arr[j] < arr[min_idx])
+            {
+                min_idx = j;
+            }
 
-            if (arr[j] > arr[j + 1]) {
-                swap(&arr[j], &arr[j + 1]);
-                swapped = true;
+            // Swap the found minimum element with the first element
+            if(min_idx != i)
+            {
+                swap(&arr[min_idx], &arr[i]);
             }
         }
-
-        // If no two elements were swapped by inner loop,
-        // then break
-        if (swapped == false)
-            break;
     }
 }
 
