@@ -166,23 +166,30 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength (margin) of victory
 void sort_pairs(void)
 {
-    int min_idx;
+    int max_idx;
 
     for (int i = 0; i < pair_count - 1; i++)
     {
-        min_idx = i;
+        max_idx = i;
 
         for (int j = i+1; j < pair_count; j++)
         {
-            if (arr[j] < arr[min_idx])
+            int marginOne = preferences[pairs[max_idx].winner], preferences[pairs[max_idx].loser];
+            int marginTwo = preferences[pairs[j].winner], preferences[pairs[j].loser];
+            printf("marginOne: %i\n", marginOne);
+            printf("marginTwo: %i\n", marginTwo);
+
+
+            if (marginTwo > marginOne)
             {
-                min_idx = j;
+                max_idx = j;
             }
 
-            // Swap the found minimum element with the first element
-            if(min_idx != i)
+            // Swap the found maximum element with the first element
+            if(max_idx != i)
             {
-                swap(&arr[min_idx], &arr[i]);
+                
+                swap(&arr[max_idx], &arr[i]);
             }
         }
     }
