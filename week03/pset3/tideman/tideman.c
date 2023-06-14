@@ -238,7 +238,24 @@ bool loop(int winner, int loser)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+
+
+    for (int j = 0; j < candidate_count; j++)
+    {
+        int sum = 0;
+        
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if (locked[i][j] == 1)
+            {
+                sum += 1;
+            }
+        }
+        if (sum == 0)
+        {
+            printf("Winner is candidate %i (%s)\n", );
+        }
+    }
     return;
 }
 
