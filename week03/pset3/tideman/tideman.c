@@ -166,11 +166,13 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength (margin) of victory
 void sort_pairs(void)
 {
-    int i, j;
     bool swapped;
-    for (i = 0; i < pair_count - 1; i++) {
+
+    for (int i = 0; i < pair_count - 1; i++) {
         swapped = false;
-        for (j = 0; j < n - i - 1; j++) {
+
+        for (int j = 0; j < n - i - 1; j++) {
+
             if (arr[j] > arr[j + 1]) {
                 swap(&arr[j], &arr[j + 1]);
                 swapped = true;
