@@ -32,7 +32,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
-bool loop(pair lockpair);
+bool loop(int winner, int loser);
 void print_winner(void);
 // Debug functions
 void print_preferences(void);
@@ -203,7 +203,7 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         // if not create loop => create edge/arrow
-        if (!loop(pairs[i]))
+        if (!loop(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
@@ -212,21 +212,23 @@ void lock_pairs(void)
 }
 
 
-bool loop(pair testpair)
+bool loop(int winner, int loser)
 {
-    int i = testpair[i].loser;
+    int i = loser;
 
     for (int j = 0; j < candidate_count; j++)
     {
         if (locked[i][j] == 1)
         {
-            loop(locked[i][j]) // to check if j has a loop to test if => and ultimately if it creates a loop
+            loop(i, j); // to check if j has a loop to test if => and ultimately if it creates a loop
         }
+
         else
         {
-            return
+            return true;
         }
     }
+    return false;
 }
 
 
