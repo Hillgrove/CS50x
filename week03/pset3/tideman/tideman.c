@@ -37,6 +37,7 @@ void print_winner(void);
 // Debug functions
 void print_preferences(void);
 void print_pairs(void);
+void print_locked(void);
 
 int main(int argc, string argv[])
 {
@@ -100,6 +101,7 @@ int main(int argc, string argv[])
     sort_pairs();
     print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     lock_pairs();
+    print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_winner();
     return 0;
 }
@@ -266,3 +268,17 @@ void print_pairs(void)
     return;
 }
 
+
+void print_locked(void)
+{
+    printf("locked array:\n");
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            printf("%i   ", locked[i][j]);
+        }
+        printf("\n");
+    }
+    return;
+}
