@@ -34,6 +34,7 @@ void sort_pairs(void);
 void lock_pairs(void);
 bool loop(int winner, int loser);
 void print_winner(void);
+
 // Debug functions
 void print_preferences(void);
 void print_pairs(void);
