@@ -220,10 +220,7 @@ bool loop(pair testpair)
     {
         if (locked[i][j] == 1)
         {
-            pair new_pair;
-            new_pair.winner = i;
-            new_pair.loser = j;
-            loop(new_pair) // to check if j has a loop to test if => and ultimately if it creates a loop
+            loop(locked[i][j]) // to check if j has a loop to test if => and ultimately if it creates a loop
         }
 
         else
