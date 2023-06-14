@@ -174,7 +174,8 @@ void sort_pairs(void)
 
         for (int j = 0; j < pair_count - (i + 1); j++)
         {
-            
+            // pairs[]
+            // preferences[]
             if (arr[j] > arr[j + 1]) {
                 swap(&arr[j], &arr[j + 1]);
                 swapped = true;
