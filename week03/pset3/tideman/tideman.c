@@ -187,6 +187,7 @@ void sort_pairs(void)
 
             if (marginTwo > marginOne)
             {
+                printf("\nMarginTwo (%i) is bigger than marginTwo (%i)\n", marginTwo, marginOne);
                 max_idx = j;
             }
 
