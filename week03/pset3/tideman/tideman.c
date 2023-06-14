@@ -176,7 +176,7 @@ void sort_pairs(void)
     {
         max_idx = i;
 
-        for (int j = i+1; j < pair_count; j++)
+        for (int j = i + 1; j < pair_count; j++)
         {
             // save the difference between the amount of voters of winner and looser of the 2 pairs we're comparing
             int marginOne = preferences[pairs[max_idx].winner][pairs[max_idx].loser] - preferences[pairs[max_idx].loser][pairs[max_idx].winner];
