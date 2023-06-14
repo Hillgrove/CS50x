@@ -179,7 +179,6 @@ void sort_pairs(void)
             printf("marginOne: %i\n", marginOne);
             printf("marginTwo: %i\n", marginTwo);
 
-
             if (marginTwo > marginOne)
             {
                 max_idx = j;
@@ -188,9 +187,9 @@ void sort_pairs(void)
             // Swap the found maximum element with the first element
             if(max_idx != i)
             {
-                pair temp = pairs[];
-                *xp = *yp;
-                *yp = temp;
+                pair temp = pairs[max_idx];
+                pairs[max_idx] = pairs[i];
+                pairs[i] = temp;
             }
         }
     }
