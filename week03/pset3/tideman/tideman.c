@@ -307,7 +307,6 @@ void print_pairs(void)
 
 void print_locked(void)
 {
-    printf("\nlocked array:\n");
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
