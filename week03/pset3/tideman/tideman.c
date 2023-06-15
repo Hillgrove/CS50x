@@ -10,6 +10,7 @@ int preferences[MAX][MAX];
 
 // locked[i][j] means i is locked in over j
 bool locked[MAX][MAX];
+bool matrix[MAX][MAX];
 
 // Each pair has a winner, loser
 typedef struct
@@ -32,7 +33,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
-bool loop(int winner, int loser, bool matrix);
+bool loop(int winner, int loser);
 void reset(bool matrix);
 void print_winner(void);
 
@@ -204,12 +205,10 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    bool matrix[candidate_count][candidate_count];
-
     for (int i = 0; i < pair_count; i++)
     {
         // check if edges form a cycle
-        if (!loop(pairs[i].winner, pairs[i].loser, matrix))
+        if (!loop(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
@@ -218,7 +217,7 @@ void lock_pairs(void)
 }
 
 
-bool loop(int winner, int loser, bool matrix)
+bool loop(int winner, int loser)
 {
     matrix[winner][loser] = true;
     int i = loser;
