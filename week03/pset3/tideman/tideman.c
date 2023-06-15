@@ -182,8 +182,8 @@ void sort_pairs(void)
             int marginOne = preferences[pairs[max_idx].winner][pairs[max_idx].loser] - preferences[pairs[max_idx].loser][pairs[max_idx].winner];
             int marginTwo = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
 
-            printf("\nmarginOne of [%i][%i]: %i\n", pairs[max_idx].winner,pairs[max_idx].loser, marginOne);
-            printf("marginTwo of [%i][%i]: %i\n", pairs[j].winner,pairs[j].loser, marginTwo);
+            // printf("\nmarginOne of [%i][%i]: %i\n", pairs[max_idx].winner,pairs[max_idx].loser, marginOne);
+            // printf("marginTwo of [%i][%i]: %i\n", pairs[j].winner,pairs[j].loser, marginTwo);
 
             if (marginTwo > marginOne)
             {
@@ -198,7 +198,7 @@ void sort_pairs(void)
                     pairs[max_idx] = pairs[i];
                     pairs[i] = temp;
 
-                    print_pairs();
+                    // print_pairs();
                 }
             }
         }
