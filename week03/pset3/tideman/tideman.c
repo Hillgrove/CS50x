@@ -230,6 +230,7 @@ bool loop(int winner, int loser)
     {
         if (locked[i][j] == 1)
         {
+            //make new matrix
             loop(i, j); // to check if j has a loop to test if => and ultimately if it creates a loop
         }
     }
