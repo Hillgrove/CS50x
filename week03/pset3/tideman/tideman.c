@@ -225,7 +225,7 @@ bool loop(int winner, int loser, bool matrix)
 
     for (int j = 0; j < candidate_count; j++)
     {
-        if (matrix[i][j] == 1)
+        if (locked[i][j] == 1)
         {
             // if something some to stop loop
             loop(i, j);
