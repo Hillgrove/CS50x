@@ -192,8 +192,8 @@ void sort_pairs(void)
             }
         }
 
-         // Swap the found maximum element with the first element
-        if(max_idx != i)
+        // Swap the found maximum element with the first element
+        if (max_idx != i)
         {
             pair temp = pairs[max_idx];
             pairs[max_idx] = pairs[i];
