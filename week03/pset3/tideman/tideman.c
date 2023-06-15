@@ -209,6 +209,7 @@ void lock_pairs(void)
     {
         // Sets grid to locked to test it
         locked[pairs[i].winner][pairs[i].loser] = true;
+        print_locked();
 
         // check if edges form a cycle
         if (loop(pairs[i].winner, pairs[i].loser))
@@ -278,7 +279,6 @@ void print_winner(void)
 
 void print_preferences(void)
 {
-    printf("Preferences array:\n");
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
