@@ -233,7 +233,7 @@ bool loop(int winner, int loser)
     {
         if (locked[i][j] == true)
         {
-            if (matrix[i][j] == true)
+            if (matrix[i][j] == true && is_loop == false)
             {
                 // resetMatrix();
                 is_loop = true;
