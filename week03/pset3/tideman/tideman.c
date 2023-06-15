@@ -223,6 +223,7 @@ void lock_pairs(void)
 
 bool loop(int winner, int loser, bool matrix)
 {
+    matrix[winner][loser] = true;
     int i = loser;
 
     for (int j = 0; j < candidate_count; j++)
