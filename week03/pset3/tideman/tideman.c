@@ -40,7 +40,7 @@ void print_winner(void);
 // Debug functions
 void print_preferences(void);
 void print_pairs(void);
-void print_locked(bool matrix);
+void print_locked(void);
 
 int main(int argc, string argv[])
 {
@@ -104,7 +104,7 @@ int main(int argc, string argv[])
     sort_pairs();
     print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     lock_pairs();
-    print_locked(locked); // TODO: REMOVE THESE WHEN PROGRAM DONE
+    print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_winner();
     return 0;
 }
@@ -208,7 +208,7 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         // Sets grid to locked to test it
-        locked[pairs[i].winner][pairs[i].loser] = true
+        locked[pairs[i].winner][pairs[i].loser] = true;
 
         // check if edges form a cycle
         if (loop(pairs[i].winner, pairs[i].loser))
@@ -303,7 +303,7 @@ void print_pairs(void)
 }
 
 
-void print_locked(bool matrix)
+void print_locked(void)
 {
     printf("\nlocked array:\n");
     for (int i = 0; i < candidate_count; i++)
