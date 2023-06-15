@@ -187,13 +187,13 @@ void sort_pairs(void)
 
             if (marginTwo > marginOne)
             {
-                printf("\nMarginTwo (%i) is bigger than marginTwo (%i)\n", marginTwo, marginOne);
+                // printf("\nMarginTwo (%i) is bigger than marginTwo (%i)\n", marginTwo, marginOne);
                 max_idx = j;
 
                 // Swap the found maximum element with the first element
                 if(max_idx != i)
                 {
-                    printf("\nSwapping pair (%i, %i) with (%i, %i)\n", pairs[max_idx].winner,pairs[max_idx].loser, pairs[i].winner,pairs[i].loser);
+                    // printf("\nSwapping pair (%i, %i) with (%i, %i)\n", pairs[max_idx].winner,pairs[max_idx].loser, pairs[i].winner,pairs[i].loser);
                     pair temp = pairs[max_idx];
                     pairs[max_idx] = pairs[i];
                     pairs[i] = temp;
