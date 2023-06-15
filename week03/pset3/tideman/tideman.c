@@ -227,6 +227,7 @@ bool loop(int winner, int loser)
 {
     matrix[winner][loser] = true;
     int i = loser;
+    bool is_loop = false;
 
     for (int j = 0; j < candidate_count; j++)
     {
@@ -234,14 +235,14 @@ bool loop(int winner, int loser)
         {
             if (matrix[i][j] == true)
             {
-                resetMatrix();
-                return true;
+                // resetMatrix();
+                is_loop = true;
             }
             loop(i, j);
         }
     }
     resetMatrix();
-    return false;
+    return is_loop;
 }
 
 
