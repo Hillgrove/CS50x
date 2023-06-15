@@ -26,6 +26,7 @@ pair pairs[MAX * (MAX - 1) / 2];
 
 int pair_count;
 int candidate_count;
+bool is_loop = false;
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
@@ -212,10 +213,12 @@ void lock_pairs(void)
         locked[pairs[i].winner][pairs[i].loser] = true;
 
         // check if edges form a cycle
+        is_loop = false;
         if (loop(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = false;
         }
+        resetMatrix();
         printf("\nTemp locked matrix after checking (%i, %i):\n", pairs[i].winner, pairs[i].loser);
         print_locked();
     }
@@ -227,7 +230,6 @@ bool loop(int winner, int loser)
 {
     matrix[winner][loser] = true;
     int i = loser;
-    bool is_loop = false;
 
     for (int j = 0; j < candidate_count; j++)
     {
@@ -242,7 +244,6 @@ bool loop(int winner, int loser)
             loop(i, j);
         }
     }
-    resetMatrix();
     return is_loop;
 }
 
