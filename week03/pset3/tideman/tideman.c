@@ -227,10 +227,13 @@ bool loop(int winner, int loser, bool matrix)
     {
         if (locked[i][j] == 1)
         {
-            matrix[i][j] = true;
+            if (matrix[i][j] == true)
+            {
+                reset(matrix);
+                return true;
+            }
 
-            if (ma)
-            // if something some to stop loop
+            matrix[i][j] = true;
             loop(i, j);
         }
     }
