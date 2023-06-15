@@ -40,7 +40,7 @@ void print_winner(void);
 // Debug functions
 void print_preferences(void);
 void print_pairs(void);
-void print_locked(void);
+void print_locked(bool matrix);
 
 int main(int argc, string argv[])
 {
@@ -104,7 +104,7 @@ int main(int argc, string argv[])
     sort_pairs();
     print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     lock_pairs();
-    print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
+    print_locked(locked); // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_winner();
     return 0;
 }
@@ -302,7 +302,7 @@ void print_pairs(void)
 }
 
 
-void print_locked(void)
+void print_locked(bool matrix)
 {
     printf("\nlocked array:\n");
     for (int i = 0; i < candidate_count; i++)
