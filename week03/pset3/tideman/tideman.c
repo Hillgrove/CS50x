@@ -100,10 +100,11 @@ int main(int argc, string argv[])
 
     print_preferences();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     add_pairs();
-    print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     sort_pairs();
     print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     lock_pairs();
+    printf("\nFinal locked matrix\n"); // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_winner();
     return 0;
@@ -216,6 +217,8 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = false;
         }
+        printf("\nTemp locked matrix after checking (%i, %i):\n", pairs[i].winner, pairs[i].loser);
+        print_locked();
     }
     return;
 }
