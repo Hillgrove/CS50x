@@ -34,7 +34,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 bool loop(int winner, int loser);
-void reset(bool matrix);
+void resetMatrix(void);
 void print_winner(void);
 
 // Debug functions
@@ -228,6 +228,7 @@ bool loop(int winner, int loser)
         {
             if (matrix[i][j] == true)
             {
+                resetMatrix();
                 return true;
             }
 
@@ -235,11 +236,12 @@ bool loop(int winner, int loser)
             loop(i, j);
         }
     }
+    resetMatrix();
     return false;
 }
 
 
-void reset(bool matrix)
+void resetMatrix(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
