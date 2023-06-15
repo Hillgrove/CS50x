@@ -212,7 +212,7 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        //make new matrix ==> insert in loop function ==> remember to reset it after loop
+        bool loopMatrix[candidate_count][candidate_count]//make new matrix ==> insert in loop function ==> remember to reset it after loop
         // if not create loop => create edge/arrow
         if (!loop(pairs[i].winner, pairs[i].loser))
         {
