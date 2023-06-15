@@ -227,6 +227,7 @@ bool loop(int winner, int loser, bool matrix)
     {
         if (locked[i][j] == 1)
         {
+            matrix[i][j] = true;
             // if something some to stop loop
             loop(i, j);
         }
