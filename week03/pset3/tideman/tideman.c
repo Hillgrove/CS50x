@@ -10,6 +10,7 @@ int preferences[MAX][MAX];
 
 // locked[i][j] means i is locked in over j
 bool locked[MAX][MAX];
+bool loopMatrix[MAX][MAX];
 
 // Each pair has a winner, loser
 typedef struct
@@ -210,10 +211,7 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    //make new matrix ==> insert in loop function ==> remember to reset it after loop
-    bool loopMatrix[candidate_count][candidate_count];
-
-    for (int i = 0; i < pair_count; i++)
+        for (int i = 0; i < pair_count; i++)
     {
         // if not create loop => create edge/arrow
         if (!loop(pairs[i].winner, pairs[i].loser, loopMatrix))
@@ -234,7 +232,6 @@ bool loop(int winner, int loser)
         if (locked[i][j] == 1)
         {
             // if something some to stop loop
-            if ( );
             loop(i, j); // to check if j has a loop to test if => and ultimately if it creates a loop
         }
     }
