@@ -219,8 +219,8 @@ void lock_pairs(void)
             locked[pairs[i].winner][pairs[i].loser] = false;
         }
         resetMatrix();
-        printf("\nTemp locked matrix after checking (%i, %i):\n", pairs[i].winner, pairs[i].loser);
-        print_locked();
+        // printf("\nTemp locked matrix after checking (%i, %i):\n", pairs[i].winner, pairs[i].loser);
+        // print_locked();
     }
     return;
 }
