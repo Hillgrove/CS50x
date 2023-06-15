@@ -99,14 +99,14 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    print_preferences();  // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_preferences();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     add_pairs();
     // print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     sort_pairs();
-    print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_pairs();  // TODO: REMOVE THESE WHEN PROGRAM DONE
     lock_pairs();
-    printf("\nFinal locked matrix\n"); // TODO: REMOVE THESE WHEN PROGRAM DONE
-    print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // printf("\nFinal locked matrix\n"); // TODO: REMOVE THESE WHEN PROGRAM DONE
+    // print_locked(); // TODO: REMOVE THESE WHEN PROGRAM DONE
     print_winner();
     return 0;
 }
