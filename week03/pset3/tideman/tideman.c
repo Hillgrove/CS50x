@@ -212,9 +212,6 @@ void lock_pairs(void)
         if (!loop(pairs[i].winner, pairs[i].loser, matrix))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
-
-            // Maybe move this top loop function?
-            reset(matrix);
         }
     }
     return;
@@ -234,6 +231,7 @@ bool loop(int winner, int loser, bool matrix)
             loop(i, j);
         }
     }
+    reset(matrix);
     return false;
 }
 
