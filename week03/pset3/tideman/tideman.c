@@ -228,7 +228,6 @@ bool loop(int winner, int loser)
         {
             if (matrix[i][j] == true)
             {
-                reset(matrix);
                 return true;
             }
 
@@ -236,7 +235,6 @@ bool loop(int winner, int loser)
             loop(i, j);
         }
     }
-    reset(matrix);
     return false;
 }
 
