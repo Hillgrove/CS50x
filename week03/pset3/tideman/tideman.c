@@ -209,7 +209,7 @@ void lock_pairs(void)
     {
         // Sets grid to locked to test it
         locked[pairs[i].winner][pairs[i].loser] = true
-        
+
         // check if edges form a cycle
         if (loop(pairs[i].winner, pairs[i].loser))
         {
