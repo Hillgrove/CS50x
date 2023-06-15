@@ -33,6 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 bool loop(int winner, int loser, bool matrix);
+void reset(bool matrix);
 void print_winner(void);
 
 // Debug functions
@@ -182,12 +183,8 @@ void sort_pairs(void)
             int marginOne = preferences[pairs[max_idx].winner][pairs[max_idx].loser] - preferences[pairs[max_idx].loser][pairs[max_idx].winner];
             int marginTwo = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
 
-            // printf("\nmarginOne of [%i][%i]: %i\n", pairs[max_idx].winner,pairs[max_idx].loser, marginOne);
-            // printf("marginTwo of [%i][%i]: %i\n", pairs[j].winner,pairs[j].loser, marginTwo);
-
             if (marginTwo > marginOne)
             {
-                // printf("\nMarginTwo (%i) is bigger than marginTwo (%i)\n", marginTwo, marginOne);
                 max_idx = j;
             }
         }
@@ -195,12 +192,9 @@ void sort_pairs(void)
          // Swap the found maximum element with the first element
         if(max_idx != i)
         {
-            // printf("\nSwapping pair (%i, %i) with (%i, %i)\n", pairs[max_idx].winner,pairs[max_idx].loser, pairs[i].winner,pairs[i].loser);
             pair temp = pairs[max_idx];
             pairs[max_idx] = pairs[i];
             pairs[i] = temp;
-
-            // print_pairs();
         }
     }
     return;
@@ -218,6 +212,7 @@ void lock_pairs(void)
         if (!loop(pairs[i].winner, pairs[i].loser, matrix))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
+            reset(matrix);
         }
     }
     return;
@@ -233,13 +228,23 @@ bool loop(int winner, int loser, bool matrix)
         if (matrix[i][j] == 1)
         {
             // if something some to stop loop
-            loop(i, j); // to check if j has a loop to test if => and ultimately if it creates a loop
+            loop(i, j);
         }
     }
-    // reset matrix
     return false;
 }
 
+
+void reset(bool matrix)
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            matrix[i][j] = false;
+        }
+    }
+}
 
 
 // Print the winner of the election
