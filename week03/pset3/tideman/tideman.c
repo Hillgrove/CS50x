@@ -237,6 +237,7 @@ bool loop(int winner, int loser)
             loop(i, j); // to check if j has a loop to test if => and ultimately if it creates a loop
         }
     }
+    // reset matrix
     return false;
 }
 
