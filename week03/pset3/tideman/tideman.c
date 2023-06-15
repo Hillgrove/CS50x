@@ -230,7 +230,7 @@ bool loop(int winner, int loser)
 
     for (int j = 0; j < candidate_count; j++)
     {
-        if (locked[i][j] == 1)
+        if (locked[i][j] == true)
         {
             if (matrix[i][j] == true)
             {
