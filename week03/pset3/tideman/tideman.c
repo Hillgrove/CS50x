@@ -237,6 +237,7 @@ bool loop(int winner, int loser)
             {
                 // resetMatrix();
                 is_loop = true;
+                break;
             }
             loop(i, j);
         }
