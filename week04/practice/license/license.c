@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, 7, infile) == 7)
     {
-        printf("buffer[6]: %c\n", buffer[6]);
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
