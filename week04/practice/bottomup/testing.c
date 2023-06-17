@@ -18,21 +18,13 @@ int main(int argc, char *argv[])
     char *infile = argv[1];
 
     // Open input file
-    FILE *inptr = fopen(infile, "r");
+    FILE *inptr = fopen(infile, "r+");
     if (inptr == NULL)
     {
         printf("Could not open %s.\n", infile);
         return 2;
     }
 
-    // Open output file
-    FILE *outptr = fopen(outfile, "w");
-    if (outptr == NULL)
-    {
-        fclose(inptr);
-        printf("Could not create %s.\n", outfile);
-        return 3;
-    }
 
     // Read infile's BITMAPFILEHEADER
     BITMAPFILEHEADER bf;
