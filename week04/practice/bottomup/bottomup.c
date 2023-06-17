@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // Iterate over infile's scanlines
-    for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
+    for (int i = 0, biHeight = o - abs(bi.biHeight); i < biHeight; i++)
     {
         // Iterate over pixels in scanline
         for (int j = 0; j < bi.biWidth; j++)
@@ -74,9 +74,8 @@ int main(int argc, char *argv[])
             // Read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-
             // Write RGB triple to outfile
-            fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr[]);
+            fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
         }
 
         // Skip over padding, if any
