@@ -72,8 +72,8 @@ int main(int argc, char *argv[])
             RGBTRIPLE triple;
 
             // Read RGB triple from infile
+            fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-            printf("BITMAPINFOHEADER.biHeight = %i\n", bi.biHeight);
 
             // Write RGB triple to outfile
             fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
