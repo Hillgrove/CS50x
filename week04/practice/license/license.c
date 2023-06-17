@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 
 
         // Save plate number in array
+        // MALLOC STUFF
         plates[idx] = buffer;
         idx++;
     }
