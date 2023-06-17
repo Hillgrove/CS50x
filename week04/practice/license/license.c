@@ -23,11 +23,11 @@ int main(int argc, char *argv[])
     {
         // Replace '\n' with '\0'
         buffer[6] = '\0';
-        printf("Buffer %i: %s\n", idx, buffer);
+        // printf("Buffer %i: %s\n", idx, buffer);
 
         // Save plate number in array
         plates[idx] = buffer;
-        printf("plates[%i]: %s\n", idx, plates[idx]);
+        // printf("plates[%i]: %s\n", idx, plates[idx]);
         idx++;
     }
 
