@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
             fseek
 
             // Write RGB triple to outfile
-            fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
+            fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr[]);
         }
 
         // Skip over padding, if any
