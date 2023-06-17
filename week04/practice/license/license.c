@@ -23,15 +23,16 @@ int main(int argc, char *argv[])
     {
         // Replace '\n' with '\0'
         buffer[6] = '\0';
-        printf("%c%c%c%c%c%c%c\n", buffer[0], buffer[1],buffer[2],buffer[3],buffer[4],buffer[5], buffer[6]);
+        printf("Buffer %i: %s\n", idx, buffer);
 
         // Save plate number in array
         plates[idx] = buffer;
+        printf("plates[%i]: %s\n", idx, plates[idx]);
         idx++;
     }
 
     for (int i = 0; i < 8; i++)
     {
-        printf("%s\n", plates[i]);
+        printf("%s\n", *plates[i]);
     }
 }
