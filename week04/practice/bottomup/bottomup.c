@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
             // Read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-
+            
 
 
             // Write RGB triple to outfile
