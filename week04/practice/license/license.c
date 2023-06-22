@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
         // MALLOC STUFF
         // check for null
         // remember to free
-        plates[idx] = malloc(sizeof(buffer));
-        
+        char *pbuffer = malloc(sizeof(buffer));
+
 
         // Save plate number in array
         plates[idx] = buffer;
