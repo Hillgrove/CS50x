@@ -2,6 +2,7 @@
 
 void colorize(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Set the new color the black pixels should be changed to
     RGBTRIPLE new_color;
     new_color.rgbtRed = 47;
     new_color.rgbtGreen = 128;
