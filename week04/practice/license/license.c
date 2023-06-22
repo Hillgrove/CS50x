@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
         // remember to free
         plates[idx] = malloc(sizeof(buffer));
 
+        // if pointer is null, quit and return error code.
         if (plates[idx] == null)
         {
             return 1;
