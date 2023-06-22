@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stlib.h>
+
 
 int main(int argc, char *argv[])
 {
@@ -27,16 +29,15 @@ int main(int argc, char *argv[])
         // MALLOC STUFF
         // check for null
         // remember to free
-        char *pbuffer = malloc(sizeof(buffer));
+        plates[idx] = malloc(sizeof(buffer));
 
-        if (pbuffer == null)
+        if (plates[idx] == null)
         {
             return 1;
         }
 
-
         // Save plate number in array
-        plates[idx] = buffer;
+        plates[idx] = *buffer;
         idx++;
     }
 
