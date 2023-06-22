@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
-
-
         // Save plate number in array
         // MALLOC STUFF
+        // check for null
+        // remember to free
         plates[idx] = buffer;
         idx++;
     }
