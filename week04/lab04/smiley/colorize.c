@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
     int width = bi.biWidth;
 
     // allocate memory for image
+    // Struct of  BYTE  rgbtBlue, BYTE  rgbtGreen, BYTE  rgbtRed
     RGBTRIPLE (*image)[width] = calloc(height, width * sizeof(RGBTRIPLE));
     if (image == NULL)
     {
