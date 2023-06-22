@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         plates[idx] = malloc(sizeof(buffer));
 
         // if pointer is null, quit and return error code.
-        if (plates[idx] == null)
+        if (plates[idx] == NULL)
         {
             return 1;
         }
