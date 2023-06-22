@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
+        // Allocates memory
         plates[idx] = malloc(sizeof(buffer));
 
         // if pointer is null, quit and return error code.
@@ -40,11 +41,15 @@ int main(int argc, char *argv[])
         idx++;
     }
 
-    fclose(infile);
-
     for (int i = 0; i < 8; i++)
     {
         printf("%s\n", plates[i]);
+
+        // Frees dynamically allocated memory
         free(plates[i]);
     }
+
+    fclose(infile);
+
+    return 0;
 }
