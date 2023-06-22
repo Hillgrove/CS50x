@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stlib.h>
+#include <stdlib.h>
 
 
 int main(int argc, char *argv[])
@@ -26,10 +26,7 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
-        // MALLOC STUFF
-        // check for null
-        // remember to free
-        *plates[idx] = malloc(sizeof(buffer));
+        plates[idx] = malloc(sizeof(buffer));
 
         // if pointer is null, quit and return error code.
         if (plates[idx] == null)
@@ -47,4 +44,5 @@ int main(int argc, char *argv[])
     {
         printf("%s\n", plates[i]);
     }
+    free(plates);
 }
