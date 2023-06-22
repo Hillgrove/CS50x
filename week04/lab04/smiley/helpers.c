@@ -3,9 +3,9 @@
 void colorize(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE new_color;
-    new_color.rgbtRed = 255;
-    new_color.rgbtGreen = 127;
-    new_color.rgbtBlue = 255;
+    new_color.rgbtRed = 47;
+    new_color.rgbtGreen = 128;
+    new_color.rgbtBlue = 86;
 
     for (int i = 0; i < height; i++)
     {
