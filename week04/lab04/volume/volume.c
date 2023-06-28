@@ -44,11 +44,11 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     int16_t *buffer;
 
-    int i = 0;
     while(fread(&buffer, sizeof(int16_t), 1, input))
     {
+        buffer = malloc(sizeof(int16_t));
         fread(&buffer, sizeof(int16_t), 1, input);
-        i++;
+        fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
     // Close files
