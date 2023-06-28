@@ -43,12 +43,13 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     int16_t buffer;
+    int size = sizeof(int16_t);
 
-    while(fread(&buffer, sizeof(int16_t), 1, input))
+    while(fread(&buffer, size, 1, input))
     {
-        fread(&buffer, sizeof(int16_t), 1, input);
+        fread(&buffer, size, 1, input);
         buffer = buffer * factor;
-        fwrite(&buffer, sizeof(int16_t), 1, output);
+        fwrite(&buffer, size, 1, output);
     }
 
     // Close files
