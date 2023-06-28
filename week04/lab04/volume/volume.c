@@ -20,14 +20,14 @@ int main(int argc, char *argv[])
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
-        printf("Could not open file.\n");
+        printf("Could not open infile.\n");
         return 1;
     }
 
     FILE *output = fopen(argv[2], "w");
     if (output == NULL)
     {
-        printf("Could not open file.\n");
+        printf("Could not open outfile.\n");
         return 1;
     }
 
