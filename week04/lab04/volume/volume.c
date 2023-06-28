@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
     while(fread(&buffer, sizeof(int16_t), 1, input))
     {
-        buffer[]
+        buffer[] = malloc(sizeof(int16_t));
         fread(&buffer, sizeof(int16_t), 1, input);
     }
 
