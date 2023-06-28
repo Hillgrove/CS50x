@@ -44,8 +44,8 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    fread(header, HEADER_SIZE, sizeof(uint8_t), input);
-    fwrite(header, HEADER_SIZE, sizeof(uint8_t), output);
+    fread(header, sizeof(uint8_t), HEADER_SIZE, input);
+    fwrite(header, sizeof(uint8_t),HEADER_SIZE, output);
     free(header);
 
 
