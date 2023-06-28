@@ -35,13 +35,21 @@ int main(int argc, char *argv[])
 
 
     // TODO: Copy header from input file to output file
-    uint8_t header[HEADER_SIZE];
-    fread(header, sizeof(uint8_t), 1, input);
-    fwrite(header, sizeof(uint8_t),1, output);
+    uint8_t *header = malloc(HEADER_SIZE);
+    if (header == NULL)
+    {
+        fclose(input);
+        fclose(output);
+        printf("Could not allocate memory for header.\n");
+        return 2;
+    }
+
+    fread(header, sizeof(uint8_t), HEADER_SIZE, input);
+    fwrite(header, sizeof(uint8_t), HEADER_SIZE, output);
+    free(header);
 
 
     // TODO: Read samples from input file and write updated data to output file
-    for (int i = 0; i < )
 
 
     // Close files
