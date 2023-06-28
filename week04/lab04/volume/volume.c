@@ -33,9 +33,25 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
+
     // TODO: Copy header from input file to output file
+    uint8_t *header = malloc(42);
+    if (header == NULL)
+    {
+        fclose(input);
+        fclose(output);
+        printf("Could not allocate memory for header.\n");
+        return 2;
+    }
+
+    fread(header, HEADER_SIZE, sizeof(uint8_t), input);
+    fwrite(header, HEADER_SIZE, sizeof(uint8_t), output);
+    free(header);
+
 
     // TODO: Read samples from input file and write updated data to output file
+    for (int i = 0; i < )
+
 
     // Close files
     fclose(input);
