@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
 
     // TODO: Copy header from input file to output file
-    uint8_t *header = malloc(HEADER_SIZE);
+    uint8_t *header = malloc(sizeof(uint8_t) * HEADER_SIZE);
     if (header == NULL)
     {
         fclose(input);
