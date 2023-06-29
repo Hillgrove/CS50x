@@ -59,8 +59,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Create copy of image
-    RGBTRIPLE copy[height][width];
+    // Create a boxblurcopy of image
+    int BOXBLURSIZE;
+    RGBTRIPLE buffer[BOXBLURSIZE][BOXBLURSIZE];
 
     for (int i = 0; i < height; i++)
     {
@@ -75,8 +76,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            RGBTRIPLE average;
-            average.rgbtRed = 
 
         }
     }
