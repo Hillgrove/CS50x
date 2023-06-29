@@ -73,7 +73,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = 0; l < BOXBLUR_SIZE; l++)
                 {
-                    if (i = 0 || i = width)
+                    if (i = 0 || i = height)
                     {}
                 }
 
