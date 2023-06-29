@@ -74,10 +74,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE blurred;
     for (int i = 0; i < height; i++)
     {
-        if (i = 0)
-        {
-            blurred.rgbtRed = copy[]
-        }
+        
     }
     return;
 }
