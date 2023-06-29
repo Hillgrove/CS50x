@@ -76,7 +76,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         int blurredRed = 0;
         int blurredGreen = 0;
         int blurredBlue = 0;
-        int divisor = 0;
+        float divisor = 0.0;
 
         for (int j = 0; j < width; j++)
         {
@@ -95,15 +95,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int greentest = round(blurredGreen  / divisor);
             int bluetest = round(blurredBlue / divisor);
 
-            image[i][j].rgbtRed = round(blurredRed / (float) divisor);
-            image[i][j].rgbtGreen = round(blurredGreen  / (float) divisor);
-            image[i][j].rgbtBlue = round(blurredBlue / (float) divisor);
+            image[i][j].rgbtRed = round(blurredRed / divisor);
+            image[i][j].rgbtGreen = round(blurredGreen  / divisor);
+            image[i][j].rgbtBlue = round(blurredBlue / divisor);
 
             // Reset colors
             blurredRed = 0;
             blurredGreen = 0;
             blurredBlue = 0;
-            divisor = 0;
+            divisor = 0.0;
         }
 
     }
