@@ -84,9 +84,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = fmax(j - 1, 0); l < fmin(j + 2, width); l++)
                 {
-                    blurredRed += image[k][l].rgbtRed;
-                    blurredGreen += image[k][l].rgbtGreen;
-                    blurredBlue += image[k][l].rgbtBlue;
+                    blurredRed += copy[k][l].rgbtRed;
+                    blurredGreen += copy[k][l].rgbtGreen;
+                    blurredBlue += copy[k][l].rgbtBlue;
                     divisor++;
                 }
             }
