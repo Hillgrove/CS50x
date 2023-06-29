@@ -2,6 +2,8 @@
 
 #include "helpers.h"
 
+void swap(RGBTRIPLE a, RGBTRIPLE b);
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -34,20 +36,32 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtGreen = sepiaGreen;
             image[i][j].rgbtBlue = sepiaBlue;
-
-
         }
     }
+    return;
 }
 
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int i = 0; i < height; i++)
+    {
+        
+    }
     return;
 }
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    return;
+}
+
+// Swaps the values of 2 pixels
+void swap(RGBTRIPLE a, RGBTRIPLE b)
+{
+    RGBTRIPLE temp = a;
+    a = b;
+    b = temp;
     return;
 }
