@@ -60,14 +60,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // Create a boxblurcopy of image
-    int BOXBLURSIZE;
-    RGBTRIPLE buffer[BOXBLURSIZE][BOXBLURSIZE];
+    int BOXBLUR_SIZE;
+    RGBTRIPLE buffer[BOXBLUR_SIZE][BOXBLUR_SIZE];
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
+            
         }
     }
 
