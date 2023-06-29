@@ -73,13 +73,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // Calculate blur value of pixel
     for (int i = 0; i < height; i++)
     {
+        long blurredRed = 0;
+        long blurredGreen = 0;
+        long blurredBlue = 0;
+        int divisor = 0;
+
         for (int j = 0; j < width; j++)
         {
-            long blurredRed = 0;
-            long blurredGreen = 0;
-            long blurredBlue = 0;
-            int divisor = 0;
-
             for (int k = fmax(i - 1, 0); k < fmin(i + 2, height); k++)
             {
                 for (int l = fmax(j - 1, 0); l < fmin(j + 2, width); l++)
@@ -90,9 +90,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     divisor++;
                 }
             }
+            // Save average color to image
             image[i][j].rgbtRed = (BYTE) round(blurredRed / divisor);
             image[i][j].rgbtGreen = (BYTE) round(blurredGreen  / divisor);
             image[i][j].rgbtBlue = (BYTE) round(blurredBlue / divisor);
+
+            // Reset colors
+            blurredRed = 0;
+            blurredGreen = 0;
+            blurredBlue = 0;
+            divisor = 0;
         }
 
     }
