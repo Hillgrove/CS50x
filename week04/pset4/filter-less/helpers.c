@@ -71,10 +71,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // Calculate blur value of pixel
-    RGBTRIPLE blurred;
-    blurred.rgbtRed = 0;
-    blurred.rgbtGreen = 0;
-    blurred.rgbtBlue = 0;
+
+    long blurredRed = 0;
+    long blurredGreen = 0;
+    long blurredBlue = 0;
+    int divisor = 0;
 
     for (int i = 0; i < height; i++)
     {
@@ -84,14 +85,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = fmax(j - 1, 0); fmin(i + 1, width); l++)
                 {
-                    blurred.rgbtRed += image[k][l].rgbtRed;
-                    blurred.rgbtGreen += image[k][l].rgbtGreen;
-                    blurred.rgbtBlue += image[k][l].rgbtGreen;
+                    blurredRed += image[k][l].rgbtRed;
+                    blurredGreen += image[k][l].rgbtGreen;
+                    blurredBlue += image[k][l].rgbtGreen;
+                    divisor++;
                 }
             }
-            image[i][j].rgbtRed = blurred.rgbtRed;
-            image[i][j].rgbtGreen = blurred.rgbtGreen;
-            image[i][j].rgbtBlue = blurred.rgbtGreen;
+            image[i][j].rgbtRed = round(blurredRed / divisor);
+            image[i][j].rgbtGreen = round(blurredGreen  / divisor);
+            image[i][j].rgbtBlue = round(blurredBlue / divisor);
+            divisor = 0;
         }
 
     }
