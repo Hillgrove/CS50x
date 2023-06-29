@@ -61,8 +61,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            
-            // copy image to new image
+            // Allocate memory for image
+            RGBTRIPLE(*buffer)[width] = calloc(height, width * sizeof(RGBTRIPLE));
+            if (buffer == NULL)
+            {
+                printf("Not enough memory to store image.\n");
+                return 8;
+    }
+
+            // copy 3 x 3 image to new image
             // calc average of all 9 pixels, 8 surrounding plus the pixel itself
         }
     }
