@@ -81,9 +81,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            for (int k = fmax(i - 1, 0); k < fmin(i + 1, height); k++)
+            for (int k = fmax(i - 1, 0); k < fmin(i + 2, height); k++)
             {
-                for (int l = (j - 1 > 0 ? j - 1 : 0); l < (j + 1 < width ? j + 1 : width)  fmin(j + 1, width); l++)
+                for (int l = fmax(j - 1, 0); l < fmin(j + 2, width); l++)
                 {
                     blurredRed += image[k][l].rgbtRed;
                     blurredGreen += image[k][l].rgbtGreen;
