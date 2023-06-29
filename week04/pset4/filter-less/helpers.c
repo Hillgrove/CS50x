@@ -91,10 +91,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // Save average color to image
-            int redtest = round(blurredRed / divisor);
-            int greentest = round(blurredGreen  / divisor);
-            int bluetest = round(blurredBlue / divisor);
-
             image[i][j].rgbtRed = round(blurredRed / divisor);
             image[i][j].rgbtGreen = round(blurredGreen  / divisor);
             image[i][j].rgbtBlue = round(blurredBlue / divisor);
