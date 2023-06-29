@@ -71,10 +71,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // Calculate blur value of pixel
-    RGBTRIPLE blurred;
     for (int i = 0; i < height; i++)
     {
-        
+        for (int j = 0; j < width; j++)
+        {
+            for (int k = i - 1; k < 3; k++)
+            {
+                for (int l = j - 1; j < 3; j++)
+                {
+                    if (k < 0)
+                }
+            }
+        }
+
     }
     return;
 }
