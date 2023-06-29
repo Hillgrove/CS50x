@@ -70,13 +70,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // calc blur value of pixel
+    // Calculate blur value of pixel
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
             RGBTRIPLE average;
-            
+            average.rgbtRed = 
+
         }
     }
     return;
