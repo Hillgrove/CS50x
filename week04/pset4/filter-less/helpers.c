@@ -91,9 +91,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     divisor++;
                 }
             }
-            image[i][j].rgbtRed = round(blurredRed / divisor);
-            image[i][j].rgbtGreen = round(blurredGreen  / divisor);
-            image[i][j].rgbtBlue = round(blurredBlue / divisor);
+            image[i][j].rgbtRed = (BYTE) round(blurredRed / divisor);
+            image[i][j].rgbtGreen = (BYTE) round(blurredGreen  / divisor);
+            image[i][j].rgbtBlue = (BYTE) round(blurredBlue / divisor);
             divisor = 0;
         }
 
