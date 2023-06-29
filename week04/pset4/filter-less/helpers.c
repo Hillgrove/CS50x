@@ -59,17 +59,18 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Create copy of image
     RGBTRIPLE copy[height][width];
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            // calc average of all 9 pixels, 8 surrounding plus the pixel itself
-            
-
+            copy[i][j] = image[i][j];
         }
     }
+
+    // calc average of all 9 pixels, 8 surrounding plus the pixel itself
 
     return;
 }
