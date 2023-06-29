@@ -59,15 +59,27 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Create a boxblurcopy of image
-    int BOXBLUR_SIZE;
+    // Create a boxblur-copy of image
+    int BOXBLUR_SIZE = 3;
     RGBTRIPLE buffer[BOXBLUR_SIZE][BOXBLUR_SIZE];
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            
+            // Copy surrounding pixel colors to buffer
+            // If index is out of bounds, skip and insert NULL, NIL, NUL or something
+            for (int k = 0; k < BOXBLUR_SIZE; k++)
+            {
+                for (int l = 0; l < BOXBLUR_SIZE; l++)
+                {
+                    if (i = 0 || i = width)
+                    {}
+                }
+
+
+            }
+
         }
     }
 
