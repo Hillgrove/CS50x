@@ -70,9 +70,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // calc average of all 9 pixels, 8 surrounding plus the pixel itself
-    
-
+    // calc blur value of pixel
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            RGBTRIPLE average;
+            
+        }
+    }
     return;
 }
 
