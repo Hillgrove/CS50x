@@ -8,6 +8,7 @@
         "type_traits": "c",
         "string_view": "c",
         "string": "c",
-        "array": "c"
+        "array": "c",
+        "random": "c"
     }
 }
