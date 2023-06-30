@@ -116,7 +116,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Calculate Gx values
-RGBTRIPLE calcGx(*copy, int i, int j)
+RGBTRIPLE calcGx(*RGBTRIPLE copy, int i, int j)
 // Traverse the 3x3 grid by gRow and gCol
 for (int gRow = 0; gRow < 2; gRow++)
 {
