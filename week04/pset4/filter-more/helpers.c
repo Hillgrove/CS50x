@@ -82,7 +82,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             blurredBlue = 0;
             divisor = 0.0;
         }
-
     }
     return;
 }
@@ -90,5 +89,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int row = 0; row < height; row++)
+    {
+        for (int col = 0; col < width; col++)
+        {
+            
+        }
+    }
     return;
 }
