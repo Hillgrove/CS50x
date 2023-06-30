@@ -9,6 +9,7 @@
         "string_view": "c",
         "string": "c",
         "array": "c",
-        "random": "c"
+        "random": "c",
+        "*.tcc": "c"
     }
 }
