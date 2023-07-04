@@ -138,13 +138,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // Save color to image
-            for (int i = 0; i < 3; i++)
+            for (int m = 0; m < 3; m++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int n = 0; n < 3; n++)
                 {
-                    gxRed += kernel[i][j].rgbtRed * Gx[i][j];
-                    gxGreen += kernel[i][j].rgbtGreen * Gx[i][j];
-                    gxBlue += kernel[i][j].rgbtBlue * Gx[i][j];
+                    GxRed += kernel[m][n].rgbtRed * Gx[m][n];
+                    GxGreen += kernel[m][n].rgbtGreen * Gx[m][n];
+                    GxBlue += kernel[m][n].rgbtBlue * Gx[m][n];
                 }
             }
             image[i][j].rgbtRed = fmin(255, round(sqrt(pow(GxRed, 2) + pow(GyRed, 2))));
