@@ -120,11 +120,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            for (int k = i - 1; k < i + 2; k++)
+            for (int k = i - 1; k < 2; k++)
             {
-                for (int l = j - 1; l < j + 2; l++)
+                for (int l = j - 1; l < 2; l++)
                 {
-                    if (k < 0 || k > height + 1 || l < 0 || l > width + 1)
+                    if (i + k < 0 || j + l > height || l < 0 || l > width + 1)
                     {
                         kernel[k + 1][l + 1].rgbtRed = 0;
                         kernel[k + 1][l + 1].rgbtGreen = 0;
