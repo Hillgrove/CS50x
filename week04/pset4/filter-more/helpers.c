@@ -142,20 +142,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            // Save color to image
-            for (int m = 0; m < 3; m++)
-            {
-                for (int n = 0; n < 3; n++)
-                {
-                    GxRed += kernel[m][n].rgbtRed * Gx[m][n];
-                    GxGreen += kernel[m][n].rgbtGreen * Gx[m][n];
-                    GxBlue += kernel[m][n].rgbtBlue * Gx[m][n];
+            // // Save color to image
+            // for (int m = 0; m < 3; m++)
+            // {
+            //     for (int n = 0; n < 3; n++)
+            //     {
+            //         GxRed += kernel[m][n].rgbtRed * Gx[m][n];
+            //         GxGreen += kernel[m][n].rgbtGreen * Gx[m][n];
+            //         GxBlue += kernel[m][n].rgbtBlue * Gx[m][n];
 
-                    GyRed += kernel[m][n].rgbtRed * Gy[m][n];
-                    GyGreen += kernel[m][n].rgbtGreen * Gy[m][n];
-                    GyBlue += kernel[m][n].rgbtBlue * Gy[m][n];
-                }
-            }
+            //         GyRed += kernel[m][n].rgbtRed * Gy[m][n];
+            //         GyGreen += kernel[m][n].rgbtGreen * Gy[m][n];
+            //         GyBlue += kernel[m][n].rgbtBlue * Gy[m][n];
+            //     }
+            // }
             int a = fmin(255, round(sqrt(pow(GxRed, 2) + pow(GyRed, 2))));
             int b = fmin(255, round(sqrt(pow(GxGreen, 2) + pow(GyGreen, 2))));
             int c = fmin(255, round(sqrt(pow(GxBlue, 2) + pow(GyBlue, 2))));
@@ -163,6 +163,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = a;
             image[i][j].rgbtGreen = b;
             image[i][j].rgbtBlue = c;
+
+                int GxRed = 0, GxGreen = 0, GxBlue = 0;
+    int GyRed = 0, GyGreen = 0, GyBlue = 0;
 
         }
     }
