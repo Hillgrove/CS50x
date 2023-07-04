@@ -89,8 +89,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
-    int GxRed = GxGreen = GxBlue = 0;
-    
+    int GxRed = 0, GxGreen = 0, GxBlue = 0;
+    int GyRed = 0, GyGreen = 0, GyBlue = 0;
+
 
     int GxKernel[3][3] = {
         {-1, 0, 1},
@@ -124,14 +125,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (k < 0 || k > height + 1 || l < 0 || l > width + 1)
                     {
-                        Gx.rgbtRed += 0;
-                        Gx.rgbtGreen += 0;
-                        Gx.rgbtlue += 0;
+                        GxRed += 0;
+                        GxGreen += 0;
+                        GxBlue += 0;
                     }
 
                     else
                     {
-
+                        
                     }
                 }
             }
