@@ -93,12 +93,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     int GyRed = 0, GyGreen = 0, GyBlue = 0;
 
 
-    int GxKernel[3][3] = {
+    int Gx[3][3] = {
         {-1, 0, 1},
         {-2, 0, 2},
         {-1, 0, 1}
         };
-    int GyKernel[3][3] = {
+    int Gy[3][3] = {
         {-1, 2, -1},
         {0, 0, 0},
         {1, 2, 1}
@@ -132,7 +132,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                     else
                     {
-                        GxRed += ;
+                        GxRed += copy[k][j].rgbtRed * Gx[][];
                         GxGreen += 0;
                         GxBlue += 0;
                     }
