@@ -116,8 +116,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            float GxRed = 0, GxGreen = 0, GxBlue = 0;
-            float GyRed = 0, GyGreen = 0, GyBlue = 0;
+            int GxRed = 0, GxGreen = 0, GxBlue = 0;
+            int GyRed = 0, GyGreen = 0, GyBlue = 0;
+            int kernel[3][3];
 
             for (int k = i - 1; k < i + 2; k++)
             {
@@ -125,18 +126,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (k < 0 || k > height + 1 || l < 0 || l > width + 1)
                     {
-                        continue;
+                        kernel[k][l] = 0;
                     }
 
                     else
                     {
-                        GxRed += copy[k][l].rgbtRed * Gx[k + 1][l + 1];
-                        GxGreen += copy[k][l].rgbtGreen * Gx[k + 1][l + 1];
-                        GxBlue += copy[k][l].rgbtBlue * Gx[k + 1][l + 1];
-
-                        GyRed += copy[k][l].rgbtRed * Gy[k + 1][l + 1];
-                        GyGreen += copy[k][l].rgbtGreen * Gy[k + 1][l + 1];
-                        GyBlue += copy[k][l].rgbtBlue * Gy[k + 1][l + 1];
+                        kernel[k][l] = copy[i][j]
                     }
                 }
             }
@@ -148,3 +143,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+
+
+                        GxRed += copy[k][l].rgbtRed * Gx[k + 1][l + 1];
+                        GxGreen += copy[k][l].rgbtGreen * Gx[k + 1][l + 1];
+                        GxBlue += copy[k][l].rgbtBlue * Gx[k + 1][l + 1];
+
+                        GyRed += copy[k][l].rgbtRed * Gy[k + 1][l + 1];
+                        GyGreen += copy[k][l].rgbtGreen * Gy[k + 1][l + 1];
+                        GyBlue += copy[k][l].rgbtBlue * Gy[k + 1][l + 1];
