@@ -109,13 +109,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             if (row == 0 || row == width - 1 || col == 0 || col == width - 1)
             {
-                image[row][col].rgbtRed = 0;
-                image[row][col].rgbtBlue = 0;
-                image[row][col].rgbtGreen = 0;
+                Gx.rgbtRed = 0;
+                Gx.rgbtBlue = 0;
+                Gx.rgbtGreen = 0;
+
+                Gy.rgbtRed = 0;
+                Gy.rgbtBlue = 0;
+                Gy.rgbtGreen = 0;
             }
             else
             {
-                
+
             }
         }
     }
