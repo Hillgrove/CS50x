@@ -107,17 +107,23 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int iCol = 0; iCol < width; iCol++)
         {
-            for (int cRow = iRow - 1; cRow < 2)
-            if (iRow == 0 || iRow == width - 1 || iCol == 0 || iCol == width - 1)
+            for (int cRow = iRow - 1; cRow < 2; cRow++)
             {
-                Gx.rgbtRed = 0;
-                Gx.rgbtBlue = 0;
-                Gx.rgbtGreen = 0;
-            }
-            else
-            {
+                for (int cCol = cCol - 1; cCol < 2; cCol++)
+                {
+                    if (iRow == 0 || iRow == width - 1 || iCol == 0 || iCol == width - 1)
+                    {
+                        Gx.rgbtRed = 0;
+                        Gx.rgbtBlue = 0;
+                        Gx.rgbtGreen = 0;
+                    }
+                    else
+                    {
 
+                    }
+                }
             }
+
         }
     }
     return;
