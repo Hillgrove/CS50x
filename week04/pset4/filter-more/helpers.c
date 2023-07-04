@@ -147,9 +147,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // Save color to image
-            image[i][j].rgbtRed = sqrt(pow(GxRed, 2) + pow(GyRed, 2));
-            image[i][j].rgbtGreen = sqrt(pow(GxGreen, 2) + pow(GyGreen, 2));
-            image[i][j].rgbtBlue = sqrt(pow(GxBlue, 2) + pow(GyBlue, 2));
+            image[i][j].rgbtRed = fmin(255,sqrt(pow(GxRed, 2) + pow(GyRed, 2)));
+            image[i][j].rgbtGreen = fmin(255,sqrt(pow(GxGreen, 2) + pow(GyGreen, 2)));
+            image[i][j].rgbtBlue = fmin(255, sqrt(pow(GxBlue, 2) + pow(GyBlue, 2)));
         }
     }
     return;
