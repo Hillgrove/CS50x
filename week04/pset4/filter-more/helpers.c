@@ -119,11 +119,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         edgeRed += 0;
                         edgeGreen += 0;
                         edgeBlue += 0;
-
                     }
+
                     else
                     {
-
+                        
                     }
                 }
             }
