@@ -116,9 +116,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (k < 0 || k > height + 1 || l < 0 || l > width + 1)
                     {
-                        Gx.rgbtRed = 0;
-                        Gx.rgbtBlue = 0;
-                        Gx.rgbtGreen = 0;
+                        edgeRed += 0;
+                        edgeGreen += 0;
+                        edgeBlue += 0;
+
                     }
                     else
                     {
