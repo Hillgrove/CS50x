@@ -133,7 +133,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                     else
                     {
-                        kernel[k][l] = copy[k][l];
+                        kernel[k + 1][l + 1] = copy[k][l];
                     }
                 }
             }
