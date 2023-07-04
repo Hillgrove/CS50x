@@ -103,11 +103,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // Traverse image by iRow and iCol
-    for (int row = 0; row < height; row++)
+    for (int iRow = 0; iRow < height; iRow++)
     {
-        for (int col = 0; col < width; col++)
+        for (int iCol = 0; iCol < width; iCol++)
         {
-            if (row == 0 || row == width - 1 || col == 0 || col == width - 1)
+            for (int cRow = iRow - 1; cRow < 2)
+            if (iRow == 0 || iRow == width - 1 || iCol == 0 || iCol == width - 1)
             {
                 Gx.rgbtRed = 0;
                 Gx.rgbtBlue = 0;
