@@ -109,20 +109,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int col = 0; col < width; col++)
         {
-            if (row == 0 || row == width - 1 || col == 0 || col == width - 1)
-            {
-                Gx.rgbtRed = 0;
-                Gx.rgbtBlue = 0;
-                Gx.rgbtGreen = 0;
-
-                Gy.rgbtRed = 0;
-                Gy.rgbtBlue = 0;
-                Gy.rgbtGreen = 0;
-            }
-            else
-            {
-
-            }
+            Gx = calcGx(copy, row, col, height, width);
+            Gy = calcGy(copy, row, col, height, width);
         }
     }
     return;
@@ -131,10 +119,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 RGBTRIPLE calcGx(RGBTRIPLE copy, int row, int col, int height, int width)
 {
-    if (row = 0 || row = width)
+    if (row == 0 || row == width - 1 || col == 0 || col == width - 1)
     {
-        copy[row][col].rgbtRed = 0;
-        copy[row][col].rgbtBlue = 0;
-        copy[row][col].rgbtGreen = 0;
+        Gx.rgbtRed = 0;
+        Gx.rgbtBlue = 0;
+        Gx.rgbtGreen = 0;
+    }
+    else
+    {
+
     }
 }
