@@ -125,12 +125,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (k < 0 || k > height + 1 || l < 0 || l > width + 1)
                     {
-                        GxRed += 0;
-                        GxGreen += 0;
-                        GxBlue += 0;
-                        GyRed += 0;
-                        GyGreen += 0;
-                        GyBlue += 0;
+                        continue;
                     }
 
                     else
