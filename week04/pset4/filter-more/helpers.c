@@ -4,6 +4,8 @@
 
 #include "helpers.h"
 
+RGBTRIPLE calcGx(RGBTRIPLE copy, int row, int col, int height, int width);
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -124,4 +126,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     return;
+}
+
+
+RGBTRIPLE calcGx(RGBTRIPLE copy, int row, int col, int height, int width)
+{
+    if (row = 0 || row = width)
+    {
+        copy[row][col].rgbtRed = 0;
+        copy[row][col].rgbtBlue = 0;
+        copy[row][col].rgbtGreen = 0;
+    }
 }
