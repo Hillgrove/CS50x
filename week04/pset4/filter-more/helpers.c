@@ -88,9 +88,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    int KERNELSIZE = 3;
     RGBTRIPLE copy[height][width];
-    RGBTRIPLE kernel[KERNELSIZE][KERNELSIZE];
+    RGBTRIPLE kernel[3][3];
 
     int Gx[3][3] = {
         {-1, 0, 1},
@@ -102,6 +101,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {0, 0, 0},
         {1, 2, 1}
         };
+
+    int GxRed = 0, GxGreen = 0, GxBlue = 0;
+    int GyRed = 0, GyGreen = 0, GyBlue = 0;
 
 
     // Create copy of image
@@ -136,7 +138,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // Save color to image
-            for (int i = 0; i <
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    gxRed += kernel[i][j] * Gx[i][j];
+                    gxGreen += kernel[i][j] * Gx[i][j];
+                    gxBlue += kernel[i][j] * Gx[i][j];
+                }
+            }
             image[i][j].rgbtRed = fmin(255, round(sqrt(pow(GxRed, 2) + pow(GyRed, 2))));
             image[i][j].rgbtGreen = fmin(255, round(sqrt(pow(GxGreen, 2) + pow(GyGreen, 2))));
             image[i][j].rgbtBlue = fmin(255, round(sqrt(pow(GxBlue, 2) + pow(GyBlue, 2))));
