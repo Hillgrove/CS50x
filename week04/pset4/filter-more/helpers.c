@@ -130,13 +130,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                     else
                     {
-                        GxRed += copy[k][l].rgbtRed * Gx[m][n];
-                        GxGreen += copy[k][l].rgbtGreen * Gx[m][n];
-                        GxBlue += copy[k][l].rgbtBlue * Gx[m][n];
+                        GxRed += copy[i][j].rgbtRed * Gx[k][l];
+                        GxGreen += copy[i][j].rgbtGreen * Gx[k][l];
+                        GxBlue += copy[i][j].rgbtBlue * Gx[k][l];
 
-                        GyRed += copy[k][l].rgbtRed * Gy[m][n];
-                        GyGreen += copy[k][l].rgbtGreen * Gy[m][n];
-                        GyBlue += copy[k][l].rgbtBlue * Gy[m][n];
+                        GyRed += copy[i][j].rgbtRed * Gy[k][l];
+                        GyGreen += copy[i][j].rgbtGreen * Gy[k][l];
+                        GyBlue += copy[i][j].rgbtBlue * Gy[k][l];
                     }
                 }
             }
