@@ -113,6 +113,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 image[row][col].rgbtBlue = 0;
                 image[row][col].rgbtGreen = 0;
             }
+            else
+            {
+                
+            }
         }
     }
     return;
