@@ -89,8 +89,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
-    RGBTRIPLE Gx = { .rgbtRed = 0, .rgbtGreen = 0, .rgbtBlue = 0 };
-    RGBTRIPLE Gy = { .rgbtRed = 0, .rgbtGreen = 0, .rgbtBlue = 0 };
+    int GxRed = GxGreen = GxBlue = 0;
+    
+
     int GxKernel[3][3] = {
         {-1, 0, 1},
         {-2, 0, 2},
