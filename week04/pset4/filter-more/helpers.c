@@ -131,4 +131,5 @@ RGBTRIPLE calcGx(RGBTRIPLE *copy, int row, int col, int height, int width)
     {
 
     }
+    return Gx;
 }
