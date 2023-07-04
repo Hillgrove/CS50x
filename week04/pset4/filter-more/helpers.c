@@ -142,9 +142,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    gxRed += kernel[i][j] * Gx[i][j];
-                    gxGreen += kernel[i][j] * Gx[i][j];
-                    gxBlue += kernel[i][j] * Gx[i][j];
+                    gxRed += kernel[i][j].rgbtRed * Gx[i][j];
+                    gxGreen += kernel[i][j].rgbtGreen * Gx[i][j];
+                    gxBlue += kernel[i][j].rgbtBlue * Gx[i][j];
                 }
             }
             image[i][j].rgbtRed = fmin(255, round(sqrt(pow(GxRed, 2) + pow(GyRed, 2))));
