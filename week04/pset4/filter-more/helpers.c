@@ -120,9 +120,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            for (int k = i - 1; k < i + 1; k++)
+            for (int k = i - 1; k < i + 2; k++)
             {
-                for (int l = j - 1; l <j + 1; l++)
+                for (int l = j - 1; l < j + 2; l++)
                 {
                     if (i + k < 0 || i + k > height || j + l < 0 || j + l > width)
                     {
