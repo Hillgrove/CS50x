@@ -129,7 +129,9 @@ RGBTRIPLE calcGx(RGBTRIPLE *copy, int row, int col, int height, int width)
     }
     else
     {
-
+        Gx.rgbtRed = 0;
+        Gx.rgbtBlue = 0;
+        Gx.rgbtGreen = 0;
     }
     return Gx;
 }
