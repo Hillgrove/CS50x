@@ -91,9 +91,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE copy[height][width];
     RGBTRIPLE Gx;
     RGBTRIPLE Gy;
-    int edgeRed = 0;
-    int edgeGreen = 0;
-    int edgeBlue = 0;
+
 
 
     // Create copy of image
@@ -116,14 +114,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (k < 0 || k > height + 1 || l < 0 || l > width + 1)
                     {
-                        edgeRed += 0;
-                        edgeGreen += 0;
-                        edgeBlue += 0;
+                        Gx.rgbtRed += 0;
+                        Gx.rgbtGreen += 0;
+                        Gx.rgbtlue += 0;
                     }
 
                     else
                     {
-                        
+
                     }
                 }
             }
