@@ -40,13 +40,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Create a boxblur-copy of image
     RGBTRIPLE copy[height][width];
     int blurredRed = 0;
     int blurredGreen = 0;
     int blurredBlue = 0;
     float divisor = 0.0;
 
+    // Create a copy of image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -91,6 +91,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE copy[height][width];
     RGBTRIPLE Gx;
     RGBTRIPLE Gy;
+    int edgeRed = 0;
+    int edgeGreen = 0;
+    int edgeBlue = 0;
+
 
     // Create copy of image
     for (int i = 0; i < height; i++)
@@ -101,7 +105,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // Traverse image by iRow and iCol
+    // Calculate edge value of pixel
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -110,7 +114,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = j - 1; l < 2; l++)
                 {
-                    if (i == 0 || i == width - 1 || j == 0 || j == width - 1)
+                    if ()
                     {
                         Gx.rgbtRed = 0;
                         Gx.rgbtBlue = 0;
