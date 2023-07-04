@@ -117,10 +117,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 }
 
 
-RGBTRIPLE calcGx(RGBTRIPLE copy, int row, int col, int height, int width)
+RGBTRIPLE calcGx(RGBTRIPLE *copy, int row, int col, int height, int width)
 {
     RGBTRIPLE Gx;
-
+    
     if (row == 0 || row == width - 1 || col == 0 || col == width - 1)
     {
         Gx.rgbtRed = 0;
@@ -129,6 +129,6 @@ RGBTRIPLE calcGx(RGBTRIPLE copy, int row, int col, int height, int width)
     }
     else
     {
-        copy
+
     }
 }
