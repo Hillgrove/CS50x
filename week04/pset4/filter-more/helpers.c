@@ -147,9 +147,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             // Save color to image
-            image[i][j].rgbtRed = GxRed;
-            image[i][j].rgbtGreen = GxGreen;
-            image[i][j].rgbtBlue = GxBlue;
+            image[i][j].rgbtRed = pow(GxRed, 2) + pow(GyRed, 2);
+            image[i][j].rgbtGreen = pow(GxGreen, 2) + pow(GyGreen, 2);
+            image[i][j].rgbtBlue = pow(GxBlue, 2) + pow(GyBlue, 2);
         }
     }
     return;
