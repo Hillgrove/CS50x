@@ -4,7 +4,7 @@
 
 #include "helpers.h"
 
-RGBTRIPLE calcGx(RGBTRIPLE copy, int i, int j);
+RGBTRIPLE calcGx(RGBTRIPLE copy, int row, int col);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -104,19 +104,19 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // Traverse image by iRow and iCol
-    for (int iRow = 0; iRow < height; iRow++)
+    for (int row = 0; row < height; row++)
     {
-        for (int iCol = 0; iCol < width; iCol++)
+        for (int col = 0; col < width; col++)
         {
-            Gx = calcGx(copy, i, j);
-            Gy = calcGy(copy, i, j);
+            Gx = calcGx(copy, row, col);
+            Gy = calcGy(copy, row, col);
         }
     }
     return;
 }
 
 // Calculate Gx values
-RGBTRIPLE calcGx(RGBTRIPLE copy, int i, int j)
+RGBTRIPLE calcGx(RGBTRIPLE copy, int row, int col)
 {
     
 }
