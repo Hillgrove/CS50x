@@ -42,6 +42,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // Create a boxblur-copy of image
     RGBTRIPLE copy[height][width];
+    int blurredRed = 0;
+    int blurredGreen = 0;
+    int blurredBlue = 0;
+    float divisor = 0.0;
 
     for (int i = 0; i < height; i++)
     {
@@ -54,11 +58,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // Calculate blur value of pixel
     for (int i = 0; i < height; i++)
     {
-        int blurredRed = 0;
-        int blurredGreen = 0;
-        int blurredBlue = 0;
-        float divisor = 0.0;
-
         for (int j = 0; j < width; j++)
         {
             for (int k = fmax(i - 1, 0); k < fmin(i + 2, height); k++)
@@ -89,9 +88,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
     RGBTRIPLE Gx;
     RGBTRIPLE Gy;
-    RGBTRIPLE copy[height][width];
 
     // Create copy of image
     for (int i = 0; i < height; i++)
