@@ -89,7 +89,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
-    RGBTRIPLE kernel[3][3];
+    // RGBTRIPLE kernel[3][3];
 
     int Gx[3][3] = {
         {-1, 0, 1},
