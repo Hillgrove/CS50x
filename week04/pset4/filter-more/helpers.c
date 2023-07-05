@@ -91,16 +91,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE copy[height][width];
     RGBTRIPLE kernel[3][3];
 
-    int Gx[3][3] = {
+    int Gx[3][3] =
+    {
         {-1, 0, 1},
         {-2, 0, 2},
         {-1, 0, 1}
-        };
-    int Gy[3][3] = {
+    };
+    int Gy[3][3] =
+    {
         {-1, -2, -1},
         {0, 0, 0},
         {1, 2, 1}
-        };
+    };
 
     int GxRed = 0, GxGreen = 0, GxBlue = 0;
     int GyRed = 0, GyGreen = 0, GyBlue = 0;
