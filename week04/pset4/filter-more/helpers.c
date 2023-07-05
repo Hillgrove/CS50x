@@ -164,8 +164,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtGreen = b;
             image[i][j].rgbtBlue = c;
 
-                int GxRed = 0, GxGreen = 0, GxBlue = 0;
-    int GyRed = 0, GyGreen = 0, GyBlue = 0;
+            GxRed = 0, GxGreen = 0, GxBlue = 0;
+            GyRed = 0, GyGreen = 0, GyBlue = 0;
 
         }
     }
