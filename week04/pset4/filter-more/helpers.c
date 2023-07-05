@@ -126,13 +126,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = - 1; l < 2; l++)
                 {
+                    // If pixel is out of bounds, set value to zero
                     if (i + k < 0 || i + k > height - 1 || j + l < 0 || j + l > width - 1)
                     {
                         kernel[k + 1][l + 1].rgbtRed = 0;
                         kernel[k + 1][l + 1].rgbtGreen = 0;
                         kernel[k + 1][l + 1].rgbtBlue = 0;
                     }
-
+                    // if pixel not out of bounds, copy RGB value to kernel
                     else
                     {
                         kernel[k + 1][l + 1] = copy[i + k][j + l];
@@ -154,15 +155,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     GyBlue += kernel[m][n].rgbtBlue * Gy[m][n];
                 }
             }
-
+            
+            // Find Sobel value of Gx and Gy RGB colors
             int a = fmin(255, round(sqrt(pow(GxRed, 2) + pow(GyRed, 2))));
             int b = fmin(255, round(sqrt(pow(GxGreen, 2) + pow(GyGreen, 2))));
             int c = fmin(255, round(sqrt(pow(GxBlue, 2) + pow(GyBlue, 2))));
 
+            // Save edge RGB values to new image
             image[i][j].rgbtRed = a;
             image[i][j].rgbtGreen = b;
             image[i][j].rgbtBlue = c;
 
+            // Reset values
             GxRed = 0, GxGreen = 0, GxBlue = 0;
             GyRed = 0, GyGreen = 0, GyBlue = 0;
 
