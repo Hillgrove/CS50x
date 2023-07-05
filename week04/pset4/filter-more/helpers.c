@@ -139,11 +139,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate Gx and Gy values for a single pixel
-            for (int m = 0; m < 3, m++)
+            for (int m = 0; m < 3; m++)
             {
                 for (int n = 0; n < 3; n++)
                 {
-                    
+                    GxRed += kernel[m][n].rgbtRed * Gx[m][n];
+                    GxGreen += kernel[m][n].rgbtGreen * Gx[m][n];
+                    GxBlue += kernel[m][n].rgbtBlue * Gx[m][n];
+
+                    GyRed += kernel[m][n].rgbtRed * Gy[m][n];
+                    GyGreen += kernel[m][n].rgbtGreen * Gy[m][n];
+                    GyBlue += kernel[m][n].rgbtBlue * Gy[m][n];
                 }
             }
 
