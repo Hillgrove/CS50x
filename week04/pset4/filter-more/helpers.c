@@ -124,23 +124,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = - 1; l < 2; l++)
                 {
+                    RGBTRIPLE kernel[3][3];
 
                     if (i + k < 0 || i + k > height + 1 || j + l < 0 || j + l > width + 1)
                     {
-                        continue;
+                        kernel[k + 1][l + 1].rgbtRed = 0;
+                        kernel[k + 1][l + 1].rgbtGreen = 0;
+                        kernel[k + 1][l + 1].rgbtBlue = 0;
                     }
 
                     else
                     {
-                        // kernel[k][l] = copy[k][l];
-                        GxRed += copy[i + k][j + l].rgbtRed * Gx[k + 1][l + 1];
-                        GxGreen += copy[i + k][j + l].rgbtGreen * Gx[k + 1][l + 1];
-                        GxBlue += copy[i + k][j + l].rgbtBlue * Gx[k + 1][l + 1];
-
-                        GyRed += copy[i + k][j + l].rgbtRed * Gy[k + 1][l + 1];
-                        GyGreen += copy[i + k][j + l].rgbtGreen * Gy[k + 1][l + 1];
-                        GyBlue += copy[i + k][j + l].rgbtBlue * Gy[k + 1][l + 1];
-
+                        kernel[k][l] = copy[i + k][j + l];
                     }
                 }
             }
