@@ -115,7 +115,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // Calculate edge value of pixel
+    // Copy RGB values of a 3x3 grid surrounding pixel to a new 2D array.
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -137,6 +137,16 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
+
+            // Calculate Gx and Gy values for a single pixel
+            for (int m = 0; m < 3, m++)
+            {
+                for (int n = 0; n < 3; n++)
+                {
+                    
+                }
+            }
+
             int a = fmin(255, round(sqrt(pow(GxRed, 2) + pow(GyRed, 2))));
             int b = fmin(255, round(sqrt(pow(GxGreen, 2) + pow(GyGreen, 2))));
             int c = fmin(255, round(sqrt(pow(GxBlue, 2) + pow(GyBlue, 2))));
