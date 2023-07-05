@@ -124,25 +124,22 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = - 1; l < 2; l++)
                 {
+
                     if (i + k < 0 || i + k > height + 1 || j + l < 0 || j + l > width + 1)
                     {
                         continue;
                     }
+
                     else
                     {
-                        for (int m = 0; m < 3; m++)
-                        {
-                            for (int n = 0; n < 3; n++)
-                            {
-                                GxRed += copy[i + m][j + n].rgbtRed * Gx[m][n];
-                                GxGreen += copy[i + m][j + n].rgbtGreen * Gx[m][n];
-                                GxBlue += copy[i + m][j + n].rgbtBlue * Gx[m][n];
+                        // kernel[k][l] = copy[k][l];
+                        GxRed += copy[i + k][j + l].rgbtRed * Gx[k + 1][l + 1];
+                        GxGreen += copy[i + k][j + l].rgbtGreen * Gx[k + 1][l + 1];
+                        GxBlue += copy[i + k][j + l].rgbtBlue * Gx[k + 1][l + 1];
 
-                                GyRed += copy[i + m][j + n].rgbtRed * Gy[m][n];
-                                GyGreen += copy[i + m][j + n].rgbtGreen * Gy[m][n];
-                                GyBlue += copy[i + m][j + n].rgbtBlue * Gy[m][n];
-                            }
-                        }
+                        GyRed += copy[i + k][j + l].rgbtRed * Gy[k + 1][l + 1];
+                        GyGreen += copy[i + k][j + l].rgbtGreen * Gy[k + 1][l + 1];
+                        GyBlue += copy[i + k][j + l].rgbtBlue * Gy[k + 1][l + 1];
                     }
                 }
             }
