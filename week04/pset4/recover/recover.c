@@ -54,6 +54,3 @@ bool new_image(BYTE buffer)
     }
     return false;
 }
-
-
-
