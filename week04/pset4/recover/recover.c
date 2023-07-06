@@ -20,4 +20,9 @@ int main(int argc, char *argv[])
 bool wrong_arguments(int argc, char *argv[])
 {
     if (argc != 2)
+    {
+        printf("Usage: ./recover filename\n");
+        return true;
+    }
+    return false;
 }
