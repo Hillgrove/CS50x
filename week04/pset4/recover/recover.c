@@ -30,17 +30,20 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Create buffer to hold <something> TODO: find proper name
+    // Create buffer to hold input stream
     BYTE buffer[BLOCK_SIZE];
 
     while (fread(buffer, 1, BLOCK_SIZE, inptr) == BLOCK_SIZE)
     {
-        // TODO: Look for beginning of JPEG
+        // Look for beginning of JPEG
         if (new_image(buffer))
         {
-            
+            fopen();
+            // TODO: Open a new JPEG file
+
+
         }
-        // TODO: Open a new JPEG file
+
         // TODO: Write 512 bytes until a new JPEG is found
     }
     fclose(inptr);
