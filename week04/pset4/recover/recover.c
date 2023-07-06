@@ -7,7 +7,8 @@ int wrong_arguments(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
-    wrong_arguments(argc, argv);
+    return wrong_arguments(argc, argv);
+    printf("test");
     // TODO: Open memory card
     // TODO: Look for beginning of JPEG
     // TODO: Open a new JPEG file
