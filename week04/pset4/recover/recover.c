@@ -7,7 +7,7 @@
 typedef uint8_t BYTE;
 int const BLOCK_SIZE = 512;
 
-bool new_image(BYTE buffer);
+bool new_image(BYTE buffer[]);
 
 
 int main(int argc, char *argv[])
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
         // TODO: Look for beginning of JPEG
         if (new_image(buffer))
         {
-
+            printf("New image found\n");
         }
         // TODO: Open a new JPEG file
         // TODO: Write 512 bytes until a new JPEG is found
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     fclose(inptr);
 }
 
-bool new_image(BYTE buffer)
+bool new_image(BYTE buffer[])
 {
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
