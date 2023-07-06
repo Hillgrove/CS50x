@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 
-bool argument_ok(int argc, char *argv[]);
+bool wrong_arguments(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
-    if (argument_ok(argc, argv))
+    if (wrong_arguments(argc, argv))
     {
         return 1;
     }
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     // TODO: Stop at end of file
 }
 
-bool argument_ok(int argc, char *argv[])
+bool wrong_arguments(int argc, char *argv[])
 {
-
+    
 }
