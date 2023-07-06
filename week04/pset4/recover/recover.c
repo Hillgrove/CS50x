@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef unint8_t BYTE;
 int const BLOCK_SIZE = 512;
+
 
 
 int main(int argc, char *argv[])
@@ -23,6 +25,7 @@ int main(int argc, char *argv[])
         printf("Could not open %s.\n", infile);
         return 1;
     }
+
 
     while (fread)
 
