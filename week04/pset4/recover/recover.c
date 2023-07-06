@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to hold <something> TODO: find proper name
-    BYTE buffer(BLOCK_SIZE);
+    BYTE buffer[BLOCK_SIZE];
 
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
