@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int const 
+int const BLOCK_SIZE = 512;
 
 
 int main(int argc, char *argv[])
