@@ -32,10 +32,16 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
         // TODO: Look for beginning of JPEG
-        if (is_)
+        if (beginning_of_new_file(buffer))
+        {
+
+        }
         // TODO: Open a new JPEG file
         // TODO: Write 512 bytes until a new JPEG is found
     }
+}
+
+bool beginning_of_new_file(buffer)
 
 
 
