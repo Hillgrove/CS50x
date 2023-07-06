@@ -16,26 +16,29 @@ int main(int argc, char *argv[])
     }
 
     // Remember filename
-    char *infile = argv[1];
+    char *raw_file = argv[1];
 
     // Open source file
-    FILE *inptr = fopen(infile, "r");
+    FILE *inptr = fopen(raw_file, "r");
     if (inptr == NULL)
     {
-        printf("Could not open %s.\n", infile);
+        printf("Could not open %s.\n", raw_file);
         return 1;
     }
 
     // Create buffer to hold <something> TODO: find proper name
     BYTE buffer(BLOCK_SIZE);
 
-    while (fread)
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    {
+        // TODO: Look for beginning of JPEG
+        if (is_)
+        // TODO: Open a new JPEG file
+        // TODO: Write 512 bytes until a new JPEG is found
+    }
 
 
-    // TODO: Open memory card
-    // TODO: Look for beginning of JPEG
-    // TODO: Open a new JPEG file
-    // TODO: Write 512 bytes until a new JPEG is found
-    // TODO: Stop at end of file
+
+
     fclose(inptr);
 }
