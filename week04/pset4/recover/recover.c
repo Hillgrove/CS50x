@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    // Create buffer to hold 
+    BYTE buffer(BLOCK_SIZE);
 
     while (fread)
 
