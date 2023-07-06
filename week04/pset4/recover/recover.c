@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
     }
 
     // Remember filename
-    char *raw_file = argv[1];
+    char *file = argv[1];
 
     // Open source file
-    FILE *inptr = fopen(raw_file, "r");
-    if (inptr == NULL)
+    FILE *raw_file = fopen(file, "r");
+    if (raw_file == NULL)
     {
         printf("Could not open %s.\n", raw_file);
         return 1;
