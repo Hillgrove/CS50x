@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
     }
 
     // Remember filename
-    char *file = argv[1];
+    char *raw_file = argv[1];
 
     // Open source file
-    FILE *raw_file = fopen(file, "r");
-    if (raw_file == NULL)
+    FILE *inptr = fopen(raw_file, "r");
+    if (inptr == NULL)
     {
         printf("Could not open %s.\n", raw_file);
         return 1;
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     // Create buffer to hold <something> TODO: find proper name
     BYTE buffer[BLOCK_SIZE];
 
-    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, inptr) == BLOCK_SIZE)
     {
         // TODO: Look for beginning of JPEG
         if (new_image(buffer))
