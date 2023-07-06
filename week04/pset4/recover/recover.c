@@ -1,15 +1,13 @@
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 
-void wrong_arguments(int argc);
-
 int main(int argc, char *argv[])
 {
     // Check if CLI arguments are correct
-    if (wrong_arguments(argc))
+    if (argc != 2)
     {
+        printf("Usage: ./recover filename\n");
         return 1;
     }
 
@@ -31,13 +29,4 @@ int main(int argc, char *argv[])
     // TODO: Write 512 bytes until a new JPEG is found
     // TODO: Stop at end of file
     fclose(inptr);
-}
-
-bool wrong_arguments(int argc)
-{
-    if (argc != 2)
-    {
-        printf("Usage: ./recover filename\n");
-        exit(1);
-    }
 }
