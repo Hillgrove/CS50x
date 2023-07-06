@@ -3,13 +3,15 @@
 #include <stdlib.h>
 
 
-void check_arguments(int argc);
+void wrong_arguments(int argc);
 
 int main(int argc, char *argv[])
 {
     // Check if CLI arguments are correct
-    check_arguments(argc);
-
+    if (wrong_arguments(argc))
+    {
+        return 1;
+    }
 
     // Remember filename
     char *infile = argv[1];
@@ -31,7 +33,7 @@ int main(int argc, char *argv[])
     fclose(inptr);
 }
 
-void check_arguments(int argc)
+bool wrong_arguments(int argc)
 {
     if (argc != 2)
     {
