@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     // Remember filename
     char *infile = argv[1];
 
+    // Open source file
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
     {
