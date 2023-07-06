@@ -3,15 +3,13 @@
 #include <stdlib.h>
 
 
-bool wrong_arguments(int argc);
+void wrong_arguments(int argc);
 
 int main(int argc, char *argv[])
 {
     // Check if CLI arguments are correct
-    if (wrong_arguments(argc))
-    {
-        return 1;
-    }
+    wrong_arguments(argc);
+
 
     // Remember filename
     char *infile = argv[1];
@@ -33,12 +31,11 @@ int main(int argc, char *argv[])
     fclose(inptr);
 }
 
-bool wrong_arguments(int argc)
+void wrong_arguments(int argc)
 {
     if (argc != 2)
     {
         printf("Usage: ./recover filename\n");
-        return true;
+        exit(1);
     }
-    return false;
 }
