@@ -3,14 +3,16 @@
 #include <stdlib.h>
 
 
-bool wrong_arguments(int argc, char *argv[]);
+bool wrong_arguments(int argc);
 
 int main(int argc, char *argv[])
 {
-    if (wrong_arguments(argc, argv))
+    if (wrong_arguments(argc))
     {
         return 1;
     }
+
+    
     // TODO: Open memory card
     // TODO: Look for beginning of JPEG
     // TODO: Open a new JPEG file
@@ -18,7 +20,7 @@ int main(int argc, char *argv[])
     // TODO: Stop at end of file
 }
 
-bool wrong_arguments(int argc, char *argv[])
+bool wrong_arguments(int argc)
 {
     if (argc != 2)
     {
