@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
         // TODO: Look for beginning of JPEG
         if (new_image(buffer))
         {
-            printf("New image found\n");
+            
         }
         // TODO: Open a new JPEG file
         // TODO: Write 512 bytes until a new JPEG is found
