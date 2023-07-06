@@ -3,12 +3,14 @@
 #include <stdlib.h>
 
 
-int wrong_arguments(int argc, char *argv[]);
+bool wrong_arguments(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
-    return wrong_arguments(argc, argv);
-    printf("test");
+    if (wrong_arguments(argc, argv))
+    {
+        return 1;
+    }
     // TODO: Open memory card
     // TODO: Look for beginning of JPEG
     // TODO: Open a new JPEG file
@@ -16,12 +18,12 @@ int main(int argc, char *argv[])
     // TODO: Stop at end of file
 }
 
-int wrong_arguments(int argc, char *argv[])
+bool wrong_arguments(int argc, char *argv[])
 {
     if (argc != 2)
     {
         printf("Usage: ./recover filename\n");
-        return 1;
+        return true;
     }
-    return 0;
+    return false;
 }
