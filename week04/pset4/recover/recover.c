@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Create buffer to hold 
+    // Create buffer to hold <something> TODO: find proper name
     BYTE buffer(BLOCK_SIZE);
 
     while (fread)
