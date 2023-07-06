@@ -1,9 +1,11 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 typedef unint8_t BYTE;
 int const BLOCK_SIZE = 512;
 
+bool new_image(BYTE buffer);
 
 
 int main(int argc, char *argv[])
@@ -32,19 +34,21 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
         // TODO: Look for beginning of JPEG
-        if (beginning_of_new_file(buffer))
+        if (new_image(buffer))
         {
 
         }
         // TODO: Open a new JPEG file
         // TODO: Write 512 bytes until a new JPEG is found
     }
-}
-
-bool beginning_of_new_file(buffer)
-
-
-
-
     fclose(inptr);
 }
+
+bool new_image(BYTE buffer)
+{
+    buffer[3] ==
+    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] == )
+}
+
+
+
