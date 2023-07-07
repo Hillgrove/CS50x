@@ -53,11 +53,12 @@ int main(int argc, char *argv[])
     // TODO #8
     BYTE audio_block[block_size];
     // Read from end of inputfile and backwards
-    for (long i = header.subchunk2Size; i > sizeof(header);  i -= block_size)
+    for (long i = header.subchunk2Size - block_size; i >= sizeof(header);  i -= block_size)
     {
-        printf("value of i: %li\n", i);
-        fseek(input, i + sizeof(header), SEEK_SET);
+
+        fseek(input, i, SEEK_SET);
         long pointer = ftell(input);
+        printf("value of i: %li\n", i);
         printf("Value of pointer: %li\n", pointer);
         fread(audio_block, block_size, 1, input);
     }
