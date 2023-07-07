@@ -55,7 +55,6 @@ int main(int argc, char *argv[])
     // Read from end of inputfile and backwards
     for (long i = header.subchunk2Size - block_size; i >= sizeof(header);  i -= block_size)
     {
-
         fseek(input, i, SEEK_SET);
         long pointer = ftell(input);
         // printf("value of i: %li\n", i);
