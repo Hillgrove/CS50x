@@ -30,23 +30,47 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Create buffer to hold input stream
-    BYTE buffer[BLOCK_SIZE];
 
+    BYTE buffer[BLOCK_SIZE];
+    int image_count = 0;
+    FILE *img = NULL;
+    char filename[8];
     while (fread(buffer, 1, BLOCK_SIZE, inptr) == BLOCK_SIZE)
     {
-        // Look for beginning of JPEG
+        // If new image is found
         if (new_image(buffer))
         {
-            fopen();
-            // TODO: Open a new JPEG file
+            // Create a new file with "filename" as name and write first BLOCK_SIZE to it
+            if (image_count == 0)
+            {
+                sprintf(filename, "%03i.jpg", image_count);
+                img = fopen(filename, "w");
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+                image_count++;
 
-
+            }
+            // Close old file and open a new, and write to it.
+            else
+            {
+                fclose(img);
+                sprintf(filename, "%03i.jpg", image_count);
+                img = fopen(filename, "w");
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+                image_count++;
+            }
         }
-
-        // TODO: Write 512 bytes until a new JPEG is found
+        // Write 512 bytes until a new JPEG is found
+        else
+        {
+            if (img != NULL)
+            {
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+            }
+        }
     }
     fclose(inptr);
+    fclose(img);
+    return 0;
 }
 
 bool new_image(BYTE buffer[])
