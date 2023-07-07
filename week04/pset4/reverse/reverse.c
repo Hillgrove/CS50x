@@ -61,6 +61,7 @@ int main(int argc, char *argv[])
         printf("value of i: %li\n", i);
         printf("Value of pointer: %li\n", pointer);
         fread(audio_block, block_size, 1, input);
+        fwrite(audio_block, block_size, 1, output);
     }
     // save to array
     // Write to output file
