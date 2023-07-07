@@ -57,9 +57,9 @@ int main(int argc, char *argv[])
     {
 
         fseek(input, i, SEEK_SET);
-        long pointer = ftell(input);
-        printf("value of i: %li\n", i);
-        printf("Value of pointer: %li\n", pointer);
+        // long pointer = ftell(input);
+        // printf("value of i: %li\n", i);
+        // printf("Value of pointer: %li\n", pointer);
         fread(audio_block, block_size, 1, input);
         fwrite(audio_block, block_size, 1, output);
     }
