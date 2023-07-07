@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     for (long i = header.subchunk2Size; i > sizeof(header);  i -= block_size)
     {
         printf("value of i: %li\n", i);
-        fseek(input, i, );
+        fseek(input, i + sizeof(header, SEEK_SET);
         long pointer = ftell(input);
         printf("Value of pointer: %li\n", pointer);
         fread(audio_block, block_size, 1, input);
