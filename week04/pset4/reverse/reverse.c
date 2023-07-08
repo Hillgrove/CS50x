@@ -53,19 +53,15 @@ int main(int argc, char *argv[])
     // TODO #8
     BYTE audio_block[block_size];
     // Read from end of inputfile and backwards
-    for (long i = 0; i < header.subchunk2Size;  i += block_size)
+    for (long i = 0; i < header.subchunk2Size; i += block_size)
     {
+        // Sets pointer to end of file and moves it backwards
         fseek(input, -(i + block_size), SEEK_END);
-        long pointer = ftell(input);
-        printf("value of i: %li\n", i);
-        printf("Value of pointer: %li\n", pointer);
+        // save to array
         fread(audio_block, 1, block_size, input);
+        // Write to output file
         fwrite(audio_block, 1, block_size, output);
     }
-    // save to array
-    // Write to output file
-
-
     // Close files
     fclose(input);
     fclose(output);
