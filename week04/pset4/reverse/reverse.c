@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     // TODO #8
     BYTE audio_block[block_size];
     // Read from end of inputfile and backwards
-    for (long i = 0; i < header.subChunk2Size;  i += block_size)
+    for (long i = 0; i < header.subchunk2Size;  i += block_size)
     {
         fseek(input, -i, SEEK_END);
         long pointer = ftell(input);
