@@ -111,10 +111,10 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *cursor = root;
-    
+
     for (int i = 0, n = strlen(word); i < n; i++)
     {
-        if
+        int index = tolower(word[i]) - 'a';
         for (int j = 0; j < SIZE_OF_ALPHABET; j++)
         {
             if
