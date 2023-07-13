@@ -119,7 +119,7 @@ bool check(char* word)
         {
             return false;
         }
-        cursor = cursor->children[index];
+
     }
 
     if (cursor->is_word == true)
