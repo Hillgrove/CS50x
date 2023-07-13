@@ -1,4 +1,4 @@
-cl// Saves popular dog names in a trie
+// Saves popular dog names in a trie
 // https://www.dailypaws.com/dogs-puppies/dog-names/common-dog-names
 
 #include <cs50.h>
@@ -14,7 +14,7 @@ cl// Saves popular dog names in a trie
 typedef struct node
 {
     bool is_word;
-    struct node *children[SIZE_OF_ALPHABET]; 
+    struct node *children[SIZE_OF_ALPHABET];
 }
 node;
 
