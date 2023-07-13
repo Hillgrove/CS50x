@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *cursor = NULL;
-    for (int i = 0; i < strlen(word); i++)
+    for (int i = 0, n = strlen(word); i < n; i++)
     {
         if
         for (int j = 0; j < SIZE_OF_ALPHABET; j++)
