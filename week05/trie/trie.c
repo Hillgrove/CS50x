@@ -14,7 +14,7 @@ cl// Saves popular dog names in a trie
 typedef struct node
 {
     bool is_word;
-    struct node *children[SIZE_OF_ALPHABET];
+    struct node *children[SIZE_OF_ALPHABET]; 
 }
 node;
 
