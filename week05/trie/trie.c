@@ -115,9 +115,15 @@ bool check(char* word)
     for (int i = 0, n = strlen(word); i < n; i++)
     {
         int index = tolower(word[i]) - 'a';
-        for (int j = 0; j < SIZE_OF_ALPHABET; j++)
+
+        if (cursor->is_word == true)
         {
-            if
+            return true;
+        }
+
+        else
+        {
+            cursor
         }
     }
     return false;
