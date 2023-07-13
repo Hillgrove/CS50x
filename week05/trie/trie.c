@@ -110,6 +110,14 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
+    for (int i = 0; i < strlen(word); i++)
+    {
+        if 
+        for (int j = 0; j < SIZE_OF_ALPHABET; j++)
+        {
+            if
+        }
+    }
     return false;
 }
 
