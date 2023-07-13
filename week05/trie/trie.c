@@ -120,7 +120,6 @@ bool check(char* word)
         {
             return false;
         }
-
     }
 
     if (cursor->is_word == true)
