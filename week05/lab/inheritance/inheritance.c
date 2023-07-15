@@ -98,7 +98,7 @@ void free_family(person *p)
 void print_family(person *p, int generation)
 {
     // Handle base case
-    if (p == NULL)
+    if (p->parents[0] == NULL && p->parents[1] == NULL)
     {
         return;
     }
