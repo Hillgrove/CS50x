@@ -12,6 +12,7 @@
         "random": "c",
         "*.tcc": "c",
         "cs50.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "ctype.h": "c"
     }
 }
