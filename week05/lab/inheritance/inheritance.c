@@ -20,7 +20,7 @@ person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
-char random_parent_allele(person *p);
+char random_parent_allele(person *p, int parent_index);
 
 int main(void)
 {
@@ -143,4 +143,10 @@ char random_allele()
     {
         return 'O';
     }
+}
+
+char random_parent_allele(person *p, int parent_index)
+{
+    int r = rand() % 2;
+    return p->parent[parent_index]->allele[r];
 }
