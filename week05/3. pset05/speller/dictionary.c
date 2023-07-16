@@ -63,6 +63,7 @@ unsigned int hash(const char *word)
     }
     */
    int test = hash % N;
+   struct node *nodetest = table[test];
    return test;
 }
 
