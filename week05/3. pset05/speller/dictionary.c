@@ -31,7 +31,6 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
     unsigned int hashkey = hash(word);
     struct node *current = table[hashkey];
 
