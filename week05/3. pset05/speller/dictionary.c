@@ -77,9 +77,7 @@ unsigned int hash(const char *word)
         hash = M * hash + word[i];
     }
     */
-   int test = hash % N;
-   struct node *nodetest = table[test];
-   return test;
+   return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -121,16 +119,6 @@ bool load(const char *dictionary)
         }
         count++;
     }
-
-    /*
-    node *temp = table[2];
-    while (temp != NULL)
-    {
-        printf("%s\n",temp->word);
-        temp = temp->next;
-    }
-    */
-
     fclose(dict);
     return true;
 }
