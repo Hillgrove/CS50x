@@ -55,7 +55,7 @@ bool load(const char *dictionary)
     }
 
 
-
+    fclose(dict);
     return false;
 }
 
