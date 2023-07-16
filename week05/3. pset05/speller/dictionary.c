@@ -79,7 +79,7 @@ bool load(const char *dictionary)
     }
 
     node *temp = table[2]; // start at the head of the list at the specific index
-    while (temp->next != NULL) // while we haven't reached the end of the list
+    while (temp != NULL) // while we haven't reached the end of the list
     {
     printf("%s\n", temp->word); // print the 'word' field of the current node
     temp = temp->next; // move on to the next node
