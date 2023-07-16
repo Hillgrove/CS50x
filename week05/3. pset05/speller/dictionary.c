@@ -34,8 +34,10 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // Hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler–Noll–Vo_hash_function#FNV-1a_hash
-    
-    unsigned int hash = 0xcbf29ce484222325;
+
+    uint32_t hash = 2166136261;
+    uint32_t prime = 16777619;
+
 
 
     /*
