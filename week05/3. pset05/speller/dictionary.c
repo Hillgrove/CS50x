@@ -62,7 +62,8 @@ unsigned int hash(const char *word)
         hash = M * hash + word[i];
     }
     */
-   return hash % N;
+   int test = hash % N;
+   return test;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
