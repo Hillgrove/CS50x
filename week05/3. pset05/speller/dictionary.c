@@ -33,7 +33,7 @@ bool check(const char *word)
 {
     // TODO
     unsigned int hashkey = hash(word);
-    if (strcasecmp(word, table[hashkey]->word) == 0)
+    if (table[hashkey] != NULL && strcasecmp(word, table[hashkey]->word) == 0)
     {
         return true;
     }
