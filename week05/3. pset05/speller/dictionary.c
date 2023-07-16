@@ -37,18 +37,24 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
-
     // Open dictionary file
     FILE *dict = fopen(dictionary, "r");
     if (dict == NULL)
     {
         return false;
     }
+
     // Read strings from file one at a time
-    // Create a new node for each word
-    // Hash word to obtain a hash value
-    // Insert node into hash table at that location
+    while (fscanf(dict, %s, word) != EOF)
+    {
+        
+        // Create a new node for each word
+        // Hash word to obtain a hash value
+        // Insert node into hash table at that location
+
+    }
+
+
 
     return false;
 }
