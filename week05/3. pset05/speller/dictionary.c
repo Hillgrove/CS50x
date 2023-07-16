@@ -33,14 +33,15 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // Hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler–Noll–Vo_hash_function#FNV-1a_hash
+    // FNV-1a hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler–Noll–Vo_hash_function#FNV-1a_hash
     uint32_t hash = 2166136261;
     uint32_t prime = 16777619;
 
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        hash *= prime;
         hash ^= *word;
+        hash *= prime;
+
     }
 
     /*
