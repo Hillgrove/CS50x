@@ -32,6 +32,12 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // Converts word to lowercase
+    for (int i = 0, len = strlen(word); i < len; i++)
+    {
+        word[i] = tolower(word[i]);
+    }
+
     unsigned int hashkey = hash(word);
     struct node *current = table[hashkey];
 
