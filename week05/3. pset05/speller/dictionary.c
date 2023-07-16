@@ -34,9 +34,13 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // Hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler–Noll–Vo_hash_function#FNV-1a_hash
-
     uint32_t hash = 2166136261;
     uint32_t prime = 16777619;
+
+    for (int i = 0, len = strlen(word); i < len; i++)
+    {
+
+    }
 
 
 
@@ -49,9 +53,8 @@ unsigned int hash(const char *word)
     {
         hash = M * hash + word[i];
     }
-
-    return hash % N;
     */
+   return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
