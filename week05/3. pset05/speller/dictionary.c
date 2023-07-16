@@ -75,12 +75,14 @@ bool load(const char *dictionary)
         }
     }
 
+    /*
     node *temp = table[2];
     while (temp != NULL)
     {
         printf("%s\n",temp->word);
         temp = temp->next;
     }
+    */
 
     fclose(dict);
     return true;
