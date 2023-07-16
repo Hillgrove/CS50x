@@ -73,9 +73,7 @@ bool load(const char *dictionary)
             n->next = table[hashkey];
             table[hashkey] = n;
         }
-
-
-        // free(n); // Needed if unload does it?
+        free(n);
     }
 
     fclose(dict);
