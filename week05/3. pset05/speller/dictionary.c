@@ -79,7 +79,7 @@ bool load(const char *dictionary)
     }
 
     fclose(dict); // Needed if unload does it?
-    return false; // Change to true when function correct
+    return true; // Change to true when function correct
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
