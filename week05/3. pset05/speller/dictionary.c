@@ -62,7 +62,7 @@ bool load(const char *dictionary)
 
 
         // Hash word to obtain a hash value
-        unsigned int hash = hash(word);
+        unsigned int hashkey = hash(word);
 
         // Insert node into hash table at that location
 
@@ -70,7 +70,7 @@ bool load(const char *dictionary)
 
 
     fclose(dict);
-    free(n);
+    // free(n);
     return false;
 }
 
