@@ -30,10 +30,19 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
+// Hash algorithm courtesy of www.strchr.com/hash_functions
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    unsigned int hash = 5381;
+    const int M = 33;
+
+    for (int i = 0, len = strlen(word); i < len; i++)
+    {
+        hash = M * hash + word[i];
+    }
+
+    return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
