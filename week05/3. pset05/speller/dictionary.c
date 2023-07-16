@@ -59,6 +59,7 @@ bool load(const char *dictionary)
 
         // Copy word from file into node
         strcpy(n->word, word);
+        printf("%s", word);
 
         // Hash word to obtain a hash value
         unsigned int hashkey = hash(word);
