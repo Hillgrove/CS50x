@@ -78,14 +78,6 @@ bool load(const char *dictionary)
         // free(n); // Needed if unload does it?
     }
 
-    node *temp = table[2]; // start at the head of the list at the specific index
-    while (temp != NULL) // while we haven't reached the end of the list
-    {
-    printf("%s\n", temp->word); // print the 'word' field of the current node
-    temp = temp->next; // move on to the next node
-    }
-
-
     fclose(dict); // Needed if unload does it?
     return false; // Change to true when function correct
 }
