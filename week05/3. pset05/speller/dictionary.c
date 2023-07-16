@@ -33,9 +33,15 @@ bool check(const char *word)
 {
     // TODO
     unsigned int hashkey = hash(word);
-    if (table[hashkey] != NULL && strcasecmp(word, table[hashkey]->word) == 0)
+    struct node *current = table[hashkey];
+
+    while (current != NULL)
     {
-        return true;
+        if (strcasecmp(current->word, word) == 0)
+        {
+            return true;
+        }
+        current = current->next;
     }
     return false;
 }
