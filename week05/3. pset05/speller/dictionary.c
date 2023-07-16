@@ -40,7 +40,7 @@ unsigned int hash(const char *word)
     for (int i = 0, len = strlen(word); i < len; i++)
     {
         hash *= prime;
-        hash ^= (*word);
+        hash ^= *word;
     }
 
 
