@@ -2,6 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -40,6 +41,10 @@ bool load(const char *dictionary)
 
     // Open dictionary file
     FILE *dict = fopen(dictionary, "r");
+    if (dict == NULL)
+    {
+        return false;
+    }
     // Read strings from file one at a time
     // Create a new node for each word
     // Hash word to obtain a hash value
