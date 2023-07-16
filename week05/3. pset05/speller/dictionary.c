@@ -61,7 +61,7 @@ unsigned int hash(const char *word)
     uint32_t prime = PRIME_32;
     uint32_t hash = OFFSET_32;
 
-    for (int i = 0, len = strlen(lowercase_word); i < len; i++)
+    for (int i = 0; i < len; i++)
     {
         hash ^= (lowercase_word[i]);
         hash *= prime;
