@@ -78,7 +78,7 @@ bool load(const char *dictionary)
         // free(n); // Needed if unload does it?
     }
 
-    fclose(dict); // Needed if unload does it?
+    fclose(dict);
     return true; // Change to true when function correct
 }
 
