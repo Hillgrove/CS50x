@@ -56,7 +56,6 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        n->next = NULL;
 
         // Copy word from file into node
         strcpy(n->word, word);
