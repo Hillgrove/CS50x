@@ -70,12 +70,20 @@ bool load(const char *dictionary)
         }
         else
         {
-            table[hashkey]->
+            n->next = table[hashkey];
+            table[hashkey]->next = n;
         }
 
 
         // free(n); // Needed if unload does it?
     }
+
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%i: %s\n", i, table[i]->word);
+    }
+
+
     fclose(dict); // Needed if unload does it?
     return false; // Change to true when function correct
 }
