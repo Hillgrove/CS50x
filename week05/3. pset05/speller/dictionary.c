@@ -31,10 +31,10 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
-// Hash algorithm courtesy of www.strchr.com/hash_functions
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
+    /*
+    // Hash algorithm courtesy of www.strchr.com/hash_functions
     unsigned int hash = 5381;
     const int M = 33;
 
@@ -44,6 +44,10 @@ unsigned int hash(const char *word)
     }
 
     return hash % N;
+    */
+
+   // Hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function#FNV-1a_hash
+
 }
 
 // Loads dictionary into memory, returning true if successful, else false
