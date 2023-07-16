@@ -32,18 +32,16 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    // Converts word to lowercase so hash value is correct
-
     unsigned int hashkey = hash(word);
-    struct node *cursor = table[hashkey];
+    struct node *current = table[hashkey];
 
-    while (cursor != NULL)
+    while (current != NULL)
     {
-        if (strcasecmp(cursor->word, word) == 0)
+        if (strcasecmp(current->word, word) == 0)
         {
             return true;
         }
-        cursor = current->next;
+        current = current->next;
     }
     return false;
 }
@@ -51,6 +49,13 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
+    // Convert word to lowercase to ensure correct hash values
+    char lowercase_word[LENGTH + 1];
+    for (int i = 0, len = strlen(word); i < len; i++)
+    {
+        lowercase_word[i] = tolower(word[i]);
+    }
+
     // FNV-1a hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler–Noll–Vo_hash_function#FNV-1a_hash
     uint32_t prime = PRIME_32;
     uint32_t hash = OFFSET_32;
