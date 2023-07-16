@@ -43,8 +43,6 @@ unsigned int hash(const char *word)
         hash ^= *word;
     }
 
-
-
     /*
     // Hash algorithm courtesy of www.strchr.com/hash_functions
     unsigned int hash = 5381;
