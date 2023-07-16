@@ -32,22 +32,18 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    // Converts word to lowercase
-    for (int i = 0, len = strlen(word); i < len; i++)
-    {
-        word[i] = tolower(word[i]);
-    }
+    // Converts word to lowercase so hash value is correct
 
     unsigned int hashkey = hash(word);
-    struct node *current = table[hashkey];
+    struct node *cursor = table[hashkey];
 
-    while (current != NULL)
+    while (cursor != NULL)
     {
-        if (strcasecmp(current->word, word) == 0)
+        if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
-        current = current->next;
+        cursor = current->next;
     }
     return false;
 }
