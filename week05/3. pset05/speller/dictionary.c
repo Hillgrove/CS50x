@@ -88,6 +88,7 @@ bool load(const char *dictionary)
     char word[LENGTH];
     while (fscanf(dict, "%s", word) != EOF)
     {
+        word = tolower(word);
         // Create a new node for each word
         node *n = malloc(sizeof(node));
         if (n == NULL)
@@ -96,7 +97,7 @@ bool load(const char *dictionary)
         }
 
         // Copy word from file into node
-        strcpy(n->word, tolower(word));
+        strcpy(n->word, word);
 
         // Hash word to obtain a hash value
         unsigned int hashkey = hash(word);
