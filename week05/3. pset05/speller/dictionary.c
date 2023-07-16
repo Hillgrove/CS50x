@@ -51,7 +51,7 @@ unsigned int hash(const char *word)
 {
     // Convert word to lowercase to ensure correct hash values
     int len = strlen(word);
-    char lowercase_word[len + 1];
+    char lowercase_word[LENGTH + 1] = "";
     for (int i = 0; i < len; i++)
     {
         lowercase_word[i] = tolower(word[i]);
