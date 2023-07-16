@@ -73,11 +73,17 @@ bool load(const char *dictionary)
             n->next = table[hashkey];
             table[hashkey] = n;
         }
-        free(n);
+    }
+
+    node *temp = table[2];
+    while (temp != NULL)
+    {
+        printf("%s\n",temp->word);
+        temp = temp->next;
     }
 
     fclose(dict);
-    return true; // Change to true when function correct
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
