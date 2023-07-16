@@ -8,6 +8,9 @@
 
 #include "dictionary.h"
 
+#define PRIME_32 16777619
+#define OFFSET_32 2166136261U
+
 // Represents a node in a hash table
 typedef struct node
 {
