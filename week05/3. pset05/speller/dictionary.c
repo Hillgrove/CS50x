@@ -20,8 +20,7 @@ typedef struct node
 }
 node;
 
-// TODO: Choose number of buckets in hash table
-// const unsigned int N = 26;
+// TODO: Choose number of buckets in hash table - default 26
 const unsigned int N = 26;
 unsigned int count = 0;
 
@@ -32,6 +31,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    if ()
     return false;
 }
 
@@ -117,7 +117,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
     return count;
 }
 
