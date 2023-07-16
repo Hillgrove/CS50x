@@ -71,7 +71,7 @@ bool load(const char *dictionary)
         else
         {
             n->next = table[hashkey];
-            table[hashkey]->next = n;
+            table[hashkey] = n;
         }
 
 
