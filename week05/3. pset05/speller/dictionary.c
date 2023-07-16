@@ -64,7 +64,6 @@ bool load(const char *dictionary)
         unsigned int hashkey = hash(word);
 
         // Insert node into hash table at that location
-        if ()
 
 
         free(n); // Needed if unload does it?
