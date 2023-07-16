@@ -32,7 +32,8 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    if (strcasecmp(word, table[hash(word)]->word) == 0)
+    unsigned int hash = hash(word);
+    if (strcasecmp(word, table[hash]->word) == 0)
     {
         return true;
     }
