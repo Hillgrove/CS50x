@@ -66,7 +66,7 @@ bool load(const char *dictionary)
         // Insert node into hash table at that location
         if (table[hashkey] == NULL)
         {
-            table[hashkey]->word = word;
+            table[hashkey]= n;
             table[hashkey]->next = NULL;
         }
 
