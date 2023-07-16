@@ -70,7 +70,7 @@ bool load(const char *dictionary)
 
 
     fclose(dict);
-    // free(n);
+    free(n);
     return false;
 }
 
