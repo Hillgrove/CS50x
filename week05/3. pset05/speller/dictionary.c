@@ -2,7 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -50,7 +52,14 @@ bool load(const char *dictionary)
     {
         // Create a new node for each word
         node *n = malloc(sizeof(node));
-        n->word
+        if (n == NULL)
+        {
+            return false;
+        }
+
+        // Copy word from file into node
+        strcpy(n->word, word);
+
 
         // Hash word to obtain a hash value
         unsigned int hash = hash(word);
