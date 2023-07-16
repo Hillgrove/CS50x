@@ -78,9 +78,11 @@ bool load(const char *dictionary)
         // free(n); // Needed if unload does it?
     }
 
-    for (int i = 0; i < 10; i++)
+    node *temp = table[0];
+    while (temp != NULL)
     {
-        printf("%i: %s\n", i, table[i]->word);
+        printf("%s\n",temp->word);
+        temp = temp->next;
     }
 
 
