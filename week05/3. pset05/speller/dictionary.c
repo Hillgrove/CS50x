@@ -68,9 +68,13 @@ bool load(const char *dictionary)
         {
             table[hashkey]= n;
         }
+        else
+        {
+            table[hashkey]->
+        }
 
 
-        free(n); // Needed if unload does it?
+        // free(n); // Needed if unload does it?
     }
     fclose(dict); // Needed if unload does it?
     return false; // Change to true when function correct
