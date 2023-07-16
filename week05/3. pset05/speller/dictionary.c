@@ -88,7 +88,6 @@ bool load(const char *dictionary)
     char word[LENGTH];
     while (fscanf(dict, "%s", word) != EOF)
     {
-        word = tolower(word);
         // Create a new node for each word
         node *n = malloc(sizeof(node));
         if (n == NULL)
