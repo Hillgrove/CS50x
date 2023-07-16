@@ -67,7 +67,6 @@ bool load(const char *dictionary)
         if (table[hashkey] == NULL)
         {
             table[hashkey]= n;
-            table[hashkey]->next = NULL;
         }
         else
         {
