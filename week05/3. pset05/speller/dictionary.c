@@ -9,7 +9,7 @@
 #include "dictionary.h"
 
 #define PRIME_32 16777619
-#define OFFSET_32 2166136261U
+#define OFFSET_32 2166136261
 
 // Represents a node in a hash table
 typedef struct node
@@ -37,8 +37,8 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // FNV-1a hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler–Noll–Vo_hash_function#FNV-1a_hash
-    uint32_t hash_32 = 2166136261;
-    uint32_t prime_32 = 16777619;
+    uint32_t hash = OFFSET_32;
+    uint32_t prime_32 = PRIME_32;
 
     for (int i = 0, len = strlen(word); i < len; i++)
     {
