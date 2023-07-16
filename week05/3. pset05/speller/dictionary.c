@@ -47,7 +47,7 @@ bool load(const char *dictionary)
     // Read strings from file one at a time
     while (fscanf(dict, %s, word) != EOF)
     {
-        
+
         // Create a new node for each word
         // Hash word to obtain a hash value
         // Insert node into hash table at that location
