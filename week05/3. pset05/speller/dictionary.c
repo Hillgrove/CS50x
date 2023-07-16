@@ -50,8 +50,9 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // Convert word to lowercase to ensure correct hash values
-    char lowercase_word[LENGTH + 1];
-    for (int i = 0, len = strlen(word); i < len; i++)
+    int len = strlen(word);
+    char lowercase_word[len + 1];
+    for (int i = 0; i < len; i++)
     {
         lowercase_word[i] = tolower(word[i]);
     }
