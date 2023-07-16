@@ -31,7 +31,10 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    if ()
+    if (strcasecmp(word, table[hash(word)]) == 0)
+    {
+        return true;
+    }
     return false;
 }
 
