@@ -67,6 +67,7 @@ bool load(const char *dictionary)
         if (table[hashkey] == NULL)
         {
             table[hashkey]->word = word;
+            table[hashkey]->next = NULL;
         }
 
 
