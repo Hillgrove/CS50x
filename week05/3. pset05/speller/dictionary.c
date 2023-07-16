@@ -61,6 +61,7 @@ bool load(const char *dictionary)
 
 
     fclose(dict);
+    free(n);
     return false;
 }
 
