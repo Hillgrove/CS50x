@@ -56,6 +56,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
+        n->next = NULL;
 
         // Copy word from file into node
         strcpy(n->word, word);
@@ -67,7 +68,6 @@ bool load(const char *dictionary)
         if (table[hashkey] == NULL)
         {
             table[hashkey]= n;
-            table[hashkey]->next = NULL;
         }
 
 
