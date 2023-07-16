@@ -60,17 +60,17 @@ bool load(const char *dictionary)
         // Copy word from file into node
         strcpy(n->word, word);
 
-
         // Hash word to obtain a hash value
         unsigned int hashkey = hash(word);
 
         // Insert node into hash table at that location
+        if ()
 
+
+        free(n); // Needed if unload does it?
     }
-
-
-    fclose(dict);
-    return false;
+    fclose(dict); // Needed if unload does it?
+    return false; // Change to true when function correct
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
