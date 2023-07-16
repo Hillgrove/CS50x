@@ -48,9 +48,13 @@ bool load(const char *dictionary)
     char word[LENGTH];
     while (fscanf(dict, "%s", word) != EOF)
     {
-        int hash = hash(word);
         // Create a new node for each word
+        node *n = malloc(sizeof(node));
+        n->word
+
         // Hash word to obtain a hash value
+        unsigned int hash = hash(word);
+
         // Insert node into hash table at that location
 
     }
