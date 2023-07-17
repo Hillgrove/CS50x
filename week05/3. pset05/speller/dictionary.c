@@ -22,9 +22,8 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table - default 26
-
-// 
-const unsigned int N = 186019;
+// Size of table: Next prime after load factor 0,7
+const unsigned int N = 204427;
 unsigned int count = 0;
 
 // Hash table
@@ -134,5 +133,5 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    return true;
 }
