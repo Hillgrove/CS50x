@@ -142,7 +142,7 @@ bool unload(void)
         node *cursor = table[i];
         if (cursor == NULL)
         {
-            continue;
+            free(cursor);
         }
         else
         {
