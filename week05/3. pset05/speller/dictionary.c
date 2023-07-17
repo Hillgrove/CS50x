@@ -14,10 +14,8 @@
 #define PRIME_32 16777619
 #define OFFSET_32 2166136261
 
-// TODO: Choose number of buckets in hash table - default 26
-// Size of table: Next prime after load factor 0,7
-//const unsigned int N = 204427;
-const unsigned int N = 204427;
+// Size of table: Next prime after load factor of 0,7 achieved (204427)
+const unsigned int N = 20;
 unsigned int count = 0;
 
 // Represents a node in a hash table
