@@ -138,18 +138,11 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         node *cursor = table[i];
-        if (cursor == NULL)
+        while (cursor != NULL)
         {
-            continue;
-        }
-        else
-        {
-            while (cursor != NULL)
-            {
-                table[i] = cursor->next;
-                free(cursor);
-                cursor = table[i];
-            }
+            table[i] = cursor->next;
+            free(cursor);
+            cursor = table[i];
         }
     }
     return true;
