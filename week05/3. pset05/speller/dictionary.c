@@ -145,13 +145,13 @@ bool unload(void)
         }
         else
         {
-            while (cursor != NULL)
+            while (cursor->next != NULL)
             {
                 table[i] = cursor->next;
                 free(cursor);
                 cursor = table[i];
             }
-            free(cursor);
+            //free(cursor);
         }
     }
     return true;
