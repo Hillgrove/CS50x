@@ -95,11 +95,10 @@ bool load(const char *dictionary)
     // Read strings from file one at a time
     char word[LENGTH];
 
-    node *n = malloc(sizeof(node));
     while (fscanf(dict, "%s", word) != EOF)
     {
         // Create a new node for each word
-        // node *n = malloc(sizeof(node));
+        node *n = malloc(sizeof(node));
         if (n == NULL)
         {
             return false;
@@ -123,7 +122,6 @@ bool load(const char *dictionary)
         }
         count++;
     }
-    free(n);
     fclose(dict);
     return true;
 }
