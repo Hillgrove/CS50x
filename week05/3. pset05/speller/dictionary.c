@@ -141,7 +141,7 @@ bool unload(void)
         {
             struct node *cursor = table[i];
             table[i] = table[i]->next;
-            free(cursor)
+            free(cursor);
 
         }
     }
