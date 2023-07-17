@@ -119,8 +119,10 @@ bool load(const char *dictionary)
             n->next = table[hashkey];
             table[hashkey] = n;
         }
+        free(n);
         count++;
     }
+
     fclose(dict);
     return true;
 }
