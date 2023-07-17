@@ -153,7 +153,6 @@ bool unload(void)
                 cursor = table[i];
             }
         }
-        free(table[i]);
     }
     return true;
 }
