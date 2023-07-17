@@ -67,6 +67,7 @@ unsigned int hash(const char *word)
         hash *= prime;
     }
 
+
     /*
     // Hash algorithm courtesy of www.strchr.com/hash_functions
     unsigned int hash = 5381;
@@ -77,7 +78,8 @@ unsigned int hash(const char *word)
         hash = M * hash + word[i];
     }
     */
-   return hash % N;
+
+    return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -112,7 +114,7 @@ bool load(const char *dictionary)
         // Insert node into hash table at that location
         if (table[hashkey] == NULL)
         {
-            table[hashkey]= n;
+            table[hashkey] = n;
         }
         else
         {
