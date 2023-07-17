@@ -138,8 +138,8 @@ bool unload(void)
 
     for (int i = 0; i < N, i++)
     {
-        node *current = table[i];
-        
+        node *cursor = table[i];
+        table[i]->next
     }
     return true;
 }
