@@ -138,7 +138,7 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         struct node *cursor = table[i];
-        while (cursor != NULL)
+        while (table[i] != NULL)
         {
             struct node *tmp = cursor;
             cursor = cursor->next;
