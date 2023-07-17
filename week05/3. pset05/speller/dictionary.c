@@ -56,7 +56,6 @@ unsigned int hash(const char *word)
     {
         lowercase_word[i] = tolower(word[i]);
     }
-    lowercase_word[len] = '\0';
 
     // FNV-1a hash algorithm courtesy of https://en.wikipedia.org/wiki/Fowler–Noll–Vo_hash_function#FNV-1a_hash
     uint32_t prime = PRIME_32;
