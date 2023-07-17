@@ -140,9 +140,10 @@ bool unload(void)
         struct node *cursor = table[i];
         while (cursor != NULL)
         {
-            cursor = table[i];
-            table[i] = table[i]->next;
-            free(cursor);
+            struct node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+
         }
     }
     return true;
