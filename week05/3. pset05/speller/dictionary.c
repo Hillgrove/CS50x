@@ -16,7 +16,8 @@
 
 // TODO: Choose number of buckets in hash table - default 26
 // Size of table: Next prime after load factor 0,7
-const unsigned int N = 204427;
+//const unsigned int N = 204427;
+const unsigned int N = 26;
 unsigned int count = 0;
 
 // Represents a node in a hash table
