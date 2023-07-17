@@ -104,6 +104,7 @@ bool load(const char *dictionary)
 
         // Copy word from file into node
         strcpy(n->word, word);
+        n->next = NULL;
 
         // Hash word to obtain a hash value
         unsigned int hashkey = hash(word);
