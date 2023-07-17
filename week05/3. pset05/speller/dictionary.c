@@ -90,6 +90,8 @@ bool load(const char *dictionary)
         return false;
     }
 
+    memset(table, 0, sizeof(table));
+
     // Read strings from file one at a time
     char word[LENGTH];
 
