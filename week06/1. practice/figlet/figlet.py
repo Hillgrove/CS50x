@@ -14,10 +14,11 @@ def main():
     if argc == 1:
         random_font = random.choice(fonts)
         figlet.setFont(font=random_font)
-        print(figlet.renderText(text))
+        print("zero argument")
+        // print(figlet.renderText(text))
 
-    if argc == 3:
-        ...
+    if argc == 3 and text[1] in ["-f", "--font"] and text[2] in fonts:
+        print("3 arguments")
 
 if __name__ == "__main__":
     main()
