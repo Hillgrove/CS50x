@@ -1,9 +1,12 @@
-import sys
-
 def main():
     greeting = input("Greeting: ")
 
-    if sys.argv[1] = "hello"
+    if greeting == "hello":
+        print("$0")
+    elif greeting[0] == "h":
+        print("$20")
+    else:
+        print("$100")
 
 
 main()
