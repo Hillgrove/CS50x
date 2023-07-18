@@ -2,20 +2,20 @@ from pyfiglet import Figlet
 
 
 def main():
-    s = input()
+    text = input("Input: ").strip()
 
-    s.split()
-    print(s)
+    argc = 
+    print(text.split())
 
-    length = len(s.split())
+    length = len(text.split())
     print(length)
 
-    print(f"number of args: {len(s)}")
+    print(f"number of args: {len(text)}")
 
-    if len(s) == 1:
+    if len(text) == 1:
         ...
 
-    if len(s) == 3:
+    if len(text) == 3:
         ...
 
 if __name__ == "__main__":
