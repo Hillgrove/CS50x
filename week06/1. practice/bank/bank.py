@@ -1,5 +1,5 @@
 def main():
-    greeting = input("Greeting: ")
+    greeting = input("Greeting: ").lower()
 
     if greeting == "hello":
         print("$0")
