@@ -4,8 +4,10 @@ from pyfiglet import Figlet
 
 
 def main():
-    text = input("Input: ").strip().split()
-    argc = len(text)
+    text = input("Input: ").strip()
+    argc = len(sys.argv)
+    print(sys.argv)
+    print(argc)
 
     figlet = Figlet()
     fonts = figlet.getFonts()
