@@ -1,5 +1,3 @@
-import sys
-
 def main():
     greeting = input("Greeting: ").lower()
 
