@@ -2,16 +2,20 @@ from pyfiglet import Figlet
 
 
 def main():
-    text = input("Input: ")
+    s = input()
 
-    length = len(text)
+    s.split()
+    print(s)
 
-    print(f"number of args: {length}")
+    length = len(s.split())
+    print(length)
 
-    if len(text) == 1:
+    print(f"number of args: {len(s)}")
+
+    if len(s) == 1:
         ...
 
-    if len(text) == 3:
+    if len(s) == 3:
         ...
 
 if __name__ == "__main__":
