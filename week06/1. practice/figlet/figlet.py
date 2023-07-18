@@ -16,7 +16,7 @@ def main():
         print(f"Output: \n{figlet.renderText(text)}")
 
     elif argc == 2:
-        if text[1] not in ["-f", "--font"] and text[2] not in fonts:
+        if sys.argv[1] not in ["-f", "--font"] and sys-argv[2] not in fonts:
             print("Invalid usage")
             sys.exit(1)
         else:
