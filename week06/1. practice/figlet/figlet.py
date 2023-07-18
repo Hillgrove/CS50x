@@ -32,7 +32,7 @@ def main():
 
     else:
         figlet.setFont(font=sys.argv[2])
-        print(figlet.renderText(text))
+        print(f"Output: \n{figlet.renderText(text)}")
 
 
 if __name__ == "__main__":
