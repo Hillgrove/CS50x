@@ -19,7 +19,7 @@ def main():
 
     elif argc == 3:
         if text[1] not in ["-f", "--font"] and text[2] not in fonts:
-            print("3 arguments but wrong arguments")
+            print("Usage: text [-f font] or [--font font]")
             sys.exit()
         else:
             print("3 arguments and correct arguments")
