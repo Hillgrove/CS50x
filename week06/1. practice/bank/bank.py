@@ -1,5 +1,5 @@
 def main():
-    greeting = input("Greeting: ").lower()
+    greeting = input("Greeting: ").strip().lower()
 
 
     if greeting[:5] == "hello":
