@@ -23,16 +23,17 @@ def main():
     # Get input from user
     text = input("Input: ").strip()
 
-    # Print ASCI art
+    # Set font
     if argc == 0:
         print(argc)
         random_font = random.choice(fonts)
         figlet.setFont(font=random_font)
-        print(f"Output: \n{figlet.renderText(text)}")
 
     else:
         figlet.setFont(font=sys.argv[2])
-        print(f"Output: \n{figlet.renderText(text)}")
+
+    # Print ASCII text
+    print(f"Output: \n{figlet.renderText(text)}")
 
 
 if __name__ == "__main__":
