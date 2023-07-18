@@ -2,7 +2,7 @@ from pyfiglet import Figlet
 
 
 def main():
-    text = input("Input: ").strip()
+    text = input("Input: ")
 
     length = len(text)
 
