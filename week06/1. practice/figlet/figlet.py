@@ -5,9 +5,12 @@ from pyfiglet import Figlet
 
 def main():
     argc = len(sys.argv) - 1
+
     if argc not in [0, 2]:
         print("Invalid usage")
         sys.exit(1)
+
+    if sys.ar
 
     text = input("Input: ").strip()
 
