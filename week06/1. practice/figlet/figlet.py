@@ -15,10 +15,14 @@ def main():
         random_font = random.choice(fonts)
         figlet.setFont(font=random_font)
         print("zero argument")
-        // print(figlet.renderText(text))
+        # print(figlet.renderText(text))
 
-    if argc == 3 and text[1] in ["-f", "--font"] and text[2] in fonts:
+    elif argc == 3 and text[1] in ["-f", "--font"] and text[2] in fonts:
         print("3 arguments")
+
+    else:
+        
+
 
 if __name__ == "__main__":
     main()
