@@ -16,15 +16,14 @@ def main():
         print("Invalid usage")
         sys.exit(1)
 
-    if sys.argv[1] not in ["-f", "--font"] and sys.argv[2] not in fonts:
+    if sys.argv[1] not in ["-f", "--font"] or sys.argv[2] not in fonts:
         print("Invalid usage")
         sys.exit(1)
-
-
 
     # Get input from user
     text = input("Input: ").strip()
 
+    # Print ASCI art
     if argc == 0:
         print(argc)
         random_font = random.choice(fonts)
@@ -32,8 +31,8 @@ def main():
         print(f"Output: \n{figlet.renderText(text)}")
 
     else:
-        figlet.setFont(font=text[1])
-        print(figlet.renderText(text[2]))
+        figlet.setFont(font=sys.argv[2])
+        print(figlet.renderText(text))
 
 
 if __name__ == "__main__":
