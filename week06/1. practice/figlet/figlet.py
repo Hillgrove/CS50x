@@ -4,13 +4,9 @@ from pyfiglet import Figlet
 def main():
     text = input("Input: ").strip()
 
-    argc = 
-    print(text.split())
+    argc = len(text.split())
 
-    length = len(text.split())
-    print(length)
-
-    print(f"number of args: {len(text)}")
+    print(f"number of args: {argc}")
 
     if len(text) == 1:
         ...
