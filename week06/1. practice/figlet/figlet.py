@@ -15,7 +15,7 @@ def main():
         random_font = random.choice(fonts)
         figlet.setFont(font=random_font)
         print("zero argument")
-        # print(figlet.renderText(text))
+        print(figlet.renderText(text))
 
     elif argc == 3:
         if text[1] not in ["-f", "--font"] and text[2] not in fonts:
