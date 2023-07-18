@@ -9,11 +9,12 @@ def main():
 
     figlet = Figlet()
     fonts = figlet.getFonts()
-    
 
 
     if argc == 1:
-        ...
+        random_font = random.choice(fonts)
+        figlet.setFont(font=random_font)
+        print(figlet.renderText(text))
 
     if argc == 3:
         ...
