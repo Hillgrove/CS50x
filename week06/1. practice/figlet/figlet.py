@@ -9,10 +9,11 @@ def main():
 
     figlet = Figlet()
     fonts = figlet.getFonts()
+    
 
 
     if argc == 1:
-        
+        ...
 
     if argc == 3:
         ...
