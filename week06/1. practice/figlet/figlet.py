@@ -2,8 +2,10 @@ import pyfiglet
 import sys
 
 
-def main:
-    text = input("Input: ")
+def main():
+    text = input("Input: ").trim()
+
+    print(f"number of args: {len(sys.argv)}")
 
     if len(sys.argv) == 1:
         ...
