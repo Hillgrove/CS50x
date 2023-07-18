@@ -16,13 +16,12 @@ def main():
         print(f"Output: \n{figlet.renderText(text)}")
 
     elif argc == 2:
-        print("2 args")
         if text[1] not in ["-f", "--font"] and text[2] not in fonts:
-            print("Usage: text [-f font] or [--font font]")
-            sys.exit()
+            print("Invalid usage")
+            sys.exit(1)
         else:
-            figlet.setFont(font=random_font)
-            print(figlet.renderText(text))
+            figlet.setFont(font=text[1])
+            print(figlet.renderText(text[2]))
 
 
 if __name__ == "__main__":
