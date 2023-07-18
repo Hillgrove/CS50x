@@ -29,7 +29,7 @@ def main():
         figlet.setFont(font=random_font)
         print(f"Output: \n{figlet.renderText(text)}")
 
-    else argc == 2:
+    else:
         figlet.setFont(font=text[1])
         print(figlet.renderText(text[2]))
 
