@@ -4,9 +4,12 @@ from pyfiglet import Figlet
 
 
 def main():
-    print(len(sys.argv) - 1)
-    text = input("Input: ").strip()
     argc = len(sys.argv) - 1
+    if argc not in [0, 2]:
+        print("Invalid usage")
+        sys.exit(1)
+
+    text = input("Input: ").strip()
 
 
     figlet = Figlet()
