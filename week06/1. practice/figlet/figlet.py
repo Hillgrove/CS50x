@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    text = input("Input: ").trim()
+    text = input("Input: ").strip()
 
     print(f"number of args: {len(sys.argv)}")
 
