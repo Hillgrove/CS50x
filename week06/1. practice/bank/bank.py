@@ -1,12 +1,10 @@
 def main():
     greeting = input("Greeting: ").lower()
-    first_word = greeting.split()[0]
 
-    print(f"first word: {first_word}")
 
-    if first_word == "hello":
+    if greeting[:5] == "hello":
         print("$0")
-    elif first_word[:1] == "h":
+    elif greeting[:1] == "h":
         print("$20")
     else:
         print("$100")
