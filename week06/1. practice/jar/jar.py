@@ -15,14 +15,14 @@ class Jar:
             raise ValueError("Exceed capacity")
         if self.size + n > self.capacity:
             raise ValueError("Exceed capacity")
-        self.size += n
+        self._size += n
 
 
 
     def withdraw(self, n):
         if n > self.size:
             raise ValueError("Less than zero would be left")
-        self.size -= n
+        self._size -= n
 
 
     @property
