@@ -18,10 +18,16 @@ class Jar:
         self.size += n
 
 
-    """
-    def withdraw(self, n):
-        ...
 
+    def withdraw(self, n):
+        if n > self.size:
+            raise ValueError("Exceed capacity")
+        if self.size - n < 0:
+            raise ValueError("Exceed capacity")
+        self.size - n
+
+
+    """
     @property
     def capacity(self):
         ...
@@ -34,7 +40,7 @@ class Jar:
 def main():
     jar = Jar()
     print(f"Total capacity: {str(jar.capacity)}")
-    jar.deposit(2)
+    jar.deposit(2))
     print(f"Cookies in jar: {jar}")
 
 
