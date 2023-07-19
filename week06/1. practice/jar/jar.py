@@ -37,9 +37,8 @@ class Jar:
 
 def main():
     jar = Jar()
-    print(f"Total capacity: {str(jar.capacity)}")
-    jar.deposit(2)
-    jar.withdraw(3)
+    jar.deposit(12)
+    jar.withdraw(9)
     print(f"Cookies in jar: {jar}")
 
 
