@@ -3,7 +3,7 @@ class Jar:
         if capacity < 0:
             raise ValueError("Wrong capacity")
         self._capacity = capacity
-        self.size = 0
+        self._size = 0
 
 
     def __str__(self):
@@ -32,8 +32,7 @@ class Jar:
 
     @property
     def size(self):
-        ...
-
+        return self._size
 
 def main():
     jar = Jar()
