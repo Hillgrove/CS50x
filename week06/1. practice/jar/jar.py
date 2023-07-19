@@ -1,6 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        if self.capacity < 0
+        if self.capacity < 0:
             raise ValueError
         ...
 
@@ -20,3 +20,12 @@ class Jar:
     @property
     def size(self):
         ...
+
+
+def main():
+    jar = Jar()
+    print(str(jar.capacity))
+
+
+if __name__ == "__main__":
+    main()
