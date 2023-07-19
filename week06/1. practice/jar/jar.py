@@ -24,6 +24,7 @@ class Jar:
 
 def main():
     jar = Jar()
+    jar.capacity = 11
     print(str(jar.capacity))
 
 
