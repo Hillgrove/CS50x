@@ -2,10 +2,12 @@ class Jar:
     def __init__(self, capacity=12):
         if capacity < 0:
             raise ValueError()
+        self.capacity = capacity
+        self.size = 0
 
 
     def __str__(self):
-        ...
+        self
 
     def deposit(self, n):
         ...
@@ -23,7 +25,7 @@ class Jar:
 
 
 def main():
-    jar = Jar(3)
+    jar = Jar()
     print(str(jar.capacity))
 
 
