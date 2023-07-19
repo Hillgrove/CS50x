@@ -7,8 +7,9 @@ class Jar:
 
 
     def __str__(self):
-        return self.size * ""
+        return self.size * "*"
 
+    """
     def deposit(self, n):
         ...
 
@@ -22,7 +23,7 @@ class Jar:
     @property
     def size(self):
         ...
-
+"""
 
 def main():
     jar = Jar()
