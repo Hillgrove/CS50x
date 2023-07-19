@@ -1,9 +1,9 @@
 class Jar:
     def __init__(self, capacity=12):
         if capacity < 0:
-            raise ValueError()
+            raise ValueError("Wrong capacity")
         self.capacity = capacity
-        self.size = 3
+        self.size = 0
 
 
     def __str__(self):
@@ -12,7 +12,10 @@ class Jar:
 
     def deposit(self, n):
         if n > self.capacity:
-            raise ValueError()
+            raise ValueError("Exceed capacity")
+        if self.size + n > self.capacity:
+            raise ValueError("Exceed capacity")
+        self.size += n
 
 
     """
@@ -30,8 +33,9 @@ class Jar:
 
 def main():
     jar = Jar()
-    print(str(jar.capacity))
-    print(jar)
+    print(f"Total capacity: {str(jar.capacity)}")
+    jar.deposit(2)
+    print(f"Cookies in jar: {jar}")
 
 
 if __name__ == "__main__":
