@@ -9,10 +9,13 @@ class Jar:
     def __str__(self):
         return self.size * "*"
 
-    """
-    def deposit(self, n):
-        ...
 
+    def deposit(self, n):
+        if n > self.capacity:
+            raise ValueError()
+
+
+    """
     def withdraw(self, n):
         ...
 
