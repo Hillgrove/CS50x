@@ -3,7 +3,7 @@ class Jar:
         if capacity < 0:
             raise ValueError()
         self.capacity = capacity
-        self.size = 0
+        self.size = 3
 
 
     def __str__(self):
@@ -28,6 +28,7 @@ class Jar:
 def main():
     jar = Jar()
     print(str(jar.capacity))
+    print(jar)
 
 
 if __name__ == "__main__":
