@@ -39,7 +39,7 @@ def calculate(reader):
     new_cases = {}
     for row in reader:
         if row["state"] not in new_cases:
-            new_cases[row["state"]] = [row["deaths"]]
+            new_cases[row["state"]] = [int(row["deaths"])]
         else:
             new_cases[row["state"]].append([row["deaths"]] - [row["deaths"] - 1])
         if len(new_cases[row["state"]]) > 14:
