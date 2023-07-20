@@ -41,7 +41,7 @@ def calculate(reader):
         if row["state"] not in new_cases:
             new_cases[row["state"]] = [row["deaths"]]
         else:
-            new_cases[row["state"]].append([row["deaths"]])
+            new_cases[row["state"]].append([row["deaths"]] - [row["deaths"] - 1])
         if len(new_cases[row["state"]]) > 14:
             new_cases[row["state"]].pop(0)
 
