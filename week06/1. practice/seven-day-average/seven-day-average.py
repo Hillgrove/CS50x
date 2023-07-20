@@ -38,6 +38,7 @@ def main():
 def calculate(reader):
     new_cases = {}
     for row in reader:
+        if 
         new_cases.append(row)
 
 
