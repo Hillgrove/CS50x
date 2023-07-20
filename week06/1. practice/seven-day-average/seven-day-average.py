@@ -38,8 +38,8 @@ def main():
 def calculate(reader):
     new_cases = {}
     for row in reader:
-        if 
-        new_cases.append(row)
+        if reader["state"] not in new_cases:
+            new_cases.append(row)
 
 
 # TODO: Calculate and print out seven day average for given state
