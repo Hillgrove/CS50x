@@ -61,11 +61,11 @@ def comparative_averages(new_cases, states):
         last_week_average = sum(new_cases[state][7:]) / 7
 
         try:
-            comparative_average = (last_week_average - first_week_average) / last_week_average
+            comparative_average = (first_week_average - last_week_average) / last_week_average
 
         except ZeroDivisionError:
             comparative_average = 0
 
         print(f"{state} had a 7-day average of {last_week_average} and an increase of {comparative_average}%.")
-        
+
 main()
