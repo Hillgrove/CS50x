@@ -11,7 +11,7 @@ def main():
     file = decoded_content.splitlines()
     reader = csv.DictReader(file)
 
-    # Construct 14 day lists of new cases for each states
+    # Construct 14 day lists of new cases for each sta  tes
     new_cases = calculate(reader)
 
     # Create a list to store selected states
