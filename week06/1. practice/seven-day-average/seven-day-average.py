@@ -65,4 +65,7 @@ def comparative_averages(new_cases, states):
 
         except ZeroDivisionError:
             comparative_average = 0
+
+        print(f"{state} had a 7-day average of {last_week_average} and an increase of {comparative_average}%.")
+        
 main()
