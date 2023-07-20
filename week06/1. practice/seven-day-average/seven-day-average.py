@@ -38,12 +38,13 @@ def main():
 def calculate(reader):
     new_cases = {}
     for row in reader:
-        cummulative_deaths = int(row["deaths"])
 
         if row["state"] not in new_cases:
-            new_cases[row["state"]] = [cummulative_deaths]
+            new_cases[row["state"]] = [int(row["deaths"])]
+            cummulative_deaths = int(row["deaths"])
         else:
             new_cases[row["state"]].append(int(row["deaths"]) - cummulative_deaths)
+            cummulative_deaths = int(row["deaths"])
 
         if len(new_cases[row["state"]]) > 14:
             new_cases[row["state"]].pop(0)
