@@ -41,10 +41,9 @@ def calculate(reader):
 
         if row["state"] not in new_cases:
             new_cases[row["state"]] = [int(row["deaths"])]
-            cummulative_deaths = int(row["deaths"])
+
         else:
-            new_cases[row["state"]].append(int(row["deaths"]) - cummulative_deaths)
-            cummulative_deaths = int(row["deaths"])
+            new_cases[row["state"]].append(int(row["deaths"]))
 
         if len(new_cases[row["state"]]) > 14:
             new_cases[row["state"]].pop(0)
