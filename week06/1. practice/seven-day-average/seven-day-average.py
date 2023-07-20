@@ -59,7 +59,8 @@ def comparative_averages(new_cases, states):
     first_week_average = 0
     last_week_average = 0
     for states in new_cases:
-        first_week_average = new_cases[states][:7]
+        first_week_average = sum(new_cases[states][:7]) / 7
+        last_week_average = sum(new_cases[states][8:]) / 7
 
 
 
