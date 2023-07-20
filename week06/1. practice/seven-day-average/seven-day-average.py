@@ -38,7 +38,7 @@ def main():
 def calculate(reader):
     new_cases = {}
     for row in reader:
-        if reader["state"] not in new_cases:
+        if row["state"] not in new_cases:
             new_cases.append(row)
 
 
