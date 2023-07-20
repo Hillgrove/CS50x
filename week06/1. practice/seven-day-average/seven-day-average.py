@@ -39,7 +39,7 @@ def calculate(reader):
     new_cases = {}
     for row in reader:
         if row["state"] not in new_cases:
-            new_cases("state") = []
+            new_cases[row["state"]] = []
 
 
 # TODO: Calculate and print out seven day average for given state
