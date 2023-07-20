@@ -14,7 +14,7 @@ def main():
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
 
-    
+
 
     # Create a list to store selected states
     states = []
@@ -36,7 +36,8 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
-    ...
+    for row in reader:
+        print(row)
 
 
 # TODO: Calculate and print out seven day average for given state
