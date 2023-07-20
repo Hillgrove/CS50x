@@ -14,19 +14,19 @@ def main():
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
 
+    
+
     # Create a list to store selected states
     states = []
     print("Choose one or more states to view average COVID cases.")
     print("Press enter when done.\n")
 
-    """
     while True:
         state = input("State: ")
         if state in new_cases:
             states.append(state)
         if len(state) == 0:
             break
-    """
 
     print(f"\nSeven-Day Averages")
 
