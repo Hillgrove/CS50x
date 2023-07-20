@@ -61,7 +61,7 @@ def comparative_averages(new_cases, states):
         last_week_average = sum(new_cases[state][7:]) / 7   # 6,57
 
         try:
-            comparative_average = (first_week_average - last_week_average) / last_week_average * 100
+            comparative_average = (last_week_average - first_week_average) / last_week_average * 100
 
         except ZeroDivisionError:
             comparative_average = 0
