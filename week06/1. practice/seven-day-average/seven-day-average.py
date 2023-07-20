@@ -43,7 +43,7 @@ def calculate(reader):
         else:
             new_cases[row["state"]].append([row["deaths"]])
         if len(new_cases["deaths"] > 14):
-            new_cases["deaths"].pop
+            new_cases["deaths"].pop(0)
     print(new_cases)
 
 
