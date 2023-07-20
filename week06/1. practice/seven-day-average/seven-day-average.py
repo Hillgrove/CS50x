@@ -41,7 +41,9 @@ def calculate(reader):
         if row["state"] not in new_cases:
             new_cases[row["state"]] = [row["deaths"]]
         else:
-            
+            new_cases[row["state"]].append([row["deaths"]])
+    print(new_cases)
+
 
 
 # TODO: Calculate and print out seven day average for given state
