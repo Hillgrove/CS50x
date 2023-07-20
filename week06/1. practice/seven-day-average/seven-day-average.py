@@ -57,8 +57,8 @@ def calculate(reader):
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
     for state in states:
-        first_week_average = sum(new_cases[state][:7]) / 7
-        last_week_average = sum(new_cases[state][7:]) / 7
+        first_week_average = sum(new_cases[state][:7]) / 7  # 15,71
+        last_week_average = sum(new_cases[state][7:]) / 7   # 6,57
 
         try:
             comparative_average = (last_week_average - first_week_average) / last_week_average
