@@ -51,7 +51,6 @@ def calculate(reader):
 
         if len(new_cases[row["state"]]) > 14:
             new_cases[row["state"]].pop(0)
-            previous_cases[row["state"]].pop(0)
 
     print(new_cases)
 
