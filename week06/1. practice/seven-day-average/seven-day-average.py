@@ -46,12 +46,12 @@ def calculate(reader):
             previous_cases[row["state"]] = [int(row["deaths"])]
 
         else:
-            new_cases[row["state"]].append(int(row["deaths"]) - previous_cases[row["state"]][0])
+            new_cases[row["state"]].append(int(row["deaths"]) - previous_cases[row["state"]][-1])
             previous_cases[row["state"]] = [int(row["deaths"])]
-            previous_cases[row["state"]].pop(0)
 
         if len(new_cases[row["state"]]) > 14:
             new_cases[row["state"]].pop(0)
+            previous_cases[row["state"]].pop(0)
 
     print(new_cases)
 
