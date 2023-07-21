@@ -19,7 +19,7 @@ def main():
     with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(file)
         for row in file_reader:
-            teams[]
+            teams[row["team"]] = [int([row["rating"]])]
 
 
     counts = {}
