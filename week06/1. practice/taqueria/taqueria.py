@@ -23,7 +23,7 @@ def main():
 
         # if order in menu:
         total += menu.get(order, 0)
-        print(f"Total: ${total}")
+        print(f"Total: ${total:.2f}")
 
 
 if __name__ == "__main__":
