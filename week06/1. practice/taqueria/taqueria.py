@@ -13,8 +13,8 @@ menu = {
 
 def main():
     total = 0
-    order = input("Item: ")
-    while order in menu:
+    while True:
+        order = input("Item: ").strip().title()
         total += menu[order]
         print(f"Total: ${total}")
 
