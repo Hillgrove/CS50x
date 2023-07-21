@@ -21,6 +21,9 @@ def main():
             print()
             break
 
+        except TypeError:
+            pass
+
         # if order in menu:
         total += menu.get(order)
         print(f"Total: ${total}")
