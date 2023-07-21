@@ -16,7 +16,7 @@ def main():
     order = input("Item: ")
     while order in menu:
         total += menu[order]
-        print(f"Total: ${total:f.02}")
+        print(f"Total: ${total}")
 
 
 if __name__ == "__main__":
