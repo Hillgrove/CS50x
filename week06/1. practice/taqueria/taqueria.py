@@ -21,9 +21,9 @@ def main():
             print()
             break
 
-        if order in menu:
-            total += menu[order]
-            print(f"Total: ${total}")
+        # if order in menu:
+        total += menu[order]
+        print(f"Total: ${total}")
 
 
 if __name__ == "__main__":
