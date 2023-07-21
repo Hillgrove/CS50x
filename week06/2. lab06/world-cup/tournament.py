@@ -18,7 +18,7 @@ def main():
     filename = sys.argv[1]
     # TODO: Read teams into memory from file
     with open(filename, "r") as file:
-        file_reader = csv.DictReader(file, fieldnames=["team", "rating"])
+        file_reader = csv.DictReader(file)
         for row in file_reader:
             teams.append(row)
 
