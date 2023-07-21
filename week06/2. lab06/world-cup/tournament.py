@@ -15,9 +15,10 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
+    filename = sys.argv[1]
     # TODO: Read teams into memory from file
-    with open(sys.argv[1]) as file:
-        file_reader = csv.DictReader(file)
+    with open(filename, "r") as file:
+        file_reader = csv.DictReader(file, fieldnames=["team", "rating"])
         for row in file_reader:
             teams[row["team"]] = [int([row["rating"]])]
 
