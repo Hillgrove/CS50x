@@ -15,6 +15,8 @@ def main():
     total = 0
     while True:
         order = input("Item: ").strip().title()
+        try:
+
         total += menu[order]
         print(f"Total: ${total}")
 
