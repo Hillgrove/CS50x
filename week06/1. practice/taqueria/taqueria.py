@@ -21,8 +21,8 @@ def main():
             print()
             break
 
-        if order in menu:
-            total += menu[order]
+        # if order in menu:
+        total += menu.get(order[, 0])
         print(f"Total: ${total}")
 
 
