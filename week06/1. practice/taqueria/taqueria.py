@@ -12,7 +12,10 @@ menu = {
 
 
 def main():
-    print(f"Price for {menu['Baja Taco']}: ")
+    total = 0
+    order = input("Item: ")
+    while order in menu:
+        print()
 
 
 if __name__ == "__main__":
