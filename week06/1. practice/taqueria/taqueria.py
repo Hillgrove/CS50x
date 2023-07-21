@@ -12,7 +12,7 @@ menu = {
 
 
 def main():
-    print(f"Price for {menu[Baja Taco]}: ")
+    print(f"Price for {menu["Baja Taco"]}: ")
 
 
 if __name__ == "__main__":
