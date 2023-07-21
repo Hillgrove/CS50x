@@ -22,7 +22,7 @@ def main():
             break
 
         # if order in menu:
-        total += get(menu[order])
+        total += menu.get(order)
         print(f"Total: ${total}")
 
 
