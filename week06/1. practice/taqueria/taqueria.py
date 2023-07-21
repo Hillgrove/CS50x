@@ -16,15 +16,14 @@ def main():
     while True:
         try:
             order = input("Item: ").strip().title()
-            if order in menu:
-                total += menu[order]
-                print(f"Total: ${total}")
 
         except EOFError:
             print()
             break
 
-
+        if order in menu:
+            total += menu[order]
+            print(f"Total: ${total}")
 
 
 if __name__ == "__main__":
