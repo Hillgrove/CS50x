@@ -1,5 +1,4 @@
 # Simulate a sports tournament
-
 import csv
 import sys
 import random
@@ -14,9 +13,10 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
+    # Read teams into memory from file
     teams = []
     filename = sys.argv[1]
-    # TODO: Read teams into memory from file
+
     with open(filename, "r") as file:
         file_reader = csv.DictReader(file)
         for row in file_reader:
