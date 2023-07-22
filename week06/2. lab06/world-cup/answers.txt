@@ -14,4 +14,4 @@ I predicted that the time would increase (quite logically). I did not expect tha
 simulations would take that much more than 100000 ones.
 
 Suppose you're charged a fee for each second of compute time your program uses.
-After how many simulations would you call the predictions "good enough"?: TODO
+After how many simulations would you call the predictions "good enough"?: 100000
