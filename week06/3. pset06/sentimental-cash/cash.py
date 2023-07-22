@@ -1,7 +1,7 @@
-from CS50 import get_float
+from cs50 import get_float
 
 def main():
-    owed = CS50.get_float("Change owed: ")
+    owed = get_float("Change owed: ")
 
 
 if __name__ == "__main__":
