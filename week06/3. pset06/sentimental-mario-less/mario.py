@@ -2,6 +2,9 @@ def main():
     while True:
         try:
             height = int(input("Height: "))
+        except EOFError:
+            print()
+            exit()
         except:
             ...
         else:
