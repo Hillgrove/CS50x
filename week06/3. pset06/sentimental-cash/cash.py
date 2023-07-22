@@ -1,4 +1,4 @@
-import CS50
+from CS50 import get_float
 
 def main():
     owed = CS50.get_float("Change owed: ")
