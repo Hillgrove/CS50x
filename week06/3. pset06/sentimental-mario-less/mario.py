@@ -1,7 +1,7 @@
 def main():
     while True:
         height = int(input("Height: "))
-        if height > 0:
+        if 0 < height > 8:
             break
 
     for i in range(height):
