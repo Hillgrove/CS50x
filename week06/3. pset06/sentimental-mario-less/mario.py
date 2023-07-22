@@ -1,7 +1,7 @@
 def main():
     height = int(input("Height: "))
     for i in range(height):
-        print(f"{(height - i - 1) * ' '}{i * '*'}")
+        print(f"{(height - i - 1) * ' '}{(i + 1) * '*'}")
 
 
 if __name__ == "__main__":
