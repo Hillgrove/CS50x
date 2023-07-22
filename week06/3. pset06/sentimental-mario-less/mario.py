@@ -6,7 +6,7 @@ def main():
             print()
             exit()
         except:
-            ...
+            print("Please input an integer between 0 and 9.")
         else:
             if 0 < height < 9:
                 break
