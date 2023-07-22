@@ -12,7 +12,9 @@ def main():
                 break
 
     for i in range(height):
-        print(f"{(height - i - 1) * ' '}{(i + 1) * '#'} {(i + 1) * '#'}")
+        white_space = (height - i - 1) * ' '
+        blocks = (i + 1) * '#'
+        print(f"{white_space}{blocks} {blocks}")
 
 
 if __name__ == "__main__":
