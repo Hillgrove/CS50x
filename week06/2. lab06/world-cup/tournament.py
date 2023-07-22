@@ -66,6 +66,7 @@ def simulate_tournament(teams):
     while len(teams) > 1:
         teams = simulate_round(teams)
     test = teams["team"]
+    print(test)
     return test
 
 
