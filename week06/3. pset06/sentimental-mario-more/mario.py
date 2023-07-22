@@ -1,3 +1,5 @@
+GAP = 2 * " "
+
 def main():
     while True:
         try:
@@ -14,7 +16,7 @@ def main():
     for i in range(height):
         white_space = (height - i - 1) * ' '
         blocks = (i + 1) * '#'
-        print(f"{white_space}{blocks} {blocks}")
+        print(f"{white_space}{blocks}{GAP}{blocks}")
 
 
 if __name__ == "__main__":
