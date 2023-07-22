@@ -1,5 +1,6 @@
 GAP = 2 * " "
 
+
 def main():
     while True:
         try:
