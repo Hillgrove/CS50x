@@ -12,7 +12,7 @@ def main():
             print("Please input an integer between 0 and 9.")
         else:
             if 0 < height < 9:
-                break
+                break   
 
     for i in range(height):
         white_space = (height - i - 1) * ' '
