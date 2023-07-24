@@ -20,10 +20,10 @@ def main():
 
         # Read fieldnames into a variable
         fieldnames = file_reader.fieldnames
-        str_dict = {fieldname: 0 for fieldname in fieldnames if fieldname != "name"}
+        subsequences = {fieldname: 0 for fieldname in fieldnames if fieldname != "name"}
 
     print(database)
-    print(str_dict)
+    print(subsequences)
 
     # Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
@@ -32,8 +32,10 @@ def main():
     print(sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
-    for str in str_dict:
-        str_dict[str] = longest_match(sequence, str)
+    for subsequence in subsequences:
+        subsequences[subsequence] = longest_match(sequence, subsequence)
+
+    print(subsequences)
 
 
     # TODO: Check database for matching profiles
