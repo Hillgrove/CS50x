@@ -20,7 +20,9 @@ def main():
             database.append(row)
 
         for fieldname in file_reader:
-            
+            if fieldname != "name":
+                sequence.append(fieldname)
+
 
 
     print(database)
