@@ -38,7 +38,6 @@ def main():
 
     # print(subsequences)
 
-
     # Check database for matching profiles
     matching_person = "No match"
     for person in database:
