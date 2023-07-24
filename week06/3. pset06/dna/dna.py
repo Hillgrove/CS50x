@@ -18,6 +18,7 @@ def main():
                 if key != "name":
                     row[key] = int(value)
             database.append(row)
+            
 
     print(database)
 
