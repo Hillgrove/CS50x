@@ -10,7 +10,6 @@ def main():
 
     # Read database file into a variable, converting numbers to integers
     database = []
-    sequences = {}
     with open(sys.argv[1], "r") as file:
         file_reader = csv.DictReader(file)
         for row in file_reader:
@@ -19,7 +18,8 @@ def main():
                     row[key] = int(value)
             database.append(row)
 
-        
+        fieldnames = file_reader.fieldnames
+        sequences = {fieldname: 0 for fieldname in fieldnames if fieldname != "name"}
 
 
 
