@@ -4,11 +4,11 @@ import sys
 
 def main():
 
-    # TODO: Check for command-line usage
+    # Check for command-line usage
     if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py data.csv sequence.txt")
 
-    # Read database file into a variable
+    # Read database file into a variable, converting numbers to integers
     database = []
     with open(sys.argv[1], "r") as file:
         file_reader = csv.DictReader(file)
