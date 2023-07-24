@@ -41,7 +41,9 @@ def main():
     # TODO: Check database for matching profiles
     for person in database:
         for key, value in person.items():
-            if sequences[key] != 
+            if subsequences[key] != value:
+                print("False")
+    
 
 
 
