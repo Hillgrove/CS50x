@@ -40,7 +40,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in database:
-        for 
+        for key, value in person.items():
+            
 
 
 
