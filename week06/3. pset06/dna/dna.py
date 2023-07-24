@@ -20,7 +20,7 @@ def main():
 
         # Read fieldnames into a variable
         fieldnames = file_reader.fieldnames
-        # Dict comprehension curtesy of duck debugger
+        # Dict-comprehension curtesy of duck debugger
         subsequences = {fieldname: 0 for fieldname in fieldnames if fieldname != "name"}
 
     print(database)
