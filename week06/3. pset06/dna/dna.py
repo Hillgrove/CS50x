@@ -23,20 +23,20 @@ def main():
         # Dict-comprehension curtesy of duck debugger
         subsequences = {fieldname: 0 for fieldname in fieldnames if fieldname != "name"}
 
-    print(database)
-    print(subsequences)
+    # print(database)
+    # print(subsequences)
 
     # Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
 
-    print(sequence)
+    # print(sequence)
 
     # Find longest match of each STR in DNA sequence
     for subsequence in subsequences:
         subsequences[subsequence] = longest_match(sequence, subsequence)
 
-    print(subsequences)
+    # print(subsequences)
 
 
     # Check database for matching profiles
