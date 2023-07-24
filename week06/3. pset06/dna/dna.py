@@ -18,12 +18,12 @@ def main():
                     row[key] = int(value)
             database.append(row)
 
+        # Read fieldnames into a variable
         fieldnames = file_reader.fieldnames
         sequences = {fieldname: 0 for fieldname in fieldnames if fieldname != "name"}
 
-
-
     print(database)
+    print(sequences)
 
     # Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
