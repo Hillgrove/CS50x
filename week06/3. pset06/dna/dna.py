@@ -41,7 +41,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in database:
-        if all(person[key] == subsequence[key] for key in subsequence):
+        if all(person[key] == subsequences[key] for key in subsequences):
             print(person["name"])
         else:
             print("No match")
