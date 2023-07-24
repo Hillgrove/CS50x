@@ -41,14 +41,10 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in database:
-        for key, value in person.items():
-            if subsequences[key] != value:
-                print("False")
-
-
-
-
-    return
+        if all(person[key] == subsequence[key] for key in subsequence):
+            print(person["name"])
+        else:
+            print("No match")
 
 
 def longest_match(sequence, subsequence):
