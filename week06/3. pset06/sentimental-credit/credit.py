@@ -36,7 +36,7 @@ def valid_checksum(cardnumber):
 def distributor(cardnumber):
     length = len(cardnumber)
 
-    if length == 15 and cardnumber[:2] in ["34", "37"]:
+    if length == 15 and cardnumber[:2] in ["34",    "37"]:
         return "AMEX"
     elif length == 16 and cardnumber[:2] in ["51", "52", "53", "54", "55"]:
         return "MASTERCARD"
