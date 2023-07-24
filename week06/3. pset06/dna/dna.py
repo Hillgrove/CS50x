@@ -10,6 +10,7 @@ def main():
 
     # Read database file into a variable, converting numbers to integers
     database = []
+    sequences = []
     with open(sys.argv[1], "r") as file:
         file_reader = csv.DictReader(file)
         for row in file_reader:
@@ -27,7 +28,7 @@ def main():
     print(sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
-    for key in 
+    for key in
 
     # TODO: Check database for matching profiles
 
