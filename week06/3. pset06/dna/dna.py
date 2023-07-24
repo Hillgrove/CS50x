@@ -40,7 +40,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in database:
-        if person[key]
+        if person[key] = subsequences[key]:
+    
 
 
     return
