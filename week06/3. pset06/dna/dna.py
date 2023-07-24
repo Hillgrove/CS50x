@@ -42,7 +42,7 @@ def main():
     # Check database for matching profiles
     matching_person = "No match"
     for person in database:
-        # Curtesy of duck debugger
+        # Generator expression curtesy of duck debugger
         if all(person[key] == value for key, value in subsequences.items()):
             matching_person = person["name"]
             break
