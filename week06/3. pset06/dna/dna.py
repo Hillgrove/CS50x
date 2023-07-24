@@ -39,10 +39,10 @@ def main():
     print(subsequences)
 
 
-    # TODO: Check database for matching profiles
+    # Check database for matching profiles
     matching_person = "No match"
     for person in database:
-        # Dict-comprehension curtesy of duck debugger
+        # Curtesy of duck debugger
         if all(person[key] == value for key, value in subsequences.items()):
             matching_person = person["name"]
             break
