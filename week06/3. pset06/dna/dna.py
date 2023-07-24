@@ -19,6 +19,9 @@ def main():
                     row[key] = int(value)
             database.append(row)
 
+        for fieldname in file_reader:
+            
+
 
     print(database)
 
