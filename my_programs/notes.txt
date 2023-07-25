@@ -1,0 +1,20 @@
+Word Frequency Counter:
+Given a list of words, create a dictionary where the keys are the words,
+and the values are the frequency of each word in the list.
+
+Student Gradebook:
+Create a list of dictionaries where each dictionary represents a student.
+The dictionaries should contain keys like 'name', 'grade', and 'class'.
+Write functions to add a student, remove a student, and calculate the
+average grade of the class.
+
+Inventory Tracker:
+Create a dictionary where the keys are item names and the values are the
+quantity in stock. Write functions to add an item, remove an item, and
+check the quantity of an item.
+
+Contact Book:
+Create a list of dictionaries where each dictionary represents a contact.
+The dictionaries should contain keys like 'name', 'phone', and 'email'.
+Write functions to add a contact, remove a contact, and search for a
+contact by name.

@@ -15,6 +15,7 @@ def main():
         words = file.read().split()
         wordcount = Counter(words)
 
+    print(f"Top 10 words used in '{filename}':")
     for word, count in wordcount.most_common(10):
         print(word, count)
 
