@@ -23,7 +23,9 @@ def main():
             students.append(row)
 
     for student in students:
-        print(students[student])
+        for grade in student.values():
+            print(grade)
+        print("\n")
 
 
 if __name__ == "__main__":
