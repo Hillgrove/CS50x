@@ -23,8 +23,8 @@ def main():
             students.append(row)
 
     for student in students:
-        for grade in student.values():
-            print(grade)
+        for class_name, grade in student.items():
+            print(f"{class_name}: {grade}")
         print("\n")
 
 
