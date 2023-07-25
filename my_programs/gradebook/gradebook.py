@@ -6,3 +6,24 @@ Write functions to add a student, remove a student, and calculate the
 average grade of the class.
 """
 
+import csv
+import sys
+
+
+def main():
+    students = {}
+    filename = sys.argv[1]
+
+    with open(filename, "r") as file:
+        file_reader = csv.DictReader(file)
+        for row in file_reader:
+            row["math"] = int(row["math"])
+            row["english"] = int(row["english"])
+            row["computer science"] = int(row["computer science"])
+            students.append(row)
+
+    print(students)
+
+
+if __name__ == "__main__":
+    main()
