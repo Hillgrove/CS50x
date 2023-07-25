@@ -9,16 +9,14 @@ import sys
 
 
 def main():
-
-    wordcount = {}
+    
     filename = sys.argv[1]
     with open(filename, "r") as file:
         words = file.read().split()
         wordcount = Counter(words)
 
-    for word in wordcount:
-        print(f"{word}: {wordcount[word]}")
-
+    for word, count in wordcount.most_common(10):
+        print(word, count)
 
 
 if __name__ == "__main__":
