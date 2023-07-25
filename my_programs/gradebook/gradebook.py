@@ -11,7 +11,7 @@ import sys
 
 
 def main():
-    students = {}
+    students = []
     filename = sys.argv[1]
 
     with open(filename, "r") as file:
@@ -22,7 +22,8 @@ def main():
             row["computer science"] = int(row["computer science"])
             students.append(row)
 
-    print(students)
+    for student in students:
+        print(students[student])
 
 
 if __name__ == "__main__":
