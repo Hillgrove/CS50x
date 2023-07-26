@@ -17,10 +17,7 @@ def main():
 
     while True:
         try:
-            choice = input(f"(P)rint grades, (A)dd student, (R)emove student, (C)alculate average grade of a class: ")
-        except EOFError:
-            print()
-            sys.exit("Program successfully closed.")
+            choice = input(f"(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ")
 
 
 def import_data():
