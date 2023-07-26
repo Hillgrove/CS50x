@@ -38,18 +38,19 @@ def actions(choice):
 
 
 def add_student():
-    print(students)
+    print_grades()
     print()
     while True:
         name = input("Name of the student you want to add: ").title()
         if name in students:
             print("Student already in gradebook. Please try again.")
         else:
-            students.append({"name": name})
+            students[name] = {}
             break
 
 
-    print_grades()
+
+    print()
     request_input()
 
 
