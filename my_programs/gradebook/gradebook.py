@@ -46,9 +46,6 @@ def add_student():
             students.append({"name": name})
             break
 
-        for student in students:
-            if student["name"] == name:
-
 
     print_grades()
     request_input()
@@ -82,7 +79,7 @@ def import_data():
 
 
 def print_grades():
-    df = pd.DataFrame(students)
+    df = pd.DataFrame(students).T
     print(df)
 
 
