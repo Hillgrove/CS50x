@@ -56,7 +56,9 @@ def add_student(students, courses):
                 print()
                 break
             else:
+                print()
                 print("Wrong input. Try again.")
+                grade = input("Enter grade: ")
 
 
     print_grades(students)
