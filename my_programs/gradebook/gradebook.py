@@ -11,10 +11,24 @@ import sys
 
 import pandas as pd
 
+actions = {
+    'p': print_grades,
+    'a': add_student,
+    'r': remove_student,
+    'g': grade_average,
+    'q': quit_program
+}
+
 
 def main():
     students = import_data()
     choice = request_input()
+    action = actions.get(choice)
+
+    if action:
+        action()
+    else:
+        print("invalid choice.")
 
 
 
