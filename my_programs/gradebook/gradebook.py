@@ -14,15 +14,15 @@ import pandas as pd
 
 
 def main():
-    students, classes = import_data()
+    students, courses = import_data()
     choice = menu()
-    actions(choice, students, classes)
+    actions(choice, students, courses)
 
 
-def actions(choice, students, classes):
+def actions(choice, students, courses):
     actions = {
     'p': lambda: print_grades(students),
-    'a': lambda: add_student(students, classes),
+    'a': lambda: add_student(students, courses),
     # 'r': remove_student,
     # 'g': grade_average,
     # 'q': quit_program
@@ -36,7 +36,7 @@ def actions(choice, students, classes):
     menu()
 
 
-def add_student(students, classes):
+def add_student(students, courses):
     print_grades(students)
     while True:
         name = input("Name of the student you want to add: ").title()
@@ -46,7 +46,7 @@ def add_student(students, classes):
             students[name] = {}
             break
 
-    for course in classes:
+    for course in courses:
         grade = input(f"Which grade did {name} get in {class}? ")
         students[name][course] = grade
 
@@ -80,7 +80,7 @@ def import_data():
 
     with open(filename, "r") as file:
         file_reader = csv.DictReader(file)
-        classes = [key for key in file_reader.fieldnames if key != "name"]
+        courses = [key for key in file_reader.fieldnames if key != "name"]
 
         for row in file_reader:
             name = row.pop("name")
@@ -88,7 +88,7 @@ def import_data():
                 row[key] = int(row[key])
             students[name] = row
 
-    return students, classes
+    return students, courses
 
 
 def print_grades(students):
