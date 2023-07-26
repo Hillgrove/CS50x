@@ -15,14 +15,13 @@ import pandas as pd
 def main():
     students = import_data()
 
+    choice = input(f"(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ").lower()
     while True:
-        try:
-            choice = input(f"(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ").lower()
-            if choice in ['p', 'a', 'r', 'g', 'q']:
-                break
+        if choice in ['p', 'a', 'r', 'g', 'q']:
+            break
         else:
-            print("Invalid choice. Please select from menu.")
-
+            print("Invalid choice. Please select from options.")
+            continue
 
 
 
