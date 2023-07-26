@@ -13,6 +13,13 @@ import pandas as pd
 
 
 def main():
+    students = import_data()
+
+    df = pd.DataFrame(students)
+    print(df)
+
+
+def import_data():
     students = []
     filename = sys.argv[1]
 
@@ -24,16 +31,11 @@ def main():
                     row[key] = int(row[key])
             students.append(row)
 
-    """
-    for student in students:
-        for class_name, grade in student.items():
-            print(f"{class_name}: {grade}")
-        print("\n")
-    """
+    return students
 
-    df = pd.DataFrame(students)
-    print(df)
 
+def print_all_grades():
+    ...
 
 if __name__ == "__main__":
     main()
