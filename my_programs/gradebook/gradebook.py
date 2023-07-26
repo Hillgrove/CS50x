@@ -51,7 +51,7 @@ def add_student():
     # print_grades()
 
     for class in students[name]:
-        print(f")
+        print(f"")
 
 
     request_input()
