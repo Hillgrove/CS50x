@@ -52,12 +52,10 @@ def add_student(students, courses):
         while True:
             try:
                 grade = int(input("Enter grade: "))
-                if 0 < grade < 10:
+                if 0 <= grade <= 10:
                     students[name][course] = grade
                     print()
                     break
-                else:
-                    print("Wrong input. Try again.")
             except ValueError:
                 if grade == "":
                     students[name][course] = grade
