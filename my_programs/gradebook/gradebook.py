@@ -13,6 +13,7 @@ import pandas as pd
 
 
 students = {}
+keys = []
 
 def main():
     global students
