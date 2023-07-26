@@ -46,9 +46,11 @@ def add_student(students, courses):
             students[name] = {}
             break
 
+    print()
     for course in courses:
-        print(f"Which grade did {name} get in {course}? ")
-        input(")
+        print(f"Which grade did {name} get in {course}?")
+        grade = input(f"If {name} didn't take the course, please write '-': ")
+
         students[name][course] = grade
 
 
