@@ -47,7 +47,7 @@ def add_student(students, courses):
             print()
             break
 
-    print(f"If {name} didn't take course, press enter, else type the grade achieved (0 to 10). ?")
+    print(f"If {name} didn't take course, press enter, else type the grade achieved (0 to 10). ?\n")
     for course in courses:
         while True:
             grade = input(f"Enter grade for {course}: ")
@@ -59,7 +59,7 @@ def add_student(students, courses):
                     print()
                     break
                 else:
-                    print("Wrong input. Try again.")
+                    print("Wrong input. Try again.\n")
                     continue
 
             if 0 <= grade <= 10:
@@ -67,7 +67,7 @@ def add_student(students, courses):
                     print()
                     break
             else:
-                print("Wrong input. Try again.")
+                print("Wrong input. Try again.\n")
 
 
     print_grades(students)
