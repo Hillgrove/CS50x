@@ -76,10 +76,8 @@ def import_data():
         for row in file_reader:
             name = row.pop("name")
             for key in row:
-                if key != "name":
-                    row[key] = int(row[key])
-            students.append(row)
-
+                row[key] = int(row[key])
+            students[name] = row
     return students
 
 
