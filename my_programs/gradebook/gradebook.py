@@ -45,6 +45,8 @@ def add_student():
         else:
             students.append("name"; name)
             break
+
+    
     print(students)
 
     # print_grades()
