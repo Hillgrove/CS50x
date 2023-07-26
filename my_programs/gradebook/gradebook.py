@@ -47,7 +47,8 @@ def add_student(students, courses):
             break
 
     for course in courses:
-        grade = input(f"Which grade did {name} get in {course}? ")
+        print(f"Which grade did {name} get in {course}? ")
+        input(")
         students[name][course] = grade
 
 
