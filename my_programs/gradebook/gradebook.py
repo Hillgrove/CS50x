@@ -46,6 +46,9 @@ def add_student():
             students.append({"name": name})
             break
 
+        for student in students:
+            if student["name"] == name:
+                
 
     print_grades()
     request_input()
