@@ -43,6 +43,7 @@ def add_student():
         for student in students:
             if student["name"] == name:
                 print("Student already in gradebook. Please try again.")
+                break
             else:
                 students.append({"name": name})
                 break
