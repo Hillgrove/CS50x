@@ -47,9 +47,7 @@ def add_student():
             break
 
 
-    print(students)
-
-    # print_grades()
+    print_grades()
     request_input()
 
 
