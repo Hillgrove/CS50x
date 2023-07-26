@@ -46,9 +46,9 @@ def add_student(students, classes):
             students[name] = {}
             break
 
-    for topic in classes:
+    for course in classes:
         grade = input(f"Which grade did {name} get in {class}? ")
-        students[name][topic] = grade
+        students[name][course] = grade
 
 
     print_grades(students)
