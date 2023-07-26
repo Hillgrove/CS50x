@@ -60,11 +60,14 @@ def add_student(students, courses):
                     break
                 else:
                     print("Wrong input. Try again.")
+                    continue
 
             if 0 <= grade <= 10:
                     students[name][course] = grade
                     print()
                     break
+            else:
+                print("Wrong input. Try again.")
 
 
     print_grades(students)
