@@ -81,7 +81,8 @@ def import_data():
 def print_grades():
     df = pd.DataFrame(students).T
     df = df.style.set_properties(**{"text-align": "center"})
-    print(df)
+    #print(df)
+    return df
 
 
 if __name__ == "__main__":
