@@ -18,7 +18,7 @@ def main():
 
 
 def request_input():
-    print("(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ")
+    print("(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ", end="")
     while True:
         choice = input().lower()
         if choice in ['p', 'a', 'r', 'g', 'q']:
