@@ -15,14 +15,14 @@ import pandas as pd
 
 def main():
     students, classes = import_data()
-    choice = request_input()
-    actions(choice)
+    choice = menu()
+    actions(choice, students, classes)
 
 
-def actions(choice):
+def actions(choice, students, classes):
     actions = {
-    'p': print_grades,
-    'a': add_student,
+    'p': lambda: print_grades(students),
+    'a': lambda: add_student(students, classes),
     # 'r': remove_student,
     # 'g': grade_average,
     # 'q': quit_program
@@ -32,7 +32,8 @@ def actions(choice):
     if action:
         action()
         print()
-        request_input()
+
+    menu()
 
 
 def add_student(students):
@@ -54,7 +55,7 @@ def add_student(students):
     request_input()
 
 
-def request_input():
+def menu():
     print("(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit")
     print("Choice: ", end="")
     while True:
