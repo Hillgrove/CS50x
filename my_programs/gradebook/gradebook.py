@@ -61,7 +61,7 @@ def import_data():
     return students
 
 
-def print__grades(students):
+def print_grades(students):
     df = pd.DataFrame(students)
     print(df)
 
