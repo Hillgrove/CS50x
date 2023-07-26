@@ -37,7 +37,7 @@ def actions(choice, students, classes):
 
 
 def add_student(students, classes):
-    print_grades()
+    print_grades(students)
     while True:
         name = input("Name of the student you want to add: ").title()
         if name in students:
@@ -52,7 +52,7 @@ def add_student(students, classes):
     #    print(f"")
 
 
-    request_input()
+    menu()
 
 
 def menu():
