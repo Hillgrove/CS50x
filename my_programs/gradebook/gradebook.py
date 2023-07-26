@@ -72,6 +72,7 @@ def request_input():
 
 
 def import_data():
+    global classes
     filename = sys.argv[1]
 
     with open(filename, "r") as file:
