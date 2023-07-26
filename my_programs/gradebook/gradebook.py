@@ -15,8 +15,10 @@ import pandas as pd
 def main():
     students = import_data()
 
-    df = pd.DataFrame(students)
-    print(df)
+    while True:
+        print(f")
+
+
 
 
 def import_data():
@@ -34,8 +36,9 @@ def import_data():
     return students
 
 
-def print_all_grades():
-    ...
+def print_all_grades(students):
+    df = pd.DataFrame(students)
+    print(df)
 
 if __name__ == "__main__":
     main()
