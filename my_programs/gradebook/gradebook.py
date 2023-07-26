@@ -11,26 +11,25 @@ import sys
 
 import pandas as pd
 
-actions = {
-    'p': print_grades,
-    'a': add_student,
-    'r': remove_student,
-    'g': grade_average,
-    'q': quit_program
-}
 
+students = []
 
 def main():
     students = import_data()
     choice = request_input()
-    action = actions.get(choice)
-
-    if action:
-        action()
-    else:
-        print("invalid choice.")
+    action(choice)
 
 
+def action(choice):
+    actions = {
+    'p': print_grades(),
+    # 'a': add_student,
+    # 'r': remove_student,
+    # 'g': grade_average,
+    # 'q': quit_program
+    }
+
+    actions.get(choice)
 
 
 def request_input():
@@ -61,9 +60,10 @@ def import_data():
     return students
 
 
-def print_grades(students):
+def print_grades():
     df = pd.DataFrame(students)
     print(df)
+
 
 if __name__ == "__main__":
     main()
