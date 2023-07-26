@@ -24,10 +24,15 @@ def main():
                     row[key] = int(row[key])
             students.append(row)
 
+    """
     for student in students:
         for class_name, grade in student.items():
             print(f"{class_name}: {grade}")
         print("\n")
+    """
+
+    df = pd.DataFrame(students)
+    print(df)
 
 
 if __name__ == "__main__":
