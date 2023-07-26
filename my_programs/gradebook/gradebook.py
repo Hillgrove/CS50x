@@ -43,10 +43,10 @@ def add_student():
         if name in students:
             print("Student already in gradebook. Please try again.")
         else:
-            students.append("name"; name)
+            students.append({}"name": name)
             break
 
-    
+
     print(students)
 
     # print_grades()
