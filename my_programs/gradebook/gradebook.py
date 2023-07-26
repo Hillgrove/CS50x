@@ -76,6 +76,7 @@ def import_data():
 
     with open(filename, "r") as file:
         file_reader = csv.DictReader(file)
+        classes = file_reader.fieldnames
         for row in file_reader:
             name = row.pop("name")
             for key in row:
