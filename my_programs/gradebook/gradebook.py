@@ -9,6 +9,8 @@ average grade of the class.
 import csv
 import sys
 
+import pandas as pd
+
 
 def main():
     students = []
