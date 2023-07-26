@@ -17,7 +17,16 @@ def main():
 
     while True:
         try:
-            choice = input(f"(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ")
+            choice = input(f"(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ").lower()
+            if choice in ['p', 'a', 'r', 'g', 'q']:
+                break
+        except ValueError:
+            print("Invalid input. Please try again")
+        else:
+            print("Invalid choice. Please select from menu.")
+
+
+
 
 
 def import_data():
