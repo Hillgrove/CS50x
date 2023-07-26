@@ -51,8 +51,8 @@ def add_student():
 
     # print_grades()
 
-    for class in students[name]:
-        print(f"")
+    # for class in students[name]:
+    #    print(f"")
 
 
     request_input()
@@ -80,7 +80,6 @@ def import_data():
         for row in file_reader:
             name = row.pop("name")
             for key in row:
-                classes.append(key)
                 row[key] = int(row[key])
             students[name] = row
     return students
