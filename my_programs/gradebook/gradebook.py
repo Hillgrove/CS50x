@@ -44,9 +44,9 @@ def add_student(students, courses):
             print("Student already in gradebook. Please try again.")
         else:
             students[name] = {}
+            print()
             break
 
-    print()
     for course in courses:
         print(f"If {name} didn't take {course}, press enter, else type the grade achieved (0 to 10). ?")
         while True:
