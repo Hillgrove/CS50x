@@ -23,7 +23,7 @@ def main():
 
 def action(choice):
     actions = {
-    'p': print_grades(),
+    'p': print_grades,
     # 'a': add_student,
     # 'r': remove_student,
     # 'g': grade_average,
