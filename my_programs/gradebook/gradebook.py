@@ -72,7 +72,6 @@ def request_input():
 
 
 def import_data():
-    students = {}
     filename = sys.argv[1]
 
     with open(filename, "r") as file:
