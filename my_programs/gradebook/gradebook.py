@@ -15,6 +15,7 @@ import pandas as pd
 students = []
 
 def main():
+    global students
     students = import_data()
     choice = request_input()
     action(choice)
