@@ -16,10 +16,9 @@ def main():
 
     with open(filename, "r") as file:
         file_reader = csv.DictReader(file)
-        for row in file_reader:
-            row["math"] = int(row["math"])
-            row["english"] = int(row["english"])
-            row["computer science"] = int(row["computer science"])
+        for row, key in file_reader:
+            if row[key] != "name":
+                row[key] = int(row[key])
             students.append(row)
 
     for student in students:
