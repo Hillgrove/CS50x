@@ -39,7 +39,6 @@ def actions(choice):
 
 def add_student():
     print_grades()
-    print()
     while True:
         name = input("Name of the student you want to add: ").title()
         if name in students:
@@ -48,9 +47,7 @@ def add_student():
             students[name] = {}
             break
 
-
-
-    print()
+    print_grades()
     request_input()
 
 
@@ -85,6 +82,7 @@ def print_grades():
     print()
     df = pd.DataFrame(students).T
     print(df)
+    print()
 
 
 
