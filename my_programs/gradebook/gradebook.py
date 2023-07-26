@@ -42,7 +42,7 @@ def add_student():
     print()
     while True:
         name = input("Name of the student you want to add: ").title()
-        if any(student["name"] == name for student in students):
+        if name in students:
             print("Student already in gradebook. Please try again.")
         else:
             students.append({"name": name})
