@@ -14,8 +14,7 @@ import pandas as pd
 
 
 def main():
-    students = import_data()
-    classes = []
+    students, classes = import_data()
     print(classes)
     choice = request_input()
     actions(choice)
@@ -70,7 +69,9 @@ def request_input():
 
 
 def import_data():
-    global classes
+    students = {}
+    classes = []
+
     filename = sys.argv[1]
 
     with open(filename, "r") as file:
@@ -81,7 +82,8 @@ def import_data():
             for key in row:
                 row[key] = int(row[key])
             students[name] = row
-    return students
+
+    return students, classes
 
 
 def print_grades():
