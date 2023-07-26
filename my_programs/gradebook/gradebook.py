@@ -18,10 +18,10 @@ def main():
     global students
     students = import_data()
     choice = request_input()
-    action(choice)
+    actions(choice)
 
 
-def action(choice):
+def actions(choice):
     actions = {
     'p': print_grades,
     # 'a': add_student,
@@ -30,7 +30,11 @@ def action(choice):
     # 'q': quit_program
     }
 
-    actions.get(choice)
+    action = actions.get(choice)
+    if action:
+        action()
+        print()
+        request_input()
 
 
 def request_input():
