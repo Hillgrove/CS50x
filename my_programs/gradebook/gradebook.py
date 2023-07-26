@@ -50,8 +50,9 @@ def add_student(students, courses):
     for course in courses:
         print(f"If {name} didn't take {course}, press enter, else type the grade achieved (0 to 10). ?")
         while True:
+            grade = input("Enter grade: ")
             try:
-                grade = int(input("Enter grade: "))
+                grade = int(grade)
                 if 0 <= grade <= 10:
                     students[name][course] = grade
                     print()
