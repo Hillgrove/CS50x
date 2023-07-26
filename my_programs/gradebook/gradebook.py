@@ -16,7 +16,7 @@ def main():
     students = import_data()
 
     while True:
-        print(f")
+        choice = input(f"(P)rint grades, (A)dd student, (R)emove student, (C)alculate average grade of a class\n")
 
 
 
