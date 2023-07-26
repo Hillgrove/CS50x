@@ -36,7 +36,7 @@ def actions(choice, students, classes):
     menu()
 
 
-def add_student(students):
+def add_student(students, classes):
     print_grades()
     while True:
         name = input("Name of the student you want to add: ").title()
