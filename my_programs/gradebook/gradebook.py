@@ -13,11 +13,12 @@ import pandas as pd
 
 
 students = {}
-keys = []
+classes = []
 
 def main():
     global students
     students = import_data()
+    print(classes)
     choice = request_input()
     actions(choice)
 
@@ -79,6 +80,7 @@ def import_data():
         for row in file_reader:
             name = row.pop("name")
             for key in row:
+                classes.append(key)
                 row[key] = int(row[key])
             students[name] = row
     return students
