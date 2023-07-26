@@ -12,7 +12,7 @@ import sys
 import pandas as pd
 
 
-students = []
+students = {}
 
 def main():
     global students
@@ -47,7 +47,12 @@ def add_student():
             students[name] = {}
             break
 
-    print_grades()
+    # print_grades()
+
+    for class in students[name]:
+        print(f")
+
+
     request_input()
 
 
