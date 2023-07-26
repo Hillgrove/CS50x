@@ -85,7 +85,7 @@ def import_data():
     return students, classes
 
 
-def print_grades():
+def print_grades(students):
     print()
     df = pd.DataFrame(students).T
     print(df)
