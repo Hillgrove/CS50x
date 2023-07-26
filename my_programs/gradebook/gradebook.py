@@ -24,7 +24,7 @@ def main():
 def actions(choice):
     actions = {
     'p': print_grades,
-    # 'a': add_student,
+    'a': add_student,
     # 'r': remove_student,
     # 'g': grade_average,
     # 'q': quit_program
@@ -35,6 +35,13 @@ def actions(choice):
         action()
         print()
         request_input()
+
+
+def add_student():
+    name = input("Name of the student you want to add: ", end="")
+    students.append(name)
+    print_grades()
+    request_input()
 
 
 def request_input():
