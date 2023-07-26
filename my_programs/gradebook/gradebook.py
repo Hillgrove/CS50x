@@ -12,12 +12,10 @@ import sys
 import pandas as pd
 
 
-students = {}
-classes = []
 
 def main():
-    global students
     students = import_data()
+    classes = []
     print(classes)
     choice = request_input()
     actions(choice)
