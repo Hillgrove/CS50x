@@ -15,7 +15,6 @@ import pandas as pd
 
 def main():
     students, classes = import_data()
-    print(classes)
     choice = request_input()
     actions(choice)
 
