@@ -40,11 +40,12 @@ def actions(choice):
 def add_student():
     name = input("Name of the student you want to add: ")
     while True:
-        if name in students:
-            print("Student already in gradebook. Please try again.")
-        else:
-            students.append({"name": name})
-            break
+        for student in students:
+            if student[name] == name:
+                print("Student already in gradebook. Please try again.")
+            else:
+                students.append({"name": name})
+                break
 
 
     print(students)
