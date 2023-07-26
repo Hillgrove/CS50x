@@ -16,7 +16,7 @@ def main():
     students = import_data()
     choice = request_input()
 
-    
+
 
 
 def request_input():
@@ -47,7 +47,7 @@ def import_data():
     return students
 
 
-def print_all_grades(students):
+def print__grades(students):
     df = pd.DataFrame(students)
     print(df)
 
