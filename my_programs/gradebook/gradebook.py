@@ -38,6 +38,7 @@ def actions(choice):
 
 
 def add_student():
+    print(students)
     print()
     while True:
         name = input("Name of the student you want to add: ").title()
