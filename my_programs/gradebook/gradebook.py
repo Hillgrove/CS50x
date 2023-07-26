@@ -16,17 +16,20 @@ def main():
     students = import_data()
     choice = request_input()
 
+    
+
 
 def request_input():
-    print("(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit: ", end="")
+    print("(P)rint grades, (A)dd student, (R)emove student, (G)rade averages, (Q)uit")
+    print("Choice: ", end="")
     while True:
         choice = input().lower()
         if choice in ['p', 'a', 'r', 'g', 'q']:
             break
         else:
             print("Invalid choice. Please select from options.")
+            print("Choice: ", end="")
     return choice
-
 
 
 def import_data():
