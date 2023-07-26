@@ -70,13 +70,12 @@ def request_input():
 
 def import_data():
     students = {}
-    classes = []
 
     filename = sys.argv[1]
 
     with open(filename, "r") as file:
         file_reader = csv.DictReader(file)
-        classes = file_reader.fieldnames
+        classes = [key for key in file_reader.fieldnames if key != "name"]
         for row in file_reader:
             name = row.pop("name")
             for key in row:
