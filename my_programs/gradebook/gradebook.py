@@ -48,7 +48,7 @@ def add_student():
 
         for student in students:
             if student["name"] == name:
-                
+
 
     print_grades()
     request_input()
@@ -68,12 +68,13 @@ def request_input():
 
 
 def import_data():
-    students = []
+    students = {}
     filename = sys.argv[1]
 
     with open(filename, "r") as file:
         file_reader = csv.DictReader(file)
         for row in file_reader:
+            name = row.pop("name")
             for key in row:
                 if key != "name":
                     row[key] = int(row[key])
