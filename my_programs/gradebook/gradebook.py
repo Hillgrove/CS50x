@@ -41,16 +41,16 @@ def add_student(students, courses):
     while True:
         name = input("Name of the student you want to add: ").title()
         if name in students:
-            print("Student already in gradebook. Please try again.")
+            print("Student already in gradebook. Please try again.\n")
         else:
             students[name] = {}
             print()
             break
 
-    print(f"If {name} didn't take course, press enter, else type the grade achieved (0 to 10). ?\n")
+    print(f"If {name} didn't take course, press enter, else type the grade achieved.\n")
     for course in courses:
         while True:
-            grade = input(f"Enter grade for {course}: ")
+            grade = input(f"Enter grade for {course} (0 - 10): ")
             try:
                 grade = int(grade)
             except ValueError:
@@ -111,7 +111,7 @@ def print_grades(students):
     print()
     df = pd.DataFrame(students).T
     print(df)
-    print()
+    # print()
 
 
 
