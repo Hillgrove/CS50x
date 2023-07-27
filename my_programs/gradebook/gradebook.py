@@ -15,8 +15,10 @@ import pandas as pd
 
 def main():
     students, courses = import_data()
-    choice = menu()
-    actions(choice, students, courses)
+
+    while True:
+        choice = menu()
+        actions(choice, students, courses)
 
 
 def actions(choice, students, courses):
@@ -32,8 +34,6 @@ def actions(choice, students, courses):
     if action:
         action()
         print()
-
-    menu()
 
 
 def add_student(students, courses):
@@ -74,9 +74,6 @@ def add_student(students, courses):
 
     # for class in students[name]:
     #    print(f"")
-
-
-    menu()
 
 
 def menu():
