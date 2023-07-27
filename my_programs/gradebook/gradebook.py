@@ -108,10 +108,9 @@ def import_data():
 
 
 def print_grades(students):
-    print()
     df = pd.DataFrame(students).T
     print(df)
-    # print()
+    print()
 
 
 
