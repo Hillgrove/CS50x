@@ -86,6 +86,7 @@ def menu():
         else:
             print("Invalid choice. Please select from options.")
             print("Choice: ", end="")
+    print()
     return choice
 
 
