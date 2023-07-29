@@ -58,9 +58,12 @@ def add_student(students, courses):
         elif name.isalpha() == False:
             print("Name not valid. Please try again.\n")
         else:
-            students[name] = {}
+            del students[name]
             print()
             break
+
+    print()
+    print_grades(students)
 
     print(f"If {name} didn't take course, press enter, else type the grade achieved.\n")
     for course in courses:
