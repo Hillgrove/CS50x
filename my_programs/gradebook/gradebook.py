@@ -27,12 +27,17 @@ def actions(choice, students, courses):
     'a': lambda: add_student(students, courses),
     'r': lambda: remove_student(students),
     'g': lambda: grade_average(students, courses),
-    # 'q': quit_program
+    'q': lambda: quit_program()
     }
 
     action = actions.get(choice)
     if action:
         action()
+
+def quit_program():
+    print("Quitting Gradebook.\n")
+    sys.exit()
+
 
 def grade_average(students, courses):
     print_grades(students)
