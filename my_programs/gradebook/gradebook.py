@@ -25,7 +25,7 @@ def actions(choice, students, courses):
     actions = {
     'p': lambda: print_grades(students),
     'a': lambda: add_student(students, courses),
-    'r': lambda: remove_student(students, courses),
+    'r': lambda: remove_student(students),
     # 'g': grade_average,
     # 'q': quit_program
     }
@@ -35,7 +35,7 @@ def actions(choice, students, courses):
         action()
 
 
-def remove_student(students, courses):
+def remove_student(students):
     print_grades(students)
     while True:
         name = input("Name of the student you want to remove: ").title()
