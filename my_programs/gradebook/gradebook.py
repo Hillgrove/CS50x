@@ -33,7 +33,6 @@ def actions(choice, students, courses):
     action = actions.get(choice)
     if action:
         action()
-        print()
 
 
 def add_student(students, courses):
@@ -44,7 +43,6 @@ def add_student(students, courses):
             print("Student already in gradebook. Please try again.\n")
         else:
             students[name] = {}
-            print()
             break
 
     print(f"If {name} didn't take course, press enter, else type the grade achieved.\n")
@@ -56,7 +54,6 @@ def add_student(students, courses):
             except ValueError:
                 if grade == "":
                     students[name][course] = grade
-                    print()
                     break
                 else:
                     print("Wrong input. Try again.\n")
@@ -64,7 +61,6 @@ def add_student(students, courses):
 
             if 0 <= grade <= 10:
                     students[name][course] = grade
-                    print()
                     break
             else:
                 print("Wrong input. Try again.\n")
@@ -86,7 +82,6 @@ def menu():
         else:
             print("Invalid choice. Please select from options.")
             print("Choice: ", end="")
-    print()
     return choice
 
 
@@ -111,7 +106,6 @@ def import_data():
 def print_grades(students):
     df = pd.DataFrame(students).T
     print(df)
-    print()
 
 
 
