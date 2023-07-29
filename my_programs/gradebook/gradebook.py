@@ -54,7 +54,7 @@ def grade_average(students, courses):
 
     average_grade = additive_grade / course_count
 
-    print(f"The average grade for {name} is {average_grade}.\n")
+    print(f"The average grade for {name} is {average_grade:.2f}.\n")
 
 
 
