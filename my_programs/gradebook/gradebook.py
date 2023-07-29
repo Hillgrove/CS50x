@@ -78,6 +78,7 @@ def menu():
     while True:
         choice = input().lower()
         if choice in ['p', 'a', 'r', 'g', 'q']:
+            print()
             break
         else:
             print("Invalid choice. Please select from options.\n")
@@ -106,6 +107,7 @@ def import_data():
 def print_grades(students):
     df = pd.DataFrame(students).T
     print(df)
+    print()
 
 
 
