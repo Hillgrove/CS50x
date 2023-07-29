@@ -80,7 +80,7 @@ def menu():
         if choice in ['p', 'a', 'r', 'g', 'q']:
             break
         else:
-            print("Invalid choice. Please select from options.")
+            print("Invalid choice. Please select from options.\n")
             print("Choice: ", end="")
     return choice
 
