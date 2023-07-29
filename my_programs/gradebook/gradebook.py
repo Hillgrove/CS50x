@@ -26,13 +26,36 @@ def actions(choice, students, courses):
     'p': lambda: print_grades(students),
     'a': lambda: add_student(students, courses),
     'r': lambda: remove_student(students),
-    # 'g': grade_average,
+    'g': lambda: grade_average(students, courses),
     # 'q': quit_program
     }
 
     action = actions.get(choice)
     if action:
         action()
+
+def grade_average(students, courses):
+    print_grades(students)
+    while True:
+        name = input("Name of the student you want to see grade averages for: ").title()
+        if name not in students:
+            print("Student not in gradebook. Please try again.\n")
+        elif name.isalpha() == False:
+            print("Name not valid. Please try again.\n")
+        else:
+            break
+
+    course_count = 0
+    additive_grade = 0
+    for course in courses:
+        if students[name][course] != "":
+            course_count += 1
+            additive_grade += students[name][course]
+
+    average_grade = additive_grade / course_count
+
+    print(f"The average grade for {name} is {average_grade}.\n")
+
 
 
 def remove_student(students):
