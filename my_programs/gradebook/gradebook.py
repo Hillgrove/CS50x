@@ -45,7 +45,6 @@ def remove_student(students):
             print("Name not valid. Please try again.\n")
         else:
             del students[name]
-            print()
             break
 
     print()
