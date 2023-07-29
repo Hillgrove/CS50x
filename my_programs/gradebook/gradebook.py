@@ -65,11 +65,8 @@ def add_student(students, courses):
             else:
                 print("Wrong input. Try again.\n")
 
-
+    print()
     print_grades(students)
-
-    # for class in students[name]:
-    #    print(f"")
 
 
 def menu():
