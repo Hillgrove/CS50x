@@ -25,7 +25,7 @@ def actions(choice, students, courses):
     actions = {
     'p': lambda: print_grades(students),
     'a': lambda: add_student(students, courses),
-    # 'r': remove_student,
+    'r': lambda: remove_student(students, courses),
     # 'g': grade_average,
     # 'q': quit_program
     }
@@ -33,6 +33,20 @@ def actions(choice, students, courses):
     action = actions.get(choice)
     if action:
         action()
+
+
+def remove_student(students, courses):
+    print_grades(students)
+    while True:
+        name = input("Name of the student you want to remove: ").title()
+        if name not in students:
+            print("Student not in gradebook. Please try again.\n")
+        elif name.isalpha() == False:
+            print("Name not valid. Please try again.\n")
+        else:
+            students[name] = {}
+            print()
+            break
 
 
 def add_student(students, courses):
