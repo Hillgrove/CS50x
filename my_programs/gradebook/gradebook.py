@@ -45,6 +45,7 @@ def add_student(students, courses):
             print("Name not valid. Please try again.\n")
         else:
             students[name] = {}
+            print()
             break
 
     print(f"If {name} didn't take course, press enter, else type the grade achieved.\n")
