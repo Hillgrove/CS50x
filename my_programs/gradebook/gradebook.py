@@ -41,6 +41,8 @@ def add_student(students, courses):
         name = input("Name of the student you want to add: ").title()
         if name in students:
             print("Student already in gradebook. Please try again.\n")
+        elif name.isalpha() == False:
+            print("Name not valid. Please try again.\n")
         else:
             students[name] = {}
             break
