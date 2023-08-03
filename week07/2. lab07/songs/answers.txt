@@ -1,11 +1,10 @@
 If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
-    1. query their top100 list for average energy, valence, and danceability
+    1. query their top100 list for average energy, valence, and danceability.
     2. use those 3 values as indexes/variables to a color lookup. Maybe energy goes from yellow to green and depending on the average it is more yellow or green.
 
 Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener:
-    1. There can be more than 1 user of an account, thus skewing the results
-    2. Because audio aura is some new-age hoax that has nothing to do with reality
-    3.
+    1. There can be more than 1 user of an account, thus skewing the results.
+    2. Because audio aura is some new-age hoax that has nothing to do with reality.
 
 What better ways of calculating this aura would you propose?
     1. I wouldn't.
