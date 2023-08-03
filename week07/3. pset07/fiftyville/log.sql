@@ -196,7 +196,7 @@ WHERE
 
 
 SELECT
-  *
+  name as caller_name, caller, receiver
 FROM
   phone_calls
   JOIN people ON phone_calls.caller = people.phone_number
