@@ -12,3 +12,8 @@ airports              crime_scene_reports   people
 atm_transactions      flights               phone_calls
 bakery_security_logs  interviews
 bank_accounts         passengers
+
+
+======================= CLUES ===========================
+date: July 28, 2021
+place: Humphrey Street
