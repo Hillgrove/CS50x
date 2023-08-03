@@ -1,6 +1,6 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
--- Clues adress and time
+-- Finds crimereports
 SELECT * FROM crime_scene_reports WHERE year = 2021 AND month = 7 AND day = 28 AND street LIKE "Humphrey Street";
 /*
 Knowledge gained:
@@ -10,6 +10,7 @@ Knowledge gained:
     all reports mentions bakery
  */
 
+-- Finds interviews mentioning "bakery"
 SELECT * from interviews WHERE year = 2021 AND month = 7 AND day = 28 AND transcript LIKE "%bakery%";
 /*
 Knowledge gained:
@@ -20,3 +21,5 @@ Knowledge gained:
     Person on the other end to purchase ticket
 */
 
+-- Finds all withdrawals the given day and location
+SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location LIKE "Leggett Street";
