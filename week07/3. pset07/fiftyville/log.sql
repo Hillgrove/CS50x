@@ -179,3 +179,17 @@ FROM
   JOIN people ON people.passport_number = passengers.passport_number
 WHERE
   people.name = "Bruce";
+
+
+-- Who is the accomplice?
+SELECT
+  *
+FROM
+  phone_calls
+  JOIN people ON phone_calls.receiver = people.phone_number
+WHERE
+  YEAR = 2021
+  AND MONTH = 7
+  AND DAY = 28
+  AND duration < 60
+  AND phone_calls.caller = "Bruce";
