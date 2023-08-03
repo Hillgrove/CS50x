@@ -183,10 +183,13 @@ WHERE
 
 -- Who is the accomplice?
 SELECT
+  -- caller, name AS receiver_name, receiver
   *
 FROM
-  phone_calls
-  JOIN people AS caller_name ON phone_calls.receiver = people.phone_number
+  phone_calls AS pc1
+  phone_calls AS pc2
+  JOIN people ON pc1.caller = people.phone_number
+  JOIN people ON pc2.receiver = people.phone_number
 WHERE
   YEAR = 2021
   AND MONTH = 7
