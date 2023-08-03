@@ -196,12 +196,14 @@ WHERE
 
 
 SELECT
-  name as caller_name, caller, receiver
+  p1.name AS caller_name, p2.name AS receiver_name
 FROM
   phone_calls
-  JOIN people ON phone_calls.caller = people.phone_number
+  JOIN people p1 ON phone_calls.caller = p1.phone_number
+  JOIN people p2 ON phone_calls.receiver = p2.phone_number
 WHERE
   YEAR = 2021
   AND MONTH = 7
   AND DAY = 28
-  AND duration < 60;
+  AND duration < 60
+  AND caller_name = "Bruce";
