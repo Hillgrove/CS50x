@@ -5,3 +5,10 @@
 
 SELECT name
 FROM people
+WHERE (
+    SELECT id
+    FROM movies
+    JOIN stars ON movies.id = stars.movie_id
+    JOIN people ON stars.person_id = people.id
+    WHERE people.name LIKE "Kevin Bacon" AND people.birth = 1958
+)
