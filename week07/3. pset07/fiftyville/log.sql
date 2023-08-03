@@ -97,11 +97,7 @@ WHERE
 */
 
 
-/* Finds the names of those who:
-- have a car that existed the parkinglot between 10:15 and 10:25
-- made made a withdrawal the given day and location
-- made a phonecall less than 60 seconds on the given day
-*/
+-- Finds the names of those who made a phonecall less that 60 seconds long on the given day
 SELECT
   name
 FROM
@@ -112,3 +108,76 @@ WHERE
   AND MONTH = 7
   AND DAY = 28
   AND duration < 60
+/*
++---------+
+|  name   |
++---------+
+| Sofia   |
+| Kelsey  |
+| Bruce   |
+| Kelsey  |
+| Taylor  |
+| Diana   |
+| Carina  |
+| Kenny   |
+| Benista |
++---------+
+*/
+
+
+/* Finds the names of those who:
+- have a car that existed the parkinglot between 10:15 and 10:25
+- made made a withdrawal the given day and location
+- made a phonecall less than 60 seconds on the given day
+*/
+SELECT
+  name
+FROM
+  people
+  JOIN bank_accounts ON people.id = bank_accounts.person_id
+  JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
+WHERE
+  YEAR = 2021
+  AND MONTH = 7
+  AND DAY = 28
+  AND atm_location = "Leggett Street"
+  AND transaction_type = "withdraw"
+
+INTERSECT
+
+SELECT
+  people.name
+FROM
+  people
+  JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
+WHERE
+  YEAR = 2021
+  AND MONTH = 7
+  AND DAY = 28
+  AND HOUR = 10
+  AND MINUTE > 15
+  AND MINUTE < 25
+  AND activity = "exit"
+
+INTERSECT
+
+SELECT
+  name
+FROM
+  phone_calls
+  JOIN people ON phone_calls.caller = people.phone_number
+WHERE
+  YEAR = 2021
+  AND MONTH = 7
+  AND DAY = 28
+  AND duration < 60;
+/*
++-------+
+| name  |
++-------+
+| Bruce |
+| Diana |
++-------+
+*/
+
+
