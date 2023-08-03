@@ -181,7 +181,10 @@ FROM
   JOIN airports ON flights.origin_airport_id = airports.id
 WHERE
   flights.id = (
-  city LIKE "fiftyville"
+    SELECT flights.id
+    FROM flights
+    WHERE
+
   AND year = 2021
   AND month = 7
   AND day = 29
