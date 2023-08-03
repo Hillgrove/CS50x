@@ -38,7 +38,8 @@ SELECT DISTINCT account_number FROM atm_transactions WHERE year = 2021 AND month
 
 SELECT name
 FROM people
-JOIN bank_accounts ON people
+JOIN bank_accounts ON bank_accounts.person_id = people.id
+JOIN atm_transactions ON people.id = 
 
 
 /*
