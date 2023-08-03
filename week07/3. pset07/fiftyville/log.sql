@@ -68,3 +68,9 @@ SELECT name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_i
 +-------+
 */
 
+SELECT *
+FROM phone_calls
+JOIN people ON phone_calls.
+WHERE year = 2021
+AND month = 7
+AND day = 28;
