@@ -61,6 +61,7 @@ SELECT people.name FROM people JOIN bakery_security_logs ON people.license_plate
     - made a phonecall less than 60 seconds on the given day
  */
 SELECT name FROM phone_calls JOIN people ON phone_calls.caller = people.phone_number WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60 AND name IN ("Bruce", "Diana", "Iman", "Luca");
+
 /*
 +-------+
 | name  |
