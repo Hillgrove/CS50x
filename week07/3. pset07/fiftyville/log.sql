@@ -175,5 +175,6 @@ SELECT
 FROM
   airports
   JOIN flights ON airports.id = flights.destination_airport_id
+  JOIN passengers
 WHERE
-  
+
