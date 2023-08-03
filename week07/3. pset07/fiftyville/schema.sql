@@ -1,0 +1,1 @@
+wget https://cdn.cs50.net/2022/fall/psets/7/fiftyville.zip
