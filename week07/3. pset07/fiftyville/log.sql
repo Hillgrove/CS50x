@@ -23,7 +23,7 @@ Knowledge gained:
 
 -- Finds all withdrawals the given day and location
 SELECT DISTINCT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
-+----------------+
++----------------+ 
 | account_number |
 +----------------+
 | 28500762       |
@@ -36,10 +36,20 @@ SELECT DISTINCT account_number FROM atm_transactions WHERE year = 2021 AND month
 | 26013199       |
 +----------------+
 
-SELECT name
-FROM people
-JOIN bank_accounts ON bank_accounts.person_id = people.id
-JOIN atm_transactions ON people.id = 
++---------+
+|  name   |
++---------+
+| Bruce   |
+| Diana   |
+| Brooke  |
+| Kenny   |
+| Iman    |
+| Luca    |
+| Taylor  |
+| Benista |
++---------+
+
+SELECT people.name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_id JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number WHERE atm_transactions.year = 2021 AND atm_transactions.month = 7 AND atm_transactions.day = 28 AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
 
 
 /*
