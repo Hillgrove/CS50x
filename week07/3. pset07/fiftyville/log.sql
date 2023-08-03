@@ -173,7 +173,7 @@ WHERE
 
 
 SELECT
-  p1.name AS caller_name, p2.name AS receiver_name, *
+  p1.name AS caller_name, p2.name AS receiver_name
 FROM
   phone_calls
   JOIN people p1 ON phone_calls.caller = p1.phone_number
