@@ -55,17 +55,16 @@ SELECT people.name FROM people JOIN bakery_security_logs ON people.license_plate
 +---------+
 */
 
--- Finds the names of those who both have a car that existed the parkinglot between 10:15 and 10:25 and whom made a withdrawal the given day and location
-SELECT name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_id JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw" INTERSECT SELECT people.name FROM people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";
+/* Finds the names of those who:
+    - have a car that existed the parkinglot between 10:15 and 10:25
+    - made made a withdrawal the given day and location
+    - made a phonecall less than 60 seconds on the given day
+ */
+SELECT name FROM phone_calls JOIN people ON phone_calls.caller = people.phone_number WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60 AND name IN ("Bruce", "Diana", "Iman", "Luca");
 /*
 +-------+
 | name  |
 +-------+
 | Bruce |
 | Diana |
-| Iman  |
-| Luca  |
 +-------+
-*/
-
-SELECT * FROM phone_calls JOIN people ON phone_calls.caller = people.phone_number WHERE year = 2021 AND month = 7 AND day = 28 AND name IN ("Bruce", "Diana", "Iman", "Luca");
