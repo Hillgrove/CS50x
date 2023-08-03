@@ -188,8 +188,8 @@ SELECT
 FROM
   phone_calls AS pc1
   phone_calls AS pc2
-  JOIN people ON pc1.caller = people.phone_number
-  JOIN people ON pc2.receiver = people.phone_number
+  JOIN people AS p1 ON pc1.caller = p1.phone_number
+  JOIN people AS p2 ON pc2.receiver = p2.phone_number
 WHERE
   YEAR = 2021
   AND MONTH = 7
