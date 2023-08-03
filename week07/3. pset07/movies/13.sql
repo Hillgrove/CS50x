@@ -5,8 +5,3 @@
 
 SELECT name
 FROM people
-JOIN stars s1 ON people.id = s1.person_id
-JOIN movies m1 ON s1.movie_id = m1.id
-JOIN stars s2 ON people.id = s2.person_id
-JOIN movies m2 ON s2.person_id = m2.id
-WHERE people.name LIKE "Kevin Bacon" AND people.birth = 1958
