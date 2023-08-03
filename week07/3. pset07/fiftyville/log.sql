@@ -22,8 +22,9 @@ Knowledge gained:
 */
 
 -- Finds all withdrawals the given day and location
-SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location LIKE "Leggett Street" AND transaction_type LIKE "Withdraw";
+SELECT DISTINCT account_number, amount FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location LIKE "Leggett Street" AND transaction_type LIKE "Withdraw";
 /*
 Knowledge gained:
-list of account numbers
+    list of account numbers and amount withdrawn
 */
+
