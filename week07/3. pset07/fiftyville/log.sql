@@ -9,7 +9,6 @@ WHERE
   AND MONTH = 7
   AND DAY = 28
   AND street = "Humphrey Street";
-
 /*
 Knowledge gained:
 reportID is 295
@@ -17,6 +16,8 @@ theft done at 10:15am
 3 witnesses
 all reports mentions bakery
 */
+
+
 -- Finds interviews mentioning "bakery"
 SELECT
   *
@@ -27,7 +28,6 @@ WHERE
   AND MONTH = 7
   AND DAY = 28
   AND transcript LIKE "%bakery%";
-
 /*
 Knowledge gained:
 within 10 mins of theft, thief drove away from parking lot
@@ -36,6 +36,8 @@ Thief called someone for less than a minute while leaving the bakery
 Thief planning to take earliest flight out of Fiftyville tomorrow
 Person on the other end to purchase ticket
 */
+
+
 -- Finds names of all who made a withdrawal the given day and location
 SELECT
   name
@@ -49,7 +51,6 @@ WHERE
   AND DAY = 28
   AND atm_location = "Leggett Street"
   AND transaction_type = "withdraw";
-
 /*
 +---------+
 |  name   |
@@ -64,6 +65,8 @@ WHERE
 | Benista |
 +---------+
 */
+
+
 -- Finds the names of all who owns a car that exited the parkinglot between 10:15 and 10:25
 SELECT
   people.name
@@ -78,7 +81,6 @@ WHERE
   AND MINUTE > 15
   AND MINUTE < 25
   AND activity = "exit";
-
 /*
 +---------+
 |  name   |
@@ -93,6 +95,8 @@ WHERE
 | Kelsey  |
 +---------+
 */
+
+
 /* Finds the names of those who:
 - have a car that existed the parkinglot between 10:15 and 10:25
 - made made a withdrawal the given day and location
@@ -108,14 +112,7 @@ WHERE
   AND MONTH = 7
   AND DAY = 28
   AND duration < 60
-  /*
-  +-------+
-  | name  |
-  +-------+
-  | Bruce |
-  | Diana |
-  +-------+
-  */
+
 SELECT
   name
 FROM
