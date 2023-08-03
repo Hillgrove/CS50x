@@ -186,7 +186,7 @@ SELECT
 FROM
   flights
   JOIN airports ON flights.origin_airport_id = airports.id
-  JOIN people ON 
+  JOIN passengers ON 
 WHERE
   city LIKE "fiftyville"
   AND year = 2021
