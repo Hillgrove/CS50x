@@ -28,3 +28,9 @@ Knowledge gained:
     list of account numbers and amount withdrawn
 */
 
+-- Finds all license plates that exited the parkinglot between 10:15 and 10:25
+SELECT license_plate FROM bakery_security_logs WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";/*
+Knowledge gained:
+    list of license plates
+*/
+
