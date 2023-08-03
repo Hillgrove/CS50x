@@ -177,7 +177,7 @@ SELECT
 FROM
   phone_calls
   JOIN people p1 ON phone_calls.caller = p1.phone_number
-  JOIN people p2 ON phone_calls.caller = p2.phone_number
+  JOIN people p2 ON phone_calls.receiver = p2.phone_number
 WHERE
   YEAR = 2021
   AND MONTH = 7
