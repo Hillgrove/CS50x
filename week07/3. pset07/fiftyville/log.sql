@@ -148,11 +148,12 @@ WHERE
 INTERSECT
 
 SELECT
-  people.name as caller_name
-  
+  p1.name as caller_name
+  p2.name as receiver_name
 FROM
-  people
-  JOIN passengers ON people.passport_number = passengers.passport_number
+  people AS p1
+  people AS
+  JOIN passengers ON p1.passport_number = passengers.passport_number
   JOIN flights ON passengers.flight_id = flights.id
   JOIN airports ON flights.origin_airport_id = airports.id
 WHERE
