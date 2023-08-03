@@ -21,21 +21,8 @@ Knowledge gained:
     Person on the other end to purchase ticket
 */
 
--- Finds all withdrawals the given day and location
+-- Finds names of all who made a withdrawal the given day and location
 SELECT DISTINCT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
-+----------------+ 
-| account_number |
-+----------------+
-| 28500762       |
-| 28296815       |
-| 76054385       |
-| 49610011       |
-| 16153065       |
-| 25506511       |
-| 81061156       |
-| 26013199       |
-+----------------+
-
 +---------+
 |  name   |
 +---------+
@@ -49,19 +36,11 @@ SELECT DISTINCT account_number FROM atm_transactions WHERE year = 2021 AND month
 | Benista |
 +---------+
 
-SELECT people.name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_id JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number WHERE atm_transactions.year = 2021 AND atm_transactions.month = 7 AND atm_transactions.day = 28 AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
-
-
-/*
-Knowledge gained:
-    list of account numbers and amount withdrawn
-*/
-
-
 
 
 -- Finds all license plates that exited the parkinglot between 10:15 and 10:25
-SELECT license_plate FROM bakery_security_logs WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";/*
+SELECT license_plate FROM bakery_security_logs WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";
+/*
 Knowledge gained:
     list of license plates
 */
