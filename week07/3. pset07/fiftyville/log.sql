@@ -135,7 +135,7 @@ WHERE
 INTERSECT
 
 SELECT
-  name
+  people.name
 FROM
   phone_calls
   JOIN people ON phone_calls.caller = people.phone_number
