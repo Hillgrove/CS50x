@@ -4,6 +4,9 @@ The ACCOMPLICE is:
 
 
 
+
+=============== REMOVE THIS WHEN COMPLETE ===============
+
 .tables
 airports              crime_scene_reports   people
 atm_transactions      flights               phone_calls
