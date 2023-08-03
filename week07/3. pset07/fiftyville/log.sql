@@ -68,4 +68,4 @@ SELECT name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_i
 +-------+
 */
 
-SELECT name, caller, receiver FROM phone_calls JOIN people ON phone_calls.caller = people.phone_number WHERE year = 2021 AND month = 7 AND day = 28 AND name IN ("Bruce", "Diana", "Iman", "Luca");
+SELECT * FROM phone_calls JOIN people ON phone_calls.caller = people.phone_number WHERE year = 2021 AND month = 7 AND day = 28 AND name IN ("Bruce", "Diana", "Iman", "Luca");
