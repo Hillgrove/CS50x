@@ -191,5 +191,5 @@ WHERE
   YEAR = 2021
   AND MONTH = 7
   AND DAY = 28
-  AND duration < 60
-  AND phone_calls.caller = "Bruce";
+  AND duration < 60;
+  AND 
