@@ -38,10 +38,19 @@ SELECT DISTINCT account_number FROM atm_transactions WHERE year = 2021 AND month
 
 
 
--- Finds all license plates that exited the parkinglot between 10:15 and 10:25
+-- Finds the names of all who owns a car that exited the parkinglot between 10:15 and 10:25
 SELECT license_plate FROM bakery_security_logs WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";
-/*
-Knowledge gained:
-    list of license plates
-*/
 
+SELECT people.name FROM people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";
++---------+
+|  name   |
++---------+
+| Vanessa |
+| Bruce   |
+| Barry   |
+| Luca    |
+| Sofia   |
+| Iman    |
+| Diana   |
+| Kelsey  |
++---------+
