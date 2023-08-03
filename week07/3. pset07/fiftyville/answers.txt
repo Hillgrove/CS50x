@@ -16,4 +16,8 @@ bank_accounts         passengers
 
 ======================= CLUES ===========================
 date: July 28, 2021
+time: 10:15am
 place: Humphrey Street
+witnesses: 3
+ReportID: 295
+keyword: bakery
