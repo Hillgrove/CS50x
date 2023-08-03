@@ -175,6 +175,7 @@ SELECT
 FROM
   airports
   JOIN flights ON airports.id = flights.destination_airport_id
-  JOIN passengers
+  JOIN passengers ON passengers.flight_id = flights.id
+  JOIN people ON people.passport_number = passengers.passport_number
 WHERE
-
+  people.name = "Bruce";
