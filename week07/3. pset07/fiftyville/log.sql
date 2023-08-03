@@ -13,6 +13,9 @@ Knowledge gained:
 SELECT * from interviews WHERE year = 2021 AND month = 7 AND day = 28 AND transcript LIKE "%bakery%";
 /*
 Knowledge gained:
-    within 10 mis of theft, thief drove away from parking lot
-    Thief 
+    within 10 mins of theft, thief drove away from parking lot
+    Thief withdrew money from ATM on leggett Street earlier same morning
+    Thief called someone for less than a minute while leaving the bakery
+    Thief planning to take earliest flight out of Fiftyville tomorrow
+    Person on the other end to purchase ticket
 */
