@@ -186,10 +186,10 @@ SELECT
   *
 FROM
   phone_calls
-  JOIN people ON phone_calls.receiver = people.phone_number
+  JOIN people AS caller_name ON phone_calls.receiver = people.phone_number
 WHERE
   YEAR = 2021
   AND MONTH = 7
   AND DAY = 28
   AND duration < 60;
-  AND 
+  AND
