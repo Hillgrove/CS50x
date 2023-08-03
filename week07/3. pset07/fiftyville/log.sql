@@ -181,4 +181,15 @@ WHERE
 */
 
 
-SELECT flights.id FROM flights JOIN airports ON flights.origin_airport_id = airports.id WHERE city LIKE "fiftyville" AND year = 2021 AND month = 7 AND day = 29;
+SELECT
+  flights.id
+FROM
+  flights
+  JOIN airports ON flights.origin_airport_id = airports.id
+  JOIN people ON 
+WHERE
+  city LIKE "fiftyville"
+  AND year = 2021
+  AND month = 7
+  AND day = 29;
+
