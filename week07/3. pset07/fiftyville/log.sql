@@ -1,7 +1,7 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
 -- Finds crimereports
-SELECT * FROM crime_scene_reports WHERE year = 2021 AND month = 7 AND day = 28 AND street LIKE "Humphrey Street";
+SELECT * FROM crime_scene_reports WHERE year = 2021 AND month = 7 AND day = 28 AND street = "Humphrey Street";
 /*
 Knowledge gained:
     reportID is 295
@@ -22,7 +22,7 @@ Knowledge gained:
 */
 
 -- Finds all withdrawals the given day and location
-SELECT DISTINCT account_number, amount FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location LIKE "Leggett Street" AND transaction_type LIKE "Withdraw";
+SELECT DISTINCT account_number, amount FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
 /*
 Knowledge gained:
     list of account numbers and amount withdrawn
