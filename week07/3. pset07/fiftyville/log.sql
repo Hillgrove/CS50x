@@ -185,4 +185,6 @@ WHERE
   AND month = 7
   AND day = 29
 ORDER BY
-  hour, minute;
+  hour, minute
+LIMIT
+  1;
