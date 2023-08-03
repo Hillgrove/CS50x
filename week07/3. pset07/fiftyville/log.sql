@@ -51,20 +51,6 @@ WHERE
   AND DAY = 28
   AND atm_location = "Leggett Street"
   AND transaction_type = "withdraw";
-/*
-+---------+
-|  name   |
-+---------+
-| Bruce   |
-| Diana   |
-| Brooke  |
-| Kenny   |
-| Iman    |
-| Luca    |
-| Taylor  |
-| Benista |
-+---------+
-*/
 
 
 -- Finds the names of all who owns a car that exited the parkinglot between 10:15 and 10:25
@@ -81,20 +67,6 @@ WHERE
   AND MINUTE > 15
   AND MINUTE < 25
   AND activity = "exit";
-/*
-+---------+
-|  name   |
-+---------+
-| Vanessa |
-| Bruce   |
-| Barry   |
-| Luca    |
-| Sofia   |
-| Iman    |
-| Diana   |
-| Kelsey  |
-+---------+
-*/
 
 
 -- Finds the names of those who made a phonecall less that 60 seconds long on the given day
@@ -108,27 +80,28 @@ WHERE
   AND MONTH = 7
   AND DAY = 28
   AND duration < 60
-/*
-+---------+
-|  name   |
-+---------+
-| Sofia   |
-| Kelsey  |
-| Bruce   |
-| Kelsey  |
-| Taylor  |
-| Diana   |
-| Carina  |
-| Kenny   |
-| Benista |
-+---------+
-*/
+
+
+-- Finds the names of those on a flight out of Fiftyville the day after
+SELECT
+  people.name
+FROM
+  people
+  JOIN passengers ON people.passport_number = passengers.passport_number
+  JOIN flights ON passengers.flight_id = flights.id
+  JOIN airports ON flights.origin_airport_id = airports.id
+WHERE
+  city LIKE "fiftyville"
+  AND year = 2021
+  AND month = 7
+  AND day = 29;
 
 
 /* Finds the names of those who:
 - have a car that existed the parkinglot between 10:15 and 10:25
 - made made a withdrawal the given day and location
 - made a phonecall less than 60 seconds on the given day
+- Are on a flight out of Fiftyville the day after
 */
 SELECT
   name
@@ -170,16 +143,9 @@ WHERE
   YEAR = 2021
   AND MONTH = 7
   AND DAY = 28
-  AND duration < 60;
-/*
-+-------+
-| name  |
-+-------+
-| Bruce |
-| Diana |
-+-------+
-*/
+  AND duration < 60
 
+INTERSECT
 
 SELECT
   people.name
@@ -194,3 +160,11 @@ WHERE
   AND month = 7
   AND day = 29;
 
+/*
++-------+
+| name  |
++-------+
+| Bruce |
+| Diana |
++-------+
+*/
