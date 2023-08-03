@@ -186,8 +186,7 @@ SELECT
   -- caller, name AS receiver_name, receiver
   *
 FROM
-  phone_calls AS pc1
-  JOIN  phone_calls AS pc2
+  phone_calls
   JOIN people AS p1 ON pc1.caller = p1.phone_number
   JOIN people AS p2 ON pc2.receiver = p2.phone_number
 WHERE
