@@ -23,6 +23,7 @@ Knowledge gained:
 
 -- Finds names of all who made a withdrawal the given day and location
 SELECT name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_id JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
+/*
 +---------+
 |  name   |
 +---------+
@@ -35,11 +36,11 @@ SELECT name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_i
 | Taylor  |
 | Benista |
 +---------+
-
-
+*/
 
 -- Finds the names of all who owns a car that exited the parkinglot between 10:15 and 10:25
 SELECT people.name FROM people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";
+/*
 +---------+
 |  name   |
 +---------+
@@ -52,9 +53,11 @@ SELECT people.name FROM people JOIN bakery_security_logs ON people.license_plate
 | Diana   |
 | Kelsey  |
 +---------+
+*/
 
--- Finds the names
+-- Finds the names of those who both have a car that existed the parkinglot between 10:15 and 10:25 and whom made a withdrawal the given day and location
 SELECT name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_id JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw" INTERSECT SELECT people.name FROM people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate WHERE year =2021 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = "exit";
+/*
 +-------+
 | name  |
 +-------+
@@ -63,3 +66,5 @@ SELECT name FROM people JOIN bank_accounts ON people.id = bank_accounts.person_i
 | Iman  |
 | Luca  |
 +-------+
+*/
+
