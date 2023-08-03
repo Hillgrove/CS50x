@@ -5,8 +5,9 @@
 
 SELECT name
 FROM people
-WHERE (
-    SELECT id
+JOIN stars ON people.id = stars.person_id
+WHERE stars.movie_id = (
+    SELECT movies.id
     FROM movies
     JOIN stars ON movies.id = stars.movie_id
     JOIN people ON stars.person_id = people.id
