@@ -187,12 +187,12 @@ SELECT
   *
 FROM
   phone_calls AS pc1
-  phone_calls AS pc2
+  JOIN  phone_calls AS pc2
   JOIN people AS p1 ON pc1.caller = p1.phone_number
   JOIN people AS p2 ON pc2.receiver = p2.phone_number
 WHERE
-  YEAR = 2021
-  AND MONTH = 7
-  AND DAY = 28
-  AND duration < 60;
+  pc1.YEAR = 2021
+  pc1.AND MONTH = 7
+  pc1.AND DAY = 28
+  pc1.AND duration < 60;
   AND
