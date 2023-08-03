@@ -101,7 +101,7 @@ WHERE
 - have a car that existed the parkinglot between 10:15 and 10:25
 - made made a withdrawal the given day and location
 - made a phonecall less than 60 seconds on the given day
-- Are on a flight out of Fiftyville the day after
+- Are on the earliest flight out of Fiftyville the day after
 */
 SELECT
   name
@@ -154,41 +154,26 @@ FROM
   JOIN passengers ON people.passport_number = passengers.passport_number
   JOIN flights ON passengers.flight_id = flights.id
   JOIN airports ON flights.origin_airport_id = airports.id
-WHERE
-  city LIKE "fiftyville"
-  AND year = 2021
-  AND month = 7
-  AND day = 29;
-
-/*
-+-------+
-| name  |
-+-------+
-| Bruce |
-| Diana |
-+-------+
-*/
-
--- ==================================================
-
-
-SELECT
-  people.name, hour, minute
-FROM
-  people
-  JOIN passengers ON people.passport_number = passengers.passport_number
-  JOIN flights ON passengers.flight_id = flights.id
-  JOIN airports ON flights.origin_airport_id = airports.id
-WHERE
-  flights.id = (
-    SELECT flights.id
-    FROM flights
-    WHERE
-
-  AND year = 2021
-  AND month = 7
-  AND day = 29
-ORDER BY
-  hour, minute
-LIMIT 1
+WHERE flights.id = (
+  SELECT
+    flights.id
+  FROM
+    flights
+  WHERE
+    year = 2021
+    AND month = 7
+    AND day = 29
+  ORDER BY
+    hour, minute
+  LIMIT 1
 );
+
+
+-- Which city is Bruce escaping to?
+SELECT
+  city
+FROM
+  airports
+  JOIN flights ON airports.id = flights.destination_airport_id
+WHERE
+  
