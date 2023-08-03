@@ -173,13 +173,16 @@ WHERE
 
 
 SELECT
-  p1.name AS caller_name, p2.name AS receiver_name
+  people.name, hour, minute
 FROM
-  phone_calls
-  JOIN people p1 ON phone_calls.caller = p1.phone_number
-  JOIN people p2 ON phone_calls.receiver = p2.phone_number
+  people
+  JOIN passengers ON people.passport_number = passengers.passport_number
+  JOIN flights ON passengers.flight_id = flights.id
+  JOIN airports ON flights.origin_airport_id = airports.id
 WHERE
-  YEAR = 2021
-  AND MONTH = 7
-  AND DAY = 28
-  AND duration < 60;
+  city LIKE "fiftyville"
+  AND year = 2021
+  AND month = 7
+  AND day = 29
+ORDER BY
+  hour, minute;
