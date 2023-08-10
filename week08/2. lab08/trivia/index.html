@@ -30,12 +30,12 @@
                     const correct = "char";
                     let buttons = document.querySelectorAll('button[type="button"]');
                     buttons.forEach(function(button) {
-                        button.addEventlistener('click', function() {
+                        button.addEventListener('click', function() {
                             if (button.id == correct) {
-                                button.backgroundColor = green;
+                                button.backgroundColor = "green";
                             }
                             else {
-                                button.backgroundColor = red;
+                                button.backgroundColor = "red";
                             }
                         });
                     });
