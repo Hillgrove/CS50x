@@ -7,6 +7,18 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            const correct = "char";
+            let buttons = document.querySelectorAll('button[type="button"]');
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    if (button.id == correct) {
+                        button.style.backgroundColor = "green";
+                    }
+                    else {
+                        button.style.backgroundColor = "red";
+                    }
+                });
+            });
         </script>
     </head>
 
@@ -25,22 +37,6 @@
                 <button id="float" type="button">float</button>
                 <button id="string" type="button">string</button>
                 <button id="char" type="button">char</button>
-
-                <script>
-                    const correct = "char";
-                    let buttons = document.querySelectorAll('button[type="button"]');
-                    buttons.forEach(function(button) {
-                        button.addEventListener('click', function() {
-                            if (button.id == correct) {
-                                button.style.backgroundColor = "green";
-                            }
-                            else {
-                                button.style.backgroundColor = "red";
-                            }
-                        });
-                    });
-                </script>
-
              </div>
 
             <div class="section">
