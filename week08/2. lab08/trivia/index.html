@@ -30,7 +30,14 @@
                     const correct = "char";
                     let buttons = document.querySelectorAll('button[type="button"]');
                     buttons.forEach(function(button) {
-                        // add eventListener
+                        button.addEventlistener('click', function() {
+                            if (button.id == correct) {
+                                button.backgroundColor = green;
+                            }
+                            else {
+                                button.backgroundColor = red;
+                            }
+                        });
                     });
                 </script>
 
