@@ -7,18 +7,21 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+                
             const correct = "char";
             let buttons = document.querySelectorAll('button[type="button"]');
             buttons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    if (button.id == correct) {
-                        button.style.backgroundColor = "green";
-                    }
-                    else {
-                        button.style.backgroundColor = "red";
-                    }
+                button.addEventListener('click', test)
+             }
+
+             function test() {
+                if (button.id == correct) {
+                    button.style.backgroundColor = "green";
+                }
+                else {
+                    button.style.backgroundColor = "red";
+                }
                 });
-            });
         </script>
     </head>
 
