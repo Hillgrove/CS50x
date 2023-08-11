@@ -19,10 +19,10 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Which of the following is not a valid data type in C?</h3>
-                <button id="int" type="button">int</button>
-                <button id="float" type="button">float</button>
-                <button id="string" type="button">string</button>
-                <button id="char" type="button">char</button>
+                <button class="section1" type="button" >int</button>
+                <button class="section1" type="button">float</button>
+                <button class="section1" type="button">string</button>
+                <button id="char" class="section1" type="button">char</button>
                 <p id="response1"> </p>
              </div>
 
@@ -31,17 +31,20 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>How many bits are in a byte?</h3>
-                <input type="text" id="answer2">
-
-                <p id = "answer2"> </p>
+                <input id="answer2" type="text">
+                <button id="confirm" type="button">Confirm</button>
+                <p id = "reponse2"> </p>
             </div>
         </div>
 
         <script>
             // TODO: Add code to check answers to questions
             const correct1 = "char";
+            const correct2 = "8";
             const response1 =  document.querySelector("#response1")
-            let buttons = document.querySelectorAll('button[type="button"]');
+            const response2 =  document.querySelector("#response2")
+
+            let buttons = document.getElementsByClassName('section1');
 
             for (let i = 0; i < buttons.length; i++) {
                 buttons[i].addEventListener('click', function() {
