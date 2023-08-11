@@ -31,8 +31,13 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>How many bits are in a byte?</h3>
-                <input autocomplete="off" placeholder="Input answer here" type="text">
-                <button ></button>
+                <form action="/submit" method="post">
+                    <input autocomplete="off" id="response" name="response" placeholder="Input answer here" type="text">
+                    
+                    <input type="submit" value="Confirm">
+                </form>
+
+
                 <p id = "answer2"> </p>
             </div>
         </div>
