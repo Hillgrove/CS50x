@@ -41,8 +41,11 @@
             // TODO: Add code to check answers to questions
             const correct1 = "char";
             const correct2 = "8";
-            const response1 =  document.querySelector("#response1")
-            const response2 =  document.querySelector("#response2")
+            const response1     = document.querySelector("#response1");
+            const answer2        = document.getElementById("#answer2");
+            const confirmBtn    = document.getElementById("#confirm");
+            const response2     = document.querySelector("#response2");
+
 
             let buttons = document.getElementsByClassName('section1');
 
@@ -63,6 +66,12 @@
                     response1.innerHTML = "Incorrect";
                 }
             };
+
+            confirmBtn.addEventListener('click', function() {
+                if (answer2 == correct2) {
+                    response2.
+                }
+            });
         </script>
 
     </body>
