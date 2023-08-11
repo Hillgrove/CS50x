@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
@@ -19,12 +20,12 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Which of the following is not a valid data type in C?</h3>
-                <button class="section1" type="button" >int</button>
+                <button class="section1" type="button">int</button>
                 <button class="section1" type="button">float</button>
                 <button id="string" class="section1" type="button">string</button>
                 <button class="section1" type="button">char</button>
                 <p id="response1"> </p>
-             </div>
+            </div>
 
             <div class="section">
                 <h2>Part 2: Free Response</h2>
@@ -33,7 +34,7 @@
                 <h3>How many bits are in a byte?</h3>
                 <input id="answer2" type="text">
                 <button id="confirm" type="button">Confirm</button>
-                <p id = "response2"> </p>
+                <p id="response2"> </p>
             </div>
         </div>
 
@@ -41,12 +42,10 @@
             // TODO: Add code to check answers to questions
             const correct1 = "string";
             const correct2 = "8";
-            const response1     = document.querySelector("#response1");
-            const response2     = document.querySelector("#response2");
-            const answer2       = document.getElementById("answer2");
-            const confirmBtn    = document.getElementById("confirm");
-
-
+            const response1 = document.querySelector("#response1");
+            const response2 = document.querySelector("#response2");
+            const answer2 = document.getElementById("answer2");
+            const confirmBtn = document.getElementById("confirm");
 
             let buttons = document.getElementsByClassName('section1');
 
@@ -61,8 +60,7 @@
                     button.style.backgroundColor = "green";
                     response1.innerHTML = "Correct";
 
-                }
-                else {
+                } else {
                     button.style.backgroundColor = "red";
                     response1.innerHTML = "Incorrect";
                 }
@@ -72,8 +70,7 @@
                 if (answer2.value == correct2) {
                     response2.innerHTML = "Correct";
                     answer2.style.backgroundColor = "green";
-                }
-                else {
+                } else {
                     response2.innerHTML = "Incorrect";
                     answer2.style.backgroundColor = "red";
                 }
