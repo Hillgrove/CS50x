@@ -47,12 +47,12 @@
             function test(button) {
                 if (button.id == correct) {
                     button.style.backgroundColor = "green";
-                    document.querySelector("answer").innerHTML = "Correct";
+                    document.querySelector("#answer").innerHTML = "Correct";
 
                 }
                 else {
                     button.style.backgroundColor = "red";
-                    answer.innerHTML = "Incorrect";
+                    document.querySelector("#answer").innerHTML = "Incorrect";
                 }
             };
         </script>
