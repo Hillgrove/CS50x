@@ -36,7 +36,6 @@
         <script>
             // TODO: Add code to check answers to questions
             const correct = "char";
-            const answer = document.querySelector("answer");
             let buttons = document.querySelectorAll('button[type="button"]');
 
             for (let i = 0; i < buttons.length; i++) {
@@ -48,7 +47,8 @@
             function test(button) {
                 if (button.id == correct) {
                     button.style.backgroundColor = "green";
-                    answer.innerHTML = "Correct";
+                    document.querySelector("answer").innerHTML = "Correct";
+
                 }
                 else {
                     button.style.backgroundColor = "red";
