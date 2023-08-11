@@ -5,26 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-            const correct = "char";
-            let buttons = document.querySelectorAll('button[type="button"]');
 
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].addEventListener('click', function() {
-                    test(buttons[i]);
-                });
-            }
-
-            function test(button) {
-                if (button.id == correct) {
-                    button.style.backgroundColor = "green";
-                }
-                else {
-                    button.style.backgroundColor = "red";
-                }
-            };
-        </script>
     </head>
 
     <body>
@@ -50,6 +31,28 @@
                 <!-- TODO: Add free response question here -->
             </div>
         </div>
+
+        <script>
+            // TODO: Add code to check answers to questions
+            const correct = "char";
+            let buttons = document.querySelectorAll('button[type="button"]');
+
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function() {
+                    test(buttons[i]);
+                });
+            }
+
+            function test(button) {
+                if (button.id == correct) {
+                    button.style.backgroundColor = "green";
+                }
+                else {
+                    button.style.backgroundColor = "red";
+                }
+            };
+        </script>
+
     </body>
 
 </html>
