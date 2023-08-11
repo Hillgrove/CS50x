@@ -23,7 +23,7 @@
                 <button id="float" type="button">float</button>
                 <button id="string" type="button">string</button>
                 <button id="char" type="button">char</button>
-                <p id="answer"> </p>
+                <p id="response1"> </p>
              </div>
 
             <div class="section">
@@ -31,11 +31,8 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>How many bits are in a byte?</h3>
-                <form action="/submit" method="post">
-                    <input autocomplete="off" id="response" name="response" placeholder="Input answer here" type="text">
+                <input type="text" id="answer2">
 
-                    <input type="submit" value="Confirm">
-                </form>
                 <p id = "answer2"> </p>
             </div>
         </div>
@@ -43,7 +40,7 @@
         <script>
             // TODO: Add code to check answers to questions
             const correct1 = "char";
-            const answer1 =  document.querySelector("#answer")
+            const response1 =  document.querySelector("#response1")
             let buttons = document.querySelectorAll('button[type="button"]');
 
             for (let i = 0; i < buttons.length; i++) {
@@ -55,12 +52,12 @@
             function test(button) {
                 if (button.id == correct1) {
                     button.style.backgroundColor = "green";
-                    answer1.innerHTML = "Correct";
+                    response1.innerHTML = "Correct";
 
                 }
                 else {
                     button.style.backgroundColor = "red";
-                    answer1.innerHTML = "Incorrect";
+                    response1.innerHTML = "Incorrect";
                 }
             };
         </script>
