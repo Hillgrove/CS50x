@@ -19,6 +19,6 @@ h2.accordion-header .accordion-button {
     font-size: 20px;
 }
 
-.navbar a:hover {
-    text-decoration: ;
+#html-showcase .container a {
+    text-decoration: none;
 }
