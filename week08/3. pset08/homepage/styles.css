@@ -23,3 +23,10 @@ h2.accordion-header .accordion-button {
     text-decoration: none;
 }
 
+.interactive-button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
