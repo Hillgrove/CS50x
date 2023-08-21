@@ -1,0 +1,7 @@
+body {
+    overflow-y: scroll;
+}
+
+h2.accordion-header .accordion-button {
+    font-weight: bold;
+}
