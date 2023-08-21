@@ -34,12 +34,14 @@
             <div class="container py-5">
                 <h1>JavaScript</h1>
                 <h2>Examples</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque purus sapien, laoreet eget consectetur rhoncus, ullamcorper eu nulla.
-                    Nunc eget porttitor lacus. Maecenas auctor condimentum nisi, at ultricies massa venenatis vestibulum. Suspendisse hendrerit ligula placerat
-                    tortor tincidunt porta. Fusce mi justo, feugiat sit amet tincidunt eget, facilisis ac tortor. Quisque tempus non dui et suscipit. Nam sed
-                    velit quam. Sed bibendum est sed orci accumsan, ac iaculis dui faucibus. Nulla nibh nunc, semper eget diam non, facilisis porta quam.
-                </p>
+                <button class="interactive-button" id="myButton">Click me!</button>
+
+                <script>
+                    const button = document.getElementById("myButton");
+                    button.addEventListener("click", function() {
+                        button.style.backgroundColor = "green";
+                    });
+                </script>
             </div>
 
             <div class="container">
