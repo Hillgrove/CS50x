@@ -38,31 +38,13 @@
                 <h2>Examples</h2>
             </div>
 
-            <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
-            <div class="container py-5" id="liveAlertPlaceholder"></div>
+            <button id="cs50">Example of JS</button>
 
             <script>
-                const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-                const appendAlert = (message, type) => {
-                    const wrapper = document.createElement('div')
-                    wrapper.innerHTML = [
-                        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                        `   <div>${message}</div>`,
-                        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                        '</div>'
-                    ].join('')
-
-                    alertPlaceholder.append(wrapper)
-                }
-
-                const alertTrigger = document.getElementById('liveAlertBtn')
-                if (alertTrigger) {
-                    alertTrigger.addEventListener('click', () => {
-                        appendAlert('Nice, you triggered this alert message!', 'success')
-                    })
-                }
+                document.getElementById('cs50').addEventListener('click', function() {
+                    this.textContent = "This was week 8 of CS50x";
+                });
             </script>
-
 
             <div class="container">
                 <footer class="py-3 my-4 border-top">
