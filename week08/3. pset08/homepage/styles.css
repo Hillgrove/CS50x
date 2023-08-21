@@ -6,6 +6,6 @@ h2.accordion-header .accordion-button {
     font-weight: bold;
 }
 
-p:hover {
-    background-color: text-secondary;
+.paragraphs p:hover {
+    background-color: ;
 }
