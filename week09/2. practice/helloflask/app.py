@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+COLORS = ["red", "blue"]
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
