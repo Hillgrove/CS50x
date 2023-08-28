@@ -3,8 +3,9 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 COLORS = [
-    {"red" = "}
-    , "blue"]
+    {"red": "Harvard Crimson"},
+    {"blue": "Yale Blue"}
+    ]
 
 
 @app.route("/", methods=["GET", "POST"])
