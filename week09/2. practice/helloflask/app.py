@@ -11,7 +11,7 @@ COLORS = [
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "GET":
-        return render_template("index.html", color=COLORS)
+        return render_template("index.html", colors=COLORS)
     else:
         print("Form submitted!")
         color = request.form.get("color")
