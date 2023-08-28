@@ -28,14 +28,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{% for birthday in birthdays %}}
+                        {% for birthday in birthdays %}
                         <tr>
-                            {{% for name, month, day in birthday %}}
+                            {% for name, month, day in birthday %}
                                 <td>{{ name }}</td>
                                 <td>{{ day }}.{{ month }}</td>
-                            {{% endfor %}}
+                            {% endfor %}
                         </tr>
-                        {{% endfor }}
+                        {% endfor %}
 
                         <!-- TODO: Loop through the database entries to display them in this table -->
                     </tbody>
