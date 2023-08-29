@@ -129,7 +129,7 @@ def register():
             return apology("Username already exists")
 
         # Create user in database
-        db.execute("INSERT INTO users VALUES ( )
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username", request.form.get("password"))
 
 
 
