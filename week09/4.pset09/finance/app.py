@@ -130,7 +130,7 @@ def register():
 
         # Ensure username does not exist
         if len(rows) != 0:
-            return apology("Username already exists", 409)
+            return apology("Username already exists")
 
         # Create user in database
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username", request.form.get("password"))
