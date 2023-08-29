@@ -134,7 +134,7 @@ def register():
 
         # Create user in database
         else:
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), request.form.get("password"))
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), generate_password_hash(request.form.get("password")))
 
         return redirect("/")
 
