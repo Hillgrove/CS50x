@@ -113,8 +113,24 @@ def register():
     # User reached route via POST (as by submitting a form via POST)
     if request.method = "POST":
 
-        #Ensure username was submitted
-        if not request.form.get("username")
+        # Ensure username was submitted
+        if not request.form.get("username"):
+                return apology("Must provide username", 403)
+
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("Must provide password", 403)
+
+        # Query database for username
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
+        # Ensure username does not exist
+        if len(rows) != 0:
+            return apology("Username already exists")
+
+        # Create user in database
+        db.execute("INSERT INTO users WHERE username = ? AND )
+
 
 
     return apology("TODO")
