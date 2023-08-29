@@ -136,9 +136,10 @@ def register():
         else:
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), request.form.get("password"))
 
+        return redirect("/")
 
-
-    return apology("TODO")
+    else:
+        return redirect("/")
 
 
 @app.route("/sell", methods=["GET", "POST"])
