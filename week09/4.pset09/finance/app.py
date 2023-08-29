@@ -139,7 +139,7 @@ def register():
         return redirect("/")
 
     else:
-        return redirect("/")
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
