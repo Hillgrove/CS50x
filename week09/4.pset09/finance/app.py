@@ -63,14 +63,15 @@ def buy():
             return apology("Invalid quote")
 
         # Determine user's balance and stock price
-        balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        user_id = session["user_id"]
+        balance = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         price = quote["price"]
 
         # Check if balance is sufficient
         if shares * price > balance:
             return apology("Insufficient balance")
         else:
-            
+            db.execute("INSERT INTO purchases(?, ?, ?, ?, ?", ))
             return redirect("/")
 
     # User reached route via GET
