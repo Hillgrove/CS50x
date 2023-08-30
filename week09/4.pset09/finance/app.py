@@ -58,6 +58,7 @@ def buy():
         try:
             quote = lookup(request.form.get("symbol"))
             print(quote)
+            
 
         except:
             return apology("Stock symbol does not exist")
