@@ -54,8 +54,11 @@ def buy():
             return apology("Missing stock symbol")
 
         # Ensure amount of shares was submitted
-        if shares == "":
+        elif shares == "":
             return apology("Missing amount of shares")
+
+        elif shares < 1:
+            return apology("Amount of shares needs to be postive")
 
         # Lookup quote
         quote = lookup(symbol)
@@ -144,7 +147,7 @@ def quote():
 
         # Ensure symbol is correct
         if quote is None:
-            return apology("Quote invalid")
+            return apology("Symbol invalid")
 
         else:
             # Convert price into USD
