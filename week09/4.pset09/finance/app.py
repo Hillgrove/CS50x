@@ -63,12 +63,15 @@ def buy():
 
         # Lookup quote
         quote = lookup(symbol)
-        balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        print(f"-- DEBUG --\nCurrent user: {session['user_id']} has {balance} in balance.")
+        balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         # Ensure symbol is correct
         if quote is None:
             return apology("Quote invalid")
+
+        # Ensure the balance is sufficient
+        if shares * quote["price"] > balance:
+            return apology("Balance insufficient")
 
         else:
 
