@@ -7,10 +7,17 @@
 {% block main %}
     TODO:<br>
     <table>
-        <thead>this is the</thead>
-        {% for element in quote %}
-            <td>{{ element }}</td>
+        <thead>this is the thead</thead>
+        <tr>
+            <td>name</td>
+            <td>price</td>
+            <td>symbol</td>
+        </tr>
+        <tr>
+            {% for element in quote %}
+                <td>{{ element }}</td>
 
-        {% endfor %}
-</table>
+            {% endfor %}
+        </tr>
+    </table>
 {% endblock %}

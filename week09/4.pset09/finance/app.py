@@ -107,7 +107,7 @@ def quote():
     if request.method == "POST":
         quote = request.form.get(request.form.get("symbol"))
 
-        print(f'DEBUG: quote.html POSTed "{symbol}" to quoted.html')
+        print(f'DEBUG: quote.html POSTed "{quote}" to quoted.html')
         return render_template("quoted.html", quote=quote)
 
     else:
