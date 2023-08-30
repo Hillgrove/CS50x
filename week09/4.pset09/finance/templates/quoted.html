@@ -6,5 +6,11 @@
 
 {% block main %}
     TODO:<br>
-    You requested to see info about "{{ symbol }}"
+    <table>
+        <thead>this is the</thead>
+        {% for element in quote %}
+            <td>{{ element }}</td>
+
+        {% endfor %}
+</table>
 {% endblock %}
