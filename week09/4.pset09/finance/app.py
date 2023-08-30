@@ -135,7 +135,7 @@ def quote():
         print(f"--- DEBUG ---\nQuote: {quote}")
         print(f"--- DEBUG ---\nType of quote: {type(quote)}")
 
-        if type(quote) is None:
+        if type(quote) is type(None):
             return apology("Quote doesn't exist")
 
         else:
