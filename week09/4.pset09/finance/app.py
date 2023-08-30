@@ -46,18 +46,15 @@ def buy():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        # Ensure symbol was submitted
-        try:
-            symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
 
-        except:
+        # Ensure symbol was submitted
+        if symbol == "":
             return apology("Missing stock symbol")
 
-
         # Ensure amount of shares was submitted
-        try:
-            shares = request.form.get("shares")
-        except:
+        if shares == "":
             return apology("Missing amount of shares")
 
         # Lookup quote
