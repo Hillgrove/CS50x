@@ -7,19 +7,22 @@
 {% block main %}
     TODO:<br>
     <table class="table table-bordered">
-        <thead>Quoted symbol</thead>
-        <tr>
-            <td>name</td>
-            <td>price</td>
-            <td>symbol</td>
-        </tr>
-        <tr>
-            {% for value in quote.values() %}
-                <td>
-                    {{ value }}
-                </td>
-            {% endfor %}
+        <thead>
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">price</th>
+                <th scope="col">symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for value in quote.values() %}
+                    <td>
+                        {{ value }}
+                    </td>
+                {% endfor %}
 
-        </tr>
+            </tr>
+        </tbody>
     </table>
 {% endblock %}
