@@ -14,7 +14,12 @@
             <td>symbol</td>
         </tr>
         <tr>
-            <td>nothing yet</td>
+            {% for key, value in quote %}
+                <td>
+                    {{ value }}
+                </td>
+            {% endfor %}
+
         </tr>
     </table>
 {% endblock %}
