@@ -71,7 +71,8 @@ def buy():
         if shares * price > balance:
             return apology("Insufficient balance")
         else:
-            db.execute("INSERT INTO purchases(?, ?, ?, ?, ?", ))
+            db.execute(UPDATE )
+            db.execute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)", user_id, symbol, shares, price)
             return redirect("/")
 
     # User reached route via GET
