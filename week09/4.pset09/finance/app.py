@@ -109,6 +109,7 @@ def quote():
 
         quote = lookup(request.form.get("symbol"))
         print(f'-- DEBUG --\n   Quote requested: {quote}')
+        quote["price"] = usd(quote["price"])
         return render_template("quoted.html", quote=quote)
 
     else:
