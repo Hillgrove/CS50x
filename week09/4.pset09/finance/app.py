@@ -63,7 +63,8 @@ def buy():
 
         # Lookup quote
         quote = lookup(symbol)
-        balance = db.execute("SELECT cash FROM users WHERE id)
+        balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        print(f"-- DEBUG --\nCurrent user: {session['user_id']} has {balance} in balance.")
 
         # Ensure symbol is correct
         if quote is None:
