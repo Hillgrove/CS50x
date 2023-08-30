@@ -43,9 +43,9 @@ def index():
 def buy():
     """Buy shares of stock"""
 
-    # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
+        # Process user input
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
 
@@ -68,7 +68,7 @@ def buy():
 
         # Check if balance is sufficient
         if shares * price > balance:
-            return apology("Insufficient")
+            return apology("Insufficient balance")
         else:
             return redirect("/")
 
