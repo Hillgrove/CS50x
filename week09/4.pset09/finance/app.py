@@ -63,7 +63,7 @@ def buy():
 
         # Lookup quote
         quote = lookup(symbol)
-        balance = db.execute("SELECT )
+        balance = db.execute("SELECT cash FROM users WHERE id)
 
         # Ensure symbol is correct
         if quote is None:
