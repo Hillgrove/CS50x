@@ -131,16 +131,18 @@ def quote():
     if request.method == "POST":
 
         # Test if quote exists
-        try:
-            quote = lookup(request.form.get("symbol"))
-            print(f"--- DEBUG ---\nQuote: {quote}")
+        quote = lookup(request.form.get("symbol"))
+        print(f"--- DEBUG ---\nQuote: {quote}")
+        
+        if type(quote) == NONE:
+            return apology("Quote doesn't exist")
 
+        else:
             # Convert price into USD
             quote["price"] = usd(quote["price"])
             return render_template("quoted.html", quote=quote)
 
-        except TypeError:
-            return apology("Quote doesn't exist")
+
 
     else:
         return render_template("quote.html")
