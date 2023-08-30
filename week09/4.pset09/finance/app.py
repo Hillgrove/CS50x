@@ -130,12 +130,14 @@ def quote():
 
     if request.method == "POST":
 
+        # Ensure symbol was submitted
+        if not request.form.get("symbol"):
+            return apology("Missing stock symbol")
+        
         # Test if quote exists
         quote = lookup(request.form.get("symbol"))
-        print(f"--- DEBUG ---\nQuote: {quote}")
-        print(f"--- DEBUG ---\nType of quote: {type(quote)}")
 
-        if type(quote) is type(None):
+        if quote is None:
             return apology("Quote doesn't exist")
 
         else:
