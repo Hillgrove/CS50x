@@ -45,7 +45,23 @@ def buy():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-            return apology("TODO")
+
+        # Ensure symbol was submitted
+        if not request.form.get("symbol"):
+            return apology("Missing stock symbol")
+
+        # Ensure amount of shares was submitted
+        elif not request.form.get("amount"):
+            return apology("Missing amount of shares")
+
+        # Ensure stock symbol is correct
+        try:
+            
+
+        except:
+            return apology("Stock symbol does not exist")
+
+
 
     else:
         return render_template("buy.html")
