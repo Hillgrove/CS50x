@@ -133,6 +133,7 @@ def quote():
         # Test if quote exists
         try:
             quote = lookup(request.form.get("symbol"))
+            print(f"--- DEBUG ---\n{quote}")
 
             # Convert price into USD
             quote["price"] = usd(quote["price"])
