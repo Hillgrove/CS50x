@@ -49,30 +49,27 @@ def buy():
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
 
-        # Ensure input is correct
+        # Validate input
         if symbol == "":
             return apology("Missing stock symbol")
-
         elif shares == "":
             return apology("Missing amount of shares")
-
         elif shares < 1:
             return apology("Amount of shares needs to be postive")
 
-        # Ensure symbol exist
+        # Check if symbol exists
         quote = lookup(symbol)
         if quote is None:
             return apology("Quote invalid")
 
+        # Determine users balance and stock price
         balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
         price = quote["price"]
 
-        # Ensure the balance is sufficient
+        # Check if balance is sufficient
         if shares * price > balance:
-            return apology("Balance insufficient")
-
+            return apology("Insufficient")
         else:
-
             return redirect("/")
 
     # User reached route via GET
