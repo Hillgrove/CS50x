@@ -57,18 +57,20 @@ def buy():
         elif shares == "":
             return apology("Missing amount of shares")
 
+        # Ensure amount of shares is positive
         elif shares < 1:
             return apology("Amount of shares needs to be postive")
 
         # Lookup quote
         quote = lookup(symbol)
+        balance = db.execute("SELECT )
 
         # Ensure symbol is correct
         if quote is None:
             return apology("Quote invalid")
 
         else:
-            
+
             return redirect("/")
 
     # User reached route via GET
