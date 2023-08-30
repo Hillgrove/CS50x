@@ -58,7 +58,7 @@ def buy():
         try:
             quote = lookup(request.form.get("symbol"))
             print(quote)
-            
+            return render_template("buy.html")
 
         except:
             return apology("Stock symbol does not exist")
@@ -66,7 +66,7 @@ def buy():
 
 
     else:
-        return render_template("buy.html")
+        return render_template(".html")
 
 
 @app.route("/history")
