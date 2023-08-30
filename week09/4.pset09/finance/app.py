@@ -60,9 +60,9 @@ def buy():
         # Check if symbol exists
         quote = lookup(symbol)
         if quote is None:
-            return apology("Quote invalid")
+            return apology("Invalid quote")
 
-        # Determine users balance and stock price
+        # Determine user's balance and stock price
         balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
         price = quote["price"]
 
@@ -70,6 +70,7 @@ def buy():
         if shares * price > balance:
             return apology("Insufficient balance")
         else:
+            
             return redirect("/")
 
     # User reached route via GET
