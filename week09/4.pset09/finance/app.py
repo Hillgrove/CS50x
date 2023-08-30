@@ -47,18 +47,21 @@ def buy():
     if request.method == "POST":
 
         # Ensure symbol was submitted
-        
-        if not request.form.get("symbol"):
+        try:
+            symbol = request.form.get("symbol")
+
+        except:
             return apology("Missing stock symbol")
 
+
         # Ensure amount of shares was submitted
-        elif not request.form.get("shares"):
+        try:
+            shares = request.form.get("shares")
+        except:
             return apology("Missing amount of shares")
 
-
-
         # Lookup quote
-        quote = lookup(request.form.get("symbol"))
+        quote = lookup(symbol)
 
         # Ensure symbol is correct
         if quote is None:
@@ -66,7 +69,6 @@ def buy():
 
         else:
             return redirect("/")
-
 
     else:
         return render_template("buy.html")
