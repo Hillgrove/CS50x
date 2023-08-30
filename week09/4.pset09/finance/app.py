@@ -48,6 +48,8 @@ def buy():
 
         symbol = request.form.get("symbol")
         shares = int(request.form.get("shares"))
+        quote = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        balance = quote["cash"]
 
         # Ensure symbol was submitted
         if symbol == "":
@@ -61,16 +63,12 @@ def buy():
         elif shares < 1:
             return apology("Amount of shares needs to be postive")
 
-        # Lookup quote
-        quote = lookup(symbol)
-        balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
-
         # Ensure symbol is correct
-        if quote is None:
+        elif quote is None:
             return apology("Quote invalid")
 
         # Ensure the balance is sufficient
-        if shares * quote["price"] > balance:
+        elif shares * quote["price"] > balance:
             return apology("Balance insufficient")
 
         else:
