@@ -110,10 +110,12 @@ def quote():
         try:
             quote = lookup(request.form.get("symbol"))
             print(f'-- DEBUG --\n   Quote requested: {quote}')
+
+            # Convert price into USD
             quote["price"] = usd(quote["price"])
             return render_template("quoted.html", quote=quote)
         except TypeError:
-            return render_template("apology.html",)
+            return apology("Quote doesn't exist")
 
     else:
         return render_template("quote.html")
