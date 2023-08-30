@@ -57,7 +57,7 @@ def buy():
         # Ensure stock symbol is correct
         try:
             quote = lookup(request.form.get("symbol"))
-            print(f"--- DEBUG ---\n{quote}")
+            print(f"--- DEBUG ---\nQuote: {quote}")
             return redirect("/")
 
         except:
@@ -133,7 +133,7 @@ def quote():
         # Test if quote exists
         try:
             quote = lookup(request.form.get("symbol"))
-            print(f"--- DEBUG ---\n{quote}")
+            print(f"--- DEBUG ---\nQuote: {quote}")
 
             # Convert price into USD
             quote["price"] = usd(quote["price"])
