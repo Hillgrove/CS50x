@@ -42,7 +42,13 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+            return apology("TODO")
+
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
