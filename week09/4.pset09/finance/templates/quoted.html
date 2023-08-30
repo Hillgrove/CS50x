@@ -5,27 +5,25 @@
 {% endblock %}
 
 {% block main %}
-    <h1>Quotes</h1>
     <div class="d-inline-block">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">name</th>
-                        <th scope="col">price</th>
-                        <th scope="col">symbol</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        {% for value in quote.values() %}
-                            <td>
-                                {{ value }}
-                            </td>
-                        {% endfor %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">price</th>
+                    <th scope="col">symbol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for value in quote.values() %}
+                        <td>
+                            {{ value }}
+                        </td>
+                    {% endfor %}
 
-                    </tr>
-                </tbody>
-            </table>
-        
+                </tr>
+            </tbody>
+        </table>
     </div>
 {% endblock %}
