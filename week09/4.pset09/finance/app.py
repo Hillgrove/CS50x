@@ -54,15 +54,15 @@ def buy():
         elif not request.form.get("amount"):
             return apology("Missing amount of shares")
 
-        # Ensure stock symbol is correct
-        try:
-            quote = lookup(request.form.get("symbol"))
-            print(f"--- DEBUG ---\nQuote: {quote}")
+        # Lookup quote
+        quote = lookup(request.form.get("symbol"))
+
+        # Ensure symbol is correct
+        if quote is None:
+            return apology("Quote invalid")
+
+        else:
             return redirect("/")
-
-        except:
-            return apology("Stock symbol does not exist")
-
 
 
     else:
@@ -128,23 +128,24 @@ def logout():
 def quote():
     """Get stock quote."""
 
+    # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
         # Ensure symbol was submitted
         if not request.form.get("symbol"):
             return apology("Missing stock symbol")
-        
-        # Test if quote exists
+
+        # Lookup quote
         quote = lookup(request.form.get("symbol"))
 
+        # Ensure symbol is correct
         if quote is None:
-            return apology("Quote doesn't exist")
+            return apology("Quote invalid")
 
         else:
             # Convert price into USD
             quote["price"] = usd(quote["price"])
             return render_template("quoted.html", quote=quote)
-
 
 
     else:
