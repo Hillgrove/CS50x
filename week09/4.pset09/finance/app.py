@@ -68,8 +68,10 @@ def buy():
             return apology("Quote invalid")
 
         else:
+            
             return redirect("/")
 
+    # User reached route via GET
     else:
         return render_template("buy.html")
 
