@@ -51,7 +51,7 @@ def buy():
             return apology("Missing stock symbol")
 
         # Ensure amount of shares was submitted
-        elif not request.form.get("amount"):
+        elif not request.form.get("shares"):
             return apology("Missing amount of shares")
 
         # Lookup quote
