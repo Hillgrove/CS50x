@@ -133,8 +133,9 @@ def quote():
         # Test if quote exists
         quote = lookup(request.form.get("symbol"))
         print(f"--- DEBUG ---\nQuote: {quote}")
-        
-        if type(quote) == NONE:
+        print(f"--- DEBUG ---\nType of quote: {type(quote)}")
+
+        if type(quote) == NoneType:
             return apology("Quote doesn't exist")
 
         else:
