@@ -65,8 +65,10 @@ def buy():
             return apology("Quote invalid")
 
         balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        price = quote["price"]
+
         # Ensure the balance is sufficient
-        if shares * quote["price"] > balance:
+        if shares * price > balance:
             return apology("Balance insufficient")
 
         else:
