@@ -6,7 +6,7 @@
 
 {% block main %}
     TODO:<br>
-    <table>
+    <table class="">
         <thead>this is the thead</thead>
         <tr>
             <td>name</td>
@@ -14,7 +14,7 @@
             <td>symbol</td>
         </tr>
         <tr>
-            {% for value in quote %}
+            {% for value in quote.values() %}
                 <td>
                     {{ value }}
                 </td>
