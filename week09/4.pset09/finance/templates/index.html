@@ -6,10 +6,13 @@
 
 {% block main %}
     <table>
-        {% for value in rows.values %}
         <tr>
-
+            {% for value in rows.values %}
+                <td>
+                    {{ value }}
+                </td>
+            {% endfor %}
         </tr>
-        {% endfor %}
+
     </table>
 {% endblock %}
