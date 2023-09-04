@@ -35,7 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    rows = db.execute("SELECT * FROM purchases WHERE user_id = ?", user_id = session["user_id"])
+    user_id = session["user_id"]
+    rows = db.execute("SELECT * FROM purchases WHERE user_id = ?", user_id)
     return render_template("index.html", rows=rows)
 
 
