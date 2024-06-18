@@ -122,8 +122,13 @@ def register():
         return apology("must provide username", 400)
 
     password = request.form.get("password")
+    confirmation = request.form.get("confirmation")
     if not password:
         return apology("must provide password", 400)
+    if not confirmation:
+        return apology("must provide confirmation", 400)
+    if not password == confirmation:
+        return apology("password and confirmation must be the same", 400)
 
     # Check if username already exists
     user_check = db.execute(
