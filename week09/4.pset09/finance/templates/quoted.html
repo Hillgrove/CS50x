@@ -6,17 +6,8 @@
 
 {% block main %}
 
-    <table>
-        <thead>
-            <td>Symbol</td>
-            <td>Price</td>
-        </thead>
-        <tbody>
-            <tr>
-                <td> {{ symbol['symbol'] }} </td>
-                <td> ${{ symbol['price'] }} </td>
-            </tr>
-        </tbody>
-    </table>
+<main class="container py-5 text-center">
+    <p>a share of {{ symbol['symbol'] }} costs {% usd(symbol['price']) %}</p>
+</main>
 
 {% endblock %}
