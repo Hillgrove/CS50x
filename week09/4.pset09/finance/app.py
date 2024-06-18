@@ -48,11 +48,18 @@ def buy():
 
     #POST method processing
     symbol = request.form.get("symbol")
-    if not symbol
+    if not symbol:
         return apology("Missing symbol", 400)
 
     if lookup(symbol) == None:
         return apology("Invalid symbol", 400)
+
+    shares = request.form.get("shares")
+    if not shares:
+        return apology("Missing shares", 400)
+
+    if shares < 0:
+        return apology("Shares must be pos)
 
 
 
