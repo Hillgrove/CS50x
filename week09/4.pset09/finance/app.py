@@ -134,9 +134,12 @@ def register():
 
     hash = generate_password_hash(password)
 
-    db.execute(
-        "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash
-    )
+    try:
+        db.execute(
+            "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash
+        )
+    except ValueError:
+        return apology("user)
 
 
 @app.route("/sell", methods=["GET", "POST"])
