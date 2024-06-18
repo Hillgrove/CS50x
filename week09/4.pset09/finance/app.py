@@ -125,15 +125,26 @@ def register():
     if not password:
         return apology("must provide password", 400)
 
+    # Check if username already exists
+    user_check = db.execute(
+        "SELECT * FROM users WHERE username = ?", username
+    )
+    if user_check:
+        return apology("username already exsits", 400)
+
+
+    # Checks passed - add new user
     hash = generate_password_hash(password)
 
-    # Add username and password to db - return error if username already exists
     try:
         db.execute(
             "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash
         )
-    except ValueError:
-        return apology("username already exists", 400)
+    except Exception:
+        return apology("an error occured while registering", 500)
+
+    # redirect user to login after registering
+    return redirect("/login")
 
 
 @app.route("/sell", methods=["GET", "POST"])
