@@ -110,7 +110,7 @@ def quote():
     if request.method == "GET":
         return render_template("quote.html")
 
-    return apology("TODO")
+    
 
 
 @app.route("/register", methods=["GET", "POST"])
