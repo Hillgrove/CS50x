@@ -5,5 +5,20 @@
 {% endblock %}
 
 {% block main %}
-    
+
+    <table>
+        <thead>
+            <td>Symbol</td>
+            <td>Price</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {% symbol_dict[symbol] %} </td>
+            </tr>
+            <tr>
+                <td> {% symbol_dict[price] %} </td>
+            </tr>
+        </tbody>
+    </table>
+
 {% endblock %}

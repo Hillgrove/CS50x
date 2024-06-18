@@ -114,7 +114,7 @@ def quote():
     symbol = request.form.get("symbol")
     symbol_dict = lookup(symbol)
 
-    return render_template("quoted.html")
+    return render_template("quoted.html", symbol_dict)
 
 
 @app.route("/register", methods=["GET", "POST"])
