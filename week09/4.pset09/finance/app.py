@@ -133,7 +133,7 @@ def register():
             "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash
         )
     except ValueError:
-        return apology("username already exists", 403)
+        return apology("username already exists", 400)
 
 
 @app.route("/sell", methods=["GET", "POST"])
