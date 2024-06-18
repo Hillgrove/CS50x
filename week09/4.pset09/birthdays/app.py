@@ -48,7 +48,7 @@ def index():
             month = int(month)
         except ValueError:
             return redirect("/")
-        if day < 1 or day > 12:
+        if month < 1 or month > 12:
             return redirect("/")
 
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
@@ -61,5 +61,3 @@ def index():
         birthdays = db.execute("SELECT * FROM birthdays")
 
         return render_template("index.html", birthdays=birthdays)
-
-
