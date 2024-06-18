@@ -112,7 +112,8 @@ def quote():
 
     # POST method processing
     symbol = request.form.get("symbol")
-    
+    price = lookup(symbol)
+
     return render_template("quoted.html")
 
 
