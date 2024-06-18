@@ -63,10 +63,9 @@ def buy():
 
 
 
-
-
     flash('Bought!')
-    return apology("TODO")
+    # Redirect user to home page
+    return redirect("/")
 
 
 @app.route("/history")
