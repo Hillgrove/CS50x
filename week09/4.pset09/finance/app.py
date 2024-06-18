@@ -112,9 +112,9 @@ def quote():
 
     # POST method processing
     symbol = request.form.get("symbol")
-    symbol_dict = lookup(symbol)
+    symbol_info = lookup(symbol)
 
-    return render_template("quoted.html", symbol_dict)
+    return render_template("quoted.html", symbol=symbol_info)
 
 
 @app.route("/register", methods=["GET", "POST"])
