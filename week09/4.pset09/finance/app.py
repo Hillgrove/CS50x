@@ -70,8 +70,11 @@ def buy():
     cost_pr_share = lookup(symbol)
     total_cost = cost_pr_share * shares
     funds = db.execute(
-        "SELECT cash FROM users WHERE username = ?", session[username]
+        "SELECT cash FROM users WHERE id = ?", session["user_id"]
     )
+
+    if funds < total_cost:
+        return apology("Not enough funds", 400)
 
 
 
