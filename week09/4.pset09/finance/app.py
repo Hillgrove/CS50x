@@ -67,7 +67,7 @@ def buy():
         return apology("Shares not a valid number", 400)
 
     # Ensuring enough funds
-    cost_pr_share = lookup(symbol)
+    cost_pr_share = lookup(symbol)['price']
     total_cost = cost_pr_share * shares
     funds = db.execute(
         "SELECT cash FROM users WHERE id = ?", session["user_id"]
