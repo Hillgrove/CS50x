@@ -58,8 +58,15 @@ def buy():
     if not shares:
         return apology("Missing shares", 400)
 
-    if shares < 0:
-        return apology("Shares must be positive", 400)
+    try:
+        if int(shares) < 0:
+            return apology("Shares must be positive", 400)
+
+    except ValueError:
+        return apology("Shares not a valid number", 400)
+
+
+
 
 
 
