@@ -46,7 +46,7 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    #Checking inputs
+    # Checking inputs
     symbol = request.form.get("symbol")
     if not symbol:
         return apology("Missing symbol", 400)
@@ -190,7 +190,6 @@ def register():
     )
     if user_check:
         return apology("username already exsits", 400)
-
 
     # Checks passed - add new user
     hash = generate_password_hash(password)
