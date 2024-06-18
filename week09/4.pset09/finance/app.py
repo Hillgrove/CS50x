@@ -47,6 +47,14 @@ def buy():
         return render_template("buy.html")
 
     #POST method processing
+    symbol = request.form.get("symbol")
+    if not symbol or lookup(symbol) == None:
+        return apology("Missing symbol", 400)
+
+
+
+
+    flash('Bought!')
     return apology("TODO")
 
 
