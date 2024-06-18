@@ -113,17 +113,17 @@ def quote():
 def register():
     """Register user"""
 
-    # Ensure username was submitted
+    if request.method == "GET":
+        return render_template("register.html")
+
+    # POST method processing
     username = request.form.get("username")
+    if not username:
+        return apology("must provide username", 400)
 
-    if username == None or len(username) == 0:
-        return apology("must provide username", 403)
-
-    # Ensure password was submitted
     password = request.form.get("password")
-
-    if password == None or len(password) == 0:
-        return apology("must provide password", 403)
+    if not password:
+        return apology("must provide password", 400)
 
     hash = generate_password_hash(password)
 
