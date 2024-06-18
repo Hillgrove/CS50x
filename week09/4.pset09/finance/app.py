@@ -83,6 +83,7 @@ def login():
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
 
+        flash('You were successfully logged in')
         # Redirect user to home page
         return redirect("/")
 
@@ -156,6 +157,7 @@ def register():
     except Exception:
         return apology("an error occured while registering", 500)
 
+    flash('User successfully created')
     # redirect user to login after registering
     return redirect("/login")
 
