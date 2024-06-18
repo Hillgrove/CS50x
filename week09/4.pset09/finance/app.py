@@ -70,7 +70,7 @@ def buy():
     cost_pr_share = lookup(symbol)
     total_cost = cost_pr_share * shares
     funds = db.execute(
-        "SELECT 
+        "SELECT cash FROM users WHERE username = ?", session[username]
     )
 
 
