@@ -59,7 +59,7 @@ def buy():
         return apology("Missing shares", 400)
 
     if shares < 0:
-        return apology("Shares must be pos)
+        return apology("Shares must be positive", 400)
 
 
 
