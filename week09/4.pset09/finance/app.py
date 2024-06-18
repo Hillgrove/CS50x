@@ -113,18 +113,11 @@ def quote():
 def register():
     """Register user"""
 
+    # Ensure username was submitted
     username = request.form.get("username")
 
     if username == None or len(username) == 0:
         return apology("must provide username", 403)
-
-    # Make sure username is unique
-    rows = db.execute(
-        "SELECT * FROM users where username = ?", username
-    )
-
-    if len(rows) != 0:
-        return apology("username already exists", 403)
 
     # Ensure password was submitted
     password = request.form.get("password")
@@ -134,12 +127,13 @@ def register():
 
     hash = generate_password_hash(password)
 
+    # Add username and password to db - return error if username already exists
     try:
         db.execute(
             "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash
         )
     except ValueError:
-        return apology("user)
+        return apology("username already exists", 403)
 
 
 @app.route("/sell", methods=["GET", "POST"])
