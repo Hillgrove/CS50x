@@ -13,10 +13,8 @@
         </thead>
         <tbody>
             <tr>
-                <td> {% symbol[symbol] %} </td>
-            </tr>
-            <tr>
-                <td> {% symbol[price] %} </td>
+                <td> {{ symbol['symbol'] }} </td>
+                <td> ${{ symbol['price'] }} </td>
             </tr>
         </tbody>
     </table>
