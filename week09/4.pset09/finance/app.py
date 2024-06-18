@@ -46,7 +46,7 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    #POST method processing
+    #Checking inputs
     symbol = request.form.get("symbol")
     if not symbol:
         return apology("Missing symbol", 400)
@@ -59,11 +59,22 @@ def buy():
         return apology("Missing shares", 400)
 
     try:
-        if int(shares) < 0:
+        shares = int(shares)
+        if shares < 0:
             return apology("Shares must be positive", 400)
 
     except ValueError:
         return apology("Shares not a valid number", 400)
+
+    # Ensuring enough funds
+    cost_pr_share = lookup(symbol)
+    total_cost = cost_pr_share * shares
+    funds = db.execute(
+        "SELECT 
+    )
+
+
+
 
 
 
