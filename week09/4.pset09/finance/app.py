@@ -279,26 +279,26 @@ def sell():
 
     # POST method
     symbol = request.form.get("symbol")
-    shares = request.form.get("shares")
-    portfolio_amount = db.execute("""
+    amount_to_sell = request.form.get("shares")
+    amount_in_portfolio = db.execute("""
                         SELECT amount
                         FROM portfolio
                         WHERE user_id = ?
                         AND symbol = ?""", session['user_id'], symbol)
 
     print(f"""=== DEBUG ===
-          Amount: {portfolio_amount}
+          Amount: {amount_in_portfolio}
           === DEBUG ===""")
 
     # Check if the result is not empty
-    if portfolio_amount[0]['amount'] is not None:
-        portfolio_amount = portfolio_amount[0]['amount']
+    if amount_in_portfolio[0]['amount'] is not None:
+        amount_in_portfolio = amount_in_portfolio[0]['amount']
     else:
         amount = 0
 
-        print(f"""=== DEBUG ===
-          Amount: {portfolio_amount}
-          === DEBUG ===""")
+    print(f"""=== DEBUG ===
+        Amount: {amount_in_portfolio}
+        === DEBUG ===""")
 
     if symbol == None:
         return apology("Missing symbol", 400)
@@ -307,22 +307,22 @@ def sell():
         return apology("Stock not owned", 400)
 
     try:
-        shares = int(shares)
+        amount_to_sell = int(amount_to_sell)
     except:
         return apology("Shares not valid", 400)
 
-    if shares == "":
+    if amount_to_sell == "":
         return apology("Missing shares", 400)
 
-    if shares < 0:
+    if amount_to_sell < 0:
         return apology("Shares must be positive", 400)
 
-    if shares > portfolio_amount:
+    if amount_to_sell > amount_in_portfolio:
         return apology("Too many shares", 400)
 
     # All checks completed - update database
     current_price = lookup(symbol)['price']
-    sell_price = current_price * amount
+    sell_price = current_price * amount_to_sell
 
     # Add funds to DB
     db.execute("""
@@ -335,7 +335,7 @@ def sell():
                UPDATE portfolio
                SET amount = amount - ?
                WHERE user_id = ?
-               AND symbol = ?""", amount, session[user_id], symbol)
+               AND symbol = ?""", amount_to_sell, session['user_id'], symbol)
 
     flash("Share sold")
     return redirect("/")
