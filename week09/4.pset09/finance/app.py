@@ -324,24 +324,23 @@ def sell():
                WHERE id = ?""", sell_price, session['user_id'])
 
     # Remove stocks from portfolio
-    db.execute("""
-               UPDATE portfolio
-               SET amount = amount - ?
-               WHERE user_id = ?
-               AND symbol = ?""", amount_to_sell, session['user_id'], symbol)
-
-    # Add sale to history
     if amount_to_sell == amount_in_portfolio:
         db.execute("""
-                   DELETE *
-                   FROM portfolio
-                   WHERE user_id = ?
-                   AND symbol = ?""", session['user_id'], symbol)
-
+                    DELETE *
+                    FROM portfolio
+                    WHERE user_id = ?
+                    AND symbol = ?""", session['user_id'], symbol)
     else:
         db.execute("""
-                INSERT INTO history (user_id, symbol, price, amount)
-                VALUES (?, ?, ?, ?)""", session['user_id', symbol, current_price, -amount_to_sell])
+                    UPDATE portfolio
+                    SET amount = amount - ?
+                    WHERE user_id = ?
+                    AND symbol = ?""", amount_to_sell, session['user_id'], symbol)
+
+    # Add sale to history
+    db.execute("""
+            INSERT INTO history (user_id, symbol, price, amount)
+            VALUES (?, ?, ?, ?)""", session['user_id', symbol, current_price, -amount_to_sell])
 
     flash("Share sold")
     return redirect("/")
