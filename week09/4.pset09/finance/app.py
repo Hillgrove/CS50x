@@ -226,6 +226,8 @@ def quote():
         symbol = request.form.get("symbol").upper()
         price = usd(lookup(symbol)['price'])
 
+        print(f"=== DEBUG ===\nSymbol: {symbol}")
+
         if not symbol:
             return apology("Invalid symbol", 400)
 
