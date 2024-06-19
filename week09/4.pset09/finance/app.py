@@ -321,7 +321,7 @@ def sell():
     db.execute("""
                UPDATE users
                SET cash = cash + ?
-               WHERE user_id = ?""", sell_price, session['user_id'])
+               WHERE id = ?""", sell_price, session['user_id'])
 
     # Remove stocks from portfolio
     db.execute("""
