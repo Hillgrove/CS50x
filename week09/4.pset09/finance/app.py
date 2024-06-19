@@ -37,7 +37,7 @@ def index():
     """Show portfolio of stocks"""
 
     portfolio = db.execute(
-        "SELECT * FROM portfolio WHERE user_id = ?", session['user_id']
+        "SELECT (symbol, price, amount) FROM portfolio WHERE user_id = ?", session['user_id']
     )
 
     return apology("TODO")
