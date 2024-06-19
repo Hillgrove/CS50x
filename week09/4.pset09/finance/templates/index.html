@@ -16,7 +16,7 @@
             <tbody>
                 {% for stock in portfolio %}
                     <tr>
-                        <td class="text-start">{{ stock['symbol'] }}</td>
+                        <td class="text-start">{{ stock['symbol'] |upper }}</td>
                         <td class="text-end">{{ stock['shares'] }}</td>
                         <td class="text-end">{{ stock['price'] }}</td>
                         <td class="text-end">{{ stock['total'] }}</td>
