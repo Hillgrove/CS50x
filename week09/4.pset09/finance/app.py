@@ -43,7 +43,7 @@ def index():
                            GROUP BY symbol""", session['user_id']
     )
 
-    return apology("TODO")
+    return render_template("index.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
