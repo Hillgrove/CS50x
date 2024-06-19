@@ -25,15 +25,18 @@
                     <td class="text-end">{{ stock['total'] | usd }}</td>
 
                     <td class="text-center">
-                        <form action="/buy" method="get">
-                            <input type="hidden" name="symbol" value="{{ stock['symbol'] }}">
-                            <button type="submit" class="btn btn-sm btn-primary">Buy</button>
-                        </form>
-                        <form action="/sell" method="get">
-                            <input type="hidden" name="symbol" value="{{ stock['symbol'] }}">
-                            <button type="submit" class="btn btn-sm btn-warning">Sell</button>
-                        </form>
+                        <div class="btn-group">
+                            <form action="/buy" method="get" style="margin-right: 5px;">
+                                <input type="hidden" name="symbol" value="{{ stock['symbol'] }}">
+                                <button type="submit" class="btn btn-sm btn-primary">Buy</button>
+                            </form>
+                            <form action="/sell" method="get">
+                                <input type="hidden" name="symbol" value="{{ stock['symbol'] }}">
+                                <button type="submit" class="btn btn-sm btn-warning">Sell</button>
+                            </form>
+                        </div>
                     </td>
+
                 </tr>
             {% endfor %}
         </tbody>
