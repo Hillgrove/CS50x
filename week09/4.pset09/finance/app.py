@@ -272,11 +272,19 @@ def sell():
     if symbol not in symbol_list:
         return apology("Stock not owned", 400)
 
+    try:
+        shares = int(shares)
+    except:
+        return apology("Shares not valid", 400)
+
     if shares == "":
         return apology("Missing shares", 400)
 
     if shares < 0:
         return apology("Shares must be positive", 400)
+
+    if shares > amount:
+        return apology("Too many shares", 400)
 
 
 
