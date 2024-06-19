@@ -17,8 +17,8 @@
                 <tr>
                     <td>{{ stock['symbol'] }}</td>
                     <td>{{ stock['shares'] }}</td>
-                    <td>{% lookup(stock['symbol']) %}</td>
-                    <td>{% stock['shares'] * lookup(stock['symbol']) %}</td>
+                    <!-- <td>{% lookup(stock['symbol']) %}</td>
+                    <td>{% stock['shares'] * lookup(stock['symbol']) %}</td> -->
                 </tr>
             {% endfor %}
         </tbody>
