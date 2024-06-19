@@ -84,6 +84,11 @@ def buy():
     except Exception:
         return apology("an error occured while registering", 500)
 
+    #Remove price from user table
+    db.execute(
+        "ALTER 
+    )
+
 
     flash('Bought!')
     # Redirect user to home page
