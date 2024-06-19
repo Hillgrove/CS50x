@@ -5,12 +5,21 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/buy" method="post">
+    <form action="/sell" method="post">
         <div class="mb-3">
-            <input autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
+            <select class="form-select mx-auto w-auto" name="symbol">
+                <option disabled selected>Symbol</option>
+
+                    <option value="DMTK">DMTK</option>
+
+                    <option value="RELI">RELI</option>
+
+                    <option value="STI">STI</option>
+
+            </select>
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
+            <input autocomplete="off" class="form-control mx-auto w-auto" min="0" name="shares" placeholder="Shares" type="number">
         </div>
         <button class="btn btn-primary" type="submit">Sell</button>
     </form>
