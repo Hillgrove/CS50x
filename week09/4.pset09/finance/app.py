@@ -39,6 +39,7 @@ def index():
     portfolio = db.execute("""
                            SELECT symbol, SUM(amount) AS [Shares]
                            FROM portfolio
+                           WHERE user_id = ?
                            GROUP BY symbol""", session['user_id']
     )
 
