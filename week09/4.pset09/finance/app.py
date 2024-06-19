@@ -149,6 +149,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    
     history = db.execute("""
                          SELECT id, symbol, price, amount, date
                          FROM history
