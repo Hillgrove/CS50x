@@ -87,8 +87,8 @@ def buy():
     #Remove price from user table
     db.execute("""
                UPDATE users
-               SET cash = cash - total_cost
-               WHERE user_id = ?""", session["user_id"]
+               SET cash = cash - ?
+               WHERE id = ?""", total_cost, session["user_id"]
     )
 
 
