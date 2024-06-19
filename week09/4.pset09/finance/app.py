@@ -47,7 +47,11 @@ def index():
         stock['price'] = lookup(stock['symbol'])['price']
         stock['total'] = stock['price'] * stock['shares']
 
-    return render_template("index.html", portfolio=portfolio)
+    cash = db.execute(
+        "SELECT cash from users where id = ?", session['user_id']
+    )
+
+    return render_template("index.html", portfolio=portfolio, cash=cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
