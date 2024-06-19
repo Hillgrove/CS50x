@@ -102,7 +102,10 @@ def buy():
     exists = db.execute("""
                         SELECT *
                         FROM portfolio
-                        WHERE 
+                        WHERE user_id = ?
+                        AND symbol = ?""", session['user_id'], symbol)
+
+    if exists 
     try:
         db.execute(
             "INSERT INTO portfolio (user_id, symbol, price, amount) VALUES (?, ?, ?, ?)", session["user_id"], symbol, price, amount
