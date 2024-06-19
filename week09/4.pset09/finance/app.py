@@ -298,7 +298,10 @@ def sell():
 
     # Remove stocks from portfolio
     db.execute("""
-               UPDATE portfolio)
+               UPDATE portfolio
+               SET amount = amount - ?
+               WHERE user_id = ?
+               AND symbol = ?""", amount, session[user_id], symbol)
 
     flash("Share sold")
     return redirect("/")
