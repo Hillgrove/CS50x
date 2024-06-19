@@ -38,7 +38,10 @@ def index():
 
     portfolio = db.execute("""
                            SELECT
-                           SUM () FROM portfolio WHERE user_id = ?""", session['user_id']
+                           symbol,
+                           
+
+                           """, session['user_id']
     )
 
     return apology("TODO")
