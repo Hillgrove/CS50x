@@ -65,8 +65,9 @@ def index():
 def buy():
     """Buy shares of stock"""
 
+    symbol = request.args.get("symbol", "").upper()
     if request.method == "GET":
-        return render_template("buy.html")
+        return render_template("buy.html", symbol=symbol)
 
     # Checking inputs
     symbol = request.form.get("symbol")
