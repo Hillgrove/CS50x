@@ -259,5 +259,5 @@ def sell():
     print(symbol)
 
     flash("Share sold")
-    return render_template("/")
+    return redirect("/")
 
