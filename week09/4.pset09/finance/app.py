@@ -81,7 +81,6 @@ def buy():
     try:
     db.execute(
         "INSERT INTO portfolio (user_id, symbol, price, amount) VALUES (?, ?, ?, ?)", session["user_id"], symbol, price, shares
-
     )
     except Exception:
         return apology("an error occured while registering", 500)
