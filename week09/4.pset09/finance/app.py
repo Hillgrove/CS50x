@@ -249,9 +249,15 @@ def sell():
 
         symbol_list = [dic['symbol'] for dic in symbols]
 
-        print(symbol_list)
+
 
         return render_template("sell.html", symbols=symbol_list)
 
     # POST method
-    symbol = get.request.form()
+    symbol = request.form.get("symbol")
+
+    print(symbol)
+
+    flash("Share sold")
+    return render_template("index.html")
+
