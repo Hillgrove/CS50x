@@ -287,7 +287,7 @@ def sell():
                         FROM portfolio
                         WHERE user_id = ?""", session['user_id'])
 
-    symbol_list = [dic['symbol'] for dic in symbols]
+    symbol_list = [dic['symbol'].upper() for dic in symbols]
     selected_symbol = request.args.get("symbol", "").upper()
 
     # GET method
