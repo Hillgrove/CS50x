@@ -99,6 +99,10 @@ def buy():
         return apology("Not enough funds", 400)
 
     #Updating database with purchase
+    exists = db.execute("""
+                        SELECT *
+                        FROM portfolio
+                        WHERE 
     try:
         db.execute(
             "INSERT INTO portfolio (user_id, symbol, price, amount) VALUES (?, ?, ?, ?)", session["user_id"], symbol, price, amount
