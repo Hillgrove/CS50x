@@ -13,6 +13,7 @@
             <th class="text-end">Shares</th>
             <th class="text-end">Price</th>
             <th class="text-end">Total</th>
+            <th class="text-center">Actions</th>
         </thead>
 
         <tbody>
@@ -22,6 +23,17 @@
                     <td class="text-end">{{ stock['shares'] }}</td>
                     <td class="text-end">{{ stock['price'] | usd }}</td>
                     <td class="text-end">{{ stock['total'] | usd }}</td>
+
+                    <td class="text-center">
+                        <form action="/buy" method="get">
+                            <input type="hidden" name="symbol" value="{{ stock['symbol'] }}">
+                            <button type="submit" class="btn btn-sm btn-primary">Buy</button>
+                        </form>
+                        <form action="/sell" method="get">
+                            <input type="hidden" name="symbol" value="{{ stock['symbol'] }}">
+                            <button type="submit" class="btn btn-sm btn-warning">Sell</button>
+                        </form>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
