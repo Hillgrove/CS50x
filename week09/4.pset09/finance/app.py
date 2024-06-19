@@ -292,7 +292,8 @@ def sell():
 
     # Add funds to DB
     db.execute("""
-               UPDATE cash)
+               UPDATE users
+               SET cash = )
 
     flash("Share sold")
     return redirect("/")
