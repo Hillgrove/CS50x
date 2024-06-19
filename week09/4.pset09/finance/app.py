@@ -37,16 +37,15 @@ def index():
     """Show portfolio of stocks"""
 
     portfolio = db.execute("""
-                           SELECT symbol, SUM(amount) AS [Shares]
+                           SELECT symbol, SUM(amount) AS [shares]
                            FROM portfolio
                            WHERE user_id = ?
                            GROUP BY symbol""", session['user_id']
     )
 
     for stock in portfolio:
-        portfolio.add
-
-
+        stock['price'] = lookup(stock['symbol'])
+        stock['total'] = stock['price'] * stock['shares']
 
     return render_template("index.html", portfolio=portfolio)
 
