@@ -54,13 +54,13 @@ def buy():
     if lookup(symbol) == None:
         return apology("Invalid symbol", 400)
 
-    shares = request.form.get("shares")
-    if not shares:
+    amount = request.form.get("shares")
+    if not amount:
         return apology("Missing shares", 400)
 
     try:
-        shares = int(shares)
-        if shares < 0:
+        amount = int(amount)
+        if amount < 0:
             return apology("Shares must be positive", 400)
 
     except ValueError:
@@ -68,7 +68,7 @@ def buy():
 
     # Ensuring enough funds
     price = lookup(symbol)['price']
-    total_cost = price * shares
+    total_cost = price * amount
     funds = db.execute(
         "SELECT cash FROM users WHERE id = ?", session["user_id"]
     )[0]['cash']
@@ -80,7 +80,7 @@ def buy():
 
     try:
     db.execute(
-        "INSERT INTO portfolio (user_id, symbol, price, amount) VALUES (?, ?, ?, ?)", session["user_id"], symbol, price, shares
+        "INSERT INTO portfolio (user_id, symbol, price, amount) VALUES (?, ?, ?, ?)", session["user_id"], symbol, price, amount
     )
     except Exception:
         return apology("an error occured while registering", 500)
