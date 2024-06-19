@@ -44,7 +44,7 @@ def index():
     )
 
     for stock in portfolio:
-        stock['price'] = lookup(stock['symbol']['price'])
+        stock['price'] = lookup(stock['symbol'])['price']
         stock['total'] = stock['price'] * stock['shares']
 
     return render_template("index.html", portfolio=portfolio)
