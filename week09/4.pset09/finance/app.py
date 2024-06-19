@@ -301,7 +301,7 @@ def sell():
 
     try:
         amount_to_sell = int(amount_to_sell)
-    except:
+    except ValueError:
         return apology("Shares not valid", 400)
 
     if amount_to_sell == "":
