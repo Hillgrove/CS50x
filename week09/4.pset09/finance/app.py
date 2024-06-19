@@ -243,7 +243,7 @@ def sell():
     # GET method
     if request.method == "GET":
         symbols = db.execute("""
-                             SELECT symbol
+                             SELECT DISTINCT symbol
                              FROM portfolio
                              WHERE user_id = ?""", session['user_id'])
 
@@ -251,6 +251,6 @@ def sell():
 
         print(symbol_list)
 
-        return render_template("sell.html")
+        return render_template("sell.html", symbols=symbol_list)
 
     # POST method
