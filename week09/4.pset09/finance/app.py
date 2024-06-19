@@ -43,15 +43,21 @@ def index():
                            GROUP BY symbol""", session['user_id']
     )
 
+    # Adds current price for each stock and their total value
     for stock in portfolio:
         stock['price'] = lookup(stock['symbol'])['price']
         stock['total'] = stock['price'] * stock['shares']
 
     cash = db.execute(
         "SELECT cash from users where id = ?", session['user_id']
-    )
+    )[0]['cash']
 
-    return render_template("index.html", portfolio=portfolio, cash=cash)
+    # Calculate total value of portfolio + liquidity
+    total = cash
+    for stock in portfolio:
+        total += stock['price'] * stock['shares']
+
+    return render_template("index.html", portfolio=portfolio, cash=cash, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
