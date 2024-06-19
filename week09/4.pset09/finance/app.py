@@ -78,6 +78,10 @@ def buy():
 
     #Updating database with purchase
 
+    db.execute(
+        "INSERT INTO portfolio VALUES (?, ?, ?)", 
+    )
+
 
 
 
