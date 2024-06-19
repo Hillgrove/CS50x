@@ -240,30 +240,28 @@ def register():
 def sell():
     """Sell shares of stock"""
 
+    symbols = db.execute("""
+                        SELECT DISTINCT symbol
+                        FROM portfolio
+                        WHERE user_id = ?""", session['user_id'])
+
+    symbol_list = [dic['symbol'] for dic in symbols]
+
     # GET method
     if request.method == "GET":
-        symbols = db.execute("""
-                             SELECT DISTINCT symbol
-                             FROM portfolio
-                             WHERE user_id = ?""", session['user_id'])
-
-        symbol_list = [dic['symbol'] for dic in symbols]
-
-
-
         return render_template("sell.html", symbols=symbol_list)
 
     # POST method
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
-
+    
     if symbol == None:
         return apology("Missing symbol", 400)
 
     if shares == "":
         return apology("Missing shares", 400)
 
-    
+
 
     print(f"DEBUG -- symbol: {symbol} -- shares: {shares}")
 
