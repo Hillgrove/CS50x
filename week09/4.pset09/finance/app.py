@@ -340,7 +340,7 @@ def sell():
     # Add sale to history
     db.execute("""
             INSERT INTO history (user_id, symbol, price, amount)
-            VALUES (?, ?, ?, ?)""", session['user_id', symbol, current_price, -amount_to_sell])
+            VALUES (?, ?, ?, ?)""", session['user_id'], symbol, current_price, -amount_to_sell)
 
     flash("Share sold")
     return redirect("/")
