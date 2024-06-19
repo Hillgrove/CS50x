@@ -287,7 +287,12 @@ def sell():
         return apology("Too many shares", 400)
 
     # All checks completed - update database
-    current_price = lookup(symbol)
+    current_price = lookup(symbol)['price']
+    sell_price = current_price * amount
+
+    # Add funds to DB
+    db.execute("""
+               UPDATE cash)
 
     flash("Share sold")
     return redirect("/")
