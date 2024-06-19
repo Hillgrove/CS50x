@@ -254,3 +254,4 @@ def sell():
         return render_template("sell.html", symbols=symbol_list)
 
     # POST method
+    symbol = get.request.form()
