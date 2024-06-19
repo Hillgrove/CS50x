@@ -255,8 +255,17 @@ def sell():
 
     # POST method
     symbol = request.form.get("symbol")
+    shares = request.form.get("shares")
 
-    print(symbol)
+    if symbol == None:
+        return apology("Missing symbol", 400)
+
+    if shares == "":
+        return apology("Missing shares", 400)
+
+    
+
+    print(f"DEBUG -- symbol: {symbol} -- shares: {shares}")
 
     flash("Share sold")
     return redirect("/")
