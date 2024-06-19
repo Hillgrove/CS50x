@@ -293,7 +293,12 @@ def sell():
     # Add funds to DB
     db.execute("""
                UPDATE users
-               SET cash = )
+               SET cash = cash + ?
+               WHERE user_id = ?""", sell_price, session['user_id'])
+
+    # Remove stocks from portfolio
+    db.execute("""
+               UPDATE portfolio)
 
     flash("Share sold")
     return redirect("/")
