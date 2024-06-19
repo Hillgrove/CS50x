@@ -76,8 +76,7 @@ def buy():
     if funds < total_cost:
         return apology("Not enough funds", 400)
 
-
-    #
+    #Updating database with purchase
 
 
 
