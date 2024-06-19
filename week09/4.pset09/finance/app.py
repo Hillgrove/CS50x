@@ -296,6 +296,10 @@ def sell():
     else:
         amount = 0
 
+        print(f"""=== DEBUG ===
+          Amount: {portfolio_amount}
+          === DEBUG ===""")
+
     if symbol == None:
         return apology("Missing symbol", 400)
 
