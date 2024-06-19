@@ -17,15 +17,14 @@
         <tbody>
 
             {% for item in history %}
-
                 <tr>
                     <td class="text-start">{{ item['symbol'] }}</td>
                     <td class="text-end">{{ item['amount'] }}</td>
                     <td class="text-end">{{ item['price'] }}</td>
                     <td class="text-end">{{ item['date'] }}</td>
                 </tr>
-
             {% endfor %}
+
 
         </tbody>
     </table>
