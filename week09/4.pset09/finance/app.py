@@ -221,17 +221,16 @@ def quote():
     if request.method == "GET":
         return render_template("quote.html")
 
-    else:
-        # POST method processing
-        symbol = request.form.get("symbol").upper()
+    # POST method processing
+    symbol = request.form.get("symbol").upper()
+
+    try:
         price = usd(lookup(symbol)['price'])
 
-        print(f"=== DEBUG ===\nSymbol: {symbol}")
+    except TypeError:
+        return apology("Invalid symbol", 400)
 
-        if not symbol:
-            return apology("Invalid symbol", 400)
-
-        return render_template("quoted.html", symbol=symbol, price=price)
+    return render_template("quoted.html", symbol=symbol, price=price)
 
 
 @app.route("/register", methods=["GET", "POST"])
