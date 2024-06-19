@@ -85,10 +85,10 @@ def buy():
         return apology("an error occured while registering", 500)
 
     #Remove price from user table
-    db.execute(
-        "UPDATE users
-         SET cash = cash - total_cost
-         WHERE user_id = ?", session["user_id"]
+    db.execute("""
+               UPDATE users
+               SET cash = cash - total_cost
+               WHERE user_id = ?""", session["user_id"]
     )
 
 
