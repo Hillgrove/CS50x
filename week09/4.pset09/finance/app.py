@@ -260,7 +260,11 @@ def sell():
                         WHERE user_id = ?
                         AND symbol = ?""", session['user_id'], symbol.lower())
 
-    print(f"-- DEBUG -- amount: {amount}")
+    # Check if the result is not empty
+    if result and result[0]['amount'] is not None:
+        amount = result[0]['amount']
+    else:
+        amount = 0
 
     if symbol == None:
         return apology("Missing symbol", 400)
