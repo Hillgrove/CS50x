@@ -43,6 +43,9 @@ def index():
                            GROUP BY symbol""", session['user_id']
     )
 
+    for stock in porfolio:
+        
+
     return render_template("index.html", portfolio=portfolio)
 
 
