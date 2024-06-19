@@ -254,15 +254,27 @@ def sell():
     # POST method
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
+    amount = db.execute("""
+                        SELECT SUM(amount)
+                        FROM portfolio
+                        WHERE user_id = ?
+                        AND symbol = ?""", session['user_id'], symbol.lower())
+
+    print(f"-- DEBUG -- amount: {amount}")
 
     if symbol == None:
         return apology("Missing symbol", 400)
 
+    if symbol not in symbol_list:
+        return apology("Stock not owned", 400)
+
     if shares == "":
         return apology("Missing shares", 400)
 
-    if symbol not in symbol_list:
-        return apology("Stock not owned", 400)
+    if shares < 0:
+        return apology("Shares must be positive", 400)
+
+
 
 
 
