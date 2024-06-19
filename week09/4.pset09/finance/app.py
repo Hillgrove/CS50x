@@ -78,12 +78,13 @@ def buy():
 
     #Updating database with purchase
 
+    try:
     db.execute(
-        "INSERT INTO portfolio VALUES (?, ?, ?)", 
+        "INSERT INTO portfolio (user_id, symbol, price, amount) VALUES (?, ?, ?, ?), 
+
     )
-
-
-
+    except Exception:
+        return apology("an error occured while registering", 500)
 
 
 
