@@ -286,11 +286,8 @@ def sell():
     if shares > amount:
         return apology("Too many shares", 400)
 
-
-
-
-
-    print(f"DEBUG -- symbol: {symbol} -- shares: {shares}")
+    # All checks completed - update database
+    
 
     flash("Share sold")
     return redirect("/")
