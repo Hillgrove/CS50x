@@ -288,10 +288,11 @@ def sell():
                         WHERE user_id = ?""", session['user_id'])
 
     symbol_list = [dic['symbol'] for dic in symbols]
+    selected_symbol = request.args.get("symbol", "").upper()
 
     # GET method
     if request.method == "GET":
-        return render_template("sell.html", symbols=symbol_list)
+        return render_template("sell.html", symbols=symbol_list, selected_symbol=selected_symbol)
 
     # POST method
     symbol = request.form.get("symbol")
