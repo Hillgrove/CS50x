@@ -313,7 +313,7 @@ def sell():
     if shares < 0:
         return apology("Shares must be positive", 400)
 
-    if shares > amount:
+    if shares > portfolio_amount:
         return apology("Too many shares", 400)
 
     # All checks completed - update database
