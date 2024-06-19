@@ -254,12 +254,15 @@ def sell():
     # POST method
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
-    
+
     if symbol == None:
         return apology("Missing symbol", 400)
 
     if shares == "":
         return apology("Missing shares", 400)
+
+    if symbol not in symbol_list:
+        return apology("Stock not owned", 400)
 
 
 
