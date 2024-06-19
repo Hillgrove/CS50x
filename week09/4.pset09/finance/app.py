@@ -331,10 +331,17 @@ def sell():
                AND symbol = ?""", amount_to_sell, session['user_id'], symbol)
 
     # Add sale to history
-    if 
-    db.execute("""
-               INSERT INTO history (user_id, symbol, price, amount)
-               VALUES (?, ?, ?, ?)""", session['user_id', symbol, current_price, -amount_to_sell])
+    if amount_to_sell == amount_in_portfolio:
+        db.execute("""
+                   DELETE *
+                   FROM portfolio
+                   WHERE user_id = ?
+                   AND symbol = ?""", session['user_id'], symbol)
+
+    else:
+        db.execute("""
+                INSERT INTO history (user_id, symbol, price, amount)
+                VALUES (?, ?, ?, ?)""", session['user_id', symbol, current_price, -amount_to_sell])
 
     flash("Share sold")
     return redirect("/")
