@@ -120,8 +120,8 @@ def buy():
     else:
         try:
             db.execute("""
-                       INSERT INTO portfolio (user_id, symbol, price, amount)
-                       VALUES (?, ?, ?, ?)""", session["user_id"], symbol, price, amount
+                       INSERT INTO portfolio (user_id, symbol, amount)
+                       VALUES (?, ?, ?)""", session["user_id"], symbol, amount
             )
         except Exception:
             return apology("an error occured while registering", 500)
