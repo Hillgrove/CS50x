@@ -36,7 +36,9 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-    
+    portfolio = db.execute(
+        "SELECT * FROM portfolio WHERE
+    )
 
     return apology("TODO")
 
