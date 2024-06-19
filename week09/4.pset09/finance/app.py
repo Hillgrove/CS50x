@@ -255,7 +255,7 @@ def sell():
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
     amount = db.execute("""
-                        SELECT SUM(amount)
+                        SELECT SUM(amount) as amount
                         FROM portfolio
                         WHERE user_id = ?
                         AND symbol = ?""", session['user_id'], symbol.lower())
