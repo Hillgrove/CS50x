@@ -280,19 +280,19 @@ def sell():
     # POST method
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
-    amount = db.execute("""
+    portfolio_amount = db.execute("""
                         SELECT amount
                         FROM portfolio
                         WHERE user_id = ?
                         AND symbol = ?""", session['user_id'], symbol)
 
     print(f"""=== DEBUG ===
-          Amount: {amount}
+          Amount: {portfolio_amount}
           === DEBUG ===""")
 
     # Check if the result is not empty
-    if amount[0]['amount'] is not None:
-        amount = result[0]['amount']
+    if portfolio_amount[0]['amount'] is not None:
+        portfolio_amount = portfolio_amount[0]['amount']
     else:
         amount = 0
 
