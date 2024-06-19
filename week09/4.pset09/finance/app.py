@@ -254,7 +254,7 @@ def sell():
     # POST method
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
-    amount = db.execute("""
+    result = db.execute("""
                         SELECT SUM(amount) as amount
                         FROM portfolio
                         WHERE user_id = ?
