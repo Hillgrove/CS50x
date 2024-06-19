@@ -13,12 +13,12 @@
             <td>Total</td>
         </thead>
         <tbody>
-            {% for symbol in portfolio %}
+            {% for stock in portfolio %}
                 <tr>
-                    <td>{{ symbol['symbol'] }}</td>
-                    <td>{{  }}</td>
-                    <td>{{  }}</td>
-                    <td>{{  }}</td>
+                    <td>{{ stock['symbol'] }}</td>
+                    <td>{{ stock['shares'] }}</td>
+                    <td>{% lookup(stock['symbol']) %}</td>
+                    <td>{% stock['shares'] * lookup(stock['symbol']) %}</td>
                 </tr>
             {% endfor %}
         </tbody>
