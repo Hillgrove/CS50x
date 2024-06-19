@@ -150,7 +150,7 @@ def buy():
 def history():
     """Show history of transactions"""
     history = db.execute("""
-                         SELECT *
+                         SELECT id, symbol, price, amount, date
                          FROM history
                          WHERE user_id = ?
                          ORDER BY id""", session['user_id'])
@@ -158,7 +158,7 @@ def history():
     print(f"""== DEBUG ==\n
               {history}\n
               == DEBUG ==""")
-    
+
     return render_template("history.html", history=history)
 
 

@@ -13,7 +13,10 @@
         {% for item in history %}
 
             <tr>
-                test
+                <td class="text-start">{{ history['symbol'] }}</td>
+                <td class="text-end">{{ history['amount'] }}</td>
+                <td class="text-end">{{ history['price'] }}</td>
+                <td class="text-end">{{ history['date'] }}</td>
             </tr>
 
         {% endfor %}
