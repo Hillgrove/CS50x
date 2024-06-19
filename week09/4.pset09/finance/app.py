@@ -247,7 +247,9 @@ def sell():
                              FROM portfolio
                              WHERE user_id = ?""", session['user_id'])
 
-        print(symbols)
+        symbol_list = [dic['symbol'] for dic in symbols]
+
+        print(symbol_list)
 
         return render_template("sell.html")
 
