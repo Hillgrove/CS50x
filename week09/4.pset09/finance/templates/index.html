@@ -5,22 +5,24 @@
 {% endblock %}
 
 {% block main %}
-    <table>
-        <thead>
-            <td>Symbol</td>
-            <td>Shares</td>
-            <td>Price</td>
-            <td>Total</td>
-        </thead>
-        <tbody>
-            {% for stock in portfolio %}
-                <tr>
-                    <td>{{ stock['symbol'] }}</td>
-                    <td>{{ stock['shares'] }}</td>
-                    <td>{{ stock['price'] }}</td>
-                    <td>{{ stock['total'] }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <main class="container py-5 text-center">
+        <table class="table table-striped">
+            <thead>
+                <td>Symbol</td>
+                <td>Shares</td>
+                <td>Price</td>
+                <td>Total</td>
+            </thead>
+            <tbody>
+                {% for stock in portfolio %}
+                    <tr>
+                        <td>{{ stock['symbol'] }}</td>
+                        <td>{{ stock['shares'] }}</td>
+                        <td>{{ stock['price'] }}</td>
+                        <td>{{ stock['total'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
 {% endblock %}
