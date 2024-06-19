@@ -91,8 +91,10 @@ def buy():
     # Ensuring enough funds
     price = lookup(symbol)['price']
     total_cost = price * amount
-    funds = db.execute(
-        "SELECT cash FROM users WHERE id = ?", session["user_id"]
+    funds = db.execute("""
+                       SELECT cash
+                       FROM users
+                       WHERE id = ?""", session["user_id"]
     )[0]['cash']
 
     if funds < total_cost:
@@ -105,13 +107,24 @@ def buy():
                         WHERE user_id = ?
                         AND symbol = ?""", session['user_id'], symbol)
 
-    if exists 
-    try:
-        db.execute(
-            "INSERT INTO portfolio (user_id, symbol, price, amount) VALUES (?, ?, ?, ?)", session["user_id"], symbol, price, amount
-        )
-    except Exception:
-        return apology("an error occured while registering", 500)
+    if exists:
+        try:
+            db.execute("""
+                       UPDATE portfolio
+                       SET amount = amount + ?
+                       WHERE user_id = ?
+                       AND symbol = ?""", amount, session['user_id'], symbol)
+        except Exception:
+            return apology("an error occured while registering", 500)
+
+    else:
+        try:
+            db.execute("""
+                       INSERT INTO portfolio (user_id, symbol, price, amount)
+                       VALUES (?, ?, ?, ?)""", session["user_id"], symbol, price, amount
+            )
+        except Exception:
+            return apology("an error occured while registering", 500)
 
     #Remove price from user table
     db.execute("""
