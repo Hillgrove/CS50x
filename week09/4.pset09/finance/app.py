@@ -287,7 +287,7 @@ def sell():
         return apology("Too many shares", 400)
 
     # All checks completed - update database
-    
+    current_price = lookup(symbol)
 
     flash("Share sold")
     return redirect("/")
