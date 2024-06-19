@@ -41,7 +41,7 @@ def index():
                            FROM portfolio
                            WHERE user_id = ?
                            GROUP BY symbol""", session['user_id']
-    )
+                           )
 
     # Adds current price for each stock and their total value
     for stock in portfolio:
@@ -95,12 +95,12 @@ def buy():
                        SELECT cash
                        FROM users
                        WHERE id = ?""", session["user_id"]
-    )[0]['cash']
+                       )[0]['cash']
 
     if funds < total_cost:
         return apology("Not enough funds", 400)
 
-    #Updating database with purchase
+    # Updating database with purchase
     exists = db.execute("""
                         SELECT *
                         FROM portfolio
@@ -122,7 +122,7 @@ def buy():
             db.execute("""
                        INSERT INTO portfolio (user_id, symbol, amount)
                        VALUES (?, ?, ?)""", session["user_id"], symbol, amount
-            )
+                       )
         except Exception:
             return apology("an error occured while registering", 500)
 
@@ -130,15 +130,14 @@ def buy():
     db.execute("""
                INSERT INTO history (user_id, symbol, price, amount)
                VALUES (?, ?, ?, ?)""", session['user_id'], symbol, price, amount
-    )
+               )
 
     # Remove price from user table
     db.execute("""
                UPDATE users
                SET cash = cash - ?
                WHERE id = ?""", total_cost, session["user_id"]
-    )
-
+               )
 
     flash('Bought!')
     # Redirect user to home page
@@ -297,7 +296,6 @@ def sell():
                         WHERE user_id = ?
                         AND symbol = ?""", session['user_id'], symbol)
 
-
     # Check if the result is not empty
     if amount_in_portfolio[0]['amount'] is not None:
         amount_in_portfolio = amount_in_portfolio[0]['amount']
@@ -355,4 +353,3 @@ def sell():
 
     flash("Share sold")
     return redirect("/")
-
