@@ -87,7 +87,6 @@ def buy():
 
 
 
-
     flash('Bought!')
     # Redirect user to home page
     return redirect("/")
