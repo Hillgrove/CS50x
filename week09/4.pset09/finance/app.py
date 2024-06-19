@@ -326,7 +326,7 @@ def sell():
     # Remove stocks from portfolio
     if amount_to_sell == amount_in_portfolio:
         db.execute("""
-                    DELETE *
+                    DELETE
                     FROM portfolio
                     WHERE user_id = ?
                     AND symbol = ?""", session['user_id'], symbol)
