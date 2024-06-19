@@ -242,7 +242,13 @@ def sell():
 
     # GET method
     if request.method == "GET":
+        symbols = db.execute("""
+                             SELECT symbol
+                             FROM portfolio
+                             WHERE user_id = ?""", session['user_id'])
+
+        print(symbols)
+
         return render_template("sell.html")
 
     # POST method
-    
