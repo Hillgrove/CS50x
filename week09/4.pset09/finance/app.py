@@ -126,7 +126,13 @@ def buy():
         except Exception:
             return apology("an error occured while registering", 500)
 
-    #Remove price from user table
+    # Updating history
+    db.execute("""
+               INSERT INTO history (user_id, symbol, price, amount)
+               VALUES (?, ?, ?, ?)""", session['user_id'], symbol, price, amount
+    )
+
+    # Remove price from user table
     db.execute("""
                UPDATE users
                SET cash = cash - ?
