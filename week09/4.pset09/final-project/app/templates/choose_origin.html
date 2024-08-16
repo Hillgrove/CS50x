@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Create Character</h1>
+    <form id="create-character-form" method="POST" action="{{ url_for('choose_origin') }}">
+        {{ form.hidden_tag() }}
+
+        <!-- Name section -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">{{ form.name.label.text }}</label>
+            <div class="col-sm-3">
+                {{ form.name(class="form-control") }}
+                {% for error in form.name.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Origin section -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">{{ form.origin_id.label.text }}</label>
+            <div class="col-sm-3">
+                {{ form.origin_id(class="form-control", id="origin_id") }}
+                {% for error in form.origin_id.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Stat section -->
+        <div class="form-group row" id="special_stats_section" style="display: none;">
+            <label class="col-sm-4 col-form-label font-weight-bold">S.P.E.C.I.A.L Stats</label>
+            <div class="col-sm-9">
+                <div id="special_stats" class="row">
+                    <!-- Stats will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Background description section -->
+        <div class="form-group row" id="background_description_section" style="display: none;">
+            <label for="origin_description" class="col-sm-3 col-form-label font-weight-bold">Background</label>
+            <div class="col-sm-9">
+                <p id="origin_description" class="form-control-static">{{ origin_description|safe }}</p>
+            </div>
+        </div>
+
+        <!-- Non-Selectable Trait section -->
+        <div class="form-group row" id="non_selectable_traits_section" style="display: none;">
+            <label class="col-sm-3 col-form-label font-weight-bold">Traits</label>
+            <div class="col-sm-9">
+                <ul id="non_selectable_traits">
+                    <!-- Non-selectable traits will be dynamically inserted here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Selectable Trait section -->
+        <div class="form-group row" id="selectable_traits_section" style="display: none;">
+            <label class="col-sm-3 col-form-label font-weight-bold">{{ form.selectable_traits.label.text }}</label>
+
+            <!-- Counter for selectable traits -->
+            <div class="form-group mt-2">
+                <label class="ml-3">Total Tags Selected: <span id="tags_selected">0</span> / <span id="tags_limit">{{ max_tags }}</span></label>
+            </div>
+            
+            <!-- Traits -->
+            <div class="col-sm-9">
+                <div id="selectable_traits">
+                    {% for subfield in form.selectable_traits %}
+                        <div class="form-check">
+                            {{ subfield(class="form-check-input") }}
+                            {{ subfield.label(class="form-check-label") }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Descriptions for selected traits -->
+        <div class="form-group row mt-3" id="selected_traits_descriptions_section" style="display: none;">
+            <div class="col-sm-9">
+                <div id="selected_traits_descriptions" class="mt-2">
+                    <!-- Descriptions will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Next button -->
+        <div class="form-group row">
+            <div class="col-sm-9">
+                {{ form.submit(class="btn btn-primary", id="submit-button", disabled=True) }}
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const originIdElement = document.getElementById('origin_id');
+    const sections = {
+        specialStats: document.getElementById('special_stats_section'),
+        backgroundDescription: document.getElementById('background_description_section'),
+        selectableTraits: document.getElementById('selectable_traits_section'),
+        nonSelectableTraits: document.getElementById('non_selectable_traits_section'),
+        selectedTraitsDescriptions: document.getElementById('selected_traits_descriptions_section')
+    };
+    const form = document.getElementById('create-character-form');
+    const submitButton = document.getElementById('submit-button');
+
+    // Handle change event for origin selection
+    originIdElement.addEventListener('change', handleOriginChange);
+
+    function handleOriginChange() {
+        const originId = originIdElement.value;
+        resetUI();
+
+        if (originId == -1) {
+            submitButton.disabled = true;
+            return;
+        }
+
+        this.options[0].disabled = true;
+
+        fetch(`{{ url_for("get_origin_description") }}?origin_id=${originId}`)
+            .then(response => response.json())
+            .then(data => updateUI(data));
+    }
+
+    // Function to reset the UI before updating
+    function resetUI() {
+        ['origin_description', 'selectable_traits', 'special_stats', 'non_selectable_traits', 'selected_traits_descriptions'].forEach(id => {
+            document.getElementById(id).innerHTML = '';
+        });
+
+        Object.values(sections).forEach(section => section.style.display = 'none');
+        submitButton.disabled = true;
+    }
+
+    // Function to update the UI based on the selected origin
+    function updateUI(data) {
+        sections.specialStats.style.display = 'block';
+        sections.backgroundDescription.style.display = 'block';
+        sections.selectableTraits.style.display = data.selectable_traits.length > 0 ? 'block' : 'none';
+        sections.nonSelectableTraits.style.display = data.non_selectable_traits.length > 0 ? 'block' : 'none';
+        sections.selectedTraitsDescriptions.style.display = 'block';
+        submitButton.disabled = data.selectable_traits.length > 0;
+
+        document.getElementById('origin_description').innerHTML = data.description;
+        updateTraits('selectable_traits', data.selectable_traits);
+        updateNonSelectableTraits(data.non_selectable_traits);
+        updateSpecialStats(data.special_stats);
+
+        form.setAttribute('data-trait-limit', data.selectable_traits_limit);
+        document.getElementById('tags_limit').innerText = data.selectable_traits_limit;
+        updateTagsCounter();
+        updateTraitsDescriptions();
+    }
+
+    // Function to update selectable traits in the UI
+    function updateTraits(containerId, traits) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+
+        traits.forEach(trait => {
+            const div = document.createElement('div');
+            div.className = 'form-check';
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.className = 'form-check-input';
+            checkbox.name = 'selectable_traits';
+            checkbox.value = trait.id;
+            checkbox.id = `selectable_trait_${trait.id}`;
+            checkbox.dataset.description = trait.description;
+            checkbox.dataset.name = trait.name;
+
+            const label = document.createElement('label');
+            label.className = 'form-check-label';
+            label.htmlFor = `selectable_trait_${trait.id}`;
+            label.innerText = trait.name;
+
+            div.appendChild(checkbox);
+            div.appendChild(label);
+            container.appendChild(div);
+
+            // Event listeners for updating tags counter and descriptions
+            checkbox.addEventListener('change', () => {
+                updateTagsCounter();
+                updateTraitsDescriptions();
+            });
+        });
+    }
+
+    // Function to update non-selectable traits in the UI
+    function updateNonSelectableTraits(traits) {
+        const container = document.getElementById('non_selectable_traits');
+        container.innerHTML = '';
+
+        traits.forEach(trait => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${trait.name}:</strong> ${trait.description}`;
+            container.appendChild(li);
+        });
+    }
+
+    // Function to update special stats in the UI
+    function updateSpecialStats(stats) {
+        const container = document.getElementById('special_stats');
+        container.innerHTML = '';
+
+        stats.forEach(stat => {
+            const div = document.createElement('div');
+            div.className = 'col-sm-12 d-flex align-items-center';
+
+            const label = document.createElement('label');
+            label.className = 'col-sm-2 mb-0';
+            label.style.padding = '0';
+            label.innerText = `${stat.name}: `;
+
+            const span = document.createElement('span');
+            span.className = 'col-sm-2 form-control-static';
+            span.innerText = ` ${stat.min} - ${stat.max}`;
+
+            div.appendChild(label);
+            div.appendChild(span);
+            container.appendChild(div);
+        });
+    }
+
+    // Function to update the counter of selected tags
+    function updateTagsCounter() {
+        const tagLimit = parseInt(form.getAttribute('data-trait-limit'), 10);
+        const selectedTags = document.querySelectorAll('input[name="selectable_traits"]:checked').length;
+        const counter = document.getElementById('tags_selected');
+        const checkboxes = document.querySelectorAll('input[name="selectable_traits"]');
+
+        counter.innerHTML = selectedTags;
+
+        checkboxes.forEach(checkbox => {
+            checkbox.disabled = selectedTags >= tagLimit && !checkbox.checked;
+        });
+
+        submitButton.disabled = selectedTags !== tagLimit;
+    }
+
+    // Function to update the descriptions of selected traits
+    function updateTraitsDescriptions() {
+        const container = document.getElementById('selected_traits_descriptions');
+        container.innerHTML = '';
+
+        document.querySelectorAll('input[name="selectable_traits"]:checked').forEach(trait => {
+            const name = trait.dataset.name;
+            const description = trait.dataset.description;
+            if (name && description) {
+                const p = document.createElement('p');
+                p.innerHTML = `<strong>${name}</strong> - ${description}`;
+                container.appendChild(p);
+            }
+        });
+    }
+});
+</script>
+
+{% endblock %}
