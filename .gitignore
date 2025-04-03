@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+.vscode/
+
+# Dev Containers
+.devcontainer/
+
+# OS/Editor junk
+.DS_Store
+Thumbs.db
+
+# Python (hvis du har brugt det i slutningen af CS50x)
+__pycache__/
+*.py[cod]
+*.sqlite
