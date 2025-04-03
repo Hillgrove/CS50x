@@ -25,8 +25,3 @@ This repository includes a mix of languages used throughout the course:
 - [🎥 CS50x YouTube Lectures](https://www.youtube.com/c/cs50)
 - [📚 CS50 Manual / Documentation](https://cs50.readthedocs.io/)
 - [🛠️ CS50 IDE (Cloud-based Dev Environment)](https://ide.cs50.io/)
-
----
-
-> ⚠️ **Note:** This repository includes a `devcontainer.json` specifically tailored for CS50's GitHub Codespace environment. It references internal CS50 extensions, container images, and settings that may not work outside that context.  
-> If you're not using CS50-provided infrastructure, the container configuration may need adjustments or removal.
